@@ -1,0 +1,1715 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e1d0bcf1-2590-4775-8fa5-4d9a0ad19f7f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Nomis Warehouse 1</ID>
+  <Name>GL_2008</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-18818" scrolltop="4672" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="24580" y="18521" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_GL (dbo.fact_GL)" left="-14989" top="9971" logicalid="8" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_GL" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_account (dbo.dim_account)" left="-15817" top="15943" logicalid="9" controlid="2" masterid="0" hint1="0" hint2="0" width="4657" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800003112000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_account" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_budget (dbo.fact_budget)" left="-8760" top="16340" logicalid="10" controlid="3" masterid="0" hint1="0" hint2="0" width="3079" height="3625" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000070c0000290e0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_budget" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Time (DimTime.Time)" left="-13435" top="2571" logicalid="11" controlid="4" masterid="0" hint1="0" hint2="0" width="5371" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000fb14000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Time" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-10500" top="7271" logicalid="12" controlid="5" masterid="0" hint1="0" hint2="0" width="3679" height="9569" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[Time-fact_budget]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="4" sourceattachpoint="4" destattachpoint="11" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-7221" y="16340" />
+              <point x="-7221" y="11956" />
+              <point x="-10200" y="11956" />
+              <point x="-10200" y="7571" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-13888" top="13243" logicalid="13" controlid="6" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_GL-dim_account]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="8" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-13489" y="15943" />
+              <point x="-13489" y="13543" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-13789" top="7072" logicalid="14" controlid="7" masterid="0" hint1="0" hint2="0" width="2339" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_GL-Time]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="5" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-11850" y="7571" />
+              <point x="-11850" y="8771" />
+              <point x="-13489" y="8771" />
+              <point x="-13489" y="9971" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-18818</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>4672</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-15817</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>2571</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="105b2cb9-19e3-4375-b608-1a90969c6e17">
+      <ID>Dim Account</ID>
+      <Name>Accounts</Name>
+      <DimensionID>Dim Account</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="75f97a51-4eca-4e21-a809-6f2283440978">
+          <AttributeID>Dim Account</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="13c59571-19ad-44ab-8b22-d32b0b2d44d3">
+          <AttributeID>Account Gl</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="05e741df-9991-4b23-9db6-1a0fa84b8830">
+          <AttributeID>Account Category Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="585c6117-3622-4973-8693-d90596273c72">
+          <AttributeID>Account Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8efd4b31-e9cb-4dd5-a99b-bee44d51a059">
+          <AttributeID>Account Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="656b9315-e607-4bd1-aff7-de08da71de30">
+          <AttributeID>Account Description</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f1864775-39fd-4a9b-9774-d8b0f71140a4">
+          <AttributeID>Account Deparment Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4f0a3216-51cb-4e16-a4ae-0a3c1d5c7ed9">
+          <AttributeID>Account Department Name</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="692cc067-2f83-4e69-ad1d-1e900d604462">
+          <HierarchyID>Account Category Id - Account Name - Account Description</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="0afe43f9-f1d9-487a-a901-f2f5e72fa9a0">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="f01fe8f9-c318-42cc-8d52-6c6deaf6fbbd">
+      <ID>Time</ID>
+      <Name>Time</Name>
+      <DimensionID>Time</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="be2af13e-d23f-497b-ba2b-6549affcbba0">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="64a48bd0-4857-4551-85cd-f4b008e0cb3e">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ab76d96c-f62e-441f-87d5-231d83807930">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="17d45c57-6bd6-4e8d-a4a2-6d3115f65100">
+          <AttributeID>Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dd7cfafe-f270-494d-8be4-ab19406d9d20">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f08fde80-44b6-4ec6-bd20-c96861ef5061">
+          <AttributeID>Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="15ab6e95-d7c7-461b-918c-a0bb3414f9f3">
+          <AttributeID>Day Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="05bc1a56-f3e9-4842-935e-2512b3f15d16">
+          <AttributeID>Day Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6023aa65-23cb-4cc6-8514-252fcaeec5fe">
+          <AttributeID>Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2e67945d-53ab-4d89-9b05-37b6755f4c98">
+          <AttributeID>Week Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="55d318fd-8434-4bd5-8fcb-9b7254936c4a">
+          <AttributeID>Month Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d374d2bc-cec2-4883-8613-a17fa49f377c">
+          <AttributeID>Month Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c73318e2-5f12-45bf-ba0b-e0c10585308d">
+          <AttributeID>Quarter Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9d81bebe-e217-4215-8487-aed1e5378654">
+          <AttributeID>Fiscal Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ea9cf5bc-a0e3-498c-a974-fcf48d3f8380">
+          <AttributeID>Fiscal Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="19978064-c452-4a92-8373-f3650185a4f1">
+          <AttributeID>Fiscal Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c0720c27-0ec5-4075-98ff-5029b0f485d3">
+          <AttributeID>Fiscal Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dccfa5d3-026d-48e5-b9a1-d29871c619ee">
+          <AttributeID>Fiscal Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a911430a-74d1-4d1f-a29d-15c84f76ba6b">
+          <AttributeID>Fiscal Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="69532d46-9347-43b2-b411-f4826877211f">
+          <AttributeID>Fiscal Day Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9cede166-7863-4cbe-816f-b2844388597c">
+          <AttributeID>Fiscal Day Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="87e98bba-4df5-40cb-8d93-084e1244205c">
+          <AttributeID>Fiscal Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8ac65eaa-a83c-4e8f-8c3f-87acadfa7b03">
+          <AttributeID>Fiscal Week Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d87da887-eb99-4ab8-8a2c-0d20cad4be27">
+          <AttributeID>Fiscal Month Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c83359bd-555d-4224-93e8-52961761e232">
+          <AttributeID>Fiscal Month Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="91f39883-a4a6-4e52-8b7b-dbe24a5df502">
+          <AttributeID>Fiscal Quarter Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9715f797-bace-46fb-bd5c-2b0ed55038d2">
+          <AttributeID>Fiscal Hierarchy Time Calculations</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a05edda7-7ee5-4758-ab2b-0dbb9a035bbc">
+          <AttributeID>Work Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1e5a2ff5-4592-45b1-adc2-6384aeb8bf3c">
+          <AttributeID>Work Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1cd3ecf1-f4d2-41cd-ac54-cc2fdd3ed426">
+          <AttributeID>Fiscal Hierarchy Time Calculations 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="45e7cdb7-a38b-4a62-a66f-a7c3a6e34193">
+          <AttributeID>Fiscal Hierarchy Time Calculations 2</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="24a00bbe-dca2-4f04-9275-fdaf619f888f">
+          <AttributeID>Calendar Hierarchy Time Calculations</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c4fafb94-873c-4ef2-a3ea-ffe18bfb2555">
+          <AttributeID>Fiscal Hierarchy Time Calculations 3</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1163108f-3148-4e69-a5e6-05b7ce3632f6">
+          <AttributeID>Calendar Hierarchy Time Calculations 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1938ffe7-cee6-4435-936b-80ba19febf47">
+          <AttributeID>Fiscal Hierarchy Time Calculations 4</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="b323bd9d-e57f-4c2b-a5ad-ef5026594f57">
+          <HierarchyID>Year -  Quarter -  Month -  Date</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="151393ea-53df-4efa-8c73-1fec03cdd8b7">
+          <HierarchyID>Fiscal Year -  Fiscal Quarter -  Fiscal Month -  Fiscal Day</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="8ebad656-efb4-4b14-af59-97b17863a0e4">
+      <ID>Fact GL</ID>
+      <Name>Fact GL</Name>
+      <DimensionID>Fact GL</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="de6c14e4-0bb2-4b61-a28e-2bdc680ed1df">
+          <AttributeID>Fact GL</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3146eff0-cfb4-484b-8266-5e1fb04ddf6c">
+          <AttributeID>Fiscal Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2ffcf1cc-028a-439c-9677-c6c562aec203">
+          <AttributeID>Fiscal Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8ef57ca1-07d3-46ed-899c-76a9148eb5cc">
+          <AttributeID>Amount</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a37bf535-398a-4f6d-9b24-1787f22b58a6">
+          <AttributeID>Description 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4b5169ba-46c5-41af-8daa-f745d752b1b9">
+          <AttributeID>Description 2</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f2cc1584-b928-4de4-a060-9a7b3af65f96">
+          <AttributeID>DATE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ed29aed8-c45a-4519-a887-018baf2688ad">
+          <AttributeID>GL</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d47fd1f3-ce62-4040-a32b-b7166831f5c9">
+          <AttributeID>Account Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4b988070-cc35-478b-a774-59b0493ca55b">
+          <AttributeID>Account Department Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="96f88001-2918-43a6-8f96-3baf43deb12e">
+      <ID>Fact GL</ID>
+      <Name>Fact GL</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="19cb0fc2-1400-431e-9ee3-f6706971fc98">
+          <ID>Amount</ID>
+          <Name>Amount</Name>
+          <Source dwd:design-time-name="1f033cbe-3744-4104-9dc2-4b3e47d6f10f">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2f2b072e-7f03-4ac5-9c38-1e0b40776cb4">
+              <TableID>dbo_fact_GL</TableID>
+              <ColumnID>Amount</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>Currency</FormatString>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1fee3068-eb86-42cb-a1e0-1476e12d21d2">
+          <CubeDimensionID>Dim Account</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="de4935b0-b9a7-4ee7-8804-e7c8ab65b557">
+              <AttributeID>Dim Account</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cc73c498-92ce-4b09-b02b-4d1e6d714c26">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b5e8035d-6e76-4391-a5c2-4464c6bdee2e">
+                    <TableID>dbo_fact_GL</TableID>
+                    <ColumnID>account_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="313460ec-b460-4da8-83c9-ef2312a79146">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c42a7737-00fe-4c54-822f-9f497e1b6c5e">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="afa895f3-8b38-465b-8459-915ca293e936">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3843180b-4083-4b6b-8795-3a2c7f976d39">
+                    <TableID>dbo_fact_GL</TableID>
+                    <ColumnID>Date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0d01e04e-4967-4a1b-8411-ccebff88839a">
+          <CubeDimensionID>Fact GL</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a8ea7a63-0d36-4dc3-b92c-022440640601">
+              <AttributeID>Fact GL</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5b66e6a5-ae4b-4062-8744-28a16b58d952">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fd6c9b38-e380-4fd5-a20d-f6b0d74f64a5">
+                    <TableID>dbo_fact_GL</TableID>
+                    <ColumnID>account_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="192e43d7-1a24-4768-b1da-e9b29258e91d">
+      <ID>Fact Budget</ID>
+      <Name>Fact Budget</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="64d1f004-fd13-4f59-b8e0-f2c7430d971f">
+          <ID>Total</ID>
+          <Name>Total</Name>
+          <Source dwd:design-time-name="d0127640-2e65-4f00-a40e-572d4e7efbf3">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="78ee983f-9b60-43f4-8b84-f130b555ad3e">
+              <TableID>dbo_fact_budget</TableID>
+              <ColumnID>total</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>Currency</FormatString>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8fc37e18-45d5-4237-8869-af0d323f1358">
+          <CubeDimensionID>Dim Account</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="856fae95-ea25-49da-a505-d0ef000f5156">
+              <AttributeID>Dim Account</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e22641ac-071c-4e88-90fe-0b897816d253">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4b5c24da-4420-428f-b4b1-a6be25ea7c69">
+                    <TableID>dbo_fact_budget</TableID>
+                    <ColumnID>account_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ddb151c8-f24c-4be5-86dd-5ba2dac35761">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6bd61bbc-f5b0-4b3a-bc03-f8c4fb1a4481">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="011eb83c-368d-4479-aedf-e2ba6b8ad602">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b1db4601-3304-4c76-b7cc-5055c58468f6">
+                    <TableID>dbo_fact_budget</TableID>
+                    <ColumnID>Date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="d19e89ea-b6f4-4ee1-9bcd-ec17bcc8fa69">
+    <DataSourceViewID>Nomis Warehouse 1</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="3acaa311-80c8-4237-9945-82fe16c35836">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE;        
+CREATE SET CURRENTCUBE.[Services]
+ AS {[Accounts].[Account Department Name].&amp;[Fiabilité],
+ [Accounts].[Account Department Name].&amp;[Field Instrumentation],
+ [Accounts].[Account Department Name].&amp;[Alcan],
+ [Accounts].[Account Department Name].&amp;[Engineering],
+ [Accounts].[Account Department Name].&amp;[Automation],
+ [Accounts].[Account Department Name].&amp;[Pratt And Whitney]} ;   
+CREATE SET CURRENTCUBE.[No Revenue Departments]
+ AS {[Accounts].[Account Department Name].&amp;[Warehouse],
+ [Accounts].[Account Department Name].&amp;[SalesOps],
+ [Accounts].[Account Department Name].&amp;[Project Group],
+ [Accounts].[Account Department Name].&amp;[Finance]};               
+CREATE SET CURRENTCUBE.[Expenses]
+ AS {[Accounts].[Account Category Id].&amp;[3],[Accounts].[Account Category Id].&amp;[4]};              
+CREATE SET CURRENTCUBE.[Sales]
+ AS [Accounts].[Account Category Id].&amp;[1];              
+CREATE SET CURRENTCUBE.[COGS]
+ AS [Accounts].[Account Category Id].&amp;[2];         
+CREATE SET CURRENTCUBE.[Q&amp;O]
+ AS {[Accounts].[Account Department Name].&amp;[Sales mtl],[Accounts].[Account Department Name].&amp;[SalesOps],[Accounts].[Account Department Name].&amp;[PSS],[Accounts].[Account Department Name].&amp;[Atlantic]};    
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Department Profit]
+ AS iif([Sales Actual] &lt;&gt; 0,([Sales Actual]+[COGS Actual]), null), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;    
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Department Profit Budget]
+ AS iif([Sales Budget] &lt;&gt; 0,([Sales Budget]+[COGS Budget]), null), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;      
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Department Margin]
+ AS iif([Sales Actual] &lt;&gt; 0,([Sales Actual]+[COGS Actual])/[Sales Actual], null), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;      
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Department Margin Budget]
+ AS iif([Sales Budget] &lt;&gt; 0,([Sales Budget]+[COGS Budget])/[Sales Budget], null), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;          
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Percentage of goal]
+ AS case [Accounts].[Account Department Name].currentmember.name 
+when "Warehouse"
+then (([Measures].[Total]-[Measures].[Amount])/[Measures].[Amount])+1
+when "SalesOps" 
+then (([Measures].[Total]-[Measures].[Amount])/[Measures].[Amount])+1
+when "Project Group"
+then (([Measures].[Total]-[Measures].[Amount])/[Measures].[Amount])+1
+when "Finance"
+then (([Measures].[Total]-[Measures].[Amount])/[Measures].[Amount])+1
+else [Measures].[Amount]/[Measures].[Total] end, 
+VISIBLE = 1;              
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Gross Margin]
+ AS Aggregate([Sales], [Measures].[Amount]) + Aggregate([COGS], [Measures].[Amount]), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;            
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Gross Margin Budget]
+ AS Aggregate([Sales], [Measures].[Total]) + Aggregate([COGS], [Measures].[Total]), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;              
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Gross Margin %]
+ AS iif(Aggregate([Sales], [Measures].[Amount]) = 0, 0, (Aggregate([Sales], [Measures].[Amount]) + Aggregate([COGS], [Measures].[Amount])) / Aggregate([Sales], [Measures].[Amount])), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;            
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Gross Margin % Budget]
+ AS iif(Aggregate([Sales], [Measures].[Total]) = 0, 0, (Aggregate([Sales], [Measures].[Total]) + Aggregate([COGS], [Measures].[Total])) / Aggregate([Sales], [Measures].[Total])), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;             
+CREATE MEMBER CURRENTCUBE.[MEASURES].Contribution
+ AS [Measures].[Amount], 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;             
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Sales Actual]
+ AS Aggregate([Sales], [Measures].[Amount]), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;            
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Sales Budget]
+ AS Aggregate([Sales], [Measures].[Total]), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;             
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Expenses Actual]
+ AS Aggregate([Expenses], [Measures].[Amount]), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;            
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Expenses Budget]
+ AS Aggregate([Expenses], [Measures].[Total]), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;             
+CREATE MEMBER CURRENTCUBE.[MEASURES].[COGS Actual]
+ AS Aggregate([COGS], [Measures].[Amount]), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;            
+CREATE MEMBER CURRENTCUBE.[MEASURES].[COGS Budget]
+ AS Aggregate([COGS], [Measures].[Total]), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;            
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Var %]
+ AS iif([Measures].[Amount] = 0, null,([Measures].[Amount]-[Measures].[Total])/[Measures].[Amount]), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;            
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Var $]
+ AS iif([Measures].[Amount] = 0,null,[Measures].[Amount]-[Measures].[Total]), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;           
+
+/*
+  Begin Time Intelligence script for the [Time].[Fiscal Hierarchy] hierarchy.
+*/
+
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Year to Date] 
+  As "NA";          
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Quarter to Date] 
+  As "NA";          
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Month to Date] 
+  As "NA";          
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Twelve Months to Date] 
+  As "NA";          
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Twelve Month Moving Average] 
+  As "NA";          
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Six Month Moving Average] 
+  As "NA";          
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Three Month Moving Average] 
+  As "NA";          
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth %] 
+  As "NA";          
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth] 
+  As "NA";          
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth %] 
+  As "NA";          
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth] 
+  As "NA";          
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth %] 
+  As "NA";          
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth] 
+  As "NA";          
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth %] 
+  As "NA";          
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth] 
+  As "NA";          
+  
+
+
+// Year to Date
+  (
+    [Time].[Fiscal Hierarchy Time Calculations 1].[Year to Date],
+    [Time].[Fiscal Year].[Fiscal Year].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) =
+
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember } *
+             PeriodsToDate(
+                            [Time].[Fiscal Hierarchy].[Fiscal Year],
+                            [Time].[Fiscal Hierarchy].CurrentMember
+             )
+  );          
+
+  
+// Quarter to Date
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 1].[Quarter to Date],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) =
+
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember } *
+             PeriodsToDate(
+                            [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                            [Time].[Fiscal Hierarchy].CurrentMember
+             )
+  );          
+
+  
+// Month to Date
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 1].[Month to Date],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) =
+
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember } *
+             PeriodsToDate(
+                            [Time].[Fiscal Hierarchy].[Fiscal Month],
+                            [Time].[Fiscal Hierarchy].CurrentMember
+             )
+  );          
+
+  
+// Twelve Months to Date
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 1].[Twelve Months to Date],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) =
+    
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember } *
+             {
+               ParallelPeriod(
+                               [Time].[Fiscal Hierarchy].[Fiscal Month],
+                               11,
+                               [Time].[Fiscal Hierarchy].CurrentMember
+               ) : [Time].[Fiscal Hierarchy].CurrentMember
+             }
+  );          
+
+  
+// Twelve Month Moving Average  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 1].[Twelve Month Moving Average],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) =
+    
+  Avg(
+       {
+         ParallelPeriod(
+                         [Time].[Fiscal Hierarchy].[Fiscal Month],
+                         11,
+                         [Time].[Fiscal Hierarchy].CurrentMember
+         ) : [Time].[Fiscal Hierarchy].CurrentMember
+       },
+      [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember
+  );          
+
+  
+// Six Month Moving Average  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 1].[Six Month Moving Average],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) =
+    
+  Avg(
+       {
+         ParallelPeriod(
+                         [Time].[Fiscal Hierarchy].[Fiscal Month],
+                         5,
+                         [Time].[Fiscal Hierarchy].CurrentMember
+         ) : [Time].[Fiscal Hierarchy].CurrentMember
+       },
+      [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember
+  );          
+
+  
+// Three Month Moving Average  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 1].[Three Month Moving Average],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) =
+    
+  Avg(
+       {
+         ParallelPeriod(
+                         [Time].[Fiscal Hierarchy].[Fiscal Month],
+                         2,
+                         [Time].[Fiscal Hierarchy].CurrentMember
+         ) : [Time].[Fiscal Hierarchy].CurrentMember
+       },
+      [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember
+  );          
+
+  
+// Year Over Year Growth %  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth %],
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) =      
+
+  ( 
+    ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Year],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  ) 
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Year],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );          
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth %],
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) = Null;           
+  
+  Format_String( 
+                 ( 
+				   [Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth %],
+				   [Time].[Date].Members
+				 )
+  ) = "Percent";          
+
+  
+// Year Over Year Growth  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth],
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Year],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );          
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth],
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) = Null;          
+
+  
+// Quarter Over Quarter Growth %  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth %],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) =      
+
+  (
+    ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  )
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );          
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth %],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) = Null;           
+  
+  Format_String( 
+                 ( 
+				   [Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth %],
+				   [Time].[Date].Members
+				 )
+  ) = "Percent";          
+
+  
+// Quarter Over Quarter Growth  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );          
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) = Null;          
+
+  
+// Month Over Month Growth %  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth %],
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) =      
+
+  (
+    ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Month],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  )
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Month],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );          
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth %],
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) = Null;           
+  
+  Format_String( 
+                 ( 
+				   [Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth %],
+				   [Time].[Date].Members
+				 )
+  ) = "Percent";          
+
+  
+// Month Over Month Growth  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth],
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Month],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );          
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth],
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) = Null;          
+
+  
+// Day Over Day Growth %  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth %],
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+  
+  ) =      
+
+  (
+    ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Day],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  )
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Day],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );          
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth %],
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) = Null;          
+  
+  Format_String( 
+                 ( 
+				   [Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth %],
+				   [Time].[Date].Members
+				 )
+  ) = "Percent";          
+
+  
+// Day Over Day Growth  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth],
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Day],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );          
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth],
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Gross Margin],
+      [Measures].[Gross Margin Budget],
+      [Measures].[Gross Margin %],
+      [Measures].[Gross Margin % Budget],
+      [Measures].[Contribution],
+      [Measures].[Sales Budget],
+      [Measures].[Expenses Budget],
+      [Measures].[COGS Budget],
+      [Measures].[Sales Actual],
+      [Measures].[Expenses Actual],
+      [Measures].[COGS Actual],
+      [Measures].[Var %],
+      [Measures].[Var $],
+      [Measures].[Amount],
+      [Measures].[Total],[Measures].[Percentage of goal],[Measures].[Department Profit],[Measures].[Department Margin Budget],[Measures].[Department Profit Budget],[Measures].[Department Margin]
+    }
+   
+  ) = Null; </Text>
+        </Command>
+      </Commands>
+      <CalculationProperties>
+        <CalculationProperty dwd:design-time-name="ba964251-60bf-41fe-a8c6-e18ca1aa9dd1">
+          <CalculationReference>COGS</CalculationReference>
+          <CalculationType>Set</CalculationType>
+        </CalculationProperty>
+        <CalculationProperty dwd:design-time-name="5aab939d-302a-4035-bc98-46c1d6b1beb4">
+          <CalculationReference>Expenses</CalculationReference>
+          <CalculationType>Set</CalculationType>
+        </CalculationProperty>
+        <CalculationProperty dwd:design-time-name="931d7c4c-6db3-4d59-b022-9a9e26fd1dfa">
+          <CalculationReference>Sales</CalculationReference>
+          <CalculationType>Set</CalculationType>
+        </CalculationProperty>
+      </CalculationProperties>
+    </MdxScript>
+  </MdxScripts>
+  <Kpis>
+    <Kpi dwd:design-time-name="2bf84d62-9865-4974-81c8-10bd2e69c54c">
+      <ID>KPI</ID>
+      <Name>Profit Margin</Name>
+      <DisplayFolder>Margins</DisplayFolder>
+      <AssociatedMeasureGroupID>Fact GL</AssociatedMeasureGroupID>
+      <Value>[Measures].[Gross Margin %]</Value>
+      <Goal>[Measures].[Gross Margin % Budget]</Goal>
+      <Status>CASE
+   WHEN KpiValue( "Profit Margin" ) &gt;=
+      KpiGoal ( "Profit Margin" ) 
+   THEN 1
+   WHEN 
+      KpiValue( "Profit Margin" ) &gt;= 
+         .90 * KpiGoal ( "Profit Margin" )
+      AND
+         KpiValue( "Profit Margin" ) &lt; 
+            KpiGoal ( "Profit Margin" ) 
+    THEN 0
+    ELSE -1
+END
+</Status>
+      <Trend>CASE
+    WHEN 
+       [Time].[Fiscal].CURRENTMEMBER.LEVEL Is [Time].[Fiscal].[(All)]
+    THEN 0
+    WHEN 
+       VBA!ABS(
+           KpiValue( "Profit Margin" ) - 
+             (KpiValue ("Profit Margin" ),
+                 PARALLELPERIOD([Time].[Fiscal].[Fiscal Year], 1,
+                    [Time].[Fiscal].CURRENTMEMBER)) /
+                 ( KpiValue ( "Profit Margin" ),
+             PARALLELPERIOD([Time].[Fiscal].[Fiscal Year], 1,
+                  [Time].[Fiscal].CURRENTMEMBER))  
+        ) &lt;=.02
+    THEN 0
+    WHEN 
+       KpiValue( "Profit Margin" ) - 
+          (KpiValue ( "Profit Margin" ),
+              PARALLELPERIOD([Time].[Fiscal].[Fiscal Year], 1,
+                 [Time].[Fiscal].CURRENTMEMBER)) /
+                    (KpiValue ( "Profit Margin" ),
+                 PARALLELPERIOD([Time].[Fiscal].[Fiscal Year], 1,
+              [Time].[Fiscal].CURRENTMEMBER)
+           )  &gt;.02
+    THEN 1
+    ELSE -1
+END
+</Trend>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Road Signs</StatusGraphic>
+    </Kpi>
+    <Kpi dwd:design-time-name="5a07dd9c-26f1-4933-b175-056c2a1372ac">
+      <ID>KPI 1</ID>
+      <Name>Gross Margin</Name>
+      <DisplayFolder>Margins</DisplayFolder>
+      <AssociatedMeasureGroupID>Fact GL</AssociatedMeasureGroupID>
+      <Value>[Measures].[Gross Margin]</Value>
+      <Goal>[Measures].[Gross Margin Budget]</Goal>
+      <Status>CASE
+   WHEN KpiValue( "Gross Margin" ) &gt;=
+      KpiGoal ( "Gross Margin" ) 
+   THEN 1
+   WHEN 
+      KpiValue( "Gross Margin" ) &gt;= 
+         .90 * KpiGoal ( "Gross Margin" )
+      AND
+         KpiValue( "Gross Margin" ) &lt; 
+            KpiGoal ( "Gross Margin" ) 
+    THEN 0
+    ELSE -1
+END</Status>
+      <Trend>CASE
+    WHEN 
+       [Time].[Fiscal].CURRENTMEMBER.LEVEL Is [Time].[Fiscal].[(All)]
+    THEN 0
+    WHEN 
+       VBA!ABS(
+           KpiValue( "Gross Margin" ) - 
+             (KpiValue ("Gross Margin" ),
+                 PARALLELPERIOD([Time].[Fiscal].[Fiscal Year], 1,
+                    [Time].[Fiscal].CURRENTMEMBER)) /
+                 ( KpiValue ( "Gross Margin" ),
+             PARALLELPERIOD([Time].[Fiscal].[Fiscal Year], 1,
+                  [Time].[Fiscal].CURRENTMEMBER))  
+        ) &lt;=.02
+    THEN 0
+    WHEN 
+       KpiValue( "Gross Margin" ) - 
+          (KpiValue ( "Gross Margin" ),
+              PARALLELPERIOD([Time].[Fiscal].[Fiscal Year], 1,
+                 [Time].[Fiscal].CURRENTMEMBER)) /
+                    (KpiValue ( "Gross Margin" ),
+                 PARALLELPERIOD([Time].[Fiscal].[Fiscal Year], 1,
+              [Time].[Fiscal].CURRENTMEMBER)
+           )  &gt;.02
+    THEN 1
+    ELSE -1
+END
+</Trend>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Road Signs</StatusGraphic>
+    </Kpi>
+    <Kpi dwd:design-time-name="6fc515c2-b104-4029-903d-0e657bb7ca99">
+      <ID>KPI 2</ID>
+      <Name>Expenses</Name>
+      <DisplayFolder>Expenses</DisplayFolder>
+      <AssociatedMeasureGroupID>Fact GL</AssociatedMeasureGroupID>
+      <Value>[Measures].[Expenses Actual]</Value>
+      <Goal>[Measures].[Expenses Budget]</Goal>
+      <Status>CASE
+   WHEN KpiValue( "Expenses" ) &gt;=
+      KpiGoal ( "Expenses" ) 
+   THEN 1
+   WHEN 
+      KpiValue( "Expenses" ) &gt;= 
+         .90 * KpiGoal ( "Expenses" )
+      AND
+         KpiValue( "Expenses" ) &lt; 
+            KpiGoal ( "Expenses" ) 
+    THEN 0
+    ELSE -1
+END</Status>
+      <Trend>CASE
+    WHEN (KpiValue( "Expenses" ),[Time].[Fiscal Month].CURRENTMEMBER) &lt; (KpiValue ("Expenses" ),[Time].[Fiscal Month].CURRENTMEMBER.PREVMEMBER) 
+    THEN 1
+    WHEN (KpiValue( "Expenses" ),[Time].[Fiscal Month].CURRENTMEMBER) &gt; (KpiValue ("Expenses" ),[Time].[Fiscal Month].CURRENTMEMBER.PREVMEMBER) 
+    THEN -1
+    ELSE 0
+END
+</Trend>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Road Signs</StatusGraphic>
+    </Kpi>
+    <Kpi dwd:design-time-name="16208b79-b398-4c4f-a98b-b8de0f6a6703">
+      <ID>KPI 3</ID>
+      <Name>Sales</Name>
+      <DisplayFolder>Sales</DisplayFolder>
+      <AssociatedMeasureGroupID>Fact GL</AssociatedMeasureGroupID>
+      <Value>[Measures].[Sales Actual]</Value>
+      <Goal>[Measures].[Sales Budget]</Goal>
+      <Status>CASE
+   WHEN KpiValue( "Sales" ) &gt;=
+      KpiGoal ( "Sales" ) 
+   THEN 1
+   WHEN 
+      KpiValue( "Sales" ) &gt;= 
+         .90 * KpiGoal ( "Sales" )
+      AND
+         KpiValue( "Sales" ) &lt; 
+            KpiGoal ( "Sales" ) 
+    THEN 0
+    ELSE -1
+END</Status>
+      <Trend>CASE
+    WHEN (KpiValue( "Sales" ),[Time].[Fiscal Month].CURRENTMEMBER) &gt; (KpiValue ("Sales" ),[Time].[Fiscal Month].CURRENTMEMBER.PREVMEMBER) 
+    THEN 1
+    WHEN (KpiValue( "Sales" ),[Time].[Fiscal Month].CURRENTMEMBER) &lt; (KpiValue ("Sales" ),[Time].[Fiscal Month].CURRENTMEMBER.PREVMEMBER) 
+    THEN -1
+    ELSE 0
+END
+</Trend>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Road Signs</StatusGraphic>
+    </Kpi>
+  </Kpis>
+  <Actions>
+    <Action xsi:type="DrillThroughAction" dwd:design-time-name="687ccc35-1704-400b-87cf-7f212c5310ce">
+      <ID>Drillthrough Action</ID>
+      <Name>GL Accounts</Name>
+      <TargetType>Cells</TargetType>
+      <Target>MeasureGroupMeasures("Fact GL")</Target>
+      <Type>DrillThrough</Type>
+      <Columns>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="3e70ef3f-f52b-4f53-8187-0da983454e2f">
+          <CubeID>Nomis Warehouse 1</CubeID>
+          <CubeDimensionID>Dim Account</CubeDimensionID>
+          <AttributeID>Account Gl</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="7f627ff3-56dc-49a9-ba7f-2e294b68e23e">
+          <CubeID>Nomis Warehouse 1</CubeID>
+          <CubeDimensionID>Dim Account</CubeDimensionID>
+          <AttributeID>Account Category</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="a3024559-0a93-43c4-baa8-f7193e746fe1">
+          <CubeID>Nomis Warehouse 1</CubeID>
+          <CubeDimensionID>Dim Account</CubeDimensionID>
+          <AttributeID>Account Name</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="8d523448-85ff-4658-ad1b-d4d05fcb54b7">
+          <CubeID>Nomis Warehouse 1</CubeID>
+          <CubeDimensionID>Dim Account</CubeDimensionID>
+          <AttributeID>Account Department Name</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="eebdd5d9-7cf8-4020-b3d0-7cd7a615f6da">
+          <CubeID>Nomis Warehouse 1</CubeID>
+          <CubeDimensionID>Time</CubeDimensionID>
+          <AttributeID>Fiscal Year</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="5810720a-5607-43ed-b8d7-a582856c1909">
+          <CubeID>Nomis Warehouse 1</CubeID>
+          <CubeDimensionID>Time</CubeDimensionID>
+          <AttributeID>Fiscal Month</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="MeasureBinding" dwd:design-time-name="5fcd34a3-05f8-415f-9ebe-49355d92271b">
+          <MeasureID>Amount</MeasureID>
+        </Column>
+      </Columns>
+    </Action>
+  </Actions>
+</Cube>

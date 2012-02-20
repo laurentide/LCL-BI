@@ -1,0 +1,270 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="af5a61bc-295d-40cc-ac25-d0cc3fa56118" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact GL</ID>
+  <Name>Fact GL</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2515" scrolltop="-6192" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8070" y="16378" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_GL (dbo.fact_GL)" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_GL" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2515</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-6192</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="d826a5d0-0f1d-4749-bcac-5cfed4383295">
+    <DataSourceViewID>Nomis Warehouse 1</DataSourceViewID>
+  </Source>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="171c1ce0-12ef-4e2a-b4d6-de503902d724">
+      <ID>Fact GL</ID>
+      <Name>Fact GL</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ccc836a8-bbff-4606-9a7e-df4ddd0eba93">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f09097f3-afdb-48e9-8d17-7f196be4b7e4">
+            <TableID>dbo_fact_GL</TableID>
+            <ColumnID>account_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="cbba8be7-6f3b-47a0-b235-b7f9a51500a1">
+          <AttributeID>Fiscal Year</AttributeID>
+          <Name>Fiscal Year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e342e500-136c-4483-a9a3-168a28a0e17d">
+          <AttributeID>Fiscal Month</AttributeID>
+          <Name>Fiscal Month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b7e04118-6665-4362-bdd0-92f71938de2e">
+          <AttributeID>Amount</AttributeID>
+          <Name>Amount</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="62f64626-4415-42c6-8423-317132c90904">
+          <AttributeID>Description 1</AttributeID>
+          <Name>Description 1</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0630ec25-f224-4dd9-867b-edd4cb127e8f">
+          <AttributeID>Description 2</AttributeID>
+          <Name>Description 2</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0e3644ce-4524-4ed7-b06d-938560fe09e1">
+          <AttributeID>DATE</AttributeID>
+          <Name>DATE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="93394aab-681e-41a9-abe5-fe3d6c4ef142">
+          <AttributeID>GL</AttributeID>
+          <Name>GL</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="feaf5c1c-89b1-4a6c-9770-bd82feac12ae">
+          <AttributeID>Account Name</AttributeID>
+          <Name>Account Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f329147e-e420-4de9-afc3-dab37e3a870a">
+          <AttributeID>Account Department Name</AttributeID>
+          <Name>Account Department Name</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="c9d6c5a7-45ff-40d0-91ac-0fe6ffe8f996">
+      <ID>Fiscal Year</ID>
+      <Name>Fiscal Year</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2823ceed-96a5-4da5-a320-591c5a670bce">
+          <DataType>WChar</DataType>
+          <DataSize>4</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="64a051c1-d79a-42a3-a5d5-273ec8be34c1">
+            <TableID>dbo_fact_GL</TableID>
+            <ColumnID>Fiscal_Year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="988659ec-ed1e-4d77-b790-73fc4d57c6d3">
+      <ID>Fiscal Month</ID>
+      <Name>Fiscal Month</Name>
+      <EstimatedCount>12</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c1e0bb03-9cd9-4214-a02d-fc48610d9814">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9be66b06-6bfa-44af-b4f5-3de49f21196d">
+            <TableID>dbo_fact_GL</TableID>
+            <ColumnID>Fiscal_Month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="ede269e7-dd4c-4783-90f8-31b1d6d60fb3">
+      <ID>Amount</ID>
+      <Name>Amount</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="18514220-5fb4-4db6-93f0-17e17f8ff580">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5dead3ad-b6b6-4cc4-9b48-15bb652bd7a1">
+            <TableID>dbo_fact_GL</TableID>
+            <ColumnID>Amount</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="23ae7315-bf18-448f-8c6d-a9d2ee8a3103">
+      <ID>Description 1</ID>
+      <Name>Description 1</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="34501d27-c8f7-426d-b412-2c717980f3c6">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3ac63608-1f41-4f5f-83de-61aade1eb2a4">
+            <TableID>dbo_fact_GL</TableID>
+            <ColumnID>Description_1</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="9449e852-e65f-43f4-a514-c0079a85813d">
+      <ID>Description 2</ID>
+      <Name>Description 2</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a467f757-de8b-4af7-a860-f3fb4398db1c">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="11917568-ce8f-46d9-972f-175fd3bc2614">
+            <TableID>dbo_fact_GL</TableID>
+            <ColumnID>Description_2</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="fc71741f-e5d4-4f27-93a8-4ee91bdb6e86">
+      <ID>DATE</ID>
+      <Name>DATE</Name>
+      <EstimatedCount>15</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5f9beb89-3af4-454c-8452-5059bf8807ff">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a5699522-3315-4225-b63c-19f00da158fc">
+            <TableID>dbo_fact_GL</TableID>
+            <ColumnID>Date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="a6160cbf-9ce5-47bf-a0e0-d9cde118d721">
+      <ID>GL</ID>
+      <Name>GL</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="09869ecc-6550-4178-a886-10dde170108a">
+          <DataType>WChar</DataType>
+          <DataSize>45</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b2df937f-3d1b-415f-a626-a25c664ba2a3">
+            <TableID>dbo_fact_GL</TableID>
+            <ColumnID>GL</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="1ffba05c-4ebd-46bb-b32b-3ff75f172b9f">
+      <ID>Account Name</ID>
+      <Name>Account Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="097cebff-dca5-496d-8433-51a513ee82ca">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c293daba-e297-4df8-b481-8cc195bbc36e">
+            <TableID>dbo_fact_GL</TableID>
+            <ColumnID>account_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="bcb665a3-b6a8-41af-9e48-63d7a9f00d6c">
+      <ID>Account Department Name</ID>
+      <Name>Account Department Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8cfaa4b1-9d59-4c69-be9d-c482e2b2d7b6">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d1ad2c52-1251-46b7-b83c-de30bc2fb2b2">
+            <TableID>dbo_fact_GL</TableID>
+            <ColumnID>account_department_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+  </Attributes>
+</Dimension>

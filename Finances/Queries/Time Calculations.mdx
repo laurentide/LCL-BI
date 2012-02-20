@@ -1,0 +1,29 @@
+SELECT 
+{
+	{
+	 ([Time].[Fiscal Hierarchy Time Calculations 1].[Year to Date],[Measures].[Total]),
+	 ([Time].[Fiscal Hierarchy Time Calculations 1].[Year to Date],[Measures].[Amount]),
+	 ([Time].[Fiscal Hierarchy Time Calculations 1].[Year to Date],[Measures].[Var $]),
+	 ([Time].[Fiscal Hierarchy Time Calculations 1].[Year to Date],[Measures].[Var %])
+	 },
+	 {
+	 ([Time].[Fiscal Hierarchy Time Calculations 1].[Quarter to Date],[Measures].[Total]),
+	 ([Time].[Fiscal Hierarchy Time Calculations 1].[Quarter to Date],[Measures].[Amount]), 
+	 ([Time].[Fiscal Hierarchy Time Calculations 1].[Quarter to Date],[Measures].[Var $]),
+	 ([Time].[Fiscal Hierarchy Time Calculations 1].[Quarter to Date],[Measures].[Var %])
+	 },
+	 {
+	 ([Time].[Fiscal Hierarchy Time Calculations 1].[Month to Date],[Measures].[Total]),
+	 ([Time].[Fiscal Hierarchy Time Calculations 1].[Month to Date],[Measures].[Amount]),
+	 ([Time].[Fiscal Hierarchy Time Calculations 1].[Month to Date],[Measures].[Var $]),
+	 ([Time].[Fiscal Hierarchy Time Calculations 1].[Month to Date],[Measures].[Var %]) 
+	 }	 
+ }  
+ ON COLUMNS, 
+ {
+ ([Accounts].[Account Category].children,
+  [Accounts].[Account Category Id].children,
+  [Accounts].[Account Name].children)
+ } ON ROWS
+FROM [GL_2008]
+WHERE ([Time].[Fiscal Month].&[2008-12-01T00:00:00],[Accounts].[Account Department Name].&[Atlantic])

@@ -1,0 +1,380 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e564b1bd-fec6-4207-bd2f-3c5d2f0e77a2" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Sales</ID>
+  <Name>Fact Sales</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1105" scrolltop="-5490" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5689" y="15981" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_sales (dbo.fact_sales)" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3651" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000430e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_sales" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1105</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5490</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="2ce58818-8b1a-46af-a97e-4a312c731c0b">
+    <DataSourceViewID>Nomis Warehouse</DataSourceViewID>
+  </Source>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="27b19887-9016-4e62-916b-6b571e1e6810">
+      <ID>Fact Sales</ID>
+      <Name>Fact Sales</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ecb41760-e445-439a-90c2-99b7d30aafea">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7f3748bc-7953-4d58-bb45-70e067bdac87">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>Order_Number</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="a4eb30d2-035b-4472-a258-e875d3d4ae20">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7ad21854-a5d3-4044-9ade-eb8538f13d91">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>Sequence_Number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="140c1378-4d1f-4317-b566-a14d35be8164">
+        <DataType>WChar</DataType>
+        <DataSize>10</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="ce6aa413-ca8e-4abc-8e72-27e496177069">
+          <TableID>dbo_fact_sales</TableID>
+          <ColumnID>Order_Number</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="37aacd94-1e28-4520-962f-6f5b7f94be9c">
+          <AttributeID>Selling Price</AttributeID>
+          <Name>Selling Price</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2460cf04-50f9-418e-8288-91ceb3bcc71e">
+          <AttributeID>Cost</AttributeID>
+          <Name>Cost</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="619cd7c9-39c8-471f-8be1-b8ae4d4a982f">
+          <AttributeID>Quantity Ordered</AttributeID>
+          <Name>Quantity Ordered</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="126648a7-d6b8-4e3f-9a57-dc5c7db090bd">
+          <AttributeID>Line Number</AttributeID>
+          <Name>Line Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="36d8aa73-09da-47bc-b437-a8379f7235ad">
+          <AttributeID>Invoice Date</AttributeID>
+          <Name>Invoice Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3827baf9-a3dc-42a2-8e31-357ac4bb598f">
+          <AttributeID>Vendor Id</AttributeID>
+          <Name>Vendor Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b9e5a98d-3d38-4121-81c4-7cf9c5615ab6">
+          <AttributeID>Customer Id</AttributeID>
+          <Name>Customer Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6094337c-b8d1-4e46-9a42-6d2d509d2b44">
+          <AttributeID>Originator Id</AttributeID>
+          <Name>Originator Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ecd8711d-b5aa-405d-af6a-c211b2e41aaa">
+          <AttributeID>Product Id</AttributeID>
+          <Name>Product Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="614d539b-84a1-45ed-bd23-7eedcd79bcee">
+          <AttributeID>Salesman Id</AttributeID>
+          <Name>Salesman Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="449e58d0-0a8b-494d-88e1-79aac1a7967b">
+          <AttributeID>Order Number</AttributeID>
+          <Name>Order Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f6db42a9-03b3-406a-b411-88d8450231ef">
+          <AttributeID>Sequence Number</AttributeID>
+          <Name>Sequence Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="feee1ddf-fc48-4590-85d2-b5e8255c058e">
+          <AttributeID>Nonstockitem</AttributeID>
+          <Name>Nonstockitem</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+    </Attribute>
+    <Attribute dwd:design-time-name="64f5e74e-ebe3-47b1-8076-65f8f30eac65">
+      <ID>Selling Price</ID>
+      <Name>Selling Price</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="05d431d7-793e-4b3c-938c-ce7cd6fc5771">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6c1fd7e2-c799-449e-a445-f7bd049c0391">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>Selling_price</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="b1a7ed96-84cb-4adb-b1f5-2c779b8c5972">
+      <ID>Cost</ID>
+      <Name>Cost</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="99105177-dc28-49d5-8e2a-8e56931085c2">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="042c3e6f-1b2c-4810-b62e-e8f1376ff506">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>Cost</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="ad58996b-edb3-4410-8d21-5367b562d7b0">
+      <ID>Quantity Ordered</ID>
+      <Name>Quantity Ordered</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ff7f1af2-7728-402a-90fb-9389f4b75b37">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8c0ab8fc-b0e9-4863-a1a1-ac85fb0d5520">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>Quantity_Ordered</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="1df30102-4077-4cee-bbef-703956bc955b">
+      <ID>Line Number</ID>
+      <Name>Line Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0c9efe16-6431-44e4-9b2f-c73049ce3344">
+          <DataType>WChar</DataType>
+          <DataSize>4</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3814be7f-3ce4-4fa5-b3cb-f12ffa3a46be">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>Line_Number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="8d2d8cf5-8bf9-4d1f-894d-75b319459184">
+      <ID>Invoice Date</ID>
+      <Name>Invoice Date</Name>
+      <EstimatedCount>231</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8450d540-d084-402e-af35-d55e6ee9c88b">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="71265cb7-33d8-4fc7-86e6-9e831c1b9a01">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>invoice_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>List</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="285b6632-93b0-40ea-8612-7f1f8f005fd0">
+      <ID>Vendor Id</ID>
+      <Name>Vendor Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="91f382e9-3302-40e6-b51d-710dcab86c84">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f57da47a-4d3a-421f-8fa6-a5604b9b32ef">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>vendor_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="ba9987eb-0d7e-4910-bce5-1d66ee35fd11">
+      <ID>Customer Id</ID>
+      <Name>Customer Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cb831756-17d2-40e3-bb93-971b61f97059">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e8c36e49-5920-43ce-807f-47c0896d95bb">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>customer_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="668ae9a3-4e4c-4355-b8db-c8323258b31b">
+      <ID>Originator Id</ID>
+      <Name>Originator Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3e7173e0-63fb-499d-8925-857750e9006c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fdabd38b-c3fa-4f4c-81a9-bf0aaebfc90a">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>originator_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="cb50b488-5879-4ee3-8019-f02ca4a61fa5">
+      <ID>Product Id</ID>
+      <Name>Product Id</Name>
+      <EstimatedCount>130</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="925ca82d-c578-4f70-813c-3a0c4f4b4526">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8dc25c71-8146-4771-bb7a-e62e65b8932a">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>product_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>List</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="38100539-66b6-4902-b0be-c226c2ac2b7e">
+      <ID>Salesman Id</ID>
+      <Name>Salesman Id</Name>
+      <EstimatedCount>29</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="132f20b9-3d4f-48b9-b3ec-7df9fe8942a2">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e06fb556-88a6-441f-9ee1-e8ae57704f09">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>salesman_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="9720770b-ef59-4ba4-a858-5829ee13852e">
+      <ID>Order Number</ID>
+      <Name>Order Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cf984997-84ef-4eb8-8d5b-ca6af6d1c40c">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7d457563-073e-4c70-ba3a-a543fcac1f8e">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>Order_Number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="e56f2551-e67e-46e9-b198-3c6cc232dd2f">
+      <ID>Sequence Number</ID>
+      <Name>Sequence Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9d179493-ee37-4980-b90d-4be8b638afd3">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fbb26b59-262a-435b-963c-d504bb084484">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>Sequence_Number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="6ab48b3a-2449-40cf-9f34-cfa9ff1ac456">
+      <ID>Nonstockitem</ID>
+      <Name>Nonstockitem</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="aeb6a0b9-b1e3-404e-8f19-c0b75ffaa486">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ca545e22-f86f-4685-81b7-5b0441cb8cde">
+            <TableID>dbo_fact_sales</TableID>
+            <ColumnID>nonstockitem</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="c3494339-8d3b-4f15-9f98-b557169cddaf">
+      <ID>Hierarchy</ID>
+      <Name>Orders</Name>
+      <Levels>
+        <Level dwd:design-time-name="ca3c661f-d587-45fd-80f5-fc2db5d7583e">
+          <ID>Order Number</ID>
+          <Name>Order Number</Name>
+          <SourceAttributeID>Order Number</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="028ba558-0817-46a9-adbd-67aa220f47c1">
+          <ID>Line Number</ID>
+          <Name>Line Number</Name>
+          <SourceAttributeID>Line Number</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

@@ -1,0 +1,16 @@
+use nomis_warehouse
+go
+truncate table dim_productcodes
+go
+insert into dim_productcodes (product_code, product_description, product_company_number,pc_category_id)
+SELECT AQC5AA,AQC6AA,A1AQNB,pc_category_id 
+from Nomis.NOMDBF95.PCDPHY01
+LEFT JOIN Nomis.NOMDBF95.FRA1REL4
+on A1C5AA = AQC5AA
+--and A1AQNB = AQAQNB
+INNER JOIN dim_product_code_category
+on A1FXTU = product_primary_category
+where AQAQNB = 1
+AND A1AQNB = 1
+go
+select * from dim_productcodes

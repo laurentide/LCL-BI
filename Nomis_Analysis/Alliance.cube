@@ -1,0 +1,2453 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9f8c9db7-cf3a-47ab-bcb1-57709d88a812" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Alliance</ID>
+  <Name>Alliance</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="66" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7745" scrolltop="-556" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="17357" y="16457" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_alliance_resource (dbo.dim_alliance_resource)" left="3200" top="11844" logicalid="31" controlid="1" masterid="0" hint1="0" hint2="0" width="3916" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800004c0f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_alliance_resource" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_alliance_task (dbo.dim_alliance_task)" left="3279" top="4444" logicalid="32" controlid="2" masterid="0" hint1="0" hint2="0" width="3757" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000ad0e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_alliance_task" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_product_code_category (dbo.dim_product_code_category)" left="24435" top="19494" logicalid="33" controlid="3" masterid="0" hint1="0" hint2="0" width="4604" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000fc11000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_product_code_category" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_product_code_subcategory (dbo.dim_product_code_subcategory)" left="17431" top="24620" logicalid="34" controlid="4" masterid="0" hint1="0" hint2="0" width="5054" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000be13000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_product_code_subcategory" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_productcodes (dbo.dim_productcodes)" left="17431" top="18648" logicalid="35" controlid="5" masterid="0" hint1="0" hint2="0" width="4604" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000fc110000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_productcodes" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="21735" top="20034" logicalid="36" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_productcodes-dim_product_code_category]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="5" sourceattachpoint="20" destattachpoint="25" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="24435" y="20433" />
+              <point x="23235" y="20433" />
+              <point x="23235" y="20434" />
+              <point x="22035" y="20434" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="19433" top="21920" logicalid="37" controlid="7" masterid="0" hint1="0" hint2="0" width="925" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_productcodes-dim_product_code_subcategory]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="5" sourceattachpoint="8" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="19958" y="24620" />
+              <point x="19958" y="23420" />
+              <point x="19733" y="23420" />
+              <point x="19733" y="22220" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_alliance_taskdetail (dbo.fact_alliance_taskdetail)" left="9516" top="11844" logicalid="38" controlid="8" masterid="0" hint1="0" hint2="0" width="3545" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000d90d000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_alliance_taskdetail" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="5308" top="8945" logicalid="39" controlid="9" masterid="0" hint1="0" hint2="0" width="6280" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_alliance_taskdetail-dim_alliance_task]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="8" sourceattachpoint="9" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="5707" y="9444" />
+              <point x="5707" y="10644" />
+              <point x="11288" y="10644" />
+              <point x="11288" y="11844" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="6816" top="13945" logicalid="40" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_alliance_taskdetail-dim_alliance_resource]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="8" sourceattachpoint="23" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7116" y="14344" />
+              <point x="9516" y="14344" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="12761" top="14044" logicalid="41" controlid="11" masterid="0" hint1="0" hint2="0" width="4970" height="5140" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_alliance_taskdetail-dim_productcodes]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="8" sourceattachpoint="18" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17431" y="18784" />
+              <point x="15246" y="18784" />
+              <point x="15246" y="14344" />
+              <point x="13061" y="14344" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Time (DimTime.Time)" left="3160" top="24025" logicalid="42" controlid="12" masterid="0" hint1="0" hint2="0" width="5371" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000fb14000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DimTime_Time" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="5996" top="16544" logicalid="43" controlid="13" masterid="0" hint1="0" hint2="0" width="5592" height="7981" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_alliance_taskdetail-Time]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="12" destid="8" sourceattachpoint="10" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6395" y="24025" />
+              <point x="6395" y="20435" />
+              <point x="11288" y="20435" />
+              <point x="11288" y="16844" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_alliance_work (dbo.dim_alliance_work)" left="9436" top="4444" logicalid="44" controlid="14" masterid="0" hint1="0" hint2="0" width="5001" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800008913000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_alliance_work" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="6736" top="6545" logicalid="45" controlid="15" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_alliance_task-dim_alliance_work]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="14" destid="2" sourceattachpoint="26" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9436" y="6944" />
+              <point x="7036" y="6944" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_alliance_rate (dbo.dim_alliance_rate)" left="-2745" top="11844" logicalid="46" controlid="16" masterid="0" hint1="0" hint2="0" width="3545" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000d90d000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_alliance_rate" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-1372" top="9144" logicalid="47" controlid="17" masterid="0" hint1="0" hint2="0" width="5729" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_alliance_task-dim_alliance_rate]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="16" destid="2" sourceattachpoint="6" destattachpoint="3" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-973" y="11844" />
+              <point x="-973" y="10644" />
+              <point x="4057" y="10644" />
+              <point x="4057" y="9444" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_service_goals (dbo.fact_service_goals)" left="3658" top="19244" logicalid="50" controlid="20" masterid="0" hint1="0" hint2="0" width="3000" height="2381" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b00004d090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_service_goals" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4346" top="21325" logicalid="51" controlid="21" masterid="0" hint1="0" hint2="0" width="1112" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_service_goals-Time]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="12" destid="20" sourceattachpoint="4" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4745" y="24025" />
+              <point x="4745" y="22825" />
+              <point x="5158" y="22825" />
+              <point x="5158" y="21625" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4759" top="16345" logicalid="52" controlid="22" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_service_goals-dim_alliance_resource]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="20" sourceattachpoint="7" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="5158" y="16844" />
+              <point x="5158" y="19244" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_bookings (dbo.fact_bookings)" left="10931" top="24025" logicalid="53" controlid="23" masterid="0" hint1="0" hint2="0" width="4101" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800000510000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_bookings" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_sales (dbo.fact_sales)" left="3927" top="31425" logicalid="54" controlid="24" masterid="0" hint1="0" hint2="0" width="3836" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000fc0e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_sales" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_servicecategory_goals (dbo.fact_servicecategory_goals)" left="16943" top="13389" logicalid="55" controlid="25" masterid="0" hint1="0" hint2="0" width="4035" height="2811" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000c30f0000fb0a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_servicecategory_goals" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="14732" top="20035" logicalid="56" controlid="26" masterid="0" hint1="0" hint2="0" width="2999" height="6790" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_bookings-dim_productcodes]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="23" sourceattachpoint="24" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17431" y="20434" />
+              <point x="16232" y="20434" />
+              <point x="16232" y="26525" />
+              <point x="15032" y="26525" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7463" top="21135" logicalid="57" controlid="27" masterid="0" hint1="0" hint2="0" width="10268" height="13090" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_sales-dim_productcodes]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="24" sourceattachpoint="28" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17431" y="21534" />
+              <point x="12597" y="21534" />
+              <point x="12597" y="33925" />
+              <point x="7763" y="33925" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8231" top="26126" logicalid="59" controlid="29" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_bookings-Time]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="12" destid="23" sourceattachpoint="27" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8531" y="26525" />
+              <point x="10931" y="26525" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="5446" top="28526" logicalid="60" controlid="30" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_sales-Time]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="12" destid="24" sourceattachpoint="9" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="5845" y="29025" />
+              <point x="5845" y="31425" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="17010" top="15900" logicalid="63" controlid="33" masterid="0" hint1="0" hint2="0" width="923" height="3248" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_servicecategory_goals-dim_productcodes]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="25" sourceattachpoint="0" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17533" y="18648" />
+              <point x="17533" y="17424" />
+              <point x="17310" y="17424" />
+              <point x="17310" y="16200" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8231" top="15594" logicalid="65" controlid="35" masterid="0" hint1="0" hint2="0" width="9012" height="9131" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_servicecategory_goals-Time]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="12" destid="25" sourceattachpoint="19" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8531" y="24325" />
+              <point x="12737" y="24325" />
+              <point x="12737" y="15894" />
+              <point x="16943" y="15894" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-7745</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-556</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-2745</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>4444</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>60</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="40457e48-56e2-4139-88c6-cb4c1e855a00">
+      <ID>Dim Alliance Task</ID>
+      <Name>Dim Alliance Task</Name>
+      <DimensionID>Dim Alliance Task</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="88693b78-3dab-4925-a762-173b9ea78148">
+          <AttributeID>Dim Alliance Task</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0fc87d23-5f5c-44c4-9b21-a10911aae98c">
+          <AttributeID>Task No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="97205679-a8d8-4b5a-9723-474c5e46be7e">
+          <AttributeID>Task Type Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4572b55a-168f-4859-8028-b5e5bbd44742">
+          <AttributeID>Task Type</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="07bceb82-b1af-478a-92e4-91ecaf222177">
+          <AttributeID>Rate Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ecb2b546-b893-4e27-818b-011818e676b0">
+          <AttributeID>Task Status Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="500658ce-317b-4175-8354-efcc235501e4">
+          <AttributeID>Task Status</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a725f969-86ba-4bad-a797-ceb9c44d8893">
+          <AttributeID>Description</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9ecb7b00-82b6-4da5-8861-8d8824b51e7c">
+          <AttributeID>Scheduled Start Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="797354c0-279a-465a-824b-9a554c159c52">
+          <AttributeID>Scheduled End Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3ae6cd57-33e8-49d5-8f6f-d7e903059d7b">
+          <AttributeID>Row Status Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="769d0294-b149-4c4e-a248-ef03f1e01a10">
+          <AttributeID>Core Product Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cafe37d5-12c5-429f-b933-afc27a4b426c">
+          <AttributeID>Cost Over Time Flag</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="822ef0ed-14e1-411a-82dc-9b5232fccf78">
+          <AttributeID>Sell Overtime Flag</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e7cd97a6-81df-4bf6-b1ae-707b0af12639">
+          <AttributeID>Work No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="879f2232-0fc9-4c51-bc5f-12c32de37a9a">
+          <AttributeID>Work Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5916b267-1ceb-43a6-a992-1a2f7f12add9">
+          <AttributeID>Rate Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="5dcf7e0b-fc4c-4041-8a76-48a129f066d9">
+      <ID>Dim Productcodes</ID>
+      <Name>Dim Productcodes</Name>
+      <DimensionID>Dim Productcodes</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="929a220f-376d-4ae9-90ec-dd084241bb2a">
+          <AttributeID>Dim Productcodes</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="94a36de5-9143-45b7-85f9-7adb0075cc58">
+          <AttributeID>Product Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="040f122a-04cd-43f6-9ddc-6ae514f1c8c1">
+          <AttributeID>Product Description</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0f08b0ab-d9de-40be-be01-a7baddc14e60">
+          <AttributeID>Dim Product Code Subcategory</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6a5bdbd3-bb71-416d-a259-0de195d13607">
+          <AttributeID>Product Primary Subcategory</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="146882b6-7330-4085-907e-8518c4500c1b">
+          <AttributeID>Dim Product Code Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9b702b1d-48c9-4dfe-93c5-7b97c479b2f0">
+          <AttributeID>Product Primary Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="74856f91-6bbb-4871-89d9-40e6a4d092f3">
+          <AttributeID>Product Service Catgory</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="67e54658-e147-4d7d-b37a-19feeddaaf50">
+          <AttributeID>Department Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="514f4b6e-f706-42bb-b07c-2b1a89b9d7af">
+          <AttributeID>Quote Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9d779ece-957a-42e6-bc7e-68619fc22840">
+          <AttributeID>Pc Nomis Secondary Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="74292136-8fbc-4be4-b462-a6fda9a03963">
+          <AttributeID>Pc Servicecategory Id</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="f828ff52-b30f-46f4-80a7-8b856e84bf4c">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="f2ef5fe6-d3fa-422a-899f-5a09edb36598">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="20d4de93-2dba-4d05-8906-af6b2b10ed7c">
+          <HierarchyID>Hierarchy 1 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="c37679fb-1ce8-4c6b-8116-14294f3e4907">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="64a6f79a-acd1-48b2-ad47-66d15eb29efa">
+      <ID>Dim Alliance Work</ID>
+      <Name>Dim Alliance Work</Name>
+      <DimensionID>Dim Alliance Work</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1fbeeb06-2af9-40e9-b800-8ef923170624">
+          <AttributeID>Dim Alliance Work</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c615475d-8733-4185-bc6f-4726877d2fd9">
+          <AttributeID>Work No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bc6a1312-5954-48e2-bdd0-3a75a9679850">
+          <AttributeID>Work Type Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d5fa21dd-235d-40b8-a5d9-4b842701c7ff">
+          <AttributeID>Work Type</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b7f2bef5-f0e9-4d2e-b60b-8c40a8e98eaa">
+          <AttributeID>Core Warehouse Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="87fc9ffe-5d90-44c2-a9d1-a6926d3799b1">
+          <AttributeID>Core Division Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a4865a5b-e4de-4769-bb34-4af8080502b4">
+          <AttributeID>Site No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="28a76d3e-98f1-4a22-8311-7ec4777b09d9">
+          <AttributeID>Bill To Site Location No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="70401205-c7dd-408f-a105-a6018b1f31ca">
+          <AttributeID>Ship To Site Location No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="baec4245-2a73-4e38-ae3c-056f3aa85511">
+          <AttributeID>Enduser Site Location No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e5e799e5-882c-46fc-8269-399d7084ea82">
+          <AttributeID>Description</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b2565e7e-65ce-41a4-b929-483510985303">
+          <AttributeID>Dispatcher Resource No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bcdbf186-f329-4603-ae4a-c6bc1bacf1ae">
+          <AttributeID>Work Status Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="425db5a5-2da2-42f5-b3c7-dcc66a4294f5">
+          <AttributeID>Stat Type</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="02660551-149f-4656-82a6-c75336d91749">
+          <AttributeID>Service Requested Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="18428499-5e8e-4d93-9ea5-24b04e65064f">
+          <AttributeID>Serv Type</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="50306889-494d-4084-8ec3-663bf7224a8a">
+          <AttributeID>Scheduled Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="77212a8d-dcaf-48b2-9911-eea67e8efefd">
+          <AttributeID>Requested Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fb512486-e95a-416b-a979-3017c23042ac">
+          <AttributeID>Comments</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ae5e6dac-ff97-4be5-9e0c-5db3e0a4418f">
+          <AttributeID>Completion Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ef1a5ca7-9755-48e8-bf17-cb64d24ab840">
+          <AttributeID>Customer Purchase Order Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8e931f94-1301-4868-ad7c-667cedd24d9b">
+          <AttributeID>Agreement No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="04d005ff-8ae9-4188-b18e-443e5267d4fc">
+          <AttributeID>Core Sales Order Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="07ad310e-f969-4a0f-8609-d82a2ceb926d">
+          <AttributeID>Invoice Message No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e091c4bf-8afd-46d1-b1d8-6cf740c0ae47">
+          <AttributeID>Invoice Note</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="027bd02a-2007-4c2c-9572-5de5ed96f1ec">
+          <AttributeID>Row Status Cd</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="621bc30a-1f43-497e-9840-c660aeb719dd">
+      <ID>Dim Alliance Resource</ID>
+      <Name>Dim Alliance Resource</Name>
+      <DimensionID>Dim Alliance Resource</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="dd83d53a-72df-4cb1-9180-01dc23562e10">
+          <AttributeID>Dim Alliance Resource</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="abb8bbf1-8744-4a13-9134-8e10e9d1a2cf">
+          <AttributeID>Resource No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="827e996e-9201-4b06-8665-dc34fb7dcecc">
+          <AttributeID>Domain User Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ad850799-7b10-47d3-8e0c-9632107c891d">
+          <AttributeID>Resource Type Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5831d6c6-863e-4afb-ae17-1023622a30cd">
+          <AttributeID>Core Division Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="681f9c89-cddd-48f9-b958-e95833d19363">
+          <AttributeID>Resource Status Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c0c3d193-ca8d-4de4-88ca-21a40e6d759b">
+          <AttributeID>Title</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ea8b9f37-c572-48cc-a790-5fcc6c3afaf6">
+          <AttributeID>Department No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b138d2a1-fef0-45e2-834d-ff4039b027ba">
+          <AttributeID>Default Rate Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5453a21c-84be-4686-81bb-d14b0fc5c25f">
+          <AttributeID>Manager Resource No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="98cee71e-6546-45d7-8f7d-16023c319191">
+          <AttributeID>Contact No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ad159788-b6f9-48dc-ad79-d416a1d3b1d5">
+          <AttributeID>Manager Flag</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d3687ba6-95e1-4e6a-b5b5-f5c32694c381">
+          <AttributeID>Over Time Payout Flag</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c294ab48-702e-46b2-b724-7ffa271688bb">
+          <AttributeID>Core Vendor Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4034005a-d576-4292-84e9-dd9ebdb34b40">
+          <AttributeID>Row Status Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a3ee9145-ab1d-4078-a57e-483219305858">
+          <AttributeID>Department Name</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="7b8b7199-3279-4e01-ae81-6fb3b2749715">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="67059f2c-a68a-40ab-85e8-b5367f67fe7f">
+      <ID>Fact Alliance Taskdetail</ID>
+      <Name>Fact Alliance Taskdetail</Name>
+      <DimensionID>Fact Alliance Taskdetail</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="dc63cc89-0fe6-487e-8952-57fd8e7a247b">
+          <AttributeID>Fact Alliance Taskdetail</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a50a0d1d-3ab2-4a52-9fe9-75171c67dad9">
+          <AttributeID>Task No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="11fc7992-8b4b-46f3-8b91-ad775085fc3c">
+          <AttributeID>Resource No</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5ed940d1-6147-4e18-a88e-9ab38194122a">
+          <AttributeID>Duration</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c274850e-de6a-459a-b9fc-d7a4dfdc4718">
+          <AttributeID>Billable Duration</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d3cffaaa-944d-4cff-ab13-c851870d85c4">
+          <AttributeID>After Hours Flag</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="803e65ff-52b1-4f8a-b105-a23d7545610b">
+          <AttributeID>Cost Time Factor Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0de49a31-dbdd-47e6-947a-1036bc96cd51">
+          <AttributeID>Sell Time Factor Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="15003f2e-a4e8-4472-be88-daaf66b7f682">
+          <AttributeID>Coverage Class Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bb856a10-c284-4d9d-9e39-e906c3af9f3b">
+          <AttributeID>Resolution</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="53edef7d-e473-4d21-9c8f-f6d814ce6c8a">
+          <AttributeID>Core Product Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b8927610-02f9-49c1-b328-20b9d7d57b32">
+          <AttributeID>Invoice Status Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b0df2c92-e096-4f5e-b6a3-db9911e43b08">
+          <AttributeID>Task Complete Flag</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="45e5fc66-fed2-4371-aa88-4968025e6d80">
+          <AttributeID>Core State Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9372d9af-771c-4def-b592-7a1843d3b652">
+          <AttributeID>Row Status Cd</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8abbcbb9-5353-441d-b0f1-020de00f78c9">
+          <AttributeID>Cost Time Factor</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8487210b-99d5-4531-ad8d-e6ac418f08e3">
+          <AttributeID>Selltime Factor</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6022dbfe-82a0-49af-8dce-b3728bed9b33">
+          <AttributeID>Sell Duration</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cac5423e-cccd-47c3-a237-82e0a301caa9">
+          <AttributeID>Cost Duration</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="42f517de-5ddc-413f-872b-f988c6d5f960">
+          <AttributeID>Task Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8f23eaaa-8308-4825-8067-d31c23b24a9c">
+          <AttributeID>Resource Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4e222c3d-a4a9-4dd9-95a1-6c2792c85357">
+          <AttributeID>Product Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c4164213-e6cb-4ff8-b881-a1351cc18b2d">
+          <AttributeID>Time In</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="50a09901-6e47-451c-8b30-d8272bda0a8e">
+      <ID>Time</ID>
+      <Name>Time</Name>
+      <DimensionID>Time</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="70e3beb5-dc7a-445d-b8fc-778749d30a08">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c568a0b3-7715-4b49-9a76-6d0a514a5711">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="01f024f9-41b3-4211-9e28-8cd85f470838">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e5f5c8ab-13ce-44a2-bfea-69823feb178f">
+          <AttributeID>Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ba5278a2-7a76-404d-8214-3438942d0f06">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9dfec76a-516b-4152-8071-2e624b14b1e0">
+          <AttributeID>Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1f7cdf14-0cc7-48a7-af0a-736a62c58f26">
+          <AttributeID>Day Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f7ca4111-abe2-4353-a460-592b9af9f25e">
+          <AttributeID>Day Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c2eba383-5133-48e6-88cb-fde47f4a0811">
+          <AttributeID>Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="48be029b-8b9a-4da4-a95b-639802fa5266">
+          <AttributeID>Week Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3d11ea25-ee33-4423-b556-4b38e73eea06">
+          <AttributeID>Month Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d84be7ce-85c4-41bb-8d85-46b737ce9dc5">
+          <AttributeID>Month Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9161aa8b-8417-4ec5-b49b-2b9997019952">
+          <AttributeID>Quarter Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b22a0271-7485-45ab-99fa-c50edb6091b4">
+          <AttributeID>Fiscal Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6827e5e1-5d3c-40fd-b370-e500cf68c3c2">
+          <AttributeID>Fiscal Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d7e4fea3-e20a-4288-8280-7c6a016c07ee">
+          <AttributeID>Fiscal Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="43a94f4f-76b7-4dde-81d6-f051f9971683">
+          <AttributeID>Fiscal Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="80a7fbd0-45da-4b02-bd59-9e5804356b15">
+          <AttributeID>Fiscal Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f5f0c73a-7fbf-4987-bd44-4a88b56cd3e8">
+          <AttributeID>Fiscal Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="474f4f69-7317-46fa-bc49-80c9711d92d6">
+          <AttributeID>Fiscal Day Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9ecc1d47-7869-45e0-8501-54d975f9a455">
+          <AttributeID>Fiscal Day Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e4dc5322-3ae3-4cff-b2ce-7a93daf18370">
+          <AttributeID>Fiscal Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9f70fef1-e734-45e7-bfb3-52fce1c60057">
+          <AttributeID>Fiscal Week Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2a4dde18-70dc-43a5-9d69-a205f9abd8f2">
+          <AttributeID>Fiscal Month Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c1af26e2-b2fc-41d6-862e-30da0a0209e5">
+          <AttributeID>Fiscal Month Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ee46db48-19b0-4f31-a18a-abd331854d98">
+          <AttributeID>Fiscal Quarter Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="14b6222f-629d-4241-a169-9e386fa2b691">
+          <AttributeID>Fiscal Hierarchy Time Calculations</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="58a100f3-6130-42ce-b671-b0145435afd6">
+          <AttributeID>Fiscal Hierarchy Time Calculations 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7d0800fc-8035-44de-8df5-8faa03ed44ac">
+          <AttributeID>Fiscal Hierarchy Time Calculations 2</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8e543347-0d27-4ff0-9ac5-fdb6748a4dee">
+          <AttributeID>Fiscal Hierarchy Time Calculations 3</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1f85e56c-19d1-485e-aead-86353596c85e">
+          <AttributeID>Fiscal Hierarchy Time Calculations 4</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1575edb1-be2b-4c89-a9c4-ada002ac5a18">
+          <AttributeID>Work Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="17fb1b13-b9e0-45eb-a646-44da83bdef58">
+          <AttributeID>Work Month</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="7e374f40-15b6-4301-84d2-ff5a4e8310f9">
+          <HierarchyID>Year -  Quarter -  Month -  Date</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="2cb14ac5-0154-43d9-b780-aea5a81c68b3">
+          <HierarchyID>Year -  Week -  Date</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="ad1eb1e4-d975-4b01-93b5-cbb4d777d2c2">
+          <HierarchyID>Fiscal Year -  Fiscal Quarter -  Fiscal Month -  Fiscal Day</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="4275cbf1-5629-44a7-b275-73ad1beb5605">
+          <HierarchyID>Fiscal Year -  Fiscal Week -  Fiscal Day</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="0f125e0e-1eb2-4f4d-9a55-3e2a5e733d28">
+      <ID>Fact Alliance Taskdetail</ID>
+      <Name>Fact Alliance Taskdetail</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="9c269437-d0db-4770-95b6-047e3a317a06">
+          <ID>Duration</ID>
+          <Name>Duration</Name>
+          <Source dwd:design-time-name="f2c450ac-57e2-4171-b866-3f34990c0a20">
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="46787463-ac45-4ae5-b0a0-81647844cea4">
+              <TableID>dbo_fact_alliance_taskdetail</TableID>
+              <ColumnID>Duration</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a20daf45-4483-4545-8458-4d3077540edb">
+          <ID>Billable Duration</ID>
+          <Name>Billable Duration</Name>
+          <Source dwd:design-time-name="803a6bb8-f2ba-4af6-bdab-b4bd2b6e83ff">
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="84e711c6-8cce-44b6-a5bf-287f502b97ef">
+              <TableID>dbo_fact_alliance_taskdetail</TableID>
+              <ColumnID>BillableDuration</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c6b66021-423f-40e0-ae22-3ba90323b876">
+          <ID>Cost Time Factor</ID>
+          <Name>Cost Time Factor</Name>
+          <AggregateFunction>Min</AggregateFunction>
+          <Source dwd:design-time-name="b31c639c-8926-4e40-85c7-2de2ac736abc">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1254a89f-955d-44a6-aff6-43cdf11f517f">
+              <TableID>dbo_fact_alliance_taskdetail</TableID>
+              <ColumnID>costTimeFactor</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="236d08eb-55a7-482e-b868-b83e8df2390d">
+          <ID>Selltime Factor</ID>
+          <Name>Selltime Factor</Name>
+          <AggregateFunction>Min</AggregateFunction>
+          <Source dwd:design-time-name="73a6f837-f1df-4657-8ba1-84e8ec298d15">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5533a876-53da-4c39-a67a-4a9bb5bfaef1">
+              <TableID>dbo_fact_alliance_taskdetail</TableID>
+              <ColumnID>selltimeFactor</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e5f26361-1acb-4668-b680-1d827fe68942">
+          <ID>Sell Duration</ID>
+          <Name>Sell Duration</Name>
+          <Source dwd:design-time-name="6b0ab6a5-bfe7-46ee-893f-c47c1ba71e5a">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="286fdc15-3778-4638-885e-14eebe89445b">
+              <TableID>dbo_fact_alliance_taskdetail</TableID>
+              <ColumnID>Sell_Duration</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e1417d78-f3c9-4bb3-8597-3a3562a9c4e4">
+          <ID>Cost Duration</ID>
+          <Name>Cost Duration</Name>
+          <Source dwd:design-time-name="618586bc-c141-4d64-9f02-4387f408435b">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="85152b94-fa7c-4d54-8e52-f7d007aff39a">
+              <TableID>dbo_fact_alliance_taskdetail</TableID>
+              <ColumnID>Cost_Duration</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e7e82f59-43f9-4fd0-ac2b-887cf81226b2">
+          <CubeDimensionID>Dim Alliance Resource</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b67cc2bf-d2bc-4282-aaa2-e21b7976ed41">
+              <AttributeID>Dim Alliance Resource</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d00a577c-d1ec-4aa9-845c-4c3ac0b07cd3">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="64a1c493-ceaf-48fb-a981-ccc42d235fce">
+                    <TableID>dbo_fact_alliance_taskdetail</TableID>
+                    <ColumnID>resource_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="976df4ff-49cb-497e-a18c-2e8bd277b703">
+          <CubeDimensionID>Fact Alliance Taskdetail</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b9f4eb47-6eed-49d5-8dde-d076579b4d82">
+              <AttributeID>Fact Alliance Taskdetail</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d1549a27-b478-42ba-9f24-196f5210456f">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5fb59457-90f0-450a-bdd3-bad3ba327f3f">
+                    <TableID>dbo_fact_alliance_taskdetail</TableID>
+                    <ColumnID>TaskDetailNo</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="4671188a-b46b-45fa-a66f-6015c4c9a5af">
+          <CubeDimensionID>Dim Alliance Work</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bd266d7a-00a7-4982-a1ae-76de9d969afe">
+              <AttributeID>Dim Alliance Work</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Alliance Task</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Work Id</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="51f19a7b-5314-423c-a83c-6e5022ebe8da">
+          <CubeDimensionID>Dim Alliance Task</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e052078e-a293-4dfd-969e-bfc379521f0c">
+              <AttributeID>Dim Alliance Task</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c2e78217-12ff-4a7a-ba46-81b276613253">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c94ded93-6b25-4b77-b844-638177f8f95b">
+                    <TableID>dbo_fact_alliance_taskdetail</TableID>
+                    <ColumnID>task_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1b81edc7-aa1c-434e-86d4-e286af065294">
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="631abeac-d857-44f0-8bc9-6980c98776d2">
+              <AttributeID>Product Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8783bbe6-6b47-4def-acfd-3a1b6aaf9014">
+                  <DataType>WChar</DataType>
+                  <DataSize>2</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="51aea449-4cf9-49a8-9fcd-d316b776a8bc">
+                    <TableID>dbo_fact_alliance_taskdetail</TableID>
+                    <ColumnID>CoreProductCd</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="0326cc6a-5cac-4eea-a247-939824a35930">
+              <AttributeID>Dim Productcodes</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7e01c7cc-f319-4408-ba24-5feabca92b1b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="41e38aa7-8ba2-4801-b9a8-43f18f5effd4">
+                    <TableID>dbo_fact_alliance_taskdetail</TableID>
+                    <ColumnID>product_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c89aa6a5-9132-4911-a14d-c53e35e9daee">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6da106e0-70c3-4505-8913-79e399a2d5ba">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2f69aa5b-8069-4eb7-841b-15d736ffcd10">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6ff73ca4-0d2f-4214-b9af-bebf5e3b8cd1">
+                    <TableID>dbo_fact_alliance_taskdetail</TableID>
+                    <ColumnID>TimeIn</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="326f3fb7-fb6c-4604-81d2-de8207085892">
+      <ID>Fact Service Goals</ID>
+      <Name>Fact Service Goals</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="eda0ca44-e0cf-4930-b1a0-554a91ce554e">
+          <ID>Hours Goal</ID>
+          <Name>Hours Goal</Name>
+          <Source dwd:design-time-name="c79f3307-e4ec-47bb-858c-2d8010cc0b6a">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c4ed5678-d84c-474f-8462-f9d93d8a3e56">
+              <TableID>dbo_fact_service_goals</TableID>
+              <ColumnID>Hours_Goal</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="395694c9-74ba-4234-b0d8-3313ed7872df">
+          <CubeDimensionID>Dim Alliance Resource</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="13dcb749-2a58-4af3-b9b6-d18bc2d59c86">
+              <AttributeID>Dim Alliance Resource</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="28c13cc0-f689-403c-b656-77c10c49ca52">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="066a16fa-ce74-4e81-a301-440b0fbcd2fe">
+                    <TableID>dbo_fact_service_goals</TableID>
+                    <ColumnID>resource_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bb42ee3a-0c07-4c83-a6b9-278f1bb3643a">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c20c2df5-8c99-413b-bb6f-9dce8a436625">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a9cdc786-b522-4cbf-874d-baece485a10d">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c1242972-d3ca-4959-97e2-3ec78438b7cb">
+                    <TableID>dbo_fact_service_goals</TableID>
+                    <ColumnID>fiscal_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="3e693b31-2749-40c3-aff4-4ef4e9e32d09">
+      <ID>Fact Sales</ID>
+      <Name>Fact Sales</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="63212b42-d6fd-44a7-a4dc-69cef79cd7c1">
+          <ID>Selling Price</ID>
+          <Name>Sell - Invoiced</Name>
+          <Source dwd:design-time-name="dac4f8d3-03fc-4c4b-b5bb-9815f9d8da41">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ebf7b7dd-7bcc-4c65-9bdd-b6e9b3d758b8">
+              <TableID>dbo_fact_sales</TableID>
+              <ColumnID>Selling_price</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9bdbd1b4-acb0-4b1e-a61f-f973cf615af9">
+          <ID>Cost</ID>
+          <Name>Cost</Name>
+          <Source dwd:design-time-name="46a9e340-7f0a-43d3-809b-69de4ea05968">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2848a84b-3239-4e81-b2fd-3a20ef871126">
+              <TableID>dbo_fact_sales</TableID>
+              <ColumnID>Cost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e4128db2-04e7-4bf7-b6c1-3b6dfafe957d">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="12feaaf3-2bdc-4b03-9cf4-1842fc332294">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cce96545-c161-487d-a49a-37a7b65975d8">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9ae0ffc3-379e-4da3-8ad0-e3d02ea33198">
+                    <TableID>dbo_fact_sales</TableID>
+                    <ColumnID>invoice_date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f11e9029-6c57-4c14-b30e-80189ce5b78d">
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f0d8b347-7437-4df4-bf90-ab31911621e1">
+              <AttributeID>Dim Productcodes</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="026f44b7-24b2-439b-80ca-83fd051a8b76">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="50fcc608-f8cf-401a-9c7a-6a429f9494e8">
+                    <TableID>dbo_fact_sales</TableID>
+                    <ColumnID>product_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="4c809c82-b081-48b2-9844-ff5d16815868">
+      <ID>Fact Bookings</ID>
+      <Name>Fact Bookings</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="df69ee6f-8b21-47f0-aba7-8e68d78156c5">
+          <ID>Selling Price - Fact Bookings</ID>
+          <Name>Sell - Bookings</Name>
+          <Source dwd:design-time-name="2b34c7a3-3d03-42f3-ad11-ad470c209e06">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8591fbee-2d64-4566-8016-9246a9e5cedb">
+              <TableID>dbo_fact_bookings</TableID>
+              <ColumnID>Selling_price</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4ed3ec5e-c9c4-4a5c-912e-b53d1f219d53">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ee083a07-8537-4132-803d-bc948e256cea">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a2cc4ae4-3520-43ba-94b1-7dcf110cbb48">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1813f80d-2403-48ce-937c-92dbd8112a41">
+                    <TableID>dbo_fact_bookings</TableID>
+                    <ColumnID>booking_date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="446fa5fb-4fc0-4201-b281-0dab0fd152dc">
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="91bc207e-de5b-4a73-8709-cd1c72fc23c9">
+              <AttributeID>Dim Productcodes</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f2d9c2f3-6aa2-4f5a-bc11-f892d03d6d67">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="193ec381-076b-47a1-ada0-90adf7f05012">
+                    <TableID>dbo_fact_bookings</TableID>
+                    <ColumnID>product_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="0ef5f0d1-d2f8-485e-b050-4c5b62d8d6dd">
+      <ID>Fact Servicecategory Goals</ID>
+      <Name>Fact Servicecategory Goals</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="e4498b10-cbe5-41d1-9197-e971c6861122">
+          <ID>Goal</ID>
+          <Name>Goal</Name>
+          <Source dwd:design-time-name="0e9b0dde-0f72-43ed-8215-31312228d66e">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="60980684-e000-4cfc-b7a1-8c12a10197ab">
+              <TableID>dbo_fact_servicecategory_goals</TableID>
+              <ColumnID>Goal</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e676b0f8-b328-47bc-a0ce-8d13c1480904">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8db10d09-4ae4-461c-aa33-27608b67f4ff">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="484c5716-da0f-42b6-8abb-f480fd240b20">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b792ca69-2a63-4550-aac1-d2b4ea6d3373">
+                    <TableID>dbo_fact_servicecategory_goals</TableID>
+                    <ColumnID>fiscal_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="e6651444-d9b8-4be6-992f-ebb6412c4acf">
+              <AttributeID>Fiscal Month</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c5868913-a165-4427-ac6e-2a3440ffc27b">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d06a8a50-3c98-4eab-970e-c6c43bdb06b2">
+                    <TableID>dbo_fact_servicecategory_goals</TableID>
+                    <ColumnID>fiscal_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="35a09849-0b06-44af-aec5-1ccb55b64185">
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="668fbab1-ea6a-42bd-829e-d70cbe37ceb3">
+              <AttributeID>Pc Servicecategory Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d53a7fb3-3ba0-4fa4-a621-3306db8c3647">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a67a6942-8d9b-47e3-86e8-955f327e5eed">
+                    <TableID>dbo_fact_servicecategory_goals</TableID>
+                    <ColumnID>pc_servicecategory_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="f1352be4-1130-4a41-9123-fc0197b8aeb7">
+    <DataSourceViewID>Alliance</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="0d0de0e3-3ab0-4619-9530-8a67aac7f27d">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE;           
+CREATE SET CURRENTCUBE.[Non Billable]
+ AS [Dim Productcodes].[Product Code].&amp;[ZZ];           
+CREATE SET CURRENTCUBE.[Billable]
+ AS [Dim Productcodes].[Product Code].[All].Children - [Dim Productcodes].[Product Code].&amp;[ZZ] - [Dim Productcodes].[Product Code].&amp;[SA]
+- [Dim Productcodes].[Product Code].&amp;[TS];          
+CREATE SET CURRENTCUBE.[SA and TS]
+ AS {[Dim Productcodes].[Product Code].&amp;[TS],[Dim Productcodes].[Product Code].&amp;[SA],[Dim Productcodes].[Product Code].&amp;[PV]};          
+CREATE SET CURRENTCUBE.[OT2]
+ AS [Fact Alliance Taskdetail].[Cost Time Factor].&amp;[2.];   
+CREATE SET CURRENTCUBE.[OT1.5]
+ AS [Fact Alliance Taskdetail].[Cost Time Factor].&amp;[1.5];            
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Non Billable Hours]
+ AS sum([Non Billable],[Measures].[Duration]), 
+VISIBLE = 1;            
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Billable]
+ AS sum([Billable],[Measures].[Duration]), 
+VISIBLE = 1;    
+CREATE MEMBER CURRENTCUBE.[MEASURES].[SA and TS]
+ AS sum([SA and TS],[Measures].[Duration]), 
+VISIBLE = 1;          
+CREATE MEMBER CURRENTCUBE.[MEASURES].[OT1.5]
+ AS Aggregate([OT1.5],[Measures].[Duration]), 
+VISIBLE = 1;          
+CREATE MEMBER CURRENTCUBE.[MEASURES].[OT2.0]
+ AS Aggregate([OT2],[Measures].[Duration]), 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[MEASURES].[OT1.5 Billable]
+ AS aggregate([OT1.5]*[Billable],[Measures].[Duration]), 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[MEASURES].[OT1.5 Non Billable]
+ AS aggregate([OT1.5]*[Non Billable],[Measures].[Duration]), 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[MEASURES].[OT2.0 Billable]
+ AS aggregate([OT2]*[Billable],[Measures].[Duration]), 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[MEASURES].[OT2.0 Non Billable]
+ AS aggregate([OT2]*[Non Billable],[Measures].[Duration]), 
+VISIBLE = 1;          
+
+
+/*
+  Begin Time Intelligence script for the [Time].[Fiscal Hierarchy] hierarchy.
+*/
+
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date] 
+  As "NA"; 
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date] 
+  As "NA"; 
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Month to Date] 
+  As "NA"; 
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Twelve Months to Date] 
+  As "NA"; 
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Twelve Month Moving Average] 
+  As "NA"; 
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Six Month Moving Average] 
+  As "NA"; 
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Three Month Moving Average] 
+  As "NA"; 
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Year Over Year Growth %] 
+  As "NA"; 
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Year Over Year Growth] 
+  As "NA"; 
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Quarter Over Quarter Growth %] 
+  As "NA"; 
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Quarter Over Quarter Growth] 
+  As "NA"; 
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Month Over Month Growth %] 
+  As "NA"; 
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Month Over Month Growth] 
+  As "NA"; 
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Day Over Day Growth %] 
+  As "NA"; 
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Day Over Day Growth] 
+  As "NA"; 
+  
+
+
+// Year to Date
+  (
+    [Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date],
+    [Time].[Fiscal Year].[Fiscal Year].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Measures].[Goal]
+    }
+   
+  ) =
+
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember } *
+             PeriodsToDate(
+                            [Time].[Fiscal Hierarchy].[Fiscal Year],
+                            [Time].[Fiscal Hierarchy].CurrentMember
+             )
+  ); 
+
+  
+// Quarter to Date
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) =
+
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember } *
+             PeriodsToDate(
+                            [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                            [Time].[Fiscal Hierarchy].CurrentMember
+             )
+  ); 
+
+  
+// Month to Date
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 4].[Month to Date],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) =
+
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember } *
+             PeriodsToDate(
+                            [Time].[Fiscal Hierarchy].[Fiscal Month],
+                            [Time].[Fiscal Hierarchy].CurrentMember
+             )
+  ); 
+
+  
+// Twelve Months to Date
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 4].[Twelve Months to Date],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) =
+    
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember } *
+             {
+               ParallelPeriod(
+                               [Time].[Fiscal Hierarchy].[Fiscal Month],
+                               11,
+                               [Time].[Fiscal Hierarchy].CurrentMember
+               ) : [Time].[Fiscal Hierarchy].CurrentMember
+             }
+  ); 
+
+  
+// Twelve Month Moving Average  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 4].[Twelve Month Moving Average],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) =
+    
+  Avg(
+       {
+         ParallelPeriod(
+                         [Time].[Fiscal Hierarchy].[Fiscal Month],
+                         11,
+                         [Time].[Fiscal Hierarchy].CurrentMember
+         ) : [Time].[Fiscal Hierarchy].CurrentMember
+       },
+      [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember
+  ); 
+
+  
+// Six Month Moving Average  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 4].[Six Month Moving Average],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) =
+    
+  Avg(
+       {
+         ParallelPeriod(
+                         [Time].[Fiscal Hierarchy].[Fiscal Month],
+                         5,
+                         [Time].[Fiscal Hierarchy].CurrentMember
+         ) : [Time].[Fiscal Hierarchy].CurrentMember
+       },
+      [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember
+  ); 
+
+  
+// Three Month Moving Average  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 4].[Three Month Moving Average],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) =
+    
+  Avg(
+       {
+         ParallelPeriod(
+                         [Time].[Fiscal Hierarchy].[Fiscal Month],
+                         2,
+                         [Time].[Fiscal Hierarchy].CurrentMember
+         ) : [Time].[Fiscal Hierarchy].CurrentMember
+       },
+      [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember
+  ); 
+
+  
+// Year Over Year Growth %  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 4].[Year Over Year Growth %],
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) =      
+
+  ( 
+    ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Year],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  ) 
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Year],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  ); 
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 4].[Year Over Year Growth %],
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) = Null;  
+  
+  Format_String( 
+                 ( 
+				   [Time].[Fiscal Hierarchy Time Calculations 4].[Year Over Year Growth %],
+				   [Time].[Date].Members
+				 )
+  ) = "Percent"; 
+
+  
+// Year Over Year Growth  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 4].[Year Over Year Growth],
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Year],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  ); 
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 4].[Year Over Year Growth],
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) = Null; 
+
+  
+// Quarter Over Quarter Growth %  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 4].[Quarter Over Quarter Growth %],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) =      
+
+  (
+    ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  )
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  ); 
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 4].[Quarter Over Quarter Growth %],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) = Null;  
+  
+  Format_String( 
+                 ( 
+				   [Time].[Fiscal Hierarchy Time Calculations 4].[Quarter Over Quarter Growth %],
+				   [Time].[Date].Members
+				 )
+  ) = "Percent"; 
+
+  
+// Quarter Over Quarter Growth  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 4].[Quarter Over Quarter Growth],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  ); 
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 4].[Quarter Over Quarter Growth],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) = Null; 
+
+  
+// Month Over Month Growth %  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 4].[Month Over Month Growth %],
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) =      
+
+  (
+    ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Month],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  )
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Month],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  ); 
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 4].[Month Over Month Growth %],
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) = Null;  
+  
+  Format_String( 
+                 ( 
+				   [Time].[Fiscal Hierarchy Time Calculations 4].[Month Over Month Growth %],
+				   [Time].[Date].Members
+				 )
+  ) = "Percent"; 
+
+  
+// Month Over Month Growth  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 4].[Month Over Month Growth],
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Month],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  ); 
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 4].[Month Over Month Growth],
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) = Null; 
+
+  
+// Day Over Day Growth %  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 4].[Day Over Day Growth %],
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+  
+  ) =      
+
+  (
+    ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Day],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  )
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Day],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  ); 
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 4].[Day Over Day Growth %],
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) = Null; 
+  
+  Format_String( 
+                 ( 
+				   [Time].[Fiscal Hierarchy Time Calculations 4].[Day Over Day Growth %],
+				   [Time].[Date].Members
+				 )
+  ) = "Percent"; 
+
+  
+// Day Over Day Growth  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 4].[Day Over Day Growth],
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Day],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  ); 
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 4].[Day Over Day Growth],
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Non Billable Hours],
+      [Measures].[Billable],
+      [Measures].[SA and TS],
+      [Measures].[OT1.5],
+      [Measures].[OT2.0],
+      [Measures].[OT1.5 Billable],
+      [Measures].[OT1.5 Non Billable],
+      [Measures].[OT2.0 Billable],
+      [Measures].[OT2.0 Non Billable],
+      [Measures].[Duration],
+      [Measures].[Billable Duration],
+      [Measures].[Cost Time Factor],
+      [Measures].[Selltime Factor],
+      [Measures].[Sell Duration],
+      [Measures].[Cost Duration],
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+    }
+   
+  ) = Null; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+  <Actions>
+    <Action xsi:type="DrillThroughAction" dwd:design-time-name="f2193426-32e4-4fd7-b5a3-340109b24c56">
+      <ID>Drillthrough Action</ID>
+      <Name>Show Work and Tasks</Name>
+      <TargetType>Cells</TargetType>
+      <Target></Target>
+      <Type>DrillThrough</Type>
+      <Columns>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="29226dd3-3495-4b76-8111-da7c4d771b87">
+          <CubeID>Alliance</CubeID>
+          <CubeDimensionID>Time</CubeDimensionID>
+          <AttributeID>Fiscal Year</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="acca452b-5f9e-426a-ac54-7cdb5de38fba">
+          <CubeID>Alliance</CubeID>
+          <CubeDimensionID>Time</CubeDimensionID>
+          <AttributeID>Fiscal Month</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="7616ae5a-4053-4a71-866e-4a9ae6cda8ae">
+          <CubeID>Alliance</CubeID>
+          <CubeDimensionID>Dim Alliance Work</CubeDimensionID>
+          <AttributeID>Work No</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="0e6b61a6-1583-4396-b10d-084cdfc9f19a">
+          <CubeID>Alliance</CubeID>
+          <CubeDimensionID>Dim Alliance Work</CubeDimensionID>
+          <AttributeID>Description</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="33328f3e-e53f-4899-8786-8ccdb179e270">
+          <CubeID>Alliance</CubeID>
+          <CubeDimensionID>Dim Alliance Task</CubeDimensionID>
+          <AttributeID>Task No</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="239499f9-1505-48d2-bca3-bde271362708">
+          <CubeID>Alliance</CubeID>
+          <CubeDimensionID>Dim Alliance Task</CubeDimensionID>
+          <AttributeID>Description</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="2f2e10e3-5515-481c-9d1f-1332afe73d92">
+          <CubeID>Alliance</CubeID>
+          <CubeDimensionID>Dim Alliance Resource</CubeDimensionID>
+          <AttributeID>Domain User Cd</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="2b305a42-2a36-4883-8fff-147959929823">
+          <CubeID>Alliance</CubeID>
+          <CubeDimensionID>Dim Alliance Resource</CubeDimensionID>
+          <AttributeID>Department Name</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="3f7bac22-568b-4c73-bef4-e0c8458fbdc7">
+          <CubeID>Alliance</CubeID>
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <AttributeID>Product Code</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="MeasureBinding" dwd:design-time-name="be7d551e-ebd3-4478-aac2-2ea71f1e37cf">
+          <MeasureID>Duration</MeasureID>
+        </Column>
+      </Columns>
+    </Action>
+  </Actions>
+</Cube>

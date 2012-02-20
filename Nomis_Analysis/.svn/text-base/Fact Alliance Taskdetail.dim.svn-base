@@ -1,0 +1,513 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="86f6c657-e842-4302-876c-9a6e428ad22b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Alliance Taskdetail</ID>
+  <Name>Fact Alliance Taskdetail</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="f1e125a2-38ff-491d-bc41-05a559921357">
+    <DataSourceViewID>Alliance</DataSourceViewID>
+  </Source>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="5542a387-502d-48a4-a9a8-d44d40b13e17">
+      <ID>Fact Alliance Taskdetail</ID>
+      <Name>Fact Alliance Taskdetail</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="610bd71c-bb68-4b79-b51a-7daf7dda6fe8">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e4ac82ed-e839-43a5-b78c-f90d90ad20c0">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>TaskDetailNo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c96523be-b267-4df8-9480-0066adceefc3">
+          <AttributeID>Task No</AttributeID>
+          <Name>Task No</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3856d24a-628a-4cbc-a160-81aa4340ba50">
+          <AttributeID>Resource No</AttributeID>
+          <Name>Resource No</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6b2635ee-17f0-41d1-9123-4596428664fe">
+          <AttributeID>Duration</AttributeID>
+          <Name>Duration</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f752bb9c-0d55-40ac-9e62-49353ff299a7">
+          <AttributeID>Billable Duration</AttributeID>
+          <Name>Billable Duration</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="81832efb-f3b5-4e73-939c-83faf4415540">
+          <AttributeID>After Hours Flag</AttributeID>
+          <Name>After Hours Flag</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="54d75439-abe7-4ea6-b807-2ce8ef377d45">
+          <AttributeID>Cost Time Factor Cd</AttributeID>
+          <Name>Cost Time Factor Cd</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c1ed61d6-b25b-46b8-955c-e3cc1563d1ba">
+          <AttributeID>Sell Time Factor Cd</AttributeID>
+          <Name>Sell Time Factor Cd</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="90b62ad9-f049-4e9a-8a54-1dfaafc85e23">
+          <AttributeID>Coverage Class Cd</AttributeID>
+          <Name>Coverage Class Cd</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="64923353-5e21-4417-9e2a-cfba8d350482">
+          <AttributeID>Resolution</AttributeID>
+          <Name>Resolution</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0ece1db5-5806-456d-a20b-78bb7158e6db">
+          <AttributeID>Core Product Cd</AttributeID>
+          <Name>Core Product Cd</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d84d4a5f-61d7-4208-aa42-80b853c7ebbe">
+          <AttributeID>Invoice Status Cd</AttributeID>
+          <Name>Invoice Status Cd</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f6df488b-17f9-44ae-a01d-becd7b7c0ff6">
+          <AttributeID>Task Complete Flag</AttributeID>
+          <Name>Task Complete Flag</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="75b69f71-8ecc-4514-a0a9-a5d0e171969e">
+          <AttributeID>Core State Cd</AttributeID>
+          <Name>Core State Cd</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c5768186-1fcf-46c4-b019-0d4d8b77d989">
+          <AttributeID>Row Status Cd</AttributeID>
+          <Name>Row Status Cd</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8ad78f36-8a73-417e-afbf-32eab2c2dabb">
+          <AttributeID>Cost Time Factor</AttributeID>
+          <Name>Cost Time Factor</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3d6622f2-f4f5-44f4-8ad4-e5af83a8aa13">
+          <AttributeID>Selltime Factor</AttributeID>
+          <Name>Selltime Factor</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="66ca11eb-d038-40d7-85e5-d11c9fcf61b0">
+          <AttributeID>Sell Duration</AttributeID>
+          <Name>Sell Duration</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d9dfb027-e150-4590-8423-fda3e62afc8b">
+          <AttributeID>Cost Duration</AttributeID>
+          <Name>Cost Duration</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4bea27ec-554a-4f51-86a6-e15ed4b7d0c0">
+          <AttributeID>Task Id</AttributeID>
+          <Name>Task Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="482ad761-91c5-4be8-b5d8-05e7b71cfbcf">
+          <AttributeID>Resource Id</AttributeID>
+          <Name>Resource Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2064b3a5-aa04-4062-8311-ed73c4c4916b">
+          <AttributeID>Product Id</AttributeID>
+          <Name>Product Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="474f5a46-b29a-4817-9d32-cfd62fc6b323">
+          <AttributeID>Time In</AttributeID>
+          <Name>Time In</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="7ffae8a6-3121-4677-9243-06fb285a4bf8">
+      <ID>Task No</ID>
+      <Name>Task No</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1befc84d-00f3-4fbf-837a-6d27fd84db63">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7b0a48fc-6dfb-4042-9c6b-e9cf62ccea78">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>TaskNo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="ec73fa6d-f967-49d5-805a-772b7792e05f">
+      <ID>Resource No</ID>
+      <Name>Resource No</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8b8954bc-9eb9-4057-bc61-31753c7ca52d">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2c99d448-9433-4b01-95d0-5946187fff0b">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>ResourceNo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="35257c8b-13ea-402e-9f26-04fbd1e8ea06">
+      <ID>Duration</ID>
+      <Name>Duration</Name>
+      <EstimatedCount>30</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1c9303f0-99ce-4d7e-9de3-496787c0e921">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1b95e6fe-4303-4e32-b929-79cf1d6c0f3d">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>Duration</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="ea883868-2e25-4bd9-80ce-a7957607b24d">
+      <ID>Billable Duration</ID>
+      <Name>Billable Duration</Name>
+      <EstimatedCount>28</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="066010c7-4738-4fdd-b884-1269bd0b1e56">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a100b79c-fd02-4832-b623-d9017779877f">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>BillableDuration</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="b8300177-9da2-4bdd-be06-0568a329347d">
+      <ID>After Hours Flag</ID>
+      <Name>After Hours Flag</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bda0c364-be12-462b-b861-6b804ca18c57">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a77d7d0e-333d-4e7b-bbd6-2ca556023326">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>AfterHoursFlag</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="0b7a7ddb-8e59-4d1d-b654-b47a5426f716">
+      <ID>Cost Time Factor Cd</ID>
+      <Name>Cost Time Factor Cd</Name>
+      <EstimatedCount>3</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ec884fe7-4db9-426e-958f-73c1d3445533">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8fe3a644-1abe-45e2-bb3a-e231954324d0">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>CostTimeFactorCd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="16d2f6e4-4ae9-4172-ad85-5e095d3e28cb">
+      <ID>Sell Time Factor Cd</ID>
+      <Name>Sell Time Factor Cd</Name>
+      <EstimatedCount>3</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4eaf148d-7e9b-421e-b959-f8fedc46cc39">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e3917ad7-abab-42e9-8001-d25ad8ec4584">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>SellTimeFactorCd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="48d1ee3f-f9fe-49fe-be97-a86ba1e536cd">
+      <ID>Coverage Class Cd</ID>
+      <Name>Coverage Class Cd</Name>
+      <EstimatedCount>6</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="769132d3-3e0f-43d1-b8f4-f14ebc1922cc">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="13820163-d136-470e-86ad-d2af0bc729c9">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>CoverageClassCd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="4a2888f4-5ab4-46b6-95a0-5d28e3173e03">
+      <ID>Resolution</ID>
+      <Name>Resolution</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="98fbee59-3caa-4802-8052-78260cdfba00">
+          <DataType>WChar</DataType>
+          <DataSize>1024</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="21f0cf19-cca4-4d7f-80ed-b9b28504cc92">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>Resolution</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="62c84956-3086-4775-b68e-d66d4fbeb610">
+      <ID>Core Product Cd</ID>
+      <Name>Core Product Cd</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="169ad6f9-55c4-453d-bed0-e4e547e87fee">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="64ca98ce-0a9a-4013-abdf-a836ef8bc5cd">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>CoreProductCd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="7fe45762-9cb7-4f83-a16e-f620df135dc9">
+      <ID>Invoice Status Cd</ID>
+      <Name>Invoice Status Cd</Name>
+      <EstimatedCount>7</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5f77f58d-3c09-478a-9d4e-63a07db7da93">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a63bd6cc-23b4-428a-bbca-1a6d6d852d71">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>InvoiceStatusCd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="8f01235f-250b-4d21-93b6-9285c0235769">
+      <ID>Task Complete Flag</ID>
+      <Name>Task Complete Flag</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a88634d3-0b4f-4eb0-96a5-73e08705f276">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b2adb139-0d76-49fa-a002-a47afcd831fe">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>TaskCompleteFlag</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="892ca212-97f7-4b0d-ba61-9c8fe40f6591">
+      <ID>Core State Cd</ID>
+      <Name>Core State Cd</Name>
+      <EstimatedCount>23</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="520670a9-c834-4c83-a409-b4ce77f0adca">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2ce95d21-c4d8-4880-95d7-f5de4ca67cec">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>CoreStateCd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="640fcf0c-60b0-453f-bb28-bf72ee1a09ce">
+      <ID>Row Status Cd</ID>
+      <Name>Row Status Cd</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="210276cb-3e7c-4c6d-927f-14314b128b0e">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="53c56fea-bd4b-49d5-be61-80db3e43becd">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>RowStatusCd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="6a2694cb-69d1-42f8-876d-40f624eecd72">
+      <ID>Cost Time Factor</ID>
+      <Name>Cost Time Factor</Name>
+      <EstimatedCount>3</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ab486ad0-f381-4da0-95b1-a26701f7b850">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d1cfabbe-689b-476e-9eb2-6a76c6c2c3c9">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>costTimeFactor</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="f18c4d9d-4e83-49d5-8fc9-e19b6859147c">
+      <ID>Selltime Factor</ID>
+      <Name>Selltime Factor</Name>
+      <EstimatedCount>3</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d86325e1-b482-4cd2-b33e-cae9418fefd1">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cf7c8ee4-8221-4847-b6d3-86b8d50c9636">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>selltimeFactor</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="8f56aafc-9156-4663-ab6a-3dedc1356086">
+      <ID>Sell Duration</ID>
+      <Name>Sell Duration</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c12522d0-0600-4bd0-90cb-229f20b105ec">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="74721f31-966f-4a7a-8aee-947b49700f90">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>Sell_Duration</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="68a92401-bd02-436f-aa8b-564505690602">
+      <ID>Cost Duration</ID>
+      <Name>Cost Duration</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="98237c32-355f-4d14-ad20-51a442d39943">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f6efc9a5-457b-4f6d-b7df-a4aadcf99d8a">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>Cost_Duration</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="0a33f705-b67e-4483-b6e6-f7e5e88996dd">
+      <ID>Task Id</ID>
+      <Name>Task Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2199ec03-b41f-42d4-8d05-e9865129126f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d3be468f-8d2b-47ea-9a2e-b48c86079e5b">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>task_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="9c38c6f9-2c6f-46f8-87d0-3e1328f0e8a1">
+      <ID>Resource Id</ID>
+      <Name>Resource Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e2286ea9-3bb1-4a20-a906-a34336df5d8f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ae5931d6-46e3-468d-a558-60a89a67824a">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>resource_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="20ca9f6d-2603-49fa-8bf2-68218b8d2be6">
+      <ID>Product Id</ID>
+      <Name>Product Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c7e7771a-91b5-4853-96cb-077af8b1ee2f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="feb2542a-a151-4779-b4b3-c484fad72f3d">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>product_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="f7abd7f1-21ef-4e38-b3c6-072c10971a7a">
+      <ID>Time In</ID>
+      <Name>Time In</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bf6e7af5-4b15-429a-98de-38cf54ba807e">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8923c156-fe43-4955-b95c-87aa50a1e178">
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+            <ColumnID>TimeIn</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+  </Attributes>
+</Dimension>

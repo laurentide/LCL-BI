@@ -1,0 +1,352 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="626e15aa-3507-4b25-9b63-9a236c7e6db9" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Customer Contact</ID>
+  <Name>Dim Customer Contact</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1978" scrolltop="-5490" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8281" y="14288" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_customerContact (dbo.dim_customerContact)" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3942" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000660f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_customerContact" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1978</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5490</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="96862587-a37c-45bb-b722-e0bffd6318a3">
+    <DataSourceViewID>QuoteBuilder</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <UnknownMemberName>Unknown Contact</UnknownMemberName>
+  <Attributes>
+    <Attribute dwd:design-time-name="01cf3e89-6a05-45e9-83fd-5ef7447586f1">
+      <ID>Dim Customer Contact</ID>
+      <Name>Dim Customer Contact</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>15531</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f3e5d46b-a6eb-4438-ac7b-9804976efe65">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5fd09daf-95e2-42c8-aa69-f5ef300307e4">
+            <TableID>dbo_dim_customerContact</TableID>
+            <ColumnID>contact_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="dcdc7e72-69f1-4fba-93fa-3c4a465af8cc">
+          <AttributeID>Contact ID</AttributeID>
+          <Name>Contact ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="244b854b-2037-4a13-ae03-9d579fc1db73">
+          <AttributeID>Customer Name</AttributeID>
+          <Name>Customer Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5b626aea-2722-41c3-8616-81a0bfa05ea8">
+          <AttributeID>Customer Short Name</AttributeID>
+          <Name>Customer Short Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="754eac96-fa59-4aab-950b-4f07f5f9e4c8">
+          <AttributeID>Address1</AttributeID>
+          <Name>Address1</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d274f24d-f524-4382-b4e6-a00ff22a0146">
+          <AttributeID>Address2</AttributeID>
+          <Name>Address2</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3e183532-6603-45b6-8b53-3b24ea81e3a7">
+          <AttributeID>City</AttributeID>
+          <Name>City</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="83d90318-273a-4bf3-a01d-6b12bfa8ceea">
+          <AttributeID>Province</AttributeID>
+          <Name>Province</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d5e632d3-3bf1-484a-98d0-4a2b68b53a3b">
+          <AttributeID>Postal Code</AttributeID>
+          <Name>Postal Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6551b709-40b8-44c1-a452-3ef5d9bf86a4">
+          <AttributeID>Contact Name</AttributeID>
+          <Name>Contact Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c053cf0f-fecb-4579-88b5-6fc58d99fbf4">
+          <AttributeID>Customerid</AttributeID>
+          <Name>Customerid</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="c0683677-b8d2-4a3b-9475-083361bdfe7c">
+      <ID>Contact ID</ID>
+      <Name>Contact ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5940e190-ce91-4e55-b109-df1db7a1cfd1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d1f31339-fb67-43d4-b686-b52da7c0fcdd">
+            <TableID>dbo_dim_customerContact</TableID>
+            <ColumnID>ContactID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="73390062-8e3a-463f-9800-f46222540c85">
+      <ID>Customer Name</ID>
+      <Name>Customer Name</Name>
+      <EstimatedCount>3255</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f8089122-a30c-449b-9c96-391b9d7642f4">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cbfb5442-8ea4-4249-a542-8d339a84147f">
+            <TableID>dbo_dim_customerContact</TableID>
+            <ColumnID>Customer_Name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="96274bf0-4962-4a1a-a9a6-fa1ec5fe5fd0">
+      <ID>Customer Short Name</ID>
+      <Name>Customer Short Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cfa44582-2d99-488a-8b26-2ac90cd70ebd">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a2ce28e8-f020-4a20-8775-4136807fe46c">
+            <TableID>dbo_dim_customerContact</TableID>
+            <ColumnID>Customer_ShortName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="bfddbf43-29d9-4714-a315-f01d50948553">
+      <ID>Address1</ID>
+      <Name>Address1</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="91091b19-df44-4b2f-b099-97da00989e79">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a56d4990-73a9-463f-9dd2-2f7ca51fe294">
+            <TableID>dbo_dim_customerContact</TableID>
+            <ColumnID>Address1</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="e9a6209c-7299-41ce-abd6-179815176638">
+      <ID>Address2</ID>
+      <Name>Address2</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a30addc0-611a-4ce0-9ca4-9405f61e73da">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0ee16082-b1ed-4b69-bcea-6907d839a866">
+            <TableID>dbo_dim_customerContact</TableID>
+            <ColumnID>Address2</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="c3691764-9654-4e69-9628-3d6e2fef257f">
+      <ID>City</ID>
+      <Name>City</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bdfc3d19-09e4-465a-8554-8d4b758fbc27">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b80b05ff-6652-4a2e-b3ef-dc1b11b57267">
+            <TableID>dbo_dim_customerContact</TableID>
+            <ColumnID>City</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="c9fc897f-f150-457f-b2e5-422dcc363f0c">
+      <ID>Province</ID>
+      <Name>Province</Name>
+      <EstimatedCount>12</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3fd1ed2c-b34e-466f-bfe1-c1b3324a2a93">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b6236336-8a3a-4f06-91cf-ec2af932ff2b">
+            <TableID>dbo_dim_customerContact</TableID>
+            <ColumnID>Province</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="f6718886-b91c-42e3-9566-7a35c0eb854f">
+      <ID>Postal Code</ID>
+      <Name>Postal Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="100e052d-fb70-4d3c-92bf-49467a30e7f1">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2af7dc76-54ea-4ee1-bc32-03914d68e603">
+            <TableID>dbo_dim_customerContact</TableID>
+            <ColumnID>PostalCode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="0a92c03b-a953-40d1-b6f8-fe7ac79c37bc">
+      <ID>Contact Name</ID>
+      <Name>Contact Name</Name>
+      <EstimatedCount>12126</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f2aa4b1a-2a43-4cb3-b675-c29fef13615d">
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="185f0177-c08d-4f64-8bbf-3b1fa3d97e8d">
+            <TableID>dbo_dim_customerContact</TableID>
+            <ColumnID>Contact_Name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="8255c537-f571-40ec-9acd-c3b2cd23446c">
+      <ID>Customerid</ID>
+      <Name>Customerid</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="630ea9e1-b872-4944-8a16-f651c277de4b">
+          <DataType>WChar</DataType>
+          <DataSize>6</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e57d08de-3c23-4ad2-a750-75f9c0179ceb">
+            <TableID>dbo_dim_customerContact</TableID>
+            <ColumnID>Customerid</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="fb001dd5-b30e-46b7-a308-fa6f0ea3551f">
+      <ID>Hierarchy</ID>
+      <Name>Location</Name>
+      <Levels>
+        <Level dwd:design-time-name="6353178f-cefc-4fb3-b3ed-3e4e64c5fb54">
+          <ID>Province</ID>
+          <Name>Province</Name>
+          <SourceAttributeID>Province</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="87aeb462-77ed-4a1f-823b-0ea7db73148b">
+          <ID>City</ID>
+          <Name>City</Name>
+          <SourceAttributeID>City</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="afe59e71-bb58-43c0-a360-79ba1b3a6ade">
+          <ID>Customer Name</ID>
+          <Name>Customer Name</Name>
+          <SourceAttributeID>Customer Name</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="17e0f0c7-4111-44c3-b25f-76b6e91cd583">
+          <ID>Contact Name</ID>
+          <Name>Contact Name</Name>
+          <SourceAttributeID>Contact Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="f057246c-72d0-41f4-a3c6-f78036c471de">
+      <ID>Hierarchy 1</ID>
+      <Name>Customers</Name>
+      <Levels>
+        <Level dwd:design-time-name="2bc26db3-2269-430c-838c-c19550848bdb">
+          <ID>Customer Name</ID>
+          <Name>Customer Name</Name>
+          <SourceAttributeID>Customer Name</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="c6652d6b-ec1a-4ca8-869f-f48f5faa10cf">
+          <ID>Contact Name</ID>
+          <Name>Contact Name</Name>
+          <SourceAttributeID>Contact Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="4e0f25ff-3e79-4602-8a8e-283dc5b8f150">
+      <ID>Hierarchy 2</ID>
+      <Name>Contacts</Name>
+      <Levels>
+        <Level dwd:design-time-name="fb2ecc99-9e9f-4cf7-b9cf-43d2561e6d5a">
+          <ID>Contact Name</ID>
+          <Name>Contact Name</Name>
+          <SourceAttributeID>Contact Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

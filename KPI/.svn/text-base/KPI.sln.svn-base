@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "KPI", "KPI.rptproj", "{FFE23FDE-EF06-477F-80EE-D40040596E11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		DEV|Default = DEV|Default
+		Production|Default = Production|Default
+		Test|Default = Test|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFE23FDE-EF06-477F-80EE-D40040596E11}.Debug|Default.ActiveCfg = Debug
+		{FFE23FDE-EF06-477F-80EE-D40040596E11}.Debug|Default.Build.0 = DebugLocal
+		{FFE23FDE-EF06-477F-80EE-D40040596E11}.Debug|Default.Deploy.0 = DebugLocal
+		{FFE23FDE-EF06-477F-80EE-D40040596E11}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{FFE23FDE-EF06-477F-80EE-D40040596E11}.DebugLocal|Default.Build.0 = DebugLocal
+		{FFE23FDE-EF06-477F-80EE-D40040596E11}.DebugLocal|Default.Deploy.0 = DebugLocal
+		{FFE23FDE-EF06-477F-80EE-D40040596E11}.DEV|Default.ActiveCfg = DEV
+		{FFE23FDE-EF06-477F-80EE-D40040596E11}.Production|Default.ActiveCfg = Production
+		{FFE23FDE-EF06-477F-80EE-D40040596E11}.Production|Default.Build.0 = Production
+		{FFE23FDE-EF06-477F-80EE-D40040596E11}.Production|Default.Deploy.0 = Production
+		{FFE23FDE-EF06-477F-80EE-D40040596E11}.Test|Default.ActiveCfg = Test
+		{FFE23FDE-EF06-477F-80EE-D40040596E11}.Test|Default.Build.0 = Test
+		{FFE23FDE-EF06-477F-80EE-D40040596E11}.Test|Default.Deploy.0 = Test
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

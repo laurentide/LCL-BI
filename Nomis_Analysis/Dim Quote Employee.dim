@@ -1,0 +1,260 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3989d294-0709-4b05-9590-51e4834f08c6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Quote Employee</ID>
+  <Name>Dim Quote Employee</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2449" scrolltop="-5569" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8070" y="20214" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_quote_employee (dbo.dim_quote_employee)" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000ea120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_quote_employee" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2449</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5569</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="511c5bfd-1f62-4c05-8432-c194d5d80573">
+    <DataSourceViewID>QuoteBuilder</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="cb48927a-c1e1-454a-9632-0c61c90e8ab6">
+      <ID>Dim Quote Employee</ID>
+      <Name>Dim Quote Employee</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>136</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a6412ac6-0f90-430d-8890-9494f61df83a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="698fefa9-854c-4942-bb60-f6f3c7e0d951">
+            <TableID>dbo_dim_quote_employee</TableID>
+            <ColumnID>employee_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="cd65ac77-f77f-4018-9025-3592f7dcc65c">
+          <AttributeID>French Title</AttributeID>
+          <Name>French Title</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c9dc4d5d-5e9d-40df-8ef1-a2dbab7375bb">
+          <AttributeID>English Title</AttributeID>
+          <Name>English Title</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4ff1e22b-6ba2-4252-bc59-7874b16dd67b">
+          <AttributeID>Email</AttributeID>
+          <Name>Email</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="19c764ef-c7ab-4a9f-a011-60779978201d">
+          <AttributeID>Extension</AttributeID>
+          <Name>Extension</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b2df2411-9a56-440f-9b33-0bb1bf9790ba">
+          <AttributeID>Employee Name</AttributeID>
+          <Name>Employee Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="27da6179-3496-4536-8c10-63c8d47c113f">
+          <AttributeID>Deparment</AttributeID>
+          <Name>Deparment</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="92fee2ac-031e-4cad-ad3d-e3827fd99b3a">
+          <AttributeID>Employeeid</AttributeID>
+          <Name>Employeeid</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>List</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="07a6c2c6-ebfe-4264-a545-302ee98bbcd0">
+      <ID>French Title</ID>
+      <Name>French Title</Name>
+      <EstimatedCount>32</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6c14515e-005d-4457-864c-70ab7387d6f9">
+          <DataType>WChar</DataType>
+          <DataSize>150</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="708a637f-85db-4d90-8370-238a521a8390">
+            <TableID>dbo_dim_quote_employee</TableID>
+            <ColumnID>FrenchTitle</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="fcccffed-3d95-410b-9a92-f6fa13e9bf5f">
+      <ID>English Title</ID>
+      <Name>English Title</Name>
+      <EstimatedCount>30</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="93b03d1f-d5aa-496b-a38b-15182cce8d21">
+          <DataType>WChar</DataType>
+          <DataSize>150</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2fb22396-f526-417a-95ee-e4243c34b935">
+            <TableID>dbo_dim_quote_employee</TableID>
+            <ColumnID>EnglishTitle</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="402df2fe-edac-425d-a459-e7cd97b9bc92">
+      <ID>Email</ID>
+      <Name>Email</Name>
+      <EstimatedCount>69</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a367af11-1366-43f8-b778-583cb17eb948">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ad567550-6fbe-4273-aa9e-92bb8b7d2979">
+            <TableID>dbo_dim_quote_employee</TableID>
+            <ColumnID>Email</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="4281dea4-6ee8-4f17-9481-9e247c9a7984">
+      <ID>Extension</ID>
+      <Name>Extension</Name>
+      <EstimatedCount>67</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a329f93f-49b3-4551-8c11-eba5077a4abf">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e0fee91c-2bc8-4716-bf6f-e1f4df012a8a">
+            <TableID>dbo_dim_quote_employee</TableID>
+            <ColumnID>Extension</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="8b274654-58d8-428f-a285-3d250fd1b4a8">
+      <ID>Employee Name</ID>
+      <Name>Employee Name</Name>
+      <EstimatedCount>161</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="477306ba-527e-4b39-a07c-48f3e8a218ee">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="de211f2d-7b85-4504-a357-40ab109d8926">
+            <TableID>dbo_dim_quote_employee</TableID>
+            <ColumnID>Employee_Name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="0b3f9d51-7bc5-452f-a38c-9006f0b7738e">
+      <ID>Deparment</ID>
+      <Name>Deparment</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="95a8ced4-7f36-49c9-ae2a-5cb9810ee76e">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="99161293-82b4-48b8-aca0-1880b27ce8fe">
+            <TableID>dbo_dim_quote_employee</TableID>
+            <ColumnID>Deparment</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="968bc139-dadd-4201-b750-a1c20853e14b">
+      <ID>Employeeid</ID>
+      <Name>Employeeid</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="69140289-b992-4a48-a8f5-823cd2487f00">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="552813fc-0eb2-4f79-b7d5-6e4f928c54cc">
+            <TableID>dbo_dim_quote_employee</TableID>
+            <ColumnID>employeeid</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="43ba6e84-7305-41cb-97c6-ae6938313f69">
+      <ID>Hierarchy</ID>
+      <Name>Employee_By_Department</Name>
+      <Levels>
+        <Level dwd:design-time-name="97290c73-574f-4e40-b19b-38f8cb33beb2">
+          <ID>Employee Name</ID>
+          <Name>Employee Name</Name>
+          <SourceAttributeID>Employee Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="6ef467e0-31d8-4af3-9ee5-57d5ed805bec">
+      <ID>Hierarchy 1</ID>
+      <Name>Employees</Name>
+      <Levels>
+        <Level dwd:design-time-name="5d92531d-2d4a-49d2-8584-a3b01ad45f16">
+          <ID>Employee Name</ID>
+          <Name>Employee Name</Name>
+          <SourceAttributeID>Employee Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

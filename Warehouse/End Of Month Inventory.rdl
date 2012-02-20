@@ -1,0 +1,1022 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="AnalysisDB">
+      <rd:DataSourceID>a9d3db19-770d-4c7f-ad66-51e274ffe3a8</rd:DataSourceID>
+      <DataSourceReference>AnalysisDB</DataSourceReference>
+    </DataSource>
+    <DataSource Name="Nomis_Warehouse">
+      <rd:DataSourceID>acb63b32-cc0b-4fb0-a494-dd86e5f63653</rd:DataSourceID>
+      <DataSourceReference>Nomis_Warehouse</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="TimeFiscalMonth">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>="[Time].[Fiscal Month].&amp;[" &amp; 
+iif(Day(now()) = 1,
+Year(dateadd("m",-1,now())) &amp; "-" &amp; Month(Dateadd("m",-1,now())).toString("D2"),
+Year(now()) &amp; "-" &amp; Month(now()).toString("D2")) 
+&amp; "-01T00:00:00]"</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Fiscal Month</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>TimeFiscalMonth</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="DimWarehouseDimWarehouse">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>="[Dim Warehouse].[Dim Warehouse].[All]"</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Dim Warehouse</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DimWarehouseDimWarehouse</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.25in</RightMargin>
+  <LeftMargin>0.25in</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Image Name="image3">
+        <Sizing>Fit</Sizing>
+        <Width>1.25in</Width>
+        <MIMEType>image/jpeg</MIMEType>
+        <Source>Embedded</Source>
+        <Style />
+        <ZIndex>1</ZIndex>
+        <Value>laurentide_logo_vector_small</Value>
+      </Image>
+      <Textbox Name="textbox3">
+        <Style>
+          <Color>#1c3a70</Color>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>18pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>4.875in</Left>
+        <Value>End Of Month Inventory Report</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.33in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>0.25in</BottomMargin>
+  <rd:ReportID>ecddaf21-a4ba-4c23-9904-0fc0b8ac513c</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="stoplight_multiple0">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>R0lGODlhDgAfANX/AAgICBAQEBgYGCEhISkpKTExMTk5OUJCQkpKSlJSUlpaWmNjY3Nzc3t7e4SEhIyMjJycnKWlpa2trbW1tb29vcbGxs7OzqUQEGMAAGsAAIwAAMYAALUQCM4IANY5MbUpIaUQCHMIAPdCMc4pGMYQAO85Ia0hELUhEP8pEKUYCPdaQpwxIZQpGIwhEEIYEMY5Ic45GJwpEP97WjkYEDEQCOc5EP+EY/+1nPe1hO+cAEJCOUJCSjk5QjExOcDAwAAAACH5BAEAAD4ALAAAAAAOAB8AQAb/QJ8PQSwahYjGj3W5hDIYU+uHoCoTCQVjUSAYANXd4rdgOB6NhEEHpj5+Mw8ul0O9aFSq4/cTLCYRCQIAeQgKPwABAIsAAgJ5BGOLBAUGA4kCVQgUfJ2eeTt7IzI2KCgkGjGgewA0LTEsLTSEmkoIEhUTEA0KBKBjAQUFAgMGBQGZP2I/AQwWFhMPCItVPGMFB8IEXr5VQp+fQkMUEGgODQ4KCwoIPjsQfDMwNTUmLrRuPx83piIqJSsK7eHwQkSHDRpCqNK0Z4aJDyBSnGCBpxY4T2H2NHsWbYcihmTMoEGwpg2Ca9m6eLmkSVKAYpYWJTvJxw8gQfho3sq1K0G3Gh8HxmDRsmAbmyo9gAkbUKxAI29GohL54SMIADs=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="stoplight_multiple1">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>R0lGODlhDgAfAOb/AAgICBAQEBgYGCEhISkpKTExMTk5OUJCQkpKSlJSUlpaWmNjY3Nzc3t7e4SEhIyMjJycnKWlpa2trbW1tb29vcbGxs7OzikYEIRKKVohAGspAL17QkohAGsxACEYEIxCABgQCIxSGFIpAGMxAHM5APelSsaEOWs5AHtCAGNCGEopAKVaAHNKEMZzCO+lOZRjGM6ECIxrKXtaGK17GLWEGN6cCPfGOaV7CNa1Qv/WSv/WQsalKf/eQvfvhPfnOf/3Y//3WkJCOf//lP//a0JCSjk5QjExOcDAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAEcALAAAAAAOAB8AQAf/gEdHCISFhoIIDUgFBwUFBAQGBEgIlA5IMyUuMC0kHSgAlUQLSAsMDg8NCQZBoZQPSAEMFhYTD0QAlJZISB4xODsyF7mVCApIAAEAywACAroEpMsEBQYDyQLFFLzc3bpEl6aoqqzfl8sD1QPKugiXLEBCPz42LiLtpAEnIRgZKCMBsiEZFWtWrQcIlFUqQoqRI0iSdAny5k3QIAoQUjlo4EDBAgUIjhCBwEvAAgkREggg9oqShFoQVE0qdilBggU4HxlodymAowEDJIFop4giN1E9b/QQMkTHCxCuEiGhkYNHjRorPoASRSqFiQ2eNKBQEVVaABUkSHBQJhABKSQmJSekXInPZYUJMRPMRHKAlE0FDBZAalXJSL6fQQs0qzTIkGPGgQAAOw==</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="arrow_status_asc2">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>R0lGODlhFQAQAKL/AGtCAJxjAO+cAP/vAMDAwAAAAAAAAAAAACH5BAEAAAQALAAAAAAVABAAQAM5SLqsMk2FSau9MYv9sicA9WkbxAxoqqpcOTah+CrxHLl2w5m5s/utoHAHKBqPSEuuKLMxAz0aNJIAADs=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="stoplight_multiple2">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>R0lGODlhDgAfAOb/AAgICBAQEBgYGCEhISkpKTExMTk5OUJCQkpKSlJSUlpaWmNjY3Nzc3t7e4SEhIyMjJycnKWlpa2trbW1tb29vcbGxs7OzkJCOd7/pb3/e63/a5TnWnveSlrWIYT/UkLGEBApCHP/SkK1ISl7EDG9CCm1ADmUISmEEBBaADm9IUreMVLeQhicCBCEABCcABBaCAhSACmlIQhrAAiEAAiMAEKtQgghCBhjGBiEGAhzCABKAABSAABaAABjAABzAAB7AFL/Yzn3UkJCSjk5QjExOcDAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAEUALAAAAAAOAB8AQAf/gEVFCISFhoIIDUYFBwUFBAQGBEYIlIoJCQoMC48GAJVCC0YpIUEfJDQzLZ+UD0YBDBYWEw9CAJSUDkZGAgsTEQkCt5UICkYAAQDKAAICuASiADYvLygwNszEFLvc3bhCugsMDg8NCQYX37rKAwUGA8m4iZQSFRMQDQqToKIBjgIDDBQIIICfERsiMGDI4KEFtkpDRL2IUSNHjx0/XuAS5M2boEEUIJRz0MCBggUKEBQRAmFXLwnAhMlzhUDCLHwJ9uUygmmBz07ydPkrMCAggQDyFHXkBkporFkPDiQjFm5cOQToWCEQxcgRpHdaowUICDYbJVFGQJjYwOEEiGFnLI2M0ABkQwcSLjRWOiCKxQoVJVjw6LGqEhFRIGTguKHDBwobBY0MMkS5UpFAADs=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="arrow_status_asc0">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>R0lGODlhEAAVAKL/AOdjQsDAwFoAEIQAGMYAIQAAAAAAAAAAACH5BAEAAAEALAAAAAAQABUAQANCGLpAIyvK9mRsJI+9LXOQlBFfpQioBwyeRYWt8sYlfI3jg3Ku1tEzWiAIBAmHRiExtpThkBWU4IfJcX43H1blYEkSADs=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="arrow_status_asc4">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>R0lGODlhEAAVAKL/AFqtawA5GABaKQCEQsDAwAAAAAAAAAAAACH5BAEAAAQALAAAAAAQABUAQANCSLoEwmvIBYYIK2jYLOZKJVlC+YDdhTKVunbkyY7jpZlg+736G3q+lCxXw0FERdMJOUhhNIESp+ej8oBV7NW13S0SADs=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="laurentide_logo_vector_small">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>/9j/4AAQSkZJRgABAQEAYABgAAD/4QAWRXhpZgAASUkqAAgAAAAAAAAAAAD/2wBDAAgFBgcGBQgHBgcJCAgJDBMMDAsLDBgREg4THBgdHRsYGxofIywlHyEqIRobJjQnKi4vMTIxHiU2OjYwOiwwMTD/2wBDAQgJCQwKDBcMDBcwIBsgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDD/wAARCAAfAHgDASIAAhEBAxEB/8QAHAAAAgMBAQEBAAAAAAAAAAAABQcAAQYCCAME/8QAOhAAAQMCBAIGBwYHAQAAAAAAAQIDBAURAAYSIRMxBxQWIkFRFTJVYZGU0zNScYGS0iNCQ1NylbHk/8QAGQEAAgMBAAAAAAAAAAAAAAAAAgQDBQYB/8QAMBEAAQIEAgkDAwUAAAAAAAAAAQIRAAMEIQWBEhQxQVFxkaHwE9HhBlKxMkNhwvH/2gAMAwEAAhEDEQA/AH/ilKSgXUQB5nF4XWfqjHfz/lylT5jcKDCPpR9119DSSoEhsd7mdSSCB4LPlcSS0aZaI5i9APDEuBii4gAEqFibDfnhG9JFYqNckVWTLiLcy9S33IDLYlJZBkgW4ik7qcIJ1AC1gPLXe2JMWhSjGqshDDmVYQVBhyEhXWJjo1qVyuUpcKQADySlQIAJLIpCUgvfz3ELmqDsBbz5h5a0jmofHFcRH3h8cedqtCTChQ4z1NEtih08SpzbiHGLSJJGlCykgkp1M7bEhsi+236ZtBiQ5FLy+3VaK+lppdTkvTJRbjLcdCEpQCghWyEIUN7qCidgbYLVB93b55dYHWzw88fpHoHUk23G+K1p+8PjhF5ipspidITTuFCbydDYeQEPhTPWluJcUUhw6rG6rA3JKEjxAx9J2W4zuSsrU95PFrddll/rN3XVJbcspbnMAkJ4Wq/ko+asCKZNiVbf4z48I7rKrgJ2f5+YeBcQBcrSB53w
+Dr8GZU5rLSH3W6eWV6jFkqYdS8SnQrUkg6QNW24uRcGwsr8x06BR8wVZFJZehU/L0BbidJKwJshIQhQUolQNlNkG+xa2tzImmwqXCTR6pR0yFLo0dyZU5p1paVIGktxwvdJOohHd2UlV+9vgdUCku/b55dYNFYqWr9I8s+V+kMOVRczyKe9ebObmKYDySzNSLyWwRpKbhIQsrPdTsA0kndRGOKrlvMSxM9GS6swVSCGAqpFYDKGe76y73W7a/MgA8uRFdDuXWDJbrEh2jzJLbPF4saS65JQty/2wKtCTpKk203v47G7LrFZptFjdYqk1mK3YkFat1WFyEjmo+4XOE59OiUop0jaLemxGdOYpQHOwAPw3ZeOYxMyg5mbs+y7OW6UGGpTMlvjGPrQUm6iE6koDl1X1Fxw/y2x8cwtVsy59SqNQqNEZ+yYS3NZ4O6EpuNTib97incJVYoIKSNOB2aul++uPlqNbmnrUgfiLpR+kgq/Apxk8tUyrdIGZAmoypb7KLrkSCdXCQSTpTfZNzcADYbmxAOK5c5GloS3JMamRhlT6es1oTLQkcHLWOzLffc0NXJ1dk1aHGjUhlbsZkDrNRkqcUhStlKS0FniL5qTdRGmw9bYGY1NNgxqbBZhQmg1HYQEIQPAD3+J953OJh9CSAyjeMjUTULmFUpLDqc/i0Bq7mhNLqD0VLLTnVovXH9b4bXwrm5bTY6yAlRI7o5b77Zp6vxZD5qgyXGmzkvNnrLRadP8ASCCHQkkuAuJTYbdxVlHScHVZ6ghSgIE46Tbk3+/HPbqF4U6b8G/34iMwPZcPopVADSpyczAGVmSBSIj7juWGEoNUecaCnNZceSo63yoosiziko1XNr2BskX6mZoy9VpTLs2g0+cHylll95sLUgcQpIc1N/wxYOrAJ3Sg3CSbYKS88IU0Uw4r7Tngp1lCx8A6P+4H9saqebjH+t/9OBM1TvpwwiiQoAGQ2avYwTp4pVcqtco7uXI
+zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ7f2aW0b/reVgfKqVflMlp3NNSSk8y1T2G1fFLoIx0VJAa56e8CcG9RTgpSLfef679sM5yiUhaJKF0uEpEtQXISY6CHlA3BXt3iDvc+OKqb9HiOR5lVchMLZJSw/JUhJQVCxCVK5XA3thOSqdNmMKYl5nrj7SvWbdbCkn8QX8Dux8P2hN+Sb+tiJVWvcnuIclYDTfuz25IV52hnVWt9HcZTqZnoZ8yl8V3hRkvhxY1HUsoSbnvq3O/ePmcAKv0p5dNO9Hw8vmdGBS31eQhttnQn1bCytgQLCw/LGQ7Hw/aE35Jv62J2Oh+0JvyTf1sQqqalWwAec4tZGDYNLvMWpWRA7B+8cyekCpobcZokWBQmHCdSYEdKCsHlqVbmB4i2MxKkvzJCpEt9x95frOOrKlK2tuTvyxqex8P2hN+Sb+tidj4ftCb8k39bCa0z5hdZfMRoqWdhlIGkJ0eST+WeMjj0Z0b5eTl3LEdlaNMqQA/IJFjrI9U/wCIsPyJ8cKuk5Np66rDQ/NmOtqfQlSDEQkKBUARcPEi/K4Bth9DlhyhklJKlbYzP1TiSZ6JciSS1ybEctucXiYmJi0jCx//2Q==</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <DataSets>
+    <DataSet Name="AnalysisDB">
+      <Fields>
+        <Field Name="Dim_Warehouse">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Warehouse].[Dim Warehouse].[Dim Warehouse]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Product_Primary_Category">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Productcodes].[Product Primary Category].[Product Primary Category]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Product_Code">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Productcodes].[Product Code].[Product Code]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Product_Description">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Productcodes].[Product Description].[Product Description]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Work_Month">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Time].[Work Month].[Work Month]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Selling_Price">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Selling Price]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Cost">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Cost]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Profit">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Profit]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Sales_From_Stock">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Sales From Stock]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Sales_From_Non_Stock">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Sales From Non Stock]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Cost_From_Stock">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Cost From Stock]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Stock_Sales__">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Stock Sales %]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Profit_From_Stock">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Profit From Stock]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Average_Inventory">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Average Inventory]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Inventory_Turns">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Inventory Turns]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Yearly_Cost">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Yearly Cost]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText> SELECT NON EMPTY { [Measures].[Cost From Stock], [Measures].[Sales From Non Stock], [Measures].[Sales From Stock], [Measures].[Stock Sales %], [Measures].[Inventory Turns], [Measures].[Average Inventory], [Measures].[Profit From Stock], [Measures].[Yearly Cost], [Measures].[Profit], [Measures].[Selling Price], [Measures].[Cost] } ON COLUMNS, NON EMPTY { ([Dim Warehouse].[Dim Warehouse].[Dim Warehouse].ALLMEMBERS * [Dim Productcodes].[Product Primary Category].[Product Primary Category].ALLMEMBERS * [Dim Productcodes].[Product Code].[Product Code].ALLMEMBERS * [Dim Productcodes].[Product Description].[Product Description].ALLMEMBERS * [Time].[Work Month].[Work Month].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@DimWarehouseDimWarehouse, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Dim Productcodes].[Product Primary Category].&amp;[FISHER REGULATORS], [Dim Productcodes].[Product Primary Category].&amp;[FRS], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT PTL], [Dim Productcodes].[Product Primary Category].&amp;[MISCELLANEOUS], [Dim Productcodes].[Product Primary Category].&amp;[DET-TRONICS], [Dim Productcodes].[Product Primary Category].&amp;[WIRELESS], [Dim Productcodes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Dim Productcodes].[Product Primary Category].&amp;[CSI], [Dim Productcodes].[Product Primary Category].&amp;[PSS], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Dim Productcodes].[Product Primary Category].&amp;[SERVICES - LCL], [Dim Productcodes].[Product Primary Category].&amp;[SIE], [Dim Productcodes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Dim Productcodes].[Product Primary Category].&amp;[VAD] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Inventory]))) WHERE ( IIF( STRTOSET(@TimeFiscalMonth, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalMonth, CONSTRAINED), [Time].[Fiscal Month].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="TimeFiscalMonth">
+            <Value>=Parameters!TimeFiscalMonth.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="DimWarehouseDimWarehouse">
+            <Value>=Parameters!DimWarehouseDimWarehouse.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Dim Warehouse</DimensionName><HierarchyName>Dim Warehouse</HierarchyName><HierarchyUniqueName>[Dim Warehouse].[Dim Warehouse]</HierarchyUniqueName><LevelName>Dim Warehouse</LevelName><UniqueName>[Dim Warehouse].[Dim Warehouse].[Dim Warehouse]</UniqueName></ID><ItemCaption>Dim Warehouse</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Productcodes</DimensionName><HierarchyName>Product Primary Category</HierarchyName><HierarchyUniqueName>[Dim Productcodes].[Product Primary Category]</HierarchyUniqueName><LevelName>Product Primary Category</LevelName><UniqueName>[Dim Productcodes].[Product Primary Category].[Product Primary Category]</UniqueName></ID><ItemCaption>Product Primary Category</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Productcodes</DimensionName><HierarchyName>Product Code</HierarchyName><HierarchyUniqueName>[Dim Productcodes].[Product Code]</HierarchyUniqueName><LevelName>Product Code</LevelName><UniqueName>[Dim Productcodes].[Product Code].[Product Code]</UniqueName></ID><ItemCaption>Product Code</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Productcodes</DimensionName><HierarchyName>Product Description</HierarchyName><HierarchyUniqueName>[Dim Productcodes].[Product Description]</HierarchyUniqueName><LevelName>Product Description</LevelName><UniqueName>[Dim Productcodes].[Product Description].[Product Description]</UniqueName></ID><ItemCaption>Product Description</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Time</DimensionName><HierarchyName>Work Month</HierarchyName><HierarchyUniqueName>[Time].[Work Month]</HierarchyUniqueName><LevelName>Work Month</LevelName><UniqueName>[Time].[Work Month].[Work Month]</UniqueName></ID><ItemCaption>Work Month</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Selling Price</MeasureName><UniqueName>[Measures].[Selling Price]</UniqueName></ID><ItemCaption>Selling Price</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Cost</MeasureName><UniqueName>[Measures].[Cost]</UniqueName></ID><ItemCaption>Cost</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Profit</MeasureName><UniqueName>[Measures].[Profit]</UniqueName></ID><ItemCaption>Profit</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Sales From Stock</MeasureName><UniqueName>[Measures].[Sales From Stock]</UniqueName></ID><ItemCaption>Sales From Stock</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Sales From Non Stock</MeasureName><UniqueName>[Measures].[Sales From Non Stock]</UniqueName></ID><ItemCaption>Sales From Non Stock</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Cost From Stock</MeasureName><UniqueName>[Measures].[Cost From Stock]</UniqueName></ID><ItemCaption>Cost From Stock</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Stock Sales %</MeasureName><UniqueName>[Measures].[Stock Sales %]</UniqueName></ID><ItemCaption>Stock Sales %</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Profit From Stock</MeasureName><UniqueName>[Measures].[Profit From Stock]</UniqueName></ID><ItemCaption>Profit From Stock</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Average Inventory</MeasureName><UniqueName>[Measures].[Average Inventory]</UniqueName></ID><ItemCaption>Average Inventory</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Inventory Turns</MeasureName><UniqueName>[Measures].[Inventory Turns]</UniqueName></ID><ItemCaption>Inventory Turns</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Yearly Cost</MeasureName><UniqueName>[Measures].[Yearly Cost]</UniqueName></ID><ItemCaption>Yearly Cost</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><From>Inventory</From><Filter><FilterItems><FilterItem><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members /><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Dim Productcodes].[Product Primary Category]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[FISHER REGULATORS]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[FRS]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT PTL]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[MISCELLANEOUS]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[DET-TRONICS]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[WIRELESS]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[CSI]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[PSS]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[SERVICES - LCL]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[SIE]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)]</MemberUniqueName></Member><Member><MemberUniqueName>[Dim Productcodes].[Product Primary Category].&amp;[VAD]</MemberUniqueName></Member></Members></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Dim Warehouse].[Dim Warehouse]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members /><Parametrized>true</Parametrized></Condition></FilterItem></FilterItems></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[Cost From Stock], [Measures].[Sales From Non Stock], [Measures].[Sales From Stock], [Measures].[Stock Sales %], [Measures].[Inventory Turns], [Measures].[Average Inventory], [Measures].[Profit From Stock], [Measures].[Yearly Cost], [Measures].[Profit], [Measures].[Selling Price], [Measures].[Cost] } ON COLUMNS, NON EMPTY { ([Dim Warehouse].[Dim Warehouse].[Dim Warehouse].ALLMEMBERS * [Dim Productcodes].[Product Primary Category].[Product Primary Category].ALLMEMBERS * [Dim Productcodes].[Product Code].[Product Code].ALLMEMBERS * [Dim Productcodes].[Product Description].[Product Description].ALLMEMBERS * [Time].[Work Month].[Work Month].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@DimWarehouseDimWarehouse, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Dim Productcodes].[Product Primary Category].&amp;[FISHER REGULATORS], [Dim Productcodes].[Product Primary Category].&amp;[FRS], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT PTL], [Dim Productcodes].[Product Primary Category].&amp;[MISCELLANEOUS], [Dim Productcodes].[Product Primary Category].&amp;[DET-TRONICS], [Dim Productcodes].[Product Primary Category].&amp;[WIRELESS], [Dim Productcodes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Dim Productcodes].[Product Primary Category].&amp;[CSI], [Dim Productcodes].[Product Primary Category].&amp;[PSS], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Dim Productcodes].[Product Primary Category].&amp;[SERVICES - LCL], [Dim Productcodes].[Product Primary Category].&amp;[SIE], [Dim Productcodes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Dim Productcodes].[Product Primary Category].&amp;[VAD] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Inventory]))) WHERE ( IIF( STRTOSET(@TimeFiscalMonth, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalMonth, CONSTRAINED), [Time].[Fiscal Month].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions><ParameterDefinition><Name>TimeFiscalMonth</Name><DefaultValues /><Caption>Fiscal Month</Caption><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Inventory]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>DimWarehouseDimWarehouse</Name><DefaultValues /><Caption>Dim Warehouse</Caption><HierarchyUniqueName>[Dim Warehouse].[Dim Warehouse]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Warehouse].[Dim Warehouse].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Warehouse].[Dim Warehouse].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Warehouse].[Dim Warehouse].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Warehouse].[Dim Warehouse].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Dim Productcodes].[Product Primary Category].&amp;[FISHER REGULATORS], [Dim Productcodes].[Product Primary Category].&amp;[FRS], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT PTL], [Dim Productcodes].[Product Primary Category].&amp;[MISCELLANEOUS], [Dim Productcodes].[Product Primary Category].&amp;[DET-TRONICS], [Dim Productcodes].[Product Primary Category].&amp;[WIRELESS], [Dim Productcodes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Dim Productcodes].[Product Primary Category].&amp;[CSI], [Dim Productcodes].[Product Primary Category].&amp;[PSS], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Dim Productcodes].[Product Primary Category].&amp;[SERVICES - LCL], [Dim Productcodes].[Product Primary Category].&amp;[SIE], [Dim Productcodes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Dim Productcodes].[Product Primary Category].&amp;[VAD] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Inventory]))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Warehouse].[Dim Warehouse].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Warehouse].[Dim Warehouse].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Warehouse].[Dim Warehouse].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Warehouse].[Dim Warehouse].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Dim Productcodes].[Product Primary Category].&amp;[FISHER REGULATORS], [Dim Productcodes].[Product Primary Category].&amp;[FRS], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT PTL], [Dim Productcodes].[Product Primary Category].&amp;[MISCELLANEOUS], [Dim Productcodes].[Product Primary Category].&amp;[DET-TRONICS], [Dim Productcodes].[Product Primary Category].&amp;[WIRELESS], [Dim Productcodes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Dim Productcodes].[Product Primary Category].&amp;[CSI], [Dim Productcodes].[Product Primary Category].&amp;[PSS], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Dim Productcodes].[Product Primary Category].&amp;[SERVICES - LCL], [Dim Productcodes].[Product Primary Category].&amp;[SIE], [Dim Productcodes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Dim Productcodes].[Product Primary Category].&amp;[VAD] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Inventory]))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition></ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
+        <rd:SuppressAutoUpdate>true</rd:SuppressAutoUpdate>
+      </Query>
+    </DataSet>
+    <DataSet Name="TimeFiscalMonth">
+      <Fields>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Inventory]</CommandText>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Inventory</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Inventory]</Statement></Query></QueryDefinition></rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+    </DataSet>
+    <DataSet Name="Today">
+      <Fields>
+        <Field Name="WorkDay">
+          <DataField>WorkDay</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>Nomis_Warehouse</DataSourceName>
+        <CommandText>SELECT     WorkDay - 1 AS WorkDay
+FROM         DimTime.Time
+WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 101))</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+    <DataSet Name="DimWarehouseDimWarehouse">
+      <Fields>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Warehouse].[Dim Warehouse].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Warehouse].[Dim Warehouse].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Warehouse].[Dim Warehouse].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Warehouse].[Dim Warehouse].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Dim Productcodes].[Product Primary Category].&amp;[FISHER REGULATORS], [Dim Productcodes].[Product Primary Category].&amp;[FISHER VALVES], [Dim Productcodes].[Product Primary Category].&amp;[FRS], [Dim Productcodes].[Product Primary Category].&amp;[MMI], [Dim Productcodes].[Product Primary Category].&amp;[PERFORMANCE PRODUCTS], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT FLOW], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT GAS ANALYTICAL], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT LIQ ANALYTICAL], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT PTL], [Dim Productcodes].[Product Primary Category].&amp;[VALVE AUTOMATION], [Dim Productcodes].[Product Primary Category].&amp;[MISCELLANEOUS], [Dim Productcodes].[Product Primary Category].&amp;[DANIEL], [Dim Productcodes].[Product Primary Category].&amp;[DET-TRONICS], [Dim Productcodes].[Product Primary Category].&amp;[EMERSON MARINE], [Dim Productcodes].[Product Primary Category].&amp;[WIRELESS] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Inventory]))</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="TimeFiscalMonth">
+            <Value>=Parameters!TimeFiscalMonth.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Inventory</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Warehouse].[Dim Warehouse].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Warehouse].[Dim Warehouse].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Warehouse].[Dim Warehouse].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Warehouse].[Dim Warehouse].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Dim Productcodes].[Product Primary Category].&amp;[FISHER REGULATORS], [Dim Productcodes].[Product Primary Category].&amp;[FISHER VALVES], [Dim Productcodes].[Product Primary Category].&amp;[FRS], [Dim Productcodes].[Product Primary Category].&amp;[MMI], [Dim Productcodes].[Product Primary Category].&amp;[PERFORMANCE PRODUCTS], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT FLOW], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT GAS ANALYTICAL], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT LIQ ANALYTICAL], [Dim Productcodes].[Product Primary Category].&amp;[ROSEMOUNT PTL], [Dim Productcodes].[Product Primary Category].&amp;[VALVE AUTOMATION], [Dim Productcodes].[Product Primary Category].&amp;[MISCELLANEOUS], [Dim Productcodes].[Product Primary Category].&amp;[DANIEL], [Dim Productcodes].[Product Primary Category].&amp;[DET-TRONICS], [Dim Productcodes].[Product Primary Category].&amp;[EMERSON MARINE], [Dim Productcodes].[Product Primary Category].&amp;[WIRELESS] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Inventory]))</Statement><ParameterDefinitions>
+<ParameterDefinition><Name>TimeFiscalMonth</Name><DefaultValues /><Caption>Fiscal Month</Caption><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Inventory]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+</ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Author>Duc Duy Nguyen</Author>
+  <Code />
+  <Width>8.5in</Width>
+  <Body>
+    <ReportItems>
+      <Table Name="table1">
+        <DataSetName>AnalysisDB</DataSetName>
+        <TableGroups>
+          <TableGroup>
+            <Grouping Name="table1_Group1">
+              <GroupExpressions>
+                <GroupExpression>=Fields!Product_Primary_Category.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ColSpan>2</ColSpan>
+                      <ReportItems>
+                        <Textbox Name="textbox4">
+                          <rd:DefaultName>textbox4</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>12</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!Product_Primary_Category.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox17">
+                          <rd:DefaultName>textbox17</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>c</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>11</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=sum(Fields!Sales_From_Stock.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox8">
+                          <rd:DefaultName>textbox8</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>c</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>10</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Sum(Fields!Cost_From_Stock.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox6">
+                          <rd:DefaultName>textbox6</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>c</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>9</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=sum(Fields!Average_Inventory.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+            </Header>
+          </TableGroup>
+        </TableGroups>
+        <Width>4.25in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Product_Primary_Category">
+                      <rd:DefaultName>Product_Primary_Category</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Product_Code.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox22">
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Product_Description.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox18">
+                      <rd:DefaultName>textbox18</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Sales_From_Stock.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Cost_From_Stock.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox26">
+                      <rd:DefaultName>textbox26</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Average_Inventory.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+          <Grouping Name="table1_Details_Group">
+            <GroupExpressions>
+              <GroupExpression>=Fields!Product_Code.Value</GroupExpression>
+            </GroupExpressions>
+          </Grouping>
+          <Visibility>
+            <Hidden>true</Hidden>
+            <ToggleItem>textbox4</ToggleItem>
+          </Visibility>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>2</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox41">
+                      <rd:DefaultName>textbox41</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>21</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox14">
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>20</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>19</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox24">
+                      <rd:DefaultName>textbox24</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>18</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>17</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>PC</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>16</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Description</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox16">
+                      <rd:DefaultName>textbox16</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>15</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Sales from Stock</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>14</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Cost from Stock</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox25">
+                      <rd:DefaultName>textbox25</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>13</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Current Inventory</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.5in</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>0.375in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.25in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.875in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.875in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.875in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>2</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderColor>
+                          <Top>DimGray</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Top>1.5pt</Top>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>12pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Total</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox19">
+                      <rd:DefaultName>textbox19</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderColor>
+                          <Top>Black</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(Fields!Sales_From_Stock.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderColor>
+                          <Top>Black</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Sum(Fields!Cost_From_Stock.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox27">
+                      <rd:DefaultName>textbox27</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderColor>
+                          <Top>Black</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(Fields!Average_Inventory.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+      </Table>
+    </ReportItems>
+    <Height>1.5in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox12">
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>7.125in</Left>
+        <Value>=Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
+      </Textbox>
+      <Textbox Name="textbox13">
+        <Width>3.125in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.5in</Left>
+        <Value>="Execution Time:" &amp; Globals!ExecutionTime</Value>
+      </Textbox>
+      <Textbox Name="textbox15">
+        <Width>1in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Value>=Globals!ReportName</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.25in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <TopMargin>0.25in</TopMargin>
+</Report>

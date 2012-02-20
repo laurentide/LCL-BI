@@ -1,0 +1,22 @@
+SELECT 
+{
+	{
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Sell - Bookings]),
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Percentage of goal]) 
+	 },
+	 {
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date],[Measures].[Sell - Bookings]),
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date],[Measures].[Percentage of goal]) 
+	 },
+	 {
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Month to Date],[Measures].[Sell - Bookings]),
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Month to Date],[Measures].[Percentage of goal]) 
+	 }	 
+ }  
+ ON COLUMNS, 
+ {
+	 [Product Code Category].[Product Primary Category].&[VALVE AUTOMATION],
+	 [Product Code Category].[Product Primary Category].&[FRS],
+	 [Product Code Category].[Product Primary Category].&[ROSEMOUNT ANALYTICAL]} ON ROWS
+FROM [Sales_2008]
+WHERE [Time].[Fiscal Month].&[2008-12-01T00:00:00]

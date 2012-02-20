@@ -1,0 +1,9 @@
+﻿<DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xsi:type="RelationalDataSource" dwd:design-time-name="209ecae0-f78c-4e1f-a0ab-9431a493453d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Lcl-sql2k5-s</ID>
+  <Name>Lcl-sql2k5-s</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <ConnectionString>Provider=SQLNCLI.1;Data Source=lcl-sql2k5-s;Integrated Security=SSPI;Initial Catalog=Nomis_Warehouse</ConnectionString>
+  <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
+  <Timeout>PT0S</Timeout>
+</DataSource>

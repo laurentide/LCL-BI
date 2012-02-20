@@ -1,0 +1,284 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c3730e67-04bb-4a19-a1d6-5f15ef75ee57" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Account</ID>
+  <Name>Dim Account</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1277" scrolltop="-5781" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8017" y="15981" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_account (dbo.dim_account)" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4657" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800003112000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_account" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1277</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5781</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="ed04308c-43ca-49a4-88cf-cfe3f33d9dc4">
+    <DataSourceViewID>Nomis Warehouse 1</DataSourceViewID>
+  </Source>
+  <UnknownMember>Hidden</UnknownMember>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="79226735-a1d8-45bb-9344-5b06a78cba67">
+      <ID>Dim Account</ID>
+      <Name>Dim Account</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>561</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6a0868c6-d70b-48ee-9897-8a67e9d538e0">
+          <NullProcessing>UnknownMember</NullProcessing>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="109306c5-d83a-438f-9494-9afc29e927b3">
+            <TableID>dbo_dim_account</TableID>
+            <ColumnID>account_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="b99e2eba-d13e-44d2-9f0b-75791a48ed62">
+          <AttributeID>Account Gl</AttributeID>
+          <Name>Account Gl</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d88be92b-0b46-48e2-8678-eae2f4376372">
+          <AttributeID>Account Category Id</AttributeID>
+          <Name>Account Category Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ee607db9-2f05-451c-92a5-d2b7903487d5">
+          <AttributeID>Account Category</AttributeID>
+          <Name>Account Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0ac490d9-c879-4812-b1d7-03d373637033">
+          <AttributeID>Account Name</AttributeID>
+          <Name>Account Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1864858b-3ddf-4ca7-aef1-3cf8e6e8c493">
+          <AttributeID>Account Description</AttributeID>
+          <Name>Account Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="886b2484-7870-4894-8d2d-feb0b93180cb">
+          <AttributeID>Account Deparment Id</AttributeID>
+          <Name>Account Deparment Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b9e73ead-e0f8-40e8-a6b2-70b9f232b43e">
+          <AttributeID>Account Department Name</AttributeID>
+          <Name>Account Department Name</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="6aea14e3-a672-413d-9499-1bd455e675cb">
+      <ID>Account Gl</ID>
+      <Name>Account Gl</Name>
+      <EstimatedCount>558</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0c4db363-2f90-4927-b136-bc34506bbb19">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a074b558-f7b6-44b3-8e28-7479b6608e65">
+            <TableID>dbo_dim_account</TableID>
+            <ColumnID>account_gl</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="a1be85ac-f5dd-4185-b496-511b7f317ad1">
+      <ID>Account Category Id</ID>
+      <Name>Account Category Id</Name>
+      <EstimatedCount>4</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3af6fc86-afb8-495a-8232-e782b0155c85">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e14fda24-df27-4d54-b67f-0560c26ea783">
+            <TableID>dbo_dim_account</TableID>
+            <ColumnID>account_category_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="813a3e5f-5424-4b25-928c-1e15a1b64bc8">
+      <ID>Account Category</ID>
+      <Name>Account Category</Name>
+      <EstimatedCount>4</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="972e13fb-3e82-48e4-9d80-7d1fb491d2ce">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="af6858c3-187e-4c8e-bb77-2b0df5f72ca3">
+            <TableID>dbo_dim_account</TableID>
+            <ColumnID>account_category</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="62f30eae-590b-4cd3-91c6-d956803ce1f1">
+      <ID>Account Name</ID>
+      <Name>Account Name</Name>
+      <EstimatedCount>25</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="846fb02b-790d-4e6a-a805-1f158b8299f6">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="99fd1d52-bfa0-46f8-b0cf-e53decad910a">
+            <TableID>dbo_dim_account</TableID>
+            <ColumnID>account_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="893fa793-6bd0-4df3-b703-1727cb6faab6">
+      <ID>Account Description</ID>
+      <Name>Account Description</Name>
+      <EstimatedCount>42</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="29a1288c-ffc0-4f39-ae8c-3b98da52954a">
+          <DataType>WChar</DataType>
+          <DataSize>1024</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ca311b48-af76-428d-a40a-81dd02da17bf">
+            <TableID>dbo_dim_account</TableID>
+            <ColumnID>account_description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="dda3f657-6be5-4dc3-ba3a-8c7b74621054">
+      <ID>Account Deparment Id</ID>
+      <Name>Account Deparment Id</Name>
+      <EstimatedCount>10</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="610b6582-7363-4583-84d7-cb2e6a25ae22">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="af973417-23fd-44cf-b3e4-e52a3b1bdd35">
+            <TableID>dbo_dim_account</TableID>
+            <ColumnID>account_department_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="1fd4c93b-1661-4cb4-bb0b-d06b7b1a3554">
+      <ID>Account Department Name</ID>
+      <Name>Account Department Name</Name>
+      <EstimatedCount>10</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="aa70ed1d-14f5-4f5a-af0e-a0fe14ae345e">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d48c3553-00d8-40b1-8c93-1b6a0a817bf5">
+            <TableID>dbo_dim_account</TableID>
+            <ColumnID>account_department_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="2f2c6e44-ff41-4788-8d45-01cc952f59c9">
+      <ID>Account Category Id - Account Name - Account Description</ID>
+      <Name>Category</Name>
+      <Levels>
+        <Level dwd:design-time-name="3b930cb3-064a-4bb2-8261-c897c1adef29">
+          <ID>Account Category</ID>
+          <Name>Account Category</Name>
+          <SourceAttributeID>Account Category</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="6836bccc-8a69-4440-95c4-8e9b24c83573">
+          <ID>Account Name</ID>
+          <Name>Account Name</Name>
+          <SourceAttributeID>Account Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="d40e6188-c882-4324-8d83-661fe34a54dd">
+      <ID>Hierarchy</ID>
+      <Name>Department</Name>
+      <Levels>
+        <Level dwd:design-time-name="67f47fed-ac22-437c-a730-4d98b7c985fd">
+          <ID>Account Department Name</ID>
+          <Name>Account Department Name</Name>
+          <SourceAttributeID>Account Department Name</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="2a1d24c8-8046-4123-8bf6-5a03fa940ebe">
+          <ID>Account Category</ID>
+          <Name>Account Category</Name>
+          <SourceAttributeID>Account Category</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="0538330c-0369-4c3f-be54-569c94a0969a">
+          <ID>Account Name</ID>
+          <Name>Account Name</Name>
+          <SourceAttributeID>Account Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

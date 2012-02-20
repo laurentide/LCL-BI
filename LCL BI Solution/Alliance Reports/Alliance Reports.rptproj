@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmR3ZD0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9EYXRhV2FyZWhvdXNlL0Rlc2lnbmVyLzEuMCI+DQogIDxFbmFibGVkPmZhbHNlPC9FbmFibGVkPg0KICA8UHJvamVjdE5hbWU+PC9Qcm9qZWN0TmFtZT4NCiAgPEF1eFBhdGg+PC9BdXhQYXRoPg0KICA8TG9jYWxQYXRoPjwvTG9jYWxQYXRoPg0KICA8UHJvdmlkZXI+PC9Qcm92aWRlcj4NCjwvU291cmNlQ29udHJvbEluZm8+</State>
+  <DataSources>
+    <ProjectItem>
+      <Name>Analysis.rds</Name>
+      <FullPath>Analysis.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AnalysisDB.rds</Name>
+      <FullPath>AnalysisDB.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>lcl-sqla.rds</Name>
+      <FullPath>lcl-sqla.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Nomis_Warehouse.rds</Name>
+      <FullPath>Nomis_Warehouse.rds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <Reports>
+    <ProjectItem>
+      <Name>Agreements - Service Banks Summary.rdl</Name>
+      <FullPath>Agreements - Service Banks Summary.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Alliance Open Orders.rdl</Name>
+      <FullPath>Alliance Open Orders.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Billable Hours by Resource - TC.rdl</Name>
+      <FullPath>Billable Hours by Resource - TC.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Billable Hours by Resource.rdl</Name>
+      <FullPath>Billable Hours by Resource.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Billable Hours by Team.rdl</Name>
+      <FullPath>Billable Hours by Team.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Billable Hours Graph Eng.rdl</Name>
+      <FullPath>Billable Hours Graph Eng.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Hours by PC by Resource.rdl</Name>
+      <FullPath>Hours by PC by Resource.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Income By Team.rdl</Name>
+      <FullPath>Income By Team.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>OT Hours by Resource - TC.rdl</Name>
+      <FullPath>OT Hours by Resource - TC.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>OT Hours by Resource.rdl</Name>
+      <FullPath>OT Hours by Resource.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PV Tasks.rdl</Name>
+      <FullPath>PV Tasks.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TaskDetails.rdl</Name>
+      <FullPath>TaskDetails.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TaskDetails_Billable.rdl</Name>
+      <FullPath>TaskDetails_Billable.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TaskDetails_Non_Billable.rdl</Name>
+      <FullPath>TaskDetails_Non_Billable.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TaskDetails_Year.rdl</Name>
+      <FullPath>TaskDetails_Year.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TaskDetails_Year_Billable.rdl</Name>
+      <FullPath>TaskDetails_Year_Billable.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TaskDetails_Year_Non_Billable.rdl</Name>
+      <FullPath>TaskDetails_Year_Non_Billable.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Time By Team.rdl</Name>
+      <FullPath>Time By Team.rdl</FullPath>
+    </ProjectItem>
+  </Reports>
+  <Configurations>
+    <Configuration>
+      <Name>Debug</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetFolder>Alliance Reports</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>DebugLocal</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetFolder>Alliance Reports</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>Production</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetServerURL>http://lcl-sql2k5-s/reportserver</TargetServerURL>
+        <TargetFolder>Alliance Reports</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>

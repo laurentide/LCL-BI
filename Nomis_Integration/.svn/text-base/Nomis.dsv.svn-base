@@ -1,0 +1,311 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8ad4e67a-af43-4c31-a495-86a5489ef153" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Nomis</ID>
+  <Name>Nomis</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Nomis 1</DataSourceID>
+  <Schema>
+    <xs:schema id="Nomis" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Nomis" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="a8637848-fcd9-4fc5-9f1b-21eb6d6b289b">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="NOMDBF95_SSTPHY01" msprop:FriendlyName="SSTPHY01" msprop:DbSchemaName="NOMDBF95" msprop:DbTableName="SSTPHY01" msprop:design-time-name="a5453a65-5d9d-4c8e-a4cb-268acdf5090e" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IMAQNB" msprop:FriendlyName="IMAQNB" msprop:DbColumnName="IMAQNB" msprop:design-time-name="f2d1608a-643c-4c79-8b1a-4235346da121" type="xs:double" />
+                  <xs:element name="IMQ9CD" msprop:FriendlyName="IMQ9CD" msprop:DbColumnName="IMQ9CD" msprop:design-time-name="bfae9628-b4e5-4133-b450-b5dc598ec139">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMS9NB" msprop:FriendlyName="IMS9NB" msprop:DbColumnName="IMS9NB" msprop:design-time-name="a1c6cd8c-bb52-4d48-9d52-5cf6c9c5fdfd" type="xs:double" />
+                  <xs:element name="IMTANB" msprop:FriendlyName="IMTANB" msprop:DbColumnName="IMTANB" msprop:design-time-name="373e1b74-94e5-4a2c-bd41-8311c73c43b1" type="xs:double" />
+                  <xs:element name="IMNWST" msprop:FriendlyName="IMNWST" msprop:DbColumnName="IMNWST" msprop:design-time-name="268a81e5-f69a-4ce7-bcc7-49cda18bdaa8">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMGPZZ" msprop:FriendlyName="IMGPZZ" msprop:DbColumnName="IMGPZZ" msprop:design-time-name="87fcc82b-5a65-4015-b076-5ff2fa23ed71">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMK8VC" msprop:FriendlyName="IMK8VC" msprop:DbColumnName="IMK8VC" msprop:design-time-name="26f5da73-f078-484a-8d7a-918ddec1cde3" type="xs:double" />
+                  <xs:element name="IMH9VA" msprop:FriendlyName="IMH9VA" msprop:DbColumnName="IMH9VA" msprop:design-time-name="54891086-9000-4922-b221-482d8304758a" type="xs:double" />
+                  <xs:element name="IMIAVA" msprop:FriendlyName="IMIAVA" msprop:DbColumnName="IMIAVA" msprop:design-time-name="611ae2e1-f064-4619-8228-94c59c1ae1fa" type="xs:double" />
+                  <xs:element name="IMOQNB" msprop:FriendlyName="IMOQNB" msprop:DbColumnName="IMOQNB" msprop:design-time-name="d03476a2-b90f-4e3e-ad74-db6054c05f6e" type="xs:double" />
+                  <xs:element name="IMORNB" msprop:FriendlyName="IMORNB" msprop:DbColumnName="IMORNB" msprop:design-time-name="d6c8f6c1-c110-49a0-b845-618fdc0cb311" type="xs:double" />
+                  <xs:element name="IMOSNB" msprop:FriendlyName="IMOSNB" msprop:DbColumnName="IMOSNB" msprop:design-time-name="517de43d-cd17-4cc5-b180-79df816796ea" type="xs:double" />
+                  <xs:element name="IMKJCD" msprop:FriendlyName="IMKJCD" msprop:DbColumnName="IMKJCD" msprop:design-time-name="59173fdb-7c98-4780-be9d-4f43d913982c">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMLSTX" msprop:FriendlyName="IMLSTX" msprop:DbColumnName="IMLSTX" msprop:design-time-name="616d5455-0dac-4c59-b027-7e8c54a13a1a">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMT6ND" msprop:FriendlyName="IMT6ND" msprop:DbColumnName="IMT6ND" msprop:design-time-name="29bdf477-7008-4039-bdaf-c3999dae1256" type="xs:double" />
+                  <xs:element name="IMLTTX" msprop:FriendlyName="IMLTTX" msprop:DbColumnName="IMLTTX" msprop:design-time-name="9836096b-f57b-4d87-b46f-b002b29649d6">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMKKCD" msprop:FriendlyName="IMKKCD" msprop:DbColumnName="IMKKCD" msprop:design-time-name="6618270b-b213-4c4c-bf55-21389aa68af1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMJ2ST" msprop:FriendlyName="IMJ2ST" msprop:DbColumnName="IMJ2ST" msprop:design-time-name="54c82aad-c3bf-4811-b87f-07623d237362">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMKLCD" msprop:FriendlyName="IMKLCD" msprop:DbColumnName="IMKLCD" msprop:design-time-name="ac4f54e7-7922-4801-8981-16676c2f9438">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMKMCD" msprop:FriendlyName="IMKMCD" msprop:DbColumnName="IMKMCD" msprop:design-time-name="cc2603e4-980f-40cc-b19a-8bae4c61c4a7">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="3" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMKNCD" msprop:FriendlyName="IMKNCD" msprop:DbColumnName="IMKNCD" msprop:design-time-name="d64a7def-038a-4eb9-bb7e-de90c2cd78f1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMT7ND" msprop:FriendlyName="IMT7ND" msprop:DbColumnName="IMT7ND" msprop:design-time-name="c82f343a-f5d9-4d88-affd-3786a0ce5c31" type="xs:double" />
+                  <xs:element name="IMP6CF" msprop:FriendlyName="IMP6CF" msprop:DbColumnName="IMP6CF" msprop:design-time-name="6a6528a5-90e2-4568-8b62-7d7a6dafd41c">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMLUTX" msprop:FriendlyName="IMLUTX" msprop:DbColumnName="IMLUTX" msprop:design-time-name="bee5c62c-1b94-479f-99c3-31aa630b0ad5">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMOVNB" msprop:FriendlyName="IMOVNB" msprop:DbColumnName="IMOVNB" msprop:design-time-name="0c3d9cdc-d8b4-4de7-b838-066688b7ca6e" type="xs:double" />
+                  <xs:element name="IMP7CF" msprop:FriendlyName="IMP7CF" msprop:DbColumnName="IMP7CF" msprop:design-time-name="a0781a8d-cd86-4217-a822-9dd0838be43c">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMDGDU" msprop:FriendlyName="IMDGDU" msprop:DbColumnName="IMDGDU" msprop:design-time-name="c832be9a-806b-46f9-b776-7c991a0100ed" type="xs:double" />
+                  <xs:element name="IMU5SU" msprop:FriendlyName="IMU5SU" msprop:DbColumnName="IMU5SU" msprop:design-time-name="2053224f-f73c-41c8-8678-745a0b83269c">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMXICF" msprop:FriendlyName="IMXICF" msprop:DbColumnName="IMXICF" msprop:design-time-name="5a1ddb43-92ca-4e60-a340-cbae50d199f3">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMRDCD" msprop:FriendlyName="IMRDCD" msprop:DbColumnName="IMRDCD" msprop:design-time-name="37d8b650-17b1-420c-b125-c139ff474f98">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="3" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMZXNB" msprop:FriendlyName="IMZXNB" msprop:DbColumnName="IMZXNB" msprop:design-time-name="f35ffbbd-ca18-42f7-b2e2-f3c45b87ba8d" type="xs:double" />
+                  <xs:element name="IMRCCD" msprop:FriendlyName="IMRCCD" msprop:DbColumnName="IMRCCD" msprop:design-time-name="0257754d-f6f1-40a2-995f-09c1789f96a2">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="6" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMC5AA" msprop:FriendlyName="IMC5AA" msprop:DbColumnName="IMC5AA" msprop:design-time-name="76c0f6be-ee6e-4c2c-b9d9-7d983a4a2a3b">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMRJCD" msprop:FriendlyName="IMRJCD" msprop:DbColumnName="IMRJCD" msprop:design-time-name="4435d489-5c41-4433-b82f-2880f7734181">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMRMCD" msprop:FriendlyName="IMRMCD" msprop:DbColumnName="IMRMCD" msprop:design-time-name="4d195e86-8f10-4fb5-9871-19693bcd74e3">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="3" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMD6CF" msprop:FriendlyName="IMD6CF" msprop:DbColumnName="IMD6CF" msprop:design-time-name="1b436b27-c893-45e1-8414-d9578b66d277">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMEQCF" msprop:FriendlyName="IMEQCF" msprop:DbColumnName="IMEQCF" msprop:design-time-name="3a707aa7-f183-4bf5-aad4-41df3683a17c">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMJRCD" msprop:FriendlyName="IMJRCD" msprop:DbColumnName="IMJRCD" msprop:design-time-name="fb58542a-5a1f-4a2b-818a-31d9dc3d31fb">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMRKCD" msprop:FriendlyName="IMRKCD" msprop:DbColumnName="IMRKCD" msprop:design-time-name="6ffe88cb-dc76-4052-9a4d-16331fe3eb93">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMTUTX" msprop:FriendlyName="IMTUTX" msprop:DbColumnName="IMTUTX" msprop:design-time-name="59adf1d1-ecdb-4f53-866b-135644e3810e" type="xs:double" />
+                  <xs:element name="IML9ND" msprop:FriendlyName="IML9ND" msprop:DbColumnName="IML9ND" msprop:design-time-name="d44b45be-cd2a-45cf-9b49-8477f6146884" type="xs:double" />
+                  <xs:element name="IMMAND" msprop:FriendlyName="IMMAND" msprop:DbColumnName="IMMAND" msprop:design-time-name="5b23a621-09b2-4d74-9965-5d0e63baa012" type="xs:double" />
+                  <xs:element name="IMD8NB" msprop:FriendlyName="IMD8NB" msprop:DbColumnName="IMD8NB" msprop:design-time-name="56cc4aed-7920-4cb2-86f1-a796beaad646" type="xs:double" />
+                  <xs:element name="IMBWDU" msprop:FriendlyName="IMBWDU" msprop:DbColumnName="IMBWDU" msprop:design-time-name="bf358d8a-2a58-47bf-bdb2-67d1dc643e71" type="xs:double" />
+                  <xs:element name="IMAWTN" msprop:FriendlyName="IMAWTN" msprop:DbColumnName="IMAWTN" msprop:design-time-name="c40cd871-4433-4f64-9647-710e9f97f828" type="xs:double" />
+                  <xs:element name="IMAWVM" msprop:FriendlyName="IMAWVM" msprop:DbColumnName="IMAWVM" msprop:design-time-name="bfc58f9c-4fff-4cfb-9d24-57b6a97002ee">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMNLTY" msprop:FriendlyName="IMNLTY" msprop:DbColumnName="IMNLTY" msprop:design-time-name="5472e067-2cd7-4e61-a2da-7a0da213f4af">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMFIDT" msprop:FriendlyName="IMFIDT" msprop:DbColumnName="IMFIDT" msprop:design-time-name="15c2f3e3-3d78-40c2-a871-265b987dc02e" type="xs:double" />
+                  <xs:element name="IMAATM" msprop:FriendlyName="IMAATM" msprop:DbColumnName="IMAATM" msprop:design-time-name="94f95156-9669-454c-8ca9-fb6c1d56129c" type="xs:double" />
+                  <xs:element name="IMAVTW" msprop:FriendlyName="IMAVTW" msprop:DbColumnName="IMAVTW" msprop:design-time-name="3c030f79-1381-43d3-ada5-fd7eac78b145">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMNMTY" msprop:FriendlyName="IMNMTY" msprop:DbColumnName="IMNMTY" msprop:design-time-name="00bd0c49-24e1-4790-b9a9-6e4f6edb8d27">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IMJ1ND" msprop:FriendlyName="IMJ1ND" msprop:DbColumnName="IMJ1ND" msprop:design-time-name="4ef1a66a-c3ae-48d1-87a8-92e3bb97ab0b" type="xs:double" />
+                  <xs:element name="IMFESU" msprop:FriendlyName="IMFESU" msprop:DbColumnName="IMFESU" msprop:design-time-name="622b697b-e5d2-4a06-b2a2-c01fce48364c">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1">
+          <xs:selector xpath=".//NOMDBF95_SSTPHY01" />
+          <xs:field xpath="IMAQNB" />
+        </xs:unique>
+        <xs:unique name="Constraint2">
+          <xs:selector xpath=".//NOMDBF95_SSTPHY01" />
+          <xs:field xpath="IMQ9CD" />
+        </xs:unique>
+        <xs:unique name="Constraint3">
+          <xs:selector xpath=".//NOMDBF95_SSTPHY01" />
+          <xs:field xpath="IMS9NB" />
+        </xs:unique>
+        <xs:unique name="Constraint4" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//NOMDBF95_SSTPHY01" />
+          <xs:field xpath="IMAQNB" />
+          <xs:field xpath="IMQ9CD" />
+          <xs:field xpath="IMS9NB" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
+  </Schema>
+</DataSourceView>

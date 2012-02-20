@@ -1,0 +1,3478 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6c32b9fe-761e-40c1-acd1-710e0367bc55" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Quote Builder</ID>
+  <Name>QuoteBuilder</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="68" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-6872" scrolltop="-9331" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="55" x="21167" y="20796" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_customerContact (dbo.dim_customerContact)" left="18169" top="-493" logicalid="34" controlid="1" masterid="0" hint1="0" hint2="0" width="3942" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000660f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_customerContact" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_quotes (dbo.fact_quotes)" left="12769" top="9" logicalid="35" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_quotes" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_productcodes (dbo.dim_productcodes)" left="-3980" top="12385" logicalid="36" controlid="3" masterid="0" hint1="0" hint2="0" width="4974" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800006e1300004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_productcodes" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_quote_status (dbo.dim_quote_status)" left="7369" top="855" logicalid="37" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_quote_status" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_quote_employee (dbo.dim_quote_employee)" left="32464" top="6907" logicalid="38" controlid="5" masterid="0" hint1="0" hint2="0" width="3307" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000eb0c000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_quote_employee" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_product_code_category (dbo.dim_product_code_category)" left="-7232" top="23412" logicalid="39" controlid="6" masterid="0" hint1="0" hint2="0" width="4604" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000fc11000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_product_code_category" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_goals (dbo.fact_goals)" left="12830" top="22559" logicalid="40" controlid="7" masterid="0" hint1="0" hint2="0" width="3175" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000670c0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_goals" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_product_code_subcategory (dbo.dim_product_code_subcategory)" left="3394" top="11672" logicalid="41" controlid="8" masterid="0" hint1="0" hint2="0" width="5573" height="1940" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000c515000094070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_product_code_subcategory" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_subgoals (dbo.fact_subgoals)" left="4205" top="6908" logicalid="42" controlid="9" masterid="0" hint1="0" hint2="0" width="3951" height="2364" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800006f0f00003c090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_subgoals" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="5781" top="8972" logicalid="43" controlid="10" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_fact_subgoals_dim_product_code_subcategory]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="9" sourceattachpoint="8" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6180" y="11672" />
+              <point x="6180" y="9272" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_quote_type (dbo.dim_quote_type)" left="12769" top="-4331" logicalid="44" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="1940" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b000094070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_quote_type" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Time (DimTime.Time)" left="11366" top="15159" logicalid="45" controlid="12" masterid="0" hint1="0" hint2="0" width="6103" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000d717000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Time" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7856" top="7691" logicalid="46" controlid="13" masterid="0" hint1="0" hint2="0" width="3810" height="8618" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[Time-fact_subgoals]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="12" sourceattachpoint="17" destattachpoint="24" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8156" y="8090" />
+              <point x="9761" y="8090" />
+              <point x="9761" y="16009" />
+              <point x="11366" y="16009" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="14018" top="19859" logicalid="47" controlid="14" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[Time-fact_goals]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="12" sourceattachpoint="4" destattachpoint="11" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14417" y="22559" />
+              <point x="14417" y="20159" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="14519" top="3704" logicalid="48" controlid="15" masterid="0" hint1="0" hint2="0" width="19998" height="3703" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_quotes-dim_quote_employee]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="2" sourceattachpoint="4" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="34117" y="6907" />
+              <point x="34117" y="5456" />
+              <point x="14819" y="5456" />
+              <point x="14819" y="4004" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="15469" top="1608" logicalid="49" controlid="16" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_quotes-dim_customerContact]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="22" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="18169" y="2007" />
+              <point x="16969" y="2007" />
+              <point x="16969" y="2006" />
+              <point x="15769" y="2006" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="10069" top="1607" logicalid="50" controlid="17" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_quotes-dim_quote_status]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="2" sourceattachpoint="13" destattachpoint="16" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="10369" y="2006" />
+              <point x="12769" y="2006" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-1892" top="3704" logicalid="51" controlid="18" masterid="0" hint1="0" hint2="0" width="15361" height="9181" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_quotes-dim_productcodes]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="2" sourceattachpoint="8" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-1493" y="12385" />
+              <point x="-1493" y="8195" />
+              <point x="13169" y="8195" />
+              <point x="13169" y="4004" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13870" top="-2890" logicalid="52" controlid="19" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_quotes-dim_quote_type]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="2" sourceattachpoint="5" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14269" y="-2391" />
+              <point x="14269" y="9" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-5329" top="15234" logicalid="53" controlid="20" masterid="0" hint1="0" hint2="0" width="3036" height="8678" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_productcodes-dim_product_code_category]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="3" sourceattachpoint="8" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-4930" y="23412" />
+              <point x="-4930" y="19473" />
+              <point x="-2593" y="19473" />
+              <point x="-2593" y="15534" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="694" top="12243" logicalid="54" controlid="21" masterid="0" hint1="0" hint2="0" width="3000" height="916" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_productcodes-dim_product_code_subcategory]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="3" sourceattachpoint="20" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3394" y="12642" />
+              <point x="2194" y="12642" />
+              <point x="2194" y="12859" />
+              <point x="994" y="12859" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_currency (dbo.dim_currency)" left="25493" top="16456" logicalid="55" controlid="22" masterid="0" hint1="0" hint2="0" width="4571" height="2405" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000db11000065090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_currency" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_currencyrate (dbo.fact_currencyrate)" left="19869" top="16456" logicalid="56" controlid="23" masterid="0" hint1="0" hint2="0" width="3224" height="2405" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000980c000065090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_currencyrate" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13969" top="3704" logicalid="57" controlid="24" masterid="0" hint1="0" hint2="0" width="14209" height="13252" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_quotes-dim_currency]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="22" destid="2" sourceattachpoint="6" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="27778" y="16456" />
+              <point x="27778" y="10230" />
+              <point x="14269" y="10230" />
+              <point x="14269" y="4004" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="22793" top="17259" logicalid="58" controlid="25" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_currencyrate-dim_currency]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="22" destid="23" sourceattachpoint="18" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="25493" y="17658" />
+              <point x="23093" y="17658" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="17169" top="17260" logicalid="59" controlid="26" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_currencyrate-Time]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="12" destid="23" sourceattachpoint="31" destattachpoint="14" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17469" y="17659" />
+              <point x="18669" y="17659" />
+              <point x="18669" y="17658" />
+              <point x="19869" y="17658" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_bookings (dbo.fact_bookings)" left="-228" top="23412" logicalid="60" controlid="27" masterid="0" hint1="0" hint2="0" width="4475" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800007b11000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_bookings" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-1342" top="15035" logicalid="61" controlid="28" masterid="0" hint1="0" hint2="0" width="3651" height="8677" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_bookings-dim_productcodes]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="27" sourceattachpoint="11" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-943" y="15534" />
+              <point x="-943" y="19473" />
+              <point x="2009" y="19473" />
+              <point x="2009" y="23412" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3947" top="18910" logicalid="62" controlid="29" masterid="0" hint1="0" hint2="0" width="7719" height="7302" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_bookings-Time]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="12" destid="27" sourceattachpoint="36" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11366" y="19309" />
+              <point x="7807" y="19309" />
+              <point x="7807" y="25912" />
+              <point x="4247" y="25912" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_sales (dbo.fact_sales)" left="3394" top="16012" logicalid="63" controlid="30" masterid="0" hint1="0" hint2="0" width="4233" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800008910000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_sales" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="694" top="14110" logicalid="64" controlid="31" masterid="0" hint1="0" hint2="0" width="3000" height="4702" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_sales-dim_productcodes]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="30" sourceattachpoint="25" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="994" y="14509" />
+              <point x="2194" y="14509" />
+              <point x="2194" y="18512" />
+              <point x="3394" y="18512" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7327" top="17260" logicalid="65" controlid="32" masterid="0" hint1="0" hint2="0" width="4339" height="1552" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_sales-Time]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="12" destid="30" sourceattachpoint="30" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11366" y="17659" />
+              <point x="9497" y="17659" />
+              <point x="9497" y="18512" />
+              <point x="7627" y="18512" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13017" top="3505" logicalid="66" controlid="33" masterid="0" hint1="0" hint2="0" width="1102" height="11954" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[Time-fact_quotes]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="12" sourceattachpoint="3" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13719" y="4004" />
+              <point x="13719" y="9581" />
+              <point x="13317" y="9581" />
+              <point x="13317" y="15159" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-6872</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-9331</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-7232</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-4331</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>55</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="e079d2f9-c325-4d05-8704-5aa342982338">
+      <ID>Dim Customer Contact</ID>
+      <Name>Customer And Contact</Name>
+      <DimensionID>Dim Customer Contact</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="eb1f93cd-42ec-45b5-977f-4bd3c8cd449c">
+          <AttributeID>Dim Customer Contact</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e1ddf5b3-0a66-435e-b219-2f585211ff2f">
+          <AttributeID>Contact ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="90b187d1-64f1-4726-a49e-ee7b5e48a3e3">
+          <AttributeID>Customer Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cda4e214-648f-421e-8702-cec502c1e688">
+          <AttributeID>Customer Short Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="286312e5-fe57-4e5f-b364-b9c9e388bd8e">
+          <AttributeID>Address1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5e199bd1-543d-46da-be86-1071712ecbdd">
+          <AttributeID>Address2</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="159c1173-1e08-4182-9490-af864b87834a">
+          <AttributeID>City</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="92b98ff6-c657-4825-a10b-bf3e2bdecd7d">
+          <AttributeID>Province</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="782d2e31-b499-453b-8c6a-3193c7c7c5ad">
+          <AttributeID>Postal Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a92c60a0-d964-4e44-9538-27ec6adb6ede">
+          <AttributeID>Contact Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="806735eb-66bd-49d5-b5c0-132735d20063">
+          <AttributeID>Customerid</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="7872d096-f04a-40bc-bdc0-bd36d3ff96d1">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="8cc9b11f-8365-4d25-ae9c-b82cb87d3c67">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="a22143ae-f689-43fa-b48b-e0fd22e71989">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="4ea4109b-ef61-4ba3-9508-e29a47bee3c0">
+      <ID>Dim Quote Status</ID>
+      <Name>Quote Status</Name>
+      <DimensionID>Dim Quote Status</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="cc8f61a6-327f-4050-a2b8-2b5c892dcfa3">
+          <AttributeID>Dim Quote Status</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="27441be9-7c79-4a9d-9903-224fe78e014e">
+          <AttributeID>Statusid</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="10b63ed9-f3cb-4f2e-b031-f1aba0bd9951">
+          <AttributeID>Status</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="90856559-37b3-4cbe-b269-a133d82a5b44">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="7b2f5699-c431-4fd7-b968-eeef9f5ba0f0">
+      <ID>Dim Quote Employee</ID>
+      <Name>Quote Employee</Name>
+      <DimensionID>Dim Quote Employee</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="da776c4b-4a44-4a58-a15a-8c06b3a24363">
+          <AttributeID>Dim Quote Employee</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7b600ecf-61ff-4530-a703-b9545b45e11d">
+          <AttributeID>French Title</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0a8d27c1-df01-4d8c-8107-70f798a4e30e">
+          <AttributeID>English Title</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="64d60c6e-f556-40da-a19e-8ca3d9ee734d">
+          <AttributeID>Email</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dd3d73d5-c350-4983-97fe-09c967302407">
+          <AttributeID>Extension</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="22f79fc0-9ae4-457b-9d3a-a97968c68b22">
+          <AttributeID>Employee Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6d081fec-3fd9-43af-a4ba-e44a42120252">
+          <AttributeID>Deparment</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8207c1dc-5004-4603-9042-060fe18e93dc">
+          <AttributeID>Employeeid</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="46a2ac52-4fff-4560-8da8-35697b59e8c0">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="01c27437-1419-4582-9cf5-d073d16968ba">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="25c13215-9a75-413d-a3f1-b8f0084f0ad9">
+      <ID>Dim Product Code Category</ID>
+      <Name>Product Code Category</Name>
+      <DimensionID>Dim Product Code Category</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="dd6b854f-2192-4040-a506-b032f6be99a4">
+          <AttributeID>Dim Product Code Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="50febf40-9c2a-4545-89b9-f1b56f634412">
+          <AttributeID>Product Primary Category</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="96083ecc-45e2-40bf-a964-a2358807b1db">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="509023cb-dcf4-437d-8ba5-a64c7d2c5fc9">
+      <ID>Dim Product Code Subcategory</ID>
+      <Name>Product Code Subcategory</Name>
+      <DimensionID>Dim Product Code Subcategory</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="60a6e65b-8476-4195-b7b8-aead4a83c902">
+          <AttributeID>Dim Product Code Subcategory</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="842f923e-453f-4dd3-8294-e234ed82e593">
+          <AttributeID>Product Primary Subcategory</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="90444847-e8de-4a46-801b-c47ba139fabe">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="b332ffa9-45ec-4b04-972e-72a4950900a4">
+      <ID>Dim Quote Type</ID>
+      <Name>Quote Type</Name>
+      <DimensionID>Dim Quote Type</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="302a4bc8-1781-42f6-86dd-6f54e865fc0c">
+          <AttributeID>Dim Quote Type</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e1fd99e2-6fe8-4c11-9820-f31745a9491b">
+          <AttributeID>Type</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="3f2fc8db-9149-4c69-bdc3-70893fffcb2f">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="127c608c-e711-4079-be88-5768d2a08f97">
+      <ID>Dim Productcodes</ID>
+      <Name>Product Codes</Name>
+      <DimensionID>Dim Productcodes</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b3780bcd-4ce6-4e22-b2c9-f163a283af41">
+          <AttributeID>Dim Productcodes</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="96e1b4b4-11f1-4208-85ca-561d2e103c44">
+          <AttributeID>Product Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d39aeef0-86be-42d5-9a40-10f340650e52">
+          <AttributeID>Product Description</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b85886b0-09c3-46dc-951f-5c349f77f113">
+          <AttributeID>Dim Product Code Subcategory</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e2da7909-1dc0-4ed3-a10d-0e6ec30b6ee5">
+          <AttributeID>Product Primary Subcategory</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="46fd24fa-eb0d-4f2d-a825-4c3a808607f0">
+          <AttributeID>Dim Product Code Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="73251230-f475-4629-ae1a-d51fa15d2760">
+          <AttributeID>Product Primary Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5ea97ea3-6a30-4717-aa7c-215cc1ceebf4">
+          <AttributeID>Product Service Catgory</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a7fa735f-65c3-487c-8d40-eab3b75a6f11">
+          <AttributeID>Department Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b27e9faa-b01f-4a66-bb4f-ab9b9daa41fa">
+          <AttributeID>Quote Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7a71c337-23cc-476f-8ffd-360443376b26">
+          <AttributeID>Pc Nomis Secondary Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="214e4fef-b1de-4b19-99db-05250e071252">
+          <AttributeID>Pc Servicecategory Id</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="d48f7d4e-d35e-4a2d-9e84-10cb910d88f6">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="a06bb057-a8ff-4f4b-9c16-7f2c56289ed4">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="d398bfd0-0dad-44a6-8f81-695c772de4e5">
+          <HierarchyID>Hierarchy 1 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="3573ec25-a70b-4e6e-8dc8-9ab98111b20d">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="7ed04be6-f7db-4d1b-9b60-d5fdec99b0cd">
+      <ID>Dim Currency</ID>
+      <Name>Dim Currency</Name>
+      <DimensionID>Dim Currency</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7df9132b-4416-49da-a1fd-fc7638cef2f1">
+          <AttributeID>Dim Currency</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="2dc12b7e-561b-4df6-a51b-fe3980855468">
+      <ID>Reporting Currency</ID>
+      <Name>Reporting Currency</Name>
+      <DimensionID>Reporting Currency</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="93f09d28-8d68-4894-98f4-ce29ae4c90b5">
+          <AttributeID>Dim Currency</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="8a52b5aa-4563-4e9e-9db6-ba77f36e8068">
+      <ID>Quotes Data</ID>
+      <Name>Quotes Data</Name>
+      <DimensionID>Fact Quotes</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="20bd08b1-6dd6-4bf4-8d90-0304be1bd3d3">
+          <AttributeID>Fact Quotes</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2341cfb8-8cea-4c18-952c-6f6386102e87">
+          <AttributeID>Quoteid</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f5a0f9c9-5a1a-4651-89ab-6ffe301769ba">
+          <AttributeID>Revision</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fbd00ff3-d869-465c-bdc3-310d30c44a27">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fe71ea55-635c-4880-bbdc-fe5f540c12db">
+          <AttributeID>Total</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a7c1e057-9b82-4b35-b03f-86491223a168">
+          <AttributeID>Cdnlist</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1ccf2820-aa47-4f9a-a3ea-c25a66b2a5d5">
+          <AttributeID>Only Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1481ce7b-f9ca-44fe-b6d8-49d40325dbfb">
+          <AttributeID>Quoted Product ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9baf0104-0b07-49ba-af11-cd6c211c5d15">
+          <AttributeID>Valve Extended ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dd8f0825-94e3-45ae-86b1-1ab60eb4741f">
+          <AttributeID>Revised Quote</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="49c87ff4-f365-4651-bbab-89c599c5d820">
+          <AttributeID>Follow Up</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3b479423-6125-40d2-bd2d-15d0ebcee88c">
+          <AttributeID>Alternative</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="22cce95c-3b87-47c6-807f-765c7e6a77ba">
+          <AttributeID>Model Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d494fa5c-8ee6-4aa5-9206-3905163ed8cf">
+          <AttributeID>Response Time</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c3035967-4e33-40ca-80b9-e125bc1af07c">
+          <AttributeID>Is Revision</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="733e4d0c-a347-4ce8-90f4-e19e9413de49">
+          <AttributeID>Latest Revision</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="53789d56-150b-4682-8ae2-3c0f706b40ee">
+          <AttributeID>OS1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7981ece3-aada-41be-8d30-6126d932d4d3">
+          <AttributeID>OS2</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="27cfcc16-c613-4691-9467-0b27859398b4">
+          <AttributeID>Source</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3020d213-5635-47df-a2c1-4c07a864f441">
+          <AttributeID>Employee Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d40f9ac7-8ede-427d-94de-9fa3798b86cf">
+          <AttributeID>Contact Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4550eadd-9a94-498e-ab17-a68c203d98f9">
+          <AttributeID>Status Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c7f35383-9aa4-4bfb-864f-9805d3890ccf">
+          <AttributeID>Product Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="15bca6ca-be6d-4855-9611-cc255348a849">
+          <AttributeID>Type Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f82c07b8-b039-49a6-bb86-f46b27aaaa96">
+          <AttributeID>Currency Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e10afb46-d8e0-4e49-ba52-15b1f266d9cb">
+          <AttributeID>Notes</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="5a036657-a2c7-44fd-9aad-79038b5436b2">
+      <ID>Time</ID>
+      <Name>Time</Name>
+      <DimensionID>Time</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="922a955a-ed2a-4020-be73-09447a1b36b6">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a48c7d4e-71e1-41e5-a5fd-25d112134c36">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d124fae7-c912-42ee-97f2-f3d961def37b">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9f451862-d797-45bb-b050-6dd753278224">
+          <AttributeID>Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fd28557b-ff99-446d-9066-a369df692d2e">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f5bf54a5-c038-4793-8446-d409ac28ada6">
+          <AttributeID>Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3ea50a8a-3ae7-49cb-9fa1-87a24a988816">
+          <AttributeID>Day Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="230a3ad5-6f3e-4252-b984-cccb69bbd3d8">
+          <AttributeID>Day Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bb9d1cf0-e42f-4dc9-bea1-1ebac99b9072">
+          <AttributeID>Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="76c9b660-58b7-4434-abac-b027d0004973">
+          <AttributeID>Week Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cc0c05ba-1028-4a19-a8c7-be92c8ce48b1">
+          <AttributeID>Month Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2739c38f-aeab-4a87-a69b-c8dc76f96a90">
+          <AttributeID>Month Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="58b9c27d-98bd-4f19-87da-5effd7e055a8">
+          <AttributeID>Quarter Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="078744d7-43bf-4e34-8fca-080533300e3f">
+          <AttributeID>Fiscal Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="38f6e38c-5792-46e4-939e-76b3e72ba554">
+          <AttributeID>Fiscal Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bbe61afc-0016-4f60-83e2-15a2dae0e8dd">
+          <AttributeID>Fiscal Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="162442a1-a09f-49dd-ae4f-f5358184e514">
+          <AttributeID>Fiscal Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a4d59ef4-c7ef-49ad-a5bd-282783a13cc1">
+          <AttributeID>Fiscal Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="75104a7e-b915-479c-869c-0ae1ccb7041c">
+          <AttributeID>Fiscal Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="abe71cf0-3fbf-4b49-9762-b4f94fb2de96">
+          <AttributeID>Fiscal Day Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b26154d0-1a83-4a59-bdd3-87c9007fa37b">
+          <AttributeID>Fiscal Day Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fe034e89-d84c-466d-a7ea-7ae1fa4122e1">
+          <AttributeID>Fiscal Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="60fa549f-2eb3-4eec-a0b4-e702b34df5d7">
+          <AttributeID>Fiscal Week Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="772f6b71-e0f7-4d19-abc4-85bb02e6086b">
+          <AttributeID>Fiscal Month Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0ad0f79e-078c-46ab-9e29-1984cd21fce7">
+          <AttributeID>Fiscal Month Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e077fbae-5f14-4626-84a5-768a8a59ff30">
+          <AttributeID>Fiscal Quarter Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7c09fcc1-940c-414f-b4b0-ca05549db1c5">
+          <AttributeID>Fiscal Hierarchy Time Calculations</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e948539a-aa88-4761-9589-2575473f8dab">
+          <AttributeID>Fiscal Hierarchy Time Calculations 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="30e1e5a0-09ba-42eb-af6c-537cac5c3edb">
+          <AttributeID>Fiscal Hierarchy Time Calculations 2</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cef06aaa-d1a7-4ddc-b78a-e1ca3c2f5080">
+          <AttributeID>Fiscal Hierarchy Time Calculations 3</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5d51355a-e5ee-47a8-a234-585251c120a0">
+          <AttributeID>Fiscal Hierarchy Time Calculations 4</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3161f579-60c1-4877-898c-10b86c359c9f">
+          <AttributeID>Work Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7610a91a-c224-44ea-ab54-5e1595e96d14">
+          <AttributeID>Work Month</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="3e67e2b2-a577-4ab2-979d-2c9dbc05c87b">
+          <HierarchyID>Year -  Quarter -  Month -  Date</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="cdd6ac5c-f6a5-4965-953b-090539af48fe">
+          <HierarchyID>Year -  Week -  Date</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="d7a8f304-edd4-4214-89fe-8e603c2fefb5">
+          <HierarchyID>Fiscal Year -  Fiscal Quarter -  Fiscal Month -  Fiscal Day</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="caa9b0b3-849c-4c47-ac2f-075019a8a712">
+          <HierarchyID>Fiscal Year -  Fiscal Week -  Fiscal Day</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="4ada49b1-fafa-4a16-8f46-172163adca12">
+      <ID>Fact Quotes</ID>
+      <Name>Fact Quotes</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="43cea659-cdb2-4082-bd79-cbef1057a1a0">
+          <ID>Total</ID>
+          <Name>Total</Name>
+          <Source dwd:design-time-name="42e283e9-69c7-4569-b48a-e4a4b4c19c14">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3c2595ab-0d49-43d5-8931-cc726a80b352">
+              <TableID>dbo_fact_quotes</TableID>
+              <ColumnID>total</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>Currency</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="8b00bb91-b04d-468e-a214-1a3d3d92ba17">
+          <ID>Quoteid</ID>
+          <Name>Number of Quotes</Name>
+          <AggregateFunction>DistinctCount</AggregateFunction>
+          <Source dwd:design-time-name="cff5d146-8ea2-467e-9ff2-95ff14da4173">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cf0b4ee8-242f-4b2b-a840-d8306b529774">
+              <TableID>dbo_fact_quotes</TableID>
+              <ColumnID>quoteid</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4ec9f752-4c20-4f6d-b316-2faf4b54df36">
+          <ID>Quoted Product ID</ID>
+          <Name>Number of Items</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="2da8e4b6-86d0-4590-b91f-7cd84bba5778">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="71b5a0d6-1e4f-4388-989f-e60b2c0bbcdf">
+              <TableID>dbo_fact_quotes</TableID>
+              <ColumnID>QuotedProductID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="44c839b9-43b3-438e-96d9-ff4bd06614f6">
+          <ID>Response Time</ID>
+          <Name>Response Time</Name>
+          <AggregateFunction>Max</AggregateFunction>
+          <Source dwd:design-time-name="c667708c-f6b1-44d8-b77a-be68693121f1">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="686002f0-62ad-4d56-bc50-38ab5d1aff0a">
+              <TableID>dbo_fact_quotes</TableID>
+              <ColumnID>ResponseTime</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="83b14d51-de60-4f38-b2fe-14e905561991">
+          <ID>Follow Up Count</ID>
+          <Name>Follow Up</Name>
+          <AggregateFunction>Max</AggregateFunction>
+          <DataType>Boolean</DataType>
+          <Source dwd:design-time-name="669d28e0-9c95-444e-a746-18bd6eb25923">
+            <DataType>Boolean</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9217b3db-e119-4233-9795-6d1d27c18ebe">
+              <TableID>dbo_fact_quotes</TableID>
+              <ColumnID>FollowUp</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6b443d92-9de0-411e-9067-ce3ba6cd7ca2">
+          <ID>Revised Quote Count</ID>
+          <Name>Revised Quote</Name>
+          <AggregateFunction>Max</AggregateFunction>
+          <DataType>Boolean</DataType>
+          <Source dwd:design-time-name="831cc1c0-713a-4478-aea3-80d203e3a63a">
+            <DataType>Boolean</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="bb8fa6af-cc80-4db5-a62e-a2b851e9fab7">
+              <TableID>dbo_fact_quotes</TableID>
+              <ColumnID>RevisedQuote</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="54854599-2790-4ab5-a3fe-df46917024b4">
+          <ID>Is Revision</ID>
+          <Name>Is Revision</Name>
+          <AggregateFunction>Max</AggregateFunction>
+          <Source dwd:design-time-name="d03692ff-94da-491b-ba76-3d6ab900fa97">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6e59a75e-593b-4291-9314-384148f47623">
+              <TableID>dbo_fact_quotes</TableID>
+              <ColumnID>IsRevision</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedRows>110581</EstimatedRows>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="08c2312a-853c-4f39-894e-fab53f657aa7">
+          <CubeDimensionID>Dim Product Code Category</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f7b12b19-34a2-4712-9192-145a72813f37">
+              <AttributeID>Dim Product Code Category</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Productcodes</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Dim Product Code Category</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="89be021d-41b7-42cf-909d-2bf951bc27e5">
+          <CubeDimensionID>Dim Product Code Subcategory</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d31a70fa-db04-469a-8de1-3eaec9af64c4">
+              <AttributeID>Dim Product Code Subcategory</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Productcodes</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Dim Product Code Subcategory</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+        </Dimension>
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="da32ad5c-feb8-4c88-bf10-230e7f974727">
+          <CubeDimensionID>Dim Currency</CubeDimensionID>
+          <MeasureGroupID>Fact Currencyrate</MeasureGroupID>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="03e69f0f-b58f-4ea7-8dea-7ad9950144ac">
+          <CubeDimensionID>Quotes Data</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f76121e4-1bf9-4a00-865e-df33a7fc7fca">
+              <AttributeID>Fact Quotes</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7f899bb9-18da-48ee-ad4f-345434aebd19">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="494da0f3-1010-4d9f-91f6-a9aea11b829b">
+                    <TableID>dbo_fact_quotes</TableID>
+                    <ColumnID>quoteidref</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2422420d-b23b-4b5c-9413-7a5a4d37e120">
+          <CubeDimensionID>Dim Customer Contact</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="000327bc-029b-4188-a8ed-021fa77f363b">
+              <AttributeID>Dim Customer Contact</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="58d31b6d-08fc-4e4a-a8e1-a8725ff4d511">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="187b38e1-aa88-48f0-8dd2-fc2f7060d63a">
+                    <TableID>dbo_fact_quotes</TableID>
+                    <ColumnID>contact_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f858c06c-49a5-41d9-b633-72c356ec723f">
+          <CubeDimensionID>Dim Quote Status</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e71be000-1bdb-4a20-8f5a-3c673da21e17">
+              <AttributeID>Dim Quote Status</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0a0b1c77-feb9-401e-8cf6-16e9a7e01263">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="73b4edd6-4e09-4da1-a0dc-da66f496ce18">
+                    <TableID>dbo_fact_quotes</TableID>
+                    <ColumnID>status_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4e88817c-3c0b-4d2c-b029-f2caec99e983">
+          <CubeDimensionID>Dim Quote Employee</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="13432186-f770-4e74-8c12-95f395fa447c">
+              <AttributeID>Dim Quote Employee</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="393b95bc-f9bf-4949-a92c-9fcef4ab8386">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4a6f560e-4c73-49ca-8755-dc0d36860e3a">
+                    <TableID>dbo_fact_quotes</TableID>
+                    <ColumnID>employee_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0ac42f61-512e-4562-98ab-90d0c3439a6f">
+          <CubeDimensionID>Dim Quote Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9f004590-94ca-4507-86af-0a73b0cb2e1e">
+              <AttributeID>Dim Quote Type</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="65c23e87-394a-45dd-9ce8-659d8b3dbe26">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ec2d66e4-e6cb-4dfe-8cb9-0e7d62e77272">
+                    <TableID>dbo_fact_quotes</TableID>
+                    <ColumnID>type_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a134862d-d4c8-4fbc-956e-e29ab5ccec6c">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e69ee898-ace5-4ca6-a856-2d206539a53f">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3bec0df9-3fe7-48cc-94af-cd6e8ab6bd1e">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="07e635dc-4b5f-494a-9c67-dff76dcf63ee">
+                    <TableID>dbo_fact_quotes</TableID>
+                    <ColumnID>Date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d6b7aec5-7cb0-4286-916b-85e61ab7302a">
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a872a132-8cca-440a-9684-0ba84d63de96">
+              <AttributeID>Dim Productcodes</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a569451f-5de6-43b2-898b-569a922a0c5d">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="277486aa-f2ec-4e88-b5c6-077f5e2cc54d">
+                    <TableID>dbo_fact_quotes</TableID>
+                    <ColumnID>product_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+      <AggregationDesigns />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="14cc25e2-e1b8-45af-a8a8-0c62ead92008">
+      <ID>Fact Goals</ID>
+      <Name>Fact Goals</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="8b092f1e-73a0-4f10-a514-40650a8b5075">
+          <ID>Goal</ID>
+          <Name>Goal</Name>
+          <Source dwd:design-time-name="fa7e1832-98de-432f-8073-e339f524c032">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="eadf055d-6acf-4255-9a14-aab3f8a7b1c0">
+              <TableID>dbo_fact_goals</TableID>
+              <ColumnID>Goal</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>Currency</FormatString>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="eaa8a025-098a-49d2-b15b-c58ee69476e9">
+          <CubeDimensionID>Dim Product Code Category</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e5b7915d-434b-4078-a71c-b5413cdb320b">
+              <AttributeID>Dim Product Code Category</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fffefc55-233a-420d-8535-ea0da847b10b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c0742e95-bfe5-425b-89fd-7f801ec7fb42">
+                    <TableID>dbo_fact_goals</TableID>
+                    <ColumnID>pc_category_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="dc3971e7-bdf2-4f70-9834-d1d5d86d4777">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6c816003-bd99-481e-abfd-8079610f6426">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="df002af8-bcaa-4ea8-a3b7-549468266a7c">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4a1725f7-e249-44f5-967e-81853011e218">
+                    <TableID>dbo_fact_goals</TableID>
+                    <ColumnID>Date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="21d82372-845d-46f6-ac0c-0d22fe424cdf">
+      <ID>Fact Subgoals</ID>
+      <Name>Fact Subgoals</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="8d260d21-6392-44cc-845c-6481dd476170">
+          <ID>Goal - Fact Subgoals</ID>
+          <Name>Goal - Fact Subgoals</Name>
+          <Source dwd:design-time-name="f5a2c19f-17d6-420a-9105-f0b0e2d8091f">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="16d1ac83-6ec6-4052-8ace-34831436abb2">
+              <TableID>dbo_fact_subgoals</TableID>
+              <ColumnID>Goal</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6f0bd191-28d7-4f63-ad5a-1b8b0e879ba8">
+          <CubeDimensionID>Dim Product Code Subcategory</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2447de71-cac3-4d92-9c8d-02fb99e03eef">
+              <AttributeID>Dim Product Code Subcategory</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a48eda56-7cf3-4523-b251-e73fc18182a4">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d7f7034e-4eb2-4829-b7f8-fc36270c7ff5">
+                    <TableID>dbo_fact_subgoals</TableID>
+                    <ColumnID>pc_subcategory_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6b81ce45-8255-4227-b2f2-4c982141a8dd">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4aa59b75-71b8-45b8-ab1f-83e928cee867">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3f764fb4-85fd-4153-9d91-9f11883b8c0c">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2f820d8a-5564-4f08-b540-a89224709504">
+                    <TableID>dbo_fact_subgoals</TableID>
+                    <ColumnID>Date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="30145495-b168-4527-ad56-03865d30085d">
+      <ID>Fact Currencyrate</ID>
+      <Name>Fact Currencyrate</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="c37ea62f-8df9-4fee-9b1a-5fff12455224">
+          <ID>Average Rate</ID>
+          <Name>Average Rate</Name>
+          <Source dwd:design-time-name="be4996e8-0340-4253-aeb8-b64685133cd8">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="42eb3e91-f63a-43e6-a94e-672b45bdc6bd">
+              <TableID>dbo_fact_currencyrate</TableID>
+              <ColumnID>AverageRate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2d87105f-e0e9-46f0-beab-ad04817af039">
+          <CubeDimensionID>Dim Currency</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="860f60ea-4b97-4eed-82eb-6fefa272136c">
+              <AttributeID>Dim Currency</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2167154d-d734-4d8a-bc0c-4ff9a9cded3f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f465a340-f9ec-4139-ad03-1d3d1c2aa526">
+                    <TableID>dbo_fact_currencyrate</TableID>
+                    <ColumnID>currency_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4faa2a42-ab3d-478f-a5cb-a28f75072942">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="82a61fe1-6589-4807-ac2f-473d87b6a250">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="db78953e-a08f-4f2c-abb6-8de71f5610bd">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b00c18ad-0a39-4ab5-bc81-7aad1ed7189e">
+                    <TableID>dbo_fact_currencyrate</TableID>
+                    <ColumnID>fiscal_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="917fc389-8da2-40f2-9fc5-dc2e46970a63">
+              <AttributeID>Fiscal Month</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="07695b57-a37c-401b-96f0-075f1a95d8ba">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7fd5935d-d3d6-498f-a91c-1d48d5e78690">
+                    <TableID>dbo_fact_currencyrate</TableID>
+                    <ColumnID>fiscal_month</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="027a51d1-c82f-45d2-a264-952dc6f4b197">
+      <ID>Fact Sales</ID>
+      <Name>Fact Sales</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="90f8f35a-1e6b-4a8f-b45b-8f51ff38b3df">
+          <ID>Selling Price</ID>
+          <Name>Selling Price</Name>
+          <Source dwd:design-time-name="d15edeaa-a3ec-4d2f-8c01-c4947b0ab710">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2cff1038-fa49-463e-9deb-79b0bea1f52d">
+              <TableID>dbo_fact_sales</TableID>
+              <ColumnID>Selling_price</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="16ecbbba-b84e-45f5-bfe3-a4cf727877eb">
+          <ID>Cost</ID>
+          <Name>Cost</Name>
+          <Source dwd:design-time-name="7b4e0f13-b752-4ab6-a64a-52b0247a1128">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0effdd52-68ac-498b-bfd4-748e964da3d8">
+              <TableID>dbo_fact_sales</TableID>
+              <ColumnID>Cost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3385fd26-c605-479d-b909-d982a2924158">
+          <ID>Quantity Ordered</ID>
+          <Name>Quantity Ordered</Name>
+          <Source dwd:design-time-name="4edecae0-1dc1-4820-a7d8-13fb8acb9a0b">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="22fbf8d6-eb1f-4057-8e13-cade57ae2187">
+              <TableID>dbo_fact_sales</TableID>
+              <ColumnID>Quantity_Ordered</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2455e6ec-fc00-410e-9409-f24b3d54961d">
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="37411b61-95a3-433f-aff7-ddfe8f732af5">
+              <AttributeID>Dim Productcodes</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="88a2f4c2-02bd-41bf-8710-2ef24c73410f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6486461f-839f-479a-a95e-5c535fe84464">
+                    <TableID>dbo_fact_sales</TableID>
+                    <ColumnID>product_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="572115cc-de6b-4c2f-b5e4-0e60081ee3c9">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d70623f4-e9eb-412f-8eeb-50eba9550ce4">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="63dc4b0b-ce82-477b-bce8-0751a32ad20f">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c620b866-c6cc-40b7-b359-41c6115be91e">
+                    <TableID>dbo_fact_sales</TableID>
+                    <ColumnID>invoice_date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="74be6c24-256b-4200-84b2-a953254027c8">
+      <ID>Fact Bookings</ID>
+      <Name>Fact Bookings</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="2461d309-e92a-40f0-a581-e9353664ba0d">
+          <ID>Selling Price - Fact Bookings</ID>
+          <Name>Selling Price - Fact Bookings</Name>
+          <Source dwd:design-time-name="2df84ea4-c825-4fce-b77a-74b573e62af5">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cdcb898a-4e1d-4439-bfe1-c40a3e367852">
+              <TableID>dbo_fact_bookings</TableID>
+              <ColumnID>Selling_price</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2d0c75c0-8403-4ab2-8b09-ddfe5ea34fbe">
+          <ID>Cost - Fact Bookings</ID>
+          <Name>Cost - Fact Bookings</Name>
+          <Source dwd:design-time-name="c980a1f2-92f2-42b0-9db1-2ff04315bff1">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d70860c3-32d2-4a94-b8da-beefe74addc1">
+              <TableID>dbo_fact_bookings</TableID>
+              <ColumnID>Cost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c045eafb-94a9-4b4c-8a0e-9baf684de727">
+          <ID>Quantity Ordered - Fact Bookings</ID>
+          <Name>Quantity Ordered - Fact Bookings</Name>
+          <Source dwd:design-time-name="3445c82e-e6c2-46ed-b2fb-67ddc90ddb0e">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4fb68bf5-a246-4b53-8fa2-5ef9d0fad358">
+              <TableID>dbo_fact_bookings</TableID>
+              <ColumnID>Quantity_Ordered</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5475ee2e-233c-46b4-be70-ae79351183f3">
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="81efefce-5f17-4c9a-a2bb-f8d6ce8bad3c">
+              <AttributeID>Dim Productcodes</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7083d5fb-3d6e-4519-a54c-ef08085b9c69">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3ec74686-5b31-423b-bfec-859ec9e56ec4">
+                    <TableID>dbo_fact_bookings</TableID>
+                    <ColumnID>product_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ad8fcf29-6765-41de-be3b-62ac9376ebd3">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="57d29241-3c65-4a60-94c8-bf97acd43bbc">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bae596e8-9109-4f82-bbe0-5932cc43593d">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="939529f3-a0e4-407f-abc7-f548195d8203">
+                    <TableID>dbo_fact_bookings</TableID>
+                    <ColumnID>booking_date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="21e97d6e-5875-4398-8031-1cc75db5aba0">
+    <DataSourceViewID>QuoteBuilder</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="cb67023d-0af6-4033-b8b0-f48652081d0e">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE;                   
+CREATE SET CURRENTCUBE.[Day to Day]
+ AS {[Quote Employee].[Employee Name].&amp;[Julian Lima],
+[Quote Employee].[Employee Name].&amp;[Jean Rene Carle-Mossdorf],
+[Quote Employee].[Employee Name].&amp;[Nataly Ranger],
+[Quote Employee].[Employee Name].&amp;[Diana Damiano],
+[Quote Employee].[Employee Name].&amp;[Luc Gaudreault],
+[Quote Employee].[Employee Name].&amp;[Kevin OBrien],
+[Quote Employee].[Employee Name].&amp;[Mylene Groulx],
+[Quote Employee].[Employee Name].&amp;[John Burgess],
+[Quote Employee].[Employee Name].&amp;[David Gencher],
+[Quote Employee].[Employee Name].&amp;[Jean-Yves Bergeron],
+[Quote Employee].[Employee Name].&amp;[Wayne Tremblay],
+[Quote Employee].[Employee Name].&amp;[Francois Lachance],
+[Quote Employee].[Employee Name].&amp;[Andrew Tan],
+[Quote Employee].[Employee Name].&amp;[Kevin Outhouse],
+[Quote Employee].[Employee Name].&amp;[Martin White],
+[Quote Employee].[Employee Name].&amp;[Nikolas Bouras],
+[Quote Employee].[Employee Name].&amp;[Isabelle Paris]} ;                       
+CREATE SET CURRENTCUBE.[WIN]
+ AS [Quote Status].[Status].&amp;[WIN];               
+CREATE SET CURRENTCUBE.[Latest Revisions]
+ AS [Quotes Data].[Latest Revision].&amp;[True];                         
+CREATE SET CURRENTCUBE.[LOST]
+ AS [Quote Status].[Status].&amp;[LOST];                         
+CREATE SET CURRENTCUBE.[OPEN]
+ AS [Quote Status].[Status].&amp;[OPEN];                       
+CREATE SET CURRENTCUBE.[Revised Quotes]
+ AS [Quotes Data].[Revised Quote].&amp;[True];                       
+CREATE SET CURRENTCUBE.[Non Revised Quotes]
+ AS [Quotes Data].[Revised Quote].&amp;[False];                       
+CREATE SET CURRENTCUBE.[Non Followed Up Quotes]
+ AS [Quotes Data].[Follow Up].&amp;[False];                       
+CREATE SET CURRENTCUBE.[Followed Up Quotes]
+ AS [Quotes Data].[Follow Up].&amp;[True];         
+CREATE SET CURRENTCUBE.[Followed Up Notes]
+ AS Except([Quotes Data].[Notes].Members,[Quotes Data].[Notes].&amp;[]);         
+CREATE SET CURRENTCUBE.[Non Followed Up Notes]
+ AS [Quotes Data].[Notes].&amp;[];               
+CREATE SET CURRENTCUBE.[Non-Project]
+ AS Filter([Quotes Data].[Fact Quotes].children,[Measures].[Total]&lt;=200000 and [Measures].[Total] &gt;= 0);        
+CREATE SET CURRENTCUBE.[Project]
+ AS Filter([Quotes Data].[Fact Quotes].children,[Measures].[Total]&gt;200000);                       
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Quote Revision %]
+ AS Aggregate([Revised Quotes],[Measures].[Number of Quotes])/(Aggregate([Revised Quotes],[Measures].[Number of Quotes]) + Aggregate([Non Revised Quotes],[Measures].[Number of Quotes])), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;                       
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Quote Follow-Up %]
+ AS Aggregate([Followed Up Quotes],[Measures].[Number of Quotes])/(Aggregate([Followed Up Quotes],[Measures].[Number of Quotes])+Aggregate([Non Followed Up Quotes],[Measures].[Number of Quotes])), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;         
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Quote Follow-Up % Notes]
+ AS Aggregate([Followed Up Notes],[Measures].[Number of Quotes])/(Aggregate([Followed Up Notes],[Measures].[Number of Quotes])+Aggregate([Non Followed Up Notes],[Measures].[Number of Quotes])), 
+VISIBLE = 1;                          
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Hit Rate]
+ AS Aggregate([WIN],[Measures].[Number of Items]) / (Aggregate([WIN],[Measures].[Number of Items]) + Aggregate([LOST],[Measures].[Number of Items])), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;                        
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Extended Hit Rate]
+ AS Aggregate([WIN],[Measures].[Number of Items]) / (Aggregate([WIN],[Measures].[Number of Items]) + Aggregate([LOST],[Measures].[Number of Items]) + Aggregate([OPEN],[Measures].[Number of Items])), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;              
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Win Rate - Items]
+ AS Aggregate([WIN],[Measures].[Number of Items]) / (Aggregate([WIN],[Measures].[Number of Items]) + Aggregate([LOST],[Measures].[Number of Items]) + Aggregate([OPEN],[Measures].[Number of Items])), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;             
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Win Rate - $]
+ AS Aggregate([WIN],[Measures].[Total]) / (Aggregate([WIN],[Measures].[Total]) + Aggregate([LOST],[Measures].[Total]) + Aggregate([OPEN],[Measures].[Total])), 
+VISIBLE = 1;              
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Open Rate - Items]
+ AS Aggregate([Open],[Measures].[Number of Items]) / (Aggregate([WIN],[Measures].[Number of Items]) + Aggregate([LOST],[Measures].[Number of Items]) + Aggregate([OPEN],[Measures].[Number of Items])), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;             
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Open Rate - $]
+ AS Aggregate([Open],[Measures].[Total]) / (Aggregate([WIN],[Measures].[Total]) + Aggregate([LOST],[Measures].[Total]) + Aggregate([OPEN],[Measures].[Total])), 
+VISIBLE = 1;              
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Lost Rate - Items]
+ AS Aggregate([LOST],[Measures].[Number of Items]) / (Aggregate([WIN],[Measures].[Number of Items]) + Aggregate([LOST],[Measures].[Number of Items]) + Aggregate([OPEN],[Measures].[Number of Items])), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;             
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Lost Rate - $]
+ AS Aggregate([LOST],[Measures].[Total]) / (Aggregate([WIN],[Measures].[Total]) + Aggregate([LOST],[Measures].[Total]) + Aggregate([OPEN],[Measures].[Total])), 
+VISIBLE = 1;                     
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Rolling average - 4 periods]
+ AS Avg (LastPeriods (3, [Time].[Fiscal Month].CurrentMember), [Measures].[Total]), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;               
+
+// &lt;Currency conversion&gt;
+		
+		// Currency conversion wizard generated script.
+		// Currency conversion generated on: Thursday, November 19, 2009 5:07:04 PM	
+		// by user: duc-duyn	
+		// Currency conversion type: ManyToMany	
+		// Selected members to be converted: Total	
+		// Please be aware that any changes that you decide to make to it may be overridden the next time you run the Currency Conversion wizard again.	
+	
+		// This is the Many to One section	
+		// All currency conversion formulas are calculated for the pivot currency and at leaf of the time dimension	
+		Scope ( { Measures.[Total]} );           
+			Scope( Leaves([Time]) ,
+				[Reporting Currency].[Canadian],	
+				Leaves([Dim Currency]));           
+		
+				
+		      
+		      // Convert Local value into Pivot currency for selected Measures that must be converted with Measure rate [Average Rate] 
+		      Scope( { Measures.[Total]} );           
+			         
+		       This = [Reporting Currency].[Local] / Measures.[Average Rate];           
+	
+		      End Scope;           
+	
+
+			End Scope;           	
+		
+			// This is the One to Many section
+			// All currency conversion formulas are calculated for the non pivot currency and at leaf of the time dimension	
+            Scope( Leaves([Time]) , 	
+				Except([Reporting Currency].[Dim Currency].[Dim Currency].Members, 
+				{[Reporting Currency].[Dim Currency].[Dim Currency].[Canadian],
+				[Reporting Currency].[Dim Currency].[Dim Currency].[Local]}));           
+		
+				
+		    
+		    // This section overrides the local values with the Converted value for each selected measures needing to be converted with Measure rate [Average Rate]…	
+		    // LinkMember is used to reference the currency from the source currency dimension in the rate cube. 
+	        Scope( { Measures.[Total]} );           
+		           This = [Reporting Currency].[Dim Currency].[Canadian] * (Measures.[Average Rate], LinkMember([Reporting Currency].[Dim Currency].CurrentMember, [Dim Currency].[Dim Currency]));           
+		    End Scope;           	
+	
+		
+			End Scope;            // Leaves of time, all reporting currencies but local and pivot currency	
+		End Scope;            // Measures
+
+		// End of the currency conversion wizard generated script 
+	// &lt;/Currency conversion&gt;
+
+/*
+  Begin Time Intelligence script for the [Time].[Fiscal Hierarchy] hierarchy.
+*/
+
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Year to Date] 
+  As "NA";      
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Quarter to Date] 
+  As "NA";      
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Month to Date] 
+  As "NA";      
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Twelve Months to Date] 
+  As "NA";      
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Twelve Month Moving Average] 
+  As "NA";      
+
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Twelve Month Moving Average Last Year] 
+  As "NA";             
+
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Twelve Months Ago] 
+  As "NA";               
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Six Month Moving Average] 
+  As "NA";      
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Three Month Moving Average] 
+  As "NA";      
+
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Three Month Moving Average Last Year] 
+  As "NA";      
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Year Over Year Growth %] 
+  As "NA";      
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Year Over Year Growth] 
+  As "NA";      
+
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Previous Quarter] 
+  As "NA";             
+
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Same Quarter Last Year] 
+  As "NA";             
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Quarter Over Quarter Growth %] 
+  As "NA";      
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Quarter Over Quarter Growth] 
+  As "NA";      
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Month Over Month Growth %] 
+  As "NA";      
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Month Over Month Growth] 
+  As "NA";      
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Day Over Day Growth %] 
+  As "NA";      
+  
+Create Member 
+  CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Day Over Day Growth] 
+  As "NA";      
+  
+
+
+// Year to Date
+  (
+    [Time].[Fiscal Hierarchy Time Calculations 2].[Year to Date],
+    [Time].[Fiscal Year].[Fiscal Year].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) =
+
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember } *
+             PeriodsToDate(
+                            [Time].[Fiscal Hierarchy].[Fiscal Year],
+                            [Time].[Fiscal Hierarchy].CurrentMember
+             )
+  );      
+
+  
+// Quarter to Date
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Quarter to Date],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) =
+
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember } *
+             PeriodsToDate(
+                            [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                            [Time].[Fiscal Hierarchy].CurrentMember
+             )
+  );      
+
+  
+// Month to Date
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Month to Date],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) =
+
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember } *
+             PeriodsToDate(
+                            [Time].[Fiscal Hierarchy].[Fiscal Month],
+                            [Time].[Fiscal Hierarchy].CurrentMember
+             )
+  );      
+
+  
+// Twelve Months to Date
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Twelve Months to Date],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) =
+    
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember } *
+             {
+               ParallelPeriod(
+                               [Time].[Fiscal Hierarchy].[Fiscal Month],
+                               11,
+                               [Time].[Fiscal Hierarchy].CurrentMember
+               ) : [Time].[Fiscal Hierarchy].CurrentMember
+             }
+  );      
+
+  
+// Twelve Month Moving Average  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Twelve Month Moving Average],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) =
+    
+  Avg(
+       {
+         ParallelPeriod(
+                         [Time].[Fiscal Hierarchy].[Fiscal Month],
+                         11,
+                         [Time].[Fiscal Hierarchy].CurrentMember
+         ) : [Time].[Fiscal Hierarchy].CurrentMember
+       },
+      [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember
+  );      
+
+// Twelve Month Moving Average Last Year
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Twelve Month Moving Average Last Year],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals]
+      
+    }
+   
+  ) =
+    
+  Avg(
+       {
+         ParallelPeriod(
+                         [Time].[Fiscal Hierarchy].[Fiscal Month],
+                         24,
+                         [Time].[Fiscal Hierarchy].CurrentMember
+         ) : ParallelPeriod(
+                         [Time].[Fiscal Hierarchy].[Fiscal Month],
+                         13,
+                         [Time].[Fiscal Hierarchy].CurrentMember
+         )
+       },
+      [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember
+  );                
+
+// Twelve Months Ago  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Twelve Months Ago],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals]
+      
+    }
+   
+  ) =
+    
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember } *
+             { ParallelPeriod(
+                               [Time].[Fiscal Hierarchy].[Fiscal Month],
+                               12,
+                               [Time].[Fiscal Hierarchy].CurrentMember)
+             }
+  );       
+
+  
+// Six Month Moving Average  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Six Month Moving Average],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) =
+    
+  Avg(
+       {
+         ParallelPeriod(
+                         [Time].[Fiscal Hierarchy].[Fiscal Month],
+                         5,
+                         [Time].[Fiscal Hierarchy].CurrentMember
+         ) : [Time].[Fiscal Hierarchy].CurrentMember
+       },
+      [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember
+  );      
+
+  
+// Three Month Moving Average  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Three Month Moving Average],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) =
+    
+  Avg(
+       {
+         ParallelPeriod(
+                         [Time].[Fiscal Hierarchy].[Fiscal Month],
+                         2,
+                         [Time].[Fiscal Hierarchy].CurrentMember
+         ) : [Time].[Fiscal Hierarchy].CurrentMember
+       },
+      [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember
+  );      
+
+// Three Month Moving Average Last Year
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Three Month Moving Average Last Year],
+    [Time].[Fiscal Month].[Fiscal Month].Members,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals]
+      
+}
+   
+  ) =
+    
+  Avg(
+       {
+         ParallelPeriod(
+                         [Time].[Fiscal Hierarchy].[Fiscal Month],
+                         15,
+                         [Time].[Fiscal Hierarchy].CurrentMember
+         ) : ParallelPeriod(
+                         [Time].[Fiscal Hierarchy].[Fiscal Month],
+                         13,
+                         [Time].[Fiscal Hierarchy].CurrentMember
+         )
+       },
+      [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember
+  );          
+
+  
+// Year Over Year Growth %  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Year Over Year Growth %],
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) =      
+
+  ( 
+    ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Year],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  ) 
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Year],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );      
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 2].[Year Over Year Growth %],
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) = Null;       
+  
+  Format_String( 
+                 ( 
+				   [Time].[Fiscal Hierarchy Time Calculations 2].[Year Over Year Growth %],
+				   [Time].[Date].Members
+				 )
+  ) = "Percent";      
+
+  
+// Year Over Year Growth  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Year Over Year Growth],
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Year],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );      
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 2].[Year Over Year Growth],
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) = Null;      
+
+// Previous Quarter
+( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Previous Quarter],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals]
+      
+    }
+   
+  ) =    
+  ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+   );      
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 2].[Previous Quarter],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals]
+      
+    }
+   
+  ) = Null;       
+
+// Same Quarter Last Year
+( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Same Quarter Last Year],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals]
+      
+    }
+   
+  ) =    
+  ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                   4 ,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+   );      
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 2].[Same Quarter Last Year],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals]
+      
+    }
+   
+  ) = Null;       
+
+
+  
+// Quarter Over Quarter Growth %  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Quarter Over Quarter Growth %],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) =      
+
+  (
+    ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  )
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );      
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 2].[Quarter Over Quarter Growth %],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) = Null;       
+  
+  Format_String( 
+                 ( 
+				   [Time].[Fiscal Hierarchy Time Calculations 2].[Quarter Over Quarter Growth %],
+				   [Time].[Date].Members
+				 )
+  ) = "Percent";      
+
+  
+// Quarter Over Quarter Growth  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Quarter Over Quarter Growth],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );      
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 2].[Quarter Over Quarter Growth],
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) = Null;      
+
+  
+// Month Over Month Growth %  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Month Over Month Growth %],
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) =      
+
+  (
+    ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Month],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  )
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Month],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );      
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 2].[Month Over Month Growth %],
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) = Null;       
+  
+  Format_String( 
+                 ( 
+				   [Time].[Fiscal Hierarchy Time Calculations 2].[Month Over Month Growth %],
+				   [Time].[Date].Members
+				 )
+  ) = "Percent";      
+
+  
+// Month Over Month Growth  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Month Over Month Growth],
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Month],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );      
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 2].[Month Over Month Growth],
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) = Null;      
+
+  
+// Day Over Day Growth %  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Day Over Day Growth %],
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+  
+  ) =      
+
+  (
+    ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Day],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  )
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Day],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );      
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 2].[Day Over Day Growth %],
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) = Null;      
+  
+  Format_String( 
+                 ( 
+				   [Time].[Fiscal Hierarchy Time Calculations 2].[Day Over Day Growth %],
+				   [Time].[Date].Members
+				 )
+  ) = "Percent";      
+
+  
+// Day Over Day Growth  
+  ( 
+	[Time].[Fiscal Hierarchy Time Calculations 2].[Day Over Day Growth],
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 1 ) : Null,
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Day],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );      
+  
+  ( 
+    [Time].[Fiscal Hierarchy Time Calculations 2].[Day Over Day Growth],
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 0 ),
+	[Time].[Date].Members,
+    {
+      [Measures].[Quote Revision %],
+      [Measures].[Quote Follow-Up %],
+      [Measures].[Quote Follow-Up % Notes],
+      [Measures].[Hit Rate],
+      [Measures].[Extended Hit Rate],
+      [Measures].[Win Rate - Items],
+      [Measures].[Win Rate - $],
+      [Measures].[Open Rate - Items],
+      [Measures].[Open Rate - $],
+      [Measures].[Lost Rate - Items],
+      [Measures].[Lost Rate - $],
+      [Measures].[Rolling average - 4 periods],
+      [Measures].[Total],
+      [Measures].[Number of Quotes],
+      [Measures].[Number of Items],
+      [Measures].[Response Time],
+      [Measures].[Follow Up],
+      [Measures].[Revised Quote],
+      [Measures].[Is Revision],
+      [Measures].[Goal],
+      [Measures].[Goal - Fact Subgoals],
+      
+      [Measures].[Average Rate],
+      [Measures].[Selling Price],
+      [Measures].[Cost],
+      [Measures].[Quantity Ordered],
+      [Measures].[Selling Price - Fact Bookings],
+      [Measures].[Cost - Fact Bookings],
+      [Measures].[Quantity Ordered - Fact Bookings]
+    }
+   
+  ) = Null; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+  <Kpis>
+    <Kpi dwd:design-time-name="eb6596e0-3d4d-4ca7-88ae-7da36f2fdb39">
+      <ID>KPI 1</ID>
+      <Name>Extended Hit Rates</Name>
+      <Value>[Measures].[Extended Hit Rate]</Value>
+      <Goal>0.8</Goal>
+      <Status>CASE
+   WHEN KpiValue( "Extended Hit Rates" ) &gt;=
+      KpiGoal ( "Extended Hit Rates" ) 
+   THEN 1
+   WHEN 
+      KpiValue( "Extended Hit Rates" ) &gt;= 
+         0.7 * KpiGoal ( "Extended Hit Rates" )
+      AND
+         KpiValue( "Extended Hit Rates" ) &lt; 
+            KpiGoal ( "Extended Hit Rates" ) 
+    THEN 0
+    ELSE -1
+END</Status>
+      <Trend>CASE WHEN IsEmpty(ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) Then 0
+When KPIValue("Extended Hit Rates") - (KPIValue("Extended Hit Rates"),ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) &gt; 0 then 1
+When KPIValue("Extended Hit Rates") - (KPIValue("Extended Hit Rates"),ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) &lt; 0 then -1
+Else 0
+End
+</Trend>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Road Signs</StatusGraphic>
+    </Kpi>
+    <Kpi dwd:design-time-name="195bfa11-cb87-4ff8-8fd2-0ce455e8b08a">
+      <ID>KPI</ID>
+      <Name>Hit Rates</Name>
+      <Value>[Measures].[Hit Rate]</Value>
+      <Goal>0.8</Goal>
+      <Status>CASE
+   WHEN KpiValue( "Hit Rates" ) &gt;=
+      KpiGoal ( "Hit Rates" ) 
+   THEN 1
+   WHEN 
+      KpiValue( "Hit Rates" ) &gt;= 
+         0.7 * KpiGoal ( "Hit Rates" )
+      AND
+         KpiValue( "Hit Rates" ) &lt; 
+            KpiGoal ( "Hit Rates" ) 
+    THEN 0
+    ELSE -1
+END</Status>
+      <Trend>CASE WHEN IsEmpty(ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) Then 0
+When KPIValue("Hit Rates") - (KPIValue("Hit Rates"),ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) &gt; 0 then 1
+When KPIValue("Hit Rates") - (KPIValue("Hit Rates"),ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) &lt; 0 then -1
+Else 0
+End
+
+</Trend>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Road Signs</StatusGraphic>
+    </Kpi>
+    <Kpi dwd:design-time-name="e33aae80-c898-45ec-905f-76bf7f1de996">
+      <ID>KPI 2</ID>
+      <Name>Quote Follow-Up</Name>
+      <Value>[Measures].[Quote Follow-Up %]</Value>
+      <Goal>1</Goal>
+      <Status>CASE
+   WHEN KpiValue( "Quote Follow-Up" ) &gt;=
+      KpiGoal ( "Quote Follow-Up" ) 
+   THEN 1
+   WHEN 
+      KpiValue( "Quote Follow-Up" ) &gt;= 
+         0.7 * KpiGoal ( "Quote Follow-Up" )
+      AND
+         KpiValue( "Quote Follow-Up" ) &lt; 
+            KpiGoal ( "Quote Follow-Up" ) 
+    THEN 0
+    ELSE -1
+END</Status>
+      <Trend>CASE WHEN IsEmpty(ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) Then 0
+When KPIValue("Quote Follow-Up") - (KPIValue("Quote Follow-Up"),ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) &gt; 0 then 1
+When KPIValue("Quote Follow-Up") - (KPIValue("Quote Follow-Up"),ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) &lt; 0 then -1
+Else 0
+End
+
+</Trend>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Road Signs</StatusGraphic>
+    </Kpi>
+    <Kpi dwd:design-time-name="476e3cd8-445d-471d-9eb6-cced65482ed5">
+      <ID>KPI 3</ID>
+      <Name>Quote Revision</Name>
+      <Value>[Measures].[Quote Revision %]</Value>
+      <Goal>0.05</Goal>
+      <Status>CASE
+   WHEN KpiValue( "Quote Revision" ) &lt;=
+      KpiGoal ( "Quote Revision" ) 
+   THEN 1
+   WHEN 
+      KpiValue( "Quote Revision" ) &lt;= 
+         1.5 * KpiGoal ( "Quote Revision" )
+      AND
+         KpiValue( "Quote Revision" ) &gt; 
+            KpiGoal ( "Quote Revision" ) 
+    THEN 0
+    ELSE -1
+END</Status>
+      <Trend>CASE WHEN IsEmpty(ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) Then 0
+When KPIValue("Quote Revision") - (KPIValue("Quote Revision"),ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) &lt; 0 then 1
+When KPIValue("Quote Revision") - (KPIValue("Quote Revision"),ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) &gt; 0 then -1
+Else 0
+End
+
+</Trend>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Road Signs</StatusGraphic>
+    </Kpi>
+    <Kpi dwd:design-time-name="16b0e822-db98-4544-94e7-dd074000d231">
+      <ID>KPI 4</ID>
+      <Name>Quotes</Name>
+      <Value>[Measures].[Total]</Value>
+      <Goal>[Measures].[Goal]</Goal>
+      <Status>CASE
+   WHEN KpiValue( "Quotes" ) &gt;=
+      KpiGoal ( "Quotes" ) 
+   THEN 1
+   WHEN 
+      KpiValue( "Quotes" ) &gt;= 
+         .90 * KpiGoal ( "Quotes" )
+      AND
+         KpiValue( "Quotes" ) &lt; 
+            KpiGoal ( "Quotes" ) 
+    THEN 0
+    ELSE -1
+END</Status>
+      <Trend>CASE WHEN IsEmpty(ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) Then 0
+When KPIValue("Quotes") - (KPIValue("Quotes"),ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) &gt; 0 then 1
+When KPIValue("Quotes") - (KPIValue("Quotes"),ParallelPeriod([Time].[Fiscal Month].[Fiscal Month],1,[Time].[Fiscal Month].CurrentMember)) &lt; 0 then -1
+Else 0
+End</Trend>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Gauge - Ascending</StatusGraphic>
+    </Kpi>
+  </Kpis>
+  <Actions>
+    <Action xsi:type="DrillThroughAction" dwd:design-time-name="67bcf7cf-cfc2-44eb-b020-44413a857d04">
+      <ID>Drillthrough Action</ID>
+      <Name>Quotes</Name>
+      <Description></Description>
+      <TargetType>Cells</TargetType>
+      <Target>MeasureGroupMeasures("Fact Quotes")</Target>
+      <Type>DrillThrough</Type>
+      <Columns>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="595d25c8-993e-4253-ad0f-e75e68744054">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Dim Customer Contact</CubeDimensionID>
+          <AttributeID>Customer Name</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="c7296824-a6d6-491e-9693-0c5b6a1ad2f9">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Dim Customer Contact</CubeDimensionID>
+          <AttributeID>Contact Name</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="f386fbb9-cc4d-4e02-97af-082bdcaa6013">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <AttributeID>Product Primary Category</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="f22cf8c3-0fe9-4f2e-9bf0-a37a4c8814db">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <AttributeID>Product Code</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="ec04f83d-c439-41c3-97ca-a7b3f93797c5">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Time</CubeDimensionID>
+          <AttributeID>Date</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="2f9018dc-ea7c-4669-a915-b0205ec85665">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Dim Quote Status</CubeDimensionID>
+          <AttributeID>Status</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="0c325d62-8d9e-42f0-96d3-13419af29238">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Dim Quote Employee</CubeDimensionID>
+          <AttributeID>Employee Name</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="MeasureBinding" dwd:design-time-name="fa32302e-719a-4555-8390-a3d79489fbfa">
+          <MeasureID>Total</MeasureID>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="3a86ce16-d98d-4b37-915a-319ee530c034">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Quotes Data</CubeDimensionID>
+          <AttributeID>Quoteid</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="0c39487b-e5ce-450f-8731-7f202d15be15">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Quotes Data</CubeDimensionID>
+          <AttributeID>Revision</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="580bf03f-74d9-49fc-888d-6ac61a53d958">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Quotes Data</CubeDimensionID>
+          <AttributeID>Date</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="e38596e8-23e8-4e3e-b41b-703df0072f7f">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Quotes Data</CubeDimensionID>
+          <AttributeID>Revised Quote</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="78f0cfbd-1459-45cc-8446-3d80ef6c1cab">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Quotes Data</CubeDimensionID>
+          <AttributeID>Follow Up</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="817ba862-7bf6-471c-807f-d8318c1e3bf5">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Quotes Data</CubeDimensionID>
+          <AttributeID>Model Number</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="f5c00ff2-e532-48a5-84fe-765622dbed90">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Quotes Data</CubeDimensionID>
+          <AttributeID>Is Revision</AttributeID>
+          <Type>All</Type>
+        </Column>
+        <Column xsi:type="CubeAttributeBinding" dwd:design-time-name="f0733174-d20b-47d3-8967-c39e2d1ce013">
+          <CubeID>Quote Builder</CubeID>
+          <CubeDimensionID>Quotes Data</CubeDimensionID>
+          <AttributeID>Latest Revision</AttributeID>
+          <Type>All</Type>
+        </Column>
+      </Columns>
+    </Action>
+  </Actions>
+</Cube>

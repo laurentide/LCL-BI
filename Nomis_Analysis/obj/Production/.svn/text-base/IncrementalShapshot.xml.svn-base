@@ -1,0 +1,327 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Nomis_Analysis</Database>
+    <Server>lcl-sql2k5-s</Server>
+    <ConnectionString>DataSource=lcl-sql2k5-s;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>true</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>Qe0jNPS/y/LWYFdeqDtnLA==3/30/2009 10:28:45 AM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Nomis Warehouse</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>HKTDFcgaTPmNyuQezxDSTQ==11/25/2009 10:53:25 AM4/16/2009 12:03:06 PM</TimeStamp>
+        <ID>
+          <String>Nomis Warehouse</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>njAt9Nw0wBkhroo16Z/qCg==11/23/2009 1:39:23 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Nomis Warehouse 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>8Bzwpu9x546vg8Ni4Cp0fg==11/19/2009 5:07:10 PM4/16/2009 12:03:05 PM</TimeStamp>
+        <ID>
+          <String>QuoteBuilder</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>HhAInkMxVSI9d0pP2V07kQ==9/9/2009 3:05:58 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Nomis Warehouse 1 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>mpoyLyYGtu5CKhyGqE8p5g==11/2/2009 2:49:15 PM10/8/2009 1:56:37 PM</TimeStamp>
+        <ID>
+          <String>Alliance</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>VKbGno3XZ3OHxf/9g1qjWQ==11/12/2009 11:59:42 AM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Salesman</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>7lb+GMdIjUHTF99kImM+Eg==8/6/2009 3:15:09 PM4/7/2009 4:55:45 PM</TimeStamp>
+        <ID>
+          <String>Dim Originator</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>7WqbeMpf1Ngi1zAk9RV8Xg==3/11/2009 2:25:46 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Account</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>JjkUiSDGemqJ4GdiUTwiUA==11/19/2009 2:24:28 PM3/11/2009 2:25:45 PM</TimeStamp>
+        <ID>
+          <String>Dim Customer Contact</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>xApGq5RzB9WKbjeKYTMBAQ==3/11/2009 2:25:46 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Quote Status</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>8aQZoHqkwj2R1D88W96Dsw==11/19/2009 2:24:29 PM3/26/2009 9:14:05 AM</TimeStamp>
+        <ID>
+          <String>Dim Quote Employee</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>CpI3YPzfNxiZy5x8lF1/GA==3/11/2009 2:25:46 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Vendor</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>NnbpFS5DIa08kBtZ/uHJaA==11/20/2009 3:48:01 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Customer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>arGszY9eeWyV+CjreeSZsg==3/11/2009 2:25:46 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Fact Sales</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>I1acQm3YQyABJndpgF217Q==7/17/2009 10:25:19 AM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Fact Bookings</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>9qX+Zj4LACnfwttqkWGnXA==11/19/2009 2:24:29 PM3/26/2009 9:14:06 AM</TimeStamp>
+        <ID>
+          <String>Fact Quotes</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Kc0MXnHTAbSglNGx1np1rQ==3/11/2009 2:25:46 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Product Code Category</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>HO/Vocx5guT3xZQXL5lnZw==4/16/2009 1:17:10 PM4/16/2009 12:03:05 PM</TimeStamp>
+        <ID>
+          <String>Dim Product Code Subcategory</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>hp5H48vQorXp919LUuVnew==11/19/2009 2:24:29 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Quote Type</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>FX+00rsmXfY7yh80LixZCw==11/19/2009 2:24:29 PM3/26/2009 9:14:06 AM</TimeStamp>
+        <ID>
+          <String>Time</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>W8NAyRL8DqjvvKN+ab19Tw==3/11/2009 2:25:46 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Division</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>8J9Dh9oc7HSuoJGq27Pvng==11/25/2009 10:55:08 AM4/16/2009 12:03:05 PM</TimeStamp>
+        <ID>
+          <String>Dim Productcodes</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>u8Q4uxh7cMsyDbxn2vj+sA==3/12/2009 11:38:16 AM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Fact GL</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>RekbmduFPViX8mkHG9MBvg==11/16/2009 2:04:33 PM4/23/2009 11:19:51 AM</TimeStamp>
+        <ID>
+          <String>Dim Inventory</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>mlgWIChb9jsCVu7lnrkapQ==4/23/2009 11:21:15 AM4/23/2009 11:20:21 AM</TimeStamp>
+        <ID>
+          <String>Dim Warehouse</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>umlYnpHQDGJesHcKag2FGA==4/23/2009 11:50:41 AM4/23/2009 11:49:11 AM</TimeStamp>
+        <ID>
+          <String>Fact Inventory</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>K5xSVd6BjshKDCAVDW8Eog==11/23/2009 11:34:11 AM7/17/2009 10:24:31 AM</TimeStamp>
+        <ID>
+          <String>Dim Customer Ship To</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Y7cGL3SutJbNpgmCdGdiCQ==9/4/2009 9:34:54 AM9/4/2009 9:33:31 AM</TimeStamp>
+        <ID>
+          <String>Fact Sales 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>PTNOQl2ZgXi4vMpW3G/vfA==9/9/2009 1:09:41 PM9/9/2009 1:08:53 PM</TimeStamp>
+        <ID>
+          <String>Fact Inventory History</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>sTlD1VH5EfzSl1/kgYxszA==10/8/2009 3:02:56 PM10/8/2009 1:58:36 PM</TimeStamp>
+        <ID>
+          <String>Dim Alliance Task</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>F0m49v0v1w2dTGpj2hWZCA==10/8/2009 2:26:13 PM10/8/2009 2:25:05 PM</TimeStamp>
+        <ID>
+          <String>Dim Alliance Work</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ugStQevEQQyyj8xxUnYCag==10/8/2009 2:32:01 PM10/8/2009 2:31:49 PM</TimeStamp>
+        <ID>
+          <String>Dim Alliance Resource</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>oDm6sy0LNimKoz04TBzZ7g==10/28/2009 3:02:13 PM10/8/2009 3:01:10 PM</TimeStamp>
+        <ID>
+          <String>Dim Alliance Rate</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>9C9+vdKaMyhzzWAM/Mpzdw==10/28/2009 1:52:51 PM10/28/2009 1:52:26 PM</TimeStamp>
+        <ID>
+          <String>Fact Alliance Taskdetail</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>djHsYt9poRuxLYc1Y97BUw==11/17/2009 10:25:13 AM11/16/2009 2:38:06 PM</TimeStamp>
+        <ID>
+          <String>Dim Currency</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>nBqZ7f4E82ubdRDkdLMwxQ==11/19/2009 5:07:10 PM11/19/2009 5:07:04 PM</TimeStamp>
+        <ID>
+          <String>Reporting Currency</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>BKTvbJXdDMQOJ71Yppk3iw==11/25/2009 10:55:07 AM4/16/2009 12:03:05 PMm5Veh2YhhdKbcKAIybIbfw==4/6/2009 4:53:40 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Nomis Warehouse</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>QS0NDM5C924WryyIWS1nBQ==10/23/2009 10:25:23 AM4/16/2009 12:03:05 PMyn+PEuedoVXN8y6sMyizng==3/11/2009 2:25:46 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Nomis Warehouse 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>JMWayfL4RETamCKdJvdxCg==11/25/2009 10:55:07 AM11/16/2009 4:55:09 PMnf2DelcxHoljJm+R3aALaQ==11/19/2009 2:47:02 PM11/16/2009 4:55:10 PM</TimeStamp>
+        <ID>
+          <String>Quote Builder</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>9qEO7tBsnwXnr9GF7ivIew==11/25/2009 10:55:08 AM3/26/2009 9:14:06 AM6Oxm2pHRh5UHYXkZD7XV+Q==9/9/2009 12:58:18 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <ID>
+          <String>Nomis Warehouse 1 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>uKHsoRlEAywPqNGfthhE5A==11/25/2009 10:55:08 AM10/8/2009 1:58:37 PMyGh/GN3PI8gWRbZDQnCZpg==11/2/2009 2:35:38 PM10/8/2009 1:58:38 PM</TimeStamp>
+        <ID>
+          <String>Alliance</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>dG3rVNNKwYOqrBxWnC4c7w==3/11/2009 2:25:45 PM3/11/2009 2:25:45 PM</TimeStamp>
+      <ID>
+        <String>Nomis_Analysis</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2009-11-25T16:30:25Z</LastDeployed>
+</DeploymentSnapshot>

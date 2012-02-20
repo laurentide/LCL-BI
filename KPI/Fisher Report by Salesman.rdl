@@ -1,0 +1,2167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="AnalysisDB">
+      <rd:DataSourceID>a9d3db19-770d-4c7f-ad66-51e274ffe3a8</rd:DataSourceID>
+      <DataSourceReference>AnalysisDB</DataSourceReference>
+    </DataSource>
+    <DataSource Name="AnalysisServicesOLEDB">
+      <rd:DataSourceID>40145a84-868c-473c-9cd9-b0d0ea9ca5d3</rd:DataSourceID>
+      <DataSourceReference>AnalysisServicesOLEDB</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>8.5in</InteractiveHeight>
+  <Description>Weekly Report for Eduardo (Fisher)</Description>
+  <ReportParameters>
+    <ReportParameter Name="TimeFiscalMonth">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>="[Time].[Fiscal Month].&amp;[" &amp; Year(now()) &amp; "-" &amp; Month(now()).toString("D2") &amp; "-01T00:00:00]"</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Fiscal Month</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>TimeFiscalMonth</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>11in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.25in</RightMargin>
+  <LeftMargin>0.25in</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Line Name="line1">
+        <Top>0.375in</Top>
+        <Width>10in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <Height>0in</Height>
+      </Line>
+      <Image Name="image1">
+        <Sizing>Fit</Sizing>
+        <Width>1.25in</Width>
+        <Source>Embedded</Source>
+        <Style />
+        <ZIndex>1</ZIndex>
+        <Height>0.33in</Height>
+        <Value>laurentide_logo_vector</Value>
+      </Image>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Width>4in</Width>
+        <Style>
+          <Color>#1c3a70</Color>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>18pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>6in</Left>
+        <Height>0.33in</Height>
+        <Value>Fisher Report</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.5in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>0.25in</BottomMargin>
+  <rd:ReportID>ecddaf21-a4ba-4c23-9904-0fc0b8ac513c</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="stoplight_multiple0">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>R0lGODlhDgAfANX/AAgICBAQEBgYGCEhISkpKTExMTk5OUJCQkpKSlJSUlpaWmNjY3Nzc3t7e4SEhIyMjJycnKWlpa2trbW1tb29vcbGxs7OzqUQEGMAAGsAAIwAAMYAALUQCM4IANY5MbUpIaUQCHMIAPdCMc4pGMYQAO85Ia0hELUhEP8pEKUYCPdaQpwxIZQpGIwhEEIYEMY5Ic45GJwpEP97WjkYEDEQCOc5EP+EY/+1nPe1hO+cAEJCOUJCSjk5QjExOcDAwAAAACH5BAEAAD4ALAAAAAAOAB8AQAb/QJ8PQSwahYjGj3W5hDIYU+uHoCoTCQVjUSAYANXd4rdgOB6NhEEHpj5+Mw8ul0O9aFSq4/cTLCYRCQIAeQgKPwABAIsAAgJ5BGOLBAUGA4kCVQgUfJ2eeTt7IzI2KCgkGjGgewA0LTEsLTSEmkoIEhUTEA0KBKBjAQUFAgMGBQGZP2I/AQwWFhMPCItVPGMFB8IEXr5VQp+fQkMUEGgODQ4KCwoIPjsQfDMwNTUmLrRuPx83piIqJSsK7eHwQkSHDRpCqNK0Z4aJDyBSnGCBpxY4T2H2NHsWbYcihmTMoEGwpg2Ca9m6eLmkSVKAYpYWJTvJxw8gQfho3sq1K0G3Gh8HxmDRsmAbmyo9gAkbUKxAI29GohL54SMIADs=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="stoplight_multiple1">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>R0lGODlhDgAfAOb/AAgICBAQEBgYGCEhISkpKTExMTk5OUJCQkpKSlJSUlpaWmNjY3Nzc3t7e4SEhIyMjJycnKWlpa2trbW1tb29vcbGxs7OzikYEIRKKVohAGspAL17QkohAGsxACEYEIxCABgQCIxSGFIpAGMxAHM5APelSsaEOWs5AHtCAGNCGEopAKVaAHNKEMZzCO+lOZRjGM6ECIxrKXtaGK17GLWEGN6cCPfGOaV7CNa1Qv/WSv/WQsalKf/eQvfvhPfnOf/3Y//3WkJCOf//lP//a0JCSjk5QjExOcDAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAEcALAAAAAAOAB8AQAf/gEdHCISFhoIIDUgFBwUFBAQGBEgIlA5IMyUuMC0kHSgAlUQLSAsMDg8NCQZBoZQPSAEMFhYTD0QAlJZISB4xODsyF7mVCApIAAEAywACAroEpMsEBQYDyQLFFLzc3bpEl6aoqqzfl8sD1QPKugiXLEBCPz42LiLtpAEnIRgZKCMBsiEZFWtWrQcIlFUqQoqRI0iSdAny5k3QIAoQUjlo4EDBAgUIjhCBwEvAAgkREggg9oqShFoQVE0qdilBggU4HxlodymAowEDJIFop4giN1E9b/QQMkTHCxCuEiGhkYNHjRorPoASRSqFiQ2eNKBQEVVaABUkSHBQJhABKSQmJSekXInPZYUJMRPMRHKAlE0FDBZAalXJSL6fQQs0qzTIkGPGgQAAOw==</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="arrow_status_asc2">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>R0lGODlhFQAQAKL/AGtCAJxjAO+cAP/vAMDAwAAAAAAAAAAAACH5BAEAAAQALAAAAAAVABAAQAM5SLqsMk2FSau9MYv9sicA9WkbxAxoqqpcOTah+CrxHLl2w5m5s/utoHAHKBqPSEuuKLMxAz0aNJIAADs=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="stoplight_multiple2">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>R0lGODlhDgAfAOb/AAgICBAQEBgYGCEhISkpKTExMTk5OUJCQkpKSlJSUlpaWmNjY3Nzc3t7e4SEhIyMjJycnKWlpa2trbW1tb29vcbGxs7OzkJCOd7/pb3/e63/a5TnWnveSlrWIYT/UkLGEBApCHP/SkK1ISl7EDG9CCm1ADmUISmEEBBaADm9IUreMVLeQhicCBCEABCcABBaCAhSACmlIQhrAAiEAAiMAEKtQgghCBhjGBiEGAhzCABKAABSAABaAABjAABzAAB7AFL/Yzn3UkJCSjk5QjExOcDAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAEUALAAAAAAOAB8AQAf/gEVFCISFhoIIDUYFBwUFBAQGBEYIlIoJCQoMC48GAJVCC0YpIUEfJDQzLZ+UD0YBDBYWEw9CAJSUDkZGAgsTEQkCt5UICkYAAQDKAAICuASiADYvLygwNszEFLvc3bhCugsMDg8NCQYX37rKAwUGA8m4iZQSFRMQDQqToKIBjgIDDBQIIICfERsiMGDI4KEFtkpDRL2IUSNHjx0/XuAS5M2boEEUIJRz0MCBggUKEBQRAmFXLwnAhMlzhUDCLHwJ9uUygmmBz07ydPkrMCAggQDyFHXkBkporFkPDiQjFm5cOQToWCEQxcgRpHdaowUICDYbJVFGQJjYwOEEiGFnLI2M0ABkQwcSLjRWOiCKxQoVJVjw6LGqEhFRIGTguKHDBwobBY0MMkS5UpFAADs=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="arrow_status_asc0">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>R0lGODlhEAAVAKL/AOdjQsDAwFoAEIQAGMYAIQAAAAAAAAAAACH5BAEAAAEALAAAAAAQABUAQANCGLpAIyvK9mRsJI+9LXOQlBFfpQioBwyeRYWt8sYlfI3jg3Ku1tEzWiAIBAmHRiExtpThkBWU4IfJcX43H1blYEkSADs=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="arrow_status_asc4">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>R0lGODlhEAAVAKL/AFqtawA5GABaKQCEQsDAwAAAAAAAAAAAACH5BAEAAAQALAAAAAAQABUAQANCSLoEwmvIBYYIK2jYLOZKJVlC+YDdhTKVunbkyY7jpZlg+736G3q+lCxXw0FERdMJOUhhNIESp+ej8oBV7NW13S0SADs=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="laurentide_logo_vector">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <PageWidth>11in</PageWidth>
+  <DataSets>
+    <DataSet Name="TimeFiscalMonth">
+      <Fields>
+        <Field Name="Fiscal_Month">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Time].[Fiscal Month].[Fiscal Month]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Sales_2008]</CommandText>
+        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Time</DimensionName><HierarchyName>Fiscal Month</HierarchyName><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><LevelName>Fiscal Month</LevelName><UniqueName>[Time].[Fiscal Month].[Fiscal Month]</UniqueName></ID><ItemCaption>Fiscal Month</ItemCaption></Item><Item><ID xsi:type="Measure"><MeasureName>ParameterCaption</MeasureName><UniqueName>[Measures].[ParameterCaption]</UniqueName></ID><ItemCaption>ParameterCaption</ItemCaption><FormattedValue>true</FormattedValue></Item><Item><ID xsi:type="Measure"><MeasureName>ParameterValue</MeasureName><UniqueName>[Measures].[ParameterValue]</UniqueName></ID><ItemCaption>ParameterValue</ItemCaption><FormattedValue>true</FormattedValue></Item><Item><ID xsi:type="Measure"><MeasureName>ParameterLevel</MeasureName><UniqueName>[Measures].[ParameterLevel]</UniqueName></ID><ItemCaption>ParameterLevel</ItemCaption><FormattedValue>true</FormattedValue></Item></Items></Select><From>Sales_2008</From><Filter><FilterItems /></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement><ParameterDefinitions /></Query></QueryDefinition></rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+        <rd:SuppressAutoUpdate>true</rd:SuppressAutoUpdate>
+      </Query>
+    </DataSet>
+    <DataSet Name="DataSet1">
+      <Fields>
+        <Field Name="Salesmen_Salesman_Name_Salesman_Name">
+          <DataField>[Salesmen].[Salesman Name].[Salesman Name].[MEMBER_CAPTION]</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Product_Codes_Product_Description_Product_Description">
+          <DataField>[Product Codes].[Product Description].[Product Description].[MEMBER_CAPTION]</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Product_Codes_Product_Code_Product_Code">
+          <DataField>[Product Codes].[Product Code].[Product Code].[MEMBER_CAPTION]</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell___Bookings">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Year to Date].[Measures].[Sell - Bookings]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sales_Profit_Margin">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Year to Date].[Measures].[Sales Profit Margin]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell____Invoiced">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Year to Date].[Measures].[Sell  - Invoiced]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Quarter_to_Date_Measures_Sell___Bookings">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date].[Measures].[Sell - Bookings]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Quarter_to_Date_Measures_Sales_Profit_Margin">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date].[Measures].[Sales Profit Margin]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Quarter_to_Date_Measures_Sell____Invoiced">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date].[Measures].[Sell  - Invoiced]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell___Bookings">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Month to Date].[Measures].[Sell - Bookings]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sales_Profit_Margin">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Month to Date].[Measures].[Sales Profit Margin]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell____Invoiced">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Month to Date].[Measures].[Sell  - Invoiced]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisServicesOLEDB</DataSourceName>
+        <CommandText>="SELECT
+{
+	{
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Sell - Bookings]),
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Sales Profit Margin]) ,
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Sell  - Invoiced]) 
+	 },
+	 {
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date],[Measures].[Sell - Bookings]),
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date],[Measures].[Sales Profit Margin]),
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date],[Measures].[Sell  - Invoiced]) 
+	 },
+	 {
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Month to Date],[Measures].[Sell - Bookings]),
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Month to Date],[Measures].[Sales Profit Margin]),
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Month to Date],[Measures].[Sell  - Invoiced]) 
+	 }	 
+ }  
+ ON COLUMNS, 
+      [Salesmen].[Salesman Name].Children * [Product Codes].[Product Description].Children * Except([Product Codes].[Product Code].Members,[Product Codes].[Product Code].[All]) HAVING ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Sell - Bookings]) &lt;&gt; null
+ ON ROWS FROM [Sales_2008]
+WHERE ("  &amp; Parameters!TimeFiscalMonth.Value  &amp; ",[Product Codes].[Product Primary Category].&amp;[Fisher Valves &amp; IVS])"</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Author>Duc Duy Nguyen</Author>
+  <Code />
+  <Width>10.025in</Width>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox3">
+        <rd:DefaultName>textbox3</rd:DefaultName>
+        <Top>2in</Top>
+        <Width>6.375in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <FontFamily>Tahoma</FontFamily>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.375in</Height>
+        <Value>Report of the Fisher Line.</Value>
+      </Textbox>
+      <Table Name="table1">
+        <DataSetName>DataSet1</DataSetName>
+        <TableGroups>
+          <TableGroup>
+            <Grouping Name="table1_Group2">
+              <GroupExpressions>
+                <GroupExpression>=Fields!Salesmen_Salesman_Name_Salesman_Name.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ColSpan>2</ColSpan>
+                      <ReportItems>
+                        <Textbox Name="textbox16">
+                          <rd:DefaultName>textbox16</rd:DefaultName>
+                          <Style>
+                            <Color>White</Color>
+                            <BackgroundColor>#60759b</BackgroundColor>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>31</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!Salesmen_Salesman_Name_Salesman_Name.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox17">
+                          <Style>
+                            <BorderColor>
+                              <Default>DimGray</Default>
+                              <Left>DimGray</Left>
+                              <Top>DarkRed</Top>
+                              <Bottom>DimGray</Bottom>
+                            </BorderColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                              <Left>Solid</Left>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <BorderWidth>
+                              <Left>1.5pt</Left>
+                              <Top>1.5pt</Top>
+                              <Bottom>1.5pt</Bottom>
+                            </BorderWidth>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>c</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>30</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell____Invoiced.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox55">
+                          <Style>
+                            <BorderColor>
+                              <Default>DimGray</Default>
+                              <Top>DarkRed</Top>
+                              <Bottom>DimGray</Bottom>
+                            </BorderColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <BorderWidth>
+                              <Top>1.5pt</Top>
+                              <Bottom>1.5pt</Bottom>
+                            </BorderWidth>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>p</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>29</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Avg(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sales_Profit_Margin.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox56">
+                          <Style>
+                            <BorderColor>
+                              <Default>DimGray</Default>
+                              <Right>DimGray</Right>
+                              <Top>DarkRed</Top>
+                              <Bottom>DimGray</Bottom>
+                            </BorderColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                              <Right>Solid</Right>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <BorderWidth>
+                              <Right>1.5pt</Right>
+                              <Top>1.5pt</Top>
+                              <Bottom>1.5pt</Bottom>
+                            </BorderWidth>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>c</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>28</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell___Bookings.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox57">
+                          <Style>
+                            <BorderColor>
+                              <Default>DimGray</Default>
+                              <Left>DimGray</Left>
+                              <Top>DarkRed</Top>
+                              <Bottom>DimGray</Bottom>
+                            </BorderColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                              <Left>Solid</Left>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <BorderWidth>
+                              <Left>1.5pt</Left>
+                              <Top>1.5pt</Top>
+                              <Bottom>1.5pt</Bottom>
+                            </BorderWidth>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>c</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>27</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Quarter_to_Date_Measures_Sell____Invoiced.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox58">
+                          <Style>
+                            <BorderColor>
+                              <Default>DimGray</Default>
+                              <Top>DarkRed</Top>
+                              <Bottom>DimGray</Bottom>
+                            </BorderColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <BorderWidth>
+                              <Top>1.5pt</Top>
+                              <Bottom>1.5pt</Bottom>
+                            </BorderWidth>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>p</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>26</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Avg(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Quarter_to_Date_Measures_Sales_Profit_Margin.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox59">
+                          <Style>
+                            <BorderColor>
+                              <Default>DimGray</Default>
+                              <Right>DimGray</Right>
+                              <Top>DarkRed</Top>
+                              <Bottom>DimGray</Bottom>
+                            </BorderColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                              <Right>Solid</Right>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <BorderWidth>
+                              <Right>1.5pt</Right>
+                              <Top>1.5pt</Top>
+                              <Bottom>1.5pt</Bottom>
+                            </BorderWidth>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>c</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>25</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Quarter_to_Date_Measures_Sell___Bookings.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox60">
+                          <Style>
+                            <BorderColor>
+                              <Default>DimGray</Default>
+                              <Left>DimGray</Left>
+                              <Top>DarkRed</Top>
+                              <Bottom>DimGray</Bottom>
+                            </BorderColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                              <Left>Solid</Left>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <BorderWidth>
+                              <Left>1.5pt</Left>
+                              <Top>1.5pt</Top>
+                              <Bottom>1.5pt</Bottom>
+                            </BorderWidth>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>c</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>24</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell____Invoiced.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox61">
+                          <Style>
+                            <BorderColor>
+                              <Default>DimGray</Default>
+                              <Top>DarkRed</Top>
+                              <Bottom>DimGray</Bottom>
+                            </BorderColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <BorderWidth>
+                              <Top>1.5pt</Top>
+                              <Bottom>1.5pt</Bottom>
+                            </BorderWidth>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>p</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>23</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Avg(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sales_Profit_Margin.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox62">
+                          <Style>
+                            <BorderColor>
+                              <Default>DimGray</Default>
+                              <Right>DimGray</Right>
+                              <Top>DarkRed</Top>
+                              <Bottom>DimGray</Bottom>
+                            </BorderColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                              <Right>Solid</Right>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <BorderWidth>
+                              <Right>1.5pt</Right>
+                              <Top>1.5pt</Top>
+                              <Bottom>1.5pt</Bottom>
+                            </BorderWidth>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>c</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>22</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell___Bookings.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+            </Header>
+          </TableGroup>
+          <TableGroup>
+            <Grouping Name="table1_Group1">
+              <GroupExpressions>
+                <GroupExpression>=Fields!Product_Codes_Product_Code_Product_Code.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+          </TableGroup>
+        </TableGroups>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Product_Primary_Category">
+                      <rd:DefaultName>Product_Primary_Category</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#60759b</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Product_Codes_Product_Description_Product_Description.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Right>DimGray</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1.5pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>9</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Product_Codes_Product_Code_Product_Code.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox32">
+                      <Action>
+                        <Drillthrough>
+                          <ReportName>Invoice Details</ReportName>
+                          <Parameters>
+                            <Parameter Name="ProductCodeSubcategorySubCategory">
+                              <Value>="[Product Code Subcategory].[Sub Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="TimeFiscalMonth">
+                              <Value>=Parameters!TimeFiscalMonth.Value</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodeCategoryProductPrimaryCategory">
+                              <Value>="[Product Code Category].[Product Primary Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodesProductCode">
+                              <Value>="[Product Codes].[Product Code].&amp;[" &amp; fields!Product_Codes_Product_Code_Product_Code.Value &amp; "]"</Value>
+                            </Parameter>
+                            <Parameter Name="SalesmenSalesmanName">
+                              <Value>="[Salesmen].[Salesman Name].[All]"</Value>
+                            </Parameter>
+                          </Parameters>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Left>DimGray</Left>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1.5pt</Left>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <TextDecoration>Underline</TextDecoration>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell____Invoiced.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox33">
+                      <Action>
+                        <Drillthrough>
+                          <ReportName>Invoice Details</ReportName>
+                          <Parameters>
+                            <Parameter Name="ProductCodeSubcategorySubCategory">
+                              <Value>="[Product Code Subcategory].[Sub Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="TimeFiscalMonth">
+                              <Value>=Parameters!TimeFiscalMonth.Value</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodeCategoryProductPrimaryCategory">
+                              <Value>="[Product Code Category].[Product Primary Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodesProductCode">
+                              <Value>="[Product Codes].[Product Code].&amp;[" &amp; fields!Product_Codes_Product_Code_Product_Code.Value &amp; "]"</Value>
+                            </Parameter>
+                            <Parameter Name="SalesmenSalesmanName">
+                              <Value>="[Salesmen].[Salesman Name].[All]"</Value>
+                            </Parameter>
+                          </Parameters>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>p</Format>
+                        <TextDecoration>Underline</TextDecoration>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sales_Profit_Margin.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox34">
+                      <Action>
+                        <Drillthrough>
+                          <ReportName>Bookings Details</ReportName>
+                          <Parameters>
+                            <Parameter Name="ProductCodeSubcategorySubCategory">
+                              <Value>="[Product Code Subcategory].[Sub Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="TimeFiscalMonth">
+                              <Value>=Parameters!TimeFiscalMonth.Value</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodeCategoryProductPrimaryCategory">
+                              <Value>="[Product Code Category].[Product Primary Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodesProductCode">
+                              <Value>="[Product Codes].[Product Code].&amp;[" &amp; fields!Product_Codes_Product_Code_Product_Code.Value &amp; "]"</Value>
+                            </Parameter>
+                            <Parameter Name="SalesmenSalesmanName">
+                              <Value>="[Salesmen].[Salesman Name].[All]"</Value>
+                            </Parameter>
+                          </Parameters>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Right>DimGray</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1.5pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <TextDecoration>Underline</TextDecoration>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell___Bookings.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox22">
+                      <Action>
+                        <Drillthrough>
+                          <ReportName>Invoice Details</ReportName>
+                          <Parameters>
+                            <Parameter Name="ProductCodeSubcategorySubCategory">
+                              <Value>="[Product Code Subcategory].[Sub Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="TimeFiscalMonth">
+                              <Value>=Parameters!TimeFiscalMonth.Value</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodeCategoryProductPrimaryCategory">
+                              <Value>="[Product Code Category].[Product Primary Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodesProductCode">
+                              <Value>="[Product Codes].[Product Code].&amp;[" &amp; fields!Product_Codes_Product_Code_Product_Code.Value &amp; "]"</Value>
+                            </Parameter>
+                            <Parameter Name="SalesmenSalesmanName">
+                              <Value>="[Salesmen].[Salesman Name].[All]"</Value>
+                            </Parameter>
+                          </Parameters>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Left>DimGray</Left>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1.5pt</Left>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <TextDecoration>Underline</TextDecoration>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Time_Fiscal_Hierarchy_Time_Calculations_Quarter_to_Date_Measures_Sell____Invoiced.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox24">
+                      <Action>
+                        <Drillthrough>
+                          <ReportName>Invoice Details</ReportName>
+                          <Parameters>
+                            <Parameter Name="ProductCodeSubcategorySubCategory">
+                              <Value>="[Product Code Subcategory].[Sub Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="TimeFiscalMonth">
+                              <Value>=Parameters!TimeFiscalMonth.Value</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodeCategoryProductPrimaryCategory">
+                              <Value>="[Product Code Category].[Product Primary Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodesProductCode">
+                              <Value>="[Product Codes].[Product Code].&amp;[" &amp; fields!Product_Codes_Product_Code_Product_Code.Value &amp; "]"</Value>
+                            </Parameter>
+                            <Parameter Name="SalesmenSalesmanName">
+                              <Value>="[Salesmen].[Salesman Name].[All]"</Value>
+                            </Parameter>
+                          </Parameters>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>p</Format>
+                        <TextDecoration>Underline</TextDecoration>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Time_Fiscal_Hierarchy_Time_Calculations_Quarter_to_Date_Measures_Sales_Profit_Margin.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox25">
+                      <Action>
+                        <Drillthrough>
+                          <ReportName>Bookings Details</ReportName>
+                          <Parameters>
+                            <Parameter Name="ProductCodeSubcategorySubCategory">
+                              <Value>="[Product Code Subcategory].[Sub Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="TimeFiscalMonth">
+                              <Value>=Parameters!TimeFiscalMonth.Value</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodeCategoryProductPrimaryCategory">
+                              <Value>="[Product Code Category].[Product Primary Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodesProductCode">
+                              <Value>="[Product Codes].[Product Code].&amp;[" &amp; fields!Product_Codes_Product_Code_Product_Code.Value &amp; "]"</Value>
+                            </Parameter>
+                            <Parameter Name="SalesmenSalesmanName">
+                              <Value>="[Salesmen].[Salesman Name].[All]"</Value>
+                            </Parameter>
+                          </Parameters>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Right>DimGray</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1.5pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <TextDecoration>Underline</TextDecoration>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Time_Fiscal_Hierarchy_Time_Calculations_Quarter_to_Date_Measures_Sell___Bookings.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <Action>
+                        <Drillthrough>
+                          <ReportName>Invoice Details</ReportName>
+                          <Parameters>
+                            <Parameter Name="ProductCodeSubcategorySubCategory">
+                              <Value>="[Product Code Subcategory].[Sub Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="TimeFiscalMonth">
+                              <Value>=Parameters!TimeFiscalMonth.Value</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodeCategoryProductPrimaryCategory">
+                              <Value>="[Product Code Category].[Product Primary Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodesProductCode">
+                              <Value>="[Product Codes].[Product Code].&amp;[" &amp; fields!Product_Codes_Product_Code_Product_Code.Value &amp; "]"</Value>
+                            </Parameter>
+                            <Parameter Name="SalesmenSalesmanName">
+                              <Value>="[Salesmen].[Salesman Name].[All]"</Value>
+                            </Parameter>
+                          </Parameters>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Left>DimGray</Left>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1.5pt</Left>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <TextDecoration>Underline</TextDecoration>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell____Invoiced.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox13">
+                      <Action>
+                        <Drillthrough>
+                          <ReportName>Invoice Details</ReportName>
+                          <Parameters>
+                            <Parameter Name="ProductCodeSubcategorySubCategory">
+                              <Value>="[Product Code Subcategory].[Sub Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="TimeFiscalMonth">
+                              <Value>=Parameters!TimeFiscalMonth.Value</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodeCategoryProductPrimaryCategory">
+                              <Value>="[Product Code Category].[Product Primary Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodesProductCode">
+                              <Value>="[Product Codes].[Product Code].&amp;[" &amp; fields!Product_Codes_Product_Code_Product_Code.Value &amp; "]"</Value>
+                            </Parameter>
+                            <Parameter Name="SalesmenSalesmanName">
+                              <Value>="[Salesmen].[Salesman Name].[All]"</Value>
+                            </Parameter>
+                          </Parameters>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>p</Format>
+                        <TextDecoration>Underline</TextDecoration>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sales_Profit_Margin.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox15">
+                      <Action>
+                        <Drillthrough>
+                          <ReportName>Bookings Details</ReportName>
+                          <Parameters>
+                            <Parameter Name="ProductCodeSubcategorySubCategory">
+                              <Value>="[Product Code Subcategory].[Sub Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="TimeFiscalMonth">
+                              <Value>=Parameters!TimeFiscalMonth.Value</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodeCategoryProductPrimaryCategory">
+                              <Value>="[Product Code Category].[Product Primary Category].[All]"</Value>
+                            </Parameter>
+                            <Parameter Name="ProductCodesProductCode">
+                              <Value>="[Product Codes].[Product Code].&amp;[" &amp; fields!Product_Codes_Product_Code_Product_Code.Value &amp; "]"</Value>
+                            </Parameter>
+                            <Parameter Name="SalesmenSalesmanName">
+                              <Value>="[Salesmen].[Salesman Name].[All]"</Value>
+                            </Parameter>
+                          </Parameters>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Right>DimGray</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1.5pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <TextDecoration>Underline</TextDecoration>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell___Bookings.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.375in</Height>
+            </TableRow>
+          </TableRows>
+          <Visibility>
+            <Hidden>true</Hidden>
+            <ToggleItem>textbox16</ToggleItem>
+          </Visibility>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox38">
+                      <rd:DefaultName>textbox38</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>47</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox39">
+                      <rd:DefaultName>textbox39</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Right>DimGray</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1.5pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>46</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox40">
+                      <rd:DefaultName>textbox40</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Left>DimGray</Left>
+                          <Right>DimGray</Right>
+                          <Top>DimGray</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1.5pt</Left>
+                          <Right>1.5pt</Right>
+                          <Top>1.5pt</Top>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>45</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>YTD</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox43">
+                      <rd:DefaultName>textbox43</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Left>DimGray</Left>
+                          <Right>DimGray</Right>
+                          <Top>DimGray</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1.5pt</Left>
+                          <Right>1.5pt</Right>
+                          <Top>1.5pt</Top>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>44</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>QTD</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox46">
+                      <rd:DefaultName>textbox46</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Left>DimGray</Left>
+                          <Right>DimGray</Right>
+                          <Top>DimGray</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1.5pt</Left>
+                          <Right>1.5pt</Right>
+                          <Top>1.5pt</Top>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>43</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>MTD</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>42</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Product Description</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox18">
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Right>DimGray</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1.5pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>41</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Product Code</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox29">
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Left>DimGray</Left>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1.5pt</Left>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>40</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Invoiced</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox30">
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>p</Format>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>39</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Invoiced Margin</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox31">
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Right>DimGray</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1.5pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>38</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Bookings</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox19">
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Left>DimGray</Left>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1.5pt</Left>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>37</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Invoiced</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox20">
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>p</Format>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>36</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Invoiced Margin</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox21">
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Right>DimGray</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1.5pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>35</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Bookings</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Left>DimGray</Left>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1.5pt</Left>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>34</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Invoiced</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>p</Format>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>33</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Invoiced Margin</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Right>DimGray</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1.5pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>32</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Bookings</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.375in</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.75in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.625in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.85in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.85in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.85in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.85in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.85in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.85in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.85in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.85in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.85in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>1.5in</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Maroon</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Top>DarkRed</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Top>1.5pt</Top>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>12pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>21</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Total:</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox14">
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Right>DimGray</Right>
+                          <Top>DarkRed</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1.5pt</Right>
+                          <Top>1.5pt</Top>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>12pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>20</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox41">
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Left>DimGray</Left>
+                          <Top>DarkRed</Top>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                          <Top>Solid</Top>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1.5pt</Left>
+                          <Top>1.5pt</Top>
+                          <Bottom>1.5pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>19</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell____Invoiced.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox42">
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Top>DarkRed</Top>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Top>Solid</Top>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Top>1.5pt</Top>
+                          <Bottom>1.5pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>p</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>18</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Avg(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sales_Profit_Margin.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox44">
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Right>DimGray</Right>
+                          <Top>DarkRed</Top>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                          <Top>Solid</Top>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1.5pt</Right>
+                          <Top>1.5pt</Top>
+                          <Bottom>1.5pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>17</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell___Bookings.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox45">
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Left>DimGray</Left>
+                          <Top>DarkRed</Top>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                          <Top>Solid</Top>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1.5pt</Left>
+                          <Top>1.5pt</Top>
+                          <Bottom>1.5pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>16</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Quarter_to_Date_Measures_Sell____Invoiced.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox47">
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Top>DarkRed</Top>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Top>Solid</Top>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Top>1.5pt</Top>
+                          <Bottom>1.5pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>p</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>15</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Avg(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Quarter_to_Date_Measures_Sales_Profit_Margin.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox48">
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Right>DimGray</Right>
+                          <Top>DarkRed</Top>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                          <Top>Solid</Top>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1.5pt</Right>
+                          <Top>1.5pt</Top>
+                          <Bottom>1.5pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>14</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Quarter_to_Date_Measures_Sell___Bookings.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox49">
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Left>DimGray</Left>
+                          <Top>DarkRed</Top>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                          <Top>Solid</Top>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1.5pt</Left>
+                          <Top>1.5pt</Top>
+                          <Bottom>1.5pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>13</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell____Invoiced.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox50">
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Top>DarkRed</Top>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Top>Solid</Top>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Top>1.5pt</Top>
+                          <Bottom>1.5pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>p</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>12</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Avg(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sales_Profit_Margin.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox51">
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Right>DimGray</Right>
+                          <Top>DarkRed</Top>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Right>Solid</Right>
+                          <Top>Solid</Top>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1.5pt</Right>
+                          <Top>1.5pt</Top>
+                          <Bottom>1.5pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>11</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell___Bookings.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+      </Table>
+    </ReportItems>
+    <Height>2.875in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Line Name="line2">
+        <Top>0.125in</Top>
+        <Width>10in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <Height>0in</Height>
+      </Line>
+      <Textbox Name="textbox9">
+        <Top>0.25in</Top>
+        <Width>1.375in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>8.625in</Left>
+        <Height>0.25in</Height>
+        <Value>=Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
+      </Textbox>
+      <Textbox Name="textbox7">
+        <Top>0.25in</Top>
+        <Width>3.125in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.25in</Left>
+        <Height>0.25in</Height>
+        <Value>="Execution Time:" &amp; Globals!ExecutionTime</Value>
+      </Textbox>
+      <Textbox Name="textbox6">
+        <rd:DefaultName>textbox6</rd:DefaultName>
+        <Top>0.25in</Top>
+        <Width>1in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=Globals!ReportName</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.625in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <TopMargin>0.25in</TopMargin>
+  <PageHeight>8.5in</PageHeight>
+</Report>

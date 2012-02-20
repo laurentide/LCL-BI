@@ -1,0 +1,187 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2d5debe3-d4c0-4a6b-94d9-43aa3cb0e0b4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>QuoteBuilder</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fact Quotes</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="52a40823-7179-4777-8091-39269a5ac12e">
+          <ID>Fact Quotes</ID>
+          <Name>Fact Quotes</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a7d7af27-2243-4118-9cd6-4d4c45654837">
+            <DataSourceViewID>QuoteBuilder</DataSourceViewID>
+            <TableID>dbo_fact_quotes</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="ade25fcf-f467-4d1f-9f58-2bc830c9dee6">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <AggregationStorage>MolapOnly</AggregationStorage>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="4c75225c-4eab-4756-b40d-a24b4b5a51da">
+              <NotificationTechnique>Server</NotificationTechnique>
+            </Source>
+          </ProactiveCaching>
+          <EstimatedRows>110581</EstimatedRows>
+        </Partition>
+      </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <EstimatedRows>110581</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Dim Customer Contact</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Customer Contact</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Quote Status</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Quote Status</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Quote Employee</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Quote Employee</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Quote Type</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Quote Type</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Productcodes</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+        </AggregationDesign>
+      </AggregationDesigns>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Goals</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a2b7151f-c9a6-4d9a-a2a8-fccd036ccac8">
+          <ID>Fact Goals</ID>
+          <Name>Fact Goals</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="0b6bbc0a-9bc3-487d-ba1e-571088453937">
+            <DataSourceViewID>QuoteBuilder</DataSourceViewID>
+            <TableID>dbo_fact_goals</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Subgoals</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="53c7a91a-80b3-4466-b4f0-dfe586999787">
+          <ID>Fact Subgoals</ID>
+          <Name>Fact Subgoals</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="e7c6cc77-8256-49d1-9601-eeed7d19acc1">
+            <DataSourceViewID>QuoteBuilder</DataSourceViewID>
+            <TableID>dbo_fact_subgoals</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Currencyrate</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="c492bfde-1eb0-48a4-881c-b5bb59a80fac">
+          <ID>Fact Currencyrate</ID>
+          <Name>Fact Currencyrate</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="90da832a-8fb1-4482-995c-dffcd71532a3">
+            <DataSourceViewID>QuoteBuilder</DataSourceViewID>
+            <TableID>dbo_fact_currencyrate</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Sales</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="490b11b9-bfea-4b0e-99bf-5a12fee8d5e2">
+          <ID>Fact Sales</ID>
+          <Name>Fact Sales</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="08a59cc6-2517-4f12-8bc9-4cc0ea76d496">
+            <DataSourceViewID>QuoteBuilder</DataSourceViewID>
+            <TableID>dbo_fact_sales</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Bookings</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="b0e074b4-d44d-4692-ac44-9c486a189f25">
+          <ID>Fact Bookings</ID>
+          <Name>Fact Bookings</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="5905c518-b9da-468d-ac17-f4fea8aaa1d6">
+            <DataSourceViewID>QuoteBuilder</DataSourceViewID>
+            <TableID>dbo_fact_bookings</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

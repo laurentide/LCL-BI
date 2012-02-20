@@ -1,0 +1,202 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9c2c6777-b831-4ee9-85b9-9d549b0137cb" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>TimeSeries SalefromStock</ID>
+  <Name>TimeSeries SalefromStock</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_vTimeSeries_SalefromStock</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5298" scrolltop="-6218" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="17780" y="15161" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="vTimeSeries_SalefromStock (dbo.vTimeSeries_SalefromStock)" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3149" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800004d0c0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vTimeSeries_SalefromStock" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-5298</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-6218</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="fb8c23c1-5b58-4b6d-88aa-f9d38f249142">
+    <DataSourceViewID>Nomis Warehouse</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7d0caa37-4ff1-43d3-96a7-16c9566936de">
+      <ID>Sell</ID>
+      <Name>Sell</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e6958f39-a899-4ed7-b755-b870367fc32c">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0210e6b3-0c08-4c97-bcb8-febebc43f859">
+            <TableID>dbo_vTimeSeries_SalefromStock</TableID>
+            <ColumnID>sell</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="50c37204-5837-4d1b-9487-a8b264e11bc2">
+      <ID>Fiscal Month</ID>
+      <Name>Fiscal Month</Name>
+      <IsKey>true</IsKey>
+      <Type>Date</Type>
+      <Content>Key Time</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a470d98b-8a80-4000-9dda-98899e9bf79d">
+          <DataType>Date</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9f7c4cd3-27b5-45f9-9fea-4a9e199b098f">
+            <TableID>dbo_vTimeSeries_SalefromStock</TableID>
+            <ColumnID>fiscal_month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="24059450-73e7-49be-8c48-c320e0dc7613">
+      <ID>Sell From Stock</ID>
+      <Name>Sell From Stock</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0ecb3d5e-5b20-4fd6-be16-36d73c179dd3">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="47070b13-504e-4e56-9095-d5c1726cc66c">
+            <TableID>dbo_vTimeSeries_SalefromStock</TableID>
+            <ColumnID>sell_from_stock</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b07ba629-7f1a-4906-89c4-5b877f713a1d">
+      <ID>Sell Rebilled</ID>
+      <Name>Sell Rebilled</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ad8f3b42-2077-49f2-9081-5f1522400175">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d737d065-f9e0-47d4-9046-af2817b88738">
+            <TableID>dbo_vTimeSeries_SalefromStock</TableID>
+            <ColumnID>sell_Rebilled</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="bdc8cbe1-b0d3-4ad7-ae58-aea20ce0c50b">
+      <ID>TimeSeries SalefromStock</ID>
+      <Name>TimeSeries SalefromStock</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Time_Series</Algorithm>
+      <AlgorithmParameters>
+        <AlgorithmParameter>
+          <Name>MISSING_VALUE_SUBSTITUTION</Name>
+          <Value xsi:type="xsd:string">Previous</Value>
+        </AlgorithmParameter>
+        <AlgorithmParameter>
+          <Name>PERIODICITY_HINT</Name>
+          <Value xsi:type="xsd:string">{12}</Value>
+        </AlgorithmParameter>
+      </AlgorithmParameters>
+      <Columns>
+        <Column dwd:design-time-name="287265eb-b307-403e-b1c2-5dc8b3211a97">
+          <ID>Sell</ID>
+          <Name>Sell</Name>
+          <SourceColumnID>Sell</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="7d6ae62c-cf13-4f28-974e-404d9c6f7fed">
+          <ID>Fiscal Month</ID>
+          <Name>Fiscal Month</Name>
+          <SourceColumnID>Fiscal Month</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="6e828180-48b8-40a5-b047-81ed7c1b2b74">
+          <ID>Sell From Stock</ID>
+          <Name>Sell From Stock</Name>
+          <SourceColumnID>Sell From Stock</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="d908b877-1b50-426b-ba91-df1778b4657b">
+          <ID>Sell Rebilled</ID>
+          <Name>Sell Rebilled</Name>
+          <SourceColumnID>Sell Rebilled</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+      </Columns>
+      <AllowDrillThrough>true</AllowDrillThrough>
+    </MiningModel>
+  </MiningModels>
+</MiningStructure>

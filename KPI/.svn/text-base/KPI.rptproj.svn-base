@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmR3ZD0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9EYXRhV2FyZWhvdXNlL0Rlc2lnbmVyLzEuMCI+DQogIDxFbmFibGVkPmZhbHNlPC9FbmFibGVkPg0KICA8UHJvamVjdE5hbWU+PC9Qcm9qZWN0TmFtZT4NCiAgPEF1eFBhdGg+PC9BdXhQYXRoPg0KICA8TG9jYWxQYXRoPjwvTG9jYWxQYXRoPg0KICA8UHJvdmlkZXI+PC9Qcm92aWRlcj4NCjwvU291cmNlQ29udHJvbEluZm8+</State>
+  <DataSources>
+    <ProjectItem>
+      <Name>AnalysisDB.rds</Name>
+      <FullPath>AnalysisDB.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AnalysisServicesOLEDB.rds</Name>
+      <FullPath>AnalysisServicesOLEDB.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Nomis_Warehouse.rds</Name>
+      <FullPath>Nomis_Warehouse.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Scope.rds</Name>
+      <FullPath>Scope.rds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <Reports>
+    <ProjectItem>
+      <Name>All Product Codes Statistics.rdl</Name>
+      <FullPath>All Product Codes Statistics.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AO Online and PW services.rdl</Name>
+      <FullPath>AO Online and PW services.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Bookings Chart.rdl</Name>
+      <FullPath>Bookings Chart.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Bookings Details Seg.rdl</Name>
+      <FullPath>Bookings Details Seg.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Bookings Details.rdl</Name>
+      <FullPath>Bookings Details.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Bookings Query.rdl</Name>
+      <FullPath>Bookings Query.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fisher Report by Salesman.rdl</Name>
+      <FullPath>Fisher Report by Salesman.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fisher Report.rdl</Name>
+      <FullPath>Fisher Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>FRS.rdl</Name>
+      <FullPath>FRS.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Invoice Details.rdl</Name>
+      <FullPath>Invoice Details.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Margin Chart.rdl</Name>
+      <FullPath>Margin Chart.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>MTD All Product Codes And Quotes.rdl</Name>
+      <FullPath>MTD All Product Codes And Quotes.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>MTD CSI-Offline.rdl</Name>
+      <FullPath>MTD CSI-Offline.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>MTD Performance Products.rdl</Name>
+      <FullPath>MTD Performance Products.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>MTD Services.rdl</Name>
+      <FullPath>MTD Services.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>MTD Valve Automation.rdl</Name>
+      <FullPath>MTD Valve Automation.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Orders by Margin.rdl</Name>
+      <FullPath>Orders by Margin.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Overall Bookings Chart.rdl</Name>
+      <FullPath>Overall Bookings Chart.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Overall Sales Chart.rdl</Name>
+      <FullPath>Overall Sales Chart.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PC G1 by Salesman.rdl</Name>
+      <FullPath>PC G1 by Salesman.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Product Line Report by Salesman.rdl</Name>
+      <FullPath>Product Line Report by Salesman.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Project Team AE.rdl</Name>
+      <FullPath>Project Team AE.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Project Team CSR.rdl</Name>
+      <FullPath>Project Team CSR.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Quote Details.rdl</Name>
+      <FullPath>Quote Details.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Report by Enterprise.rdl</Name>
+      <FullPath>Report by Enterprise.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Salesmen Report for Steve.rdl</Name>
+      <FullPath>Salesmen Report for Steve.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Salesmen Report.rdl</Name>
+      <FullPath>Salesmen Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Ship-To Report.rdl</Name>
+      <FullPath>Ship-To Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>SOO Report.rdl</Name>
+      <FullPath>SOO Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Total Quoted by Month of Year.rdl</Name>
+      <FullPath>Total Quoted by Month of Year.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>VAD by Salesman.rdl</Name>
+      <FullPath>VAD by Salesman.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>VAD Sales W1W2W3.rdl</Name>
+      <FullPath>VAD Sales W1W2W3.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>WDC Report.rdl</Name>
+      <FullPath>WDC Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Weekly Margins.rdl</Name>
+      <FullPath>Weekly Margins.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>WhiteSpace - Ann.rdl</Name>
+      <FullPath>WhiteSpace - Ann.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>WhiteSpace - Segmentation - Admin.rdl</Name>
+      <FullPath>WhiteSpace - Segmentation - Admin.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Whitespace - Segmentation - Goals.rdl</Name>
+      <FullPath>Whitespace - Segmentation - Goals.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Whitespace - Segmentation.rdl</Name>
+      <FullPath>WhiteSpace - Segmentation.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Whitespace Report - Avg per year.rdl</Name>
+      <FullPath>Whitespace Report - Avg per year.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Whitespace Report - No bookings in FY09.rdl</Name>
+      <FullPath>Whitespace Report - No bookings in FY09.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Whitespace Report - Product Lines with Ship Tos.rdl</Name>
+      <FullPath>Whitespace Report - Product Lines with Ship Tos.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Whitespace Report - Product Lines.rdl</Name>
+      <FullPath>Whitespace Report - Product Lines.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Whitespace Report Overall With Ship-Tos.rdl</Name>
+      <FullPath>Whitespace Report Overall With Ship-Tos.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Whitespace Report Overall.rdl</Name>
+      <FullPath>Whitespace Report Overall.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Whitespace Report.rdl</Name>
+      <FullPath>Whitespace Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>YTD All Product Codes.rdl</Name>
+      <FullPath>YTD All Product Codes.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>YTD Automation Report.rdl</Name>
+      <FullPath>YTD Automation Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>YTD Enginnering Report.rdl</Name>
+      <FullPath>YTD Enginnering Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>YTD Proaxion Report.rdl</Name>
+      <FullPath>YTD Proaxion Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>YTD Project Team.rdl</Name>
+      <FullPath>YTD Project Team.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Salesmen Report - Admin.rdl</Name>
+      <FullPath>Salesmen Report - Admin.rdl</FullPath>
+    </ProjectItem>
+  </Reports>
+  <Configurations>
+    <Configuration>
+      <Name>Debug</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetServerURL>http://lcl-sql2k5-s/ReportServer</TargetServerURL>
+        <TargetFolder>Sales And Bookings</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+        <StartItem>Extended Hit Rates.rdl</StartItem>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>DebugLocal</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetFolder>Report Project1</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>Production</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetServerURL>http://lcl-sql2k5-s/ReportServer</TargetServerURL>
+        <TargetFolder>Sales And Bookings</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>Test</Name>
+      <Options>
+        <TargetServerURL>http://lcl-sql2k5d-vs1/sites/Test/</TargetServerURL>
+        <TargetFolder>http://lcl-sql2k5d-vs1/sites/Test/Reports/Forms/AllItems.aspx </TargetFolder>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>DEV</Name>
+      <Options>
+        <TargetServerURL>http://lcl-sql2k5-dev/ReportServer</TargetServerURL>
+        <TargetFolder>Sales And Bookings</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+        <StartItem>Extended Hit Rates.rdl</StartItem>
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>

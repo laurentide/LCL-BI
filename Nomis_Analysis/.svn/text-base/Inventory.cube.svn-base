@@ -1,0 +1,2655 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="25bab1b3-642d-44ff-9381-9576e921d946" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Nomis Warehouse 1 1</ID>
+  <Name>Inventory</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="50" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5132" scrolltop="-3943" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="18812" y="15425" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_inventory (dbo.dim_inventory)" left="13848" top="0" logicalid="25" controlid="1" masterid="0" hint1="0" hint2="0" width="4948" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800005413000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_inventory" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_inventory (dbo.fact_inventory)" left="13998" top="14879" logicalid="26" controlid="2" masterid="0" hint1="0" hint2="0" width="3969" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000810f0000ea120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_inventory" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Time (DimTime.Time)" left="6148" top="14800" logicalid="27" controlid="3" masterid="0" hint1="0" hint2="0" width="5450" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800004a15000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Time" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="11298" top="16901" logicalid="28" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_inventory-Time]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="2" sourceattachpoint="27" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11598" y="17300" />
+              <point x="13998" y="17300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_warehouse (dbo.dim_warehouse)" left="14457" top="25371" logicalid="29" controlid="5" masterid="0" hint1="0" hint2="0" width="3731" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000930e0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_warehouse" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="15682" top="19421" logicalid="30" controlid="6" masterid="0" hint1="0" hint2="0" width="1590" height="6450" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_inventory-dim_warehouse]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="2" sourceattachpoint="8" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="16872" y="25371" />
+              <point x="16872" y="22546" />
+              <point x="15982" y="22546" />
+              <point x="15982" y="19721" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="15682" top="4501" logicalid="31" controlid="7" masterid="0" hint1="0" hint2="0" width="1040" height="10678" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_inventory-dim_inventory]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="9" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="16322" y="5000" />
+              <point x="16322" y="9939" />
+              <point x="15982" y="9939" />
+              <point x="15982" y="14879" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_productcodes (dbo.dim_productcodes)" left="22527" top="3965" logicalid="32" controlid="8" masterid="0" hint1="0" hint2="0" width="5027" height="3748" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000a3130000a40e0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_productcodes" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_product_code_category (dbo.dim_product_code_category)" left="27794" top="12607" logicalid="33" controlid="9" masterid="0" hint1="0" hint2="0" width="4983" height="1985" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="0008000077130000c1070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_product_code_category" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_product_code_subcategory (dbo.dim_product_code_subcategory)" left="20367" top="17874" logicalid="34" controlid="10" masterid="0" hint1="0" hint2="0" width="5468" height="1985" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800005c150000c1070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_product_code_subcategory" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="22702" top="7413" logicalid="35" controlid="11" masterid="0" hint1="0" hint2="0" width="3738" height="10961" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_productcodes-dim_product_code_subcategory]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="8" sourceattachpoint="8" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="23101" y="17874" />
+              <point x="23101" y="16674" />
+              <point x="26140" y="16674" />
+              <point x="26140" y="7713" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="26940" top="7413" logicalid="36" controlid="12" masterid="0" hint1="0" hint2="0" width="1545" height="5694" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_productcodes-dim_product_code_category]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="8" sourceattachpoint="0" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="28085" y="12607" />
+              <point x="28085" y="10160" />
+              <point x="27240" y="10160" />
+              <point x="27240" y="7713" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_sales (dbo.fact_sales)" left="6889" top="7400" logicalid="37" controlid="13" masterid="0" hint1="0" hint2="0" width="3968" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000800f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_sales" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8573" top="4501" logicalid="38" controlid="14" masterid="0" hint1="0" hint2="0" width="7599" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_sales-dim_inventory]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="13" sourceattachpoint="7" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="15772" y="5000" />
+              <point x="15772" y="6200" />
+              <point x="8873" y="6200" />
+              <point x="8873" y="7400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8474" top="11901" logicalid="39" controlid="15" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[Time-fact_sales]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="13" destid="3" sourceattachpoint="7" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8873" y="12400" />
+              <point x="8873" y="14800" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="10557" top="3790" logicalid="40" controlid="16" masterid="0" hint1="0" hint2="0" width="12270" height="6410" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_sales-dim_productcodes]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="13" sourceattachpoint="18" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="22527" y="4189" />
+              <point x="15612" y="4189" />
+              <point x="15612" y="9900" />
+              <point x="10857" y="9900" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="17122" top="4700" logicalid="41" controlid="17" masterid="0" hint1="0" hint2="0" width="5705" height="1000" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_inventory-dim_productcodes]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="1" sourceattachpoint="22" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="22527" y="5289" />
+              <point x="19974" y="5289" />
+              <point x="19974" y="5400" />
+              <point x="17422" y="5400" />
+              <point x="17422" y="5000" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_warehouse_inventory (dbo.fact_warehouse_inventory)" left="20588" top="24022" logicalid="42" controlid="18" masterid="0" hint1="0" hint2="0" width="3837" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000fd0e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_warehouse_inventory" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_inventory_history (dbo.fact_inventory_history)" left="-132" top="14800" logicalid="45" controlid="21" masterid="0" hint1="0" hint2="0" width="3880" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000280f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact_inventory_history" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1508" top="19500" logicalid="46" controlid="22" masterid="0" hint1="0" hint2="0" width="14114" height="6371" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_inventory_history-dim_warehouse]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="21" sourceattachpoint="2" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="15222" y="25371" />
+              <point x="15222" y="22586" />
+              <point x="1808" y="22586" />
+              <point x="1808" y="19800" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1508" top="4501" logicalid="47" controlid="23" masterid="0" hint1="0" hint2="0" width="14114" height="10599" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_inventory_history-dim_inventory]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="21" sourceattachpoint="5" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="15222" y="5000" />
+              <point x="15222" y="9900" />
+              <point x="1808" y="9900" />
+              <point x="1808" y="14800" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3448" top="16901" logicalid="48" controlid="24" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[fact_inventory_history-Time]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="21" sourceattachpoint="26" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6148" y="17300" />
+              <point x="3748" y="17300" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-5132</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3943</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-132</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>60</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="43c2ba82-71d3-470e-a19c-ef43cf3be776">
+      <ID>Dim Inventory</ID>
+      <Name>Dim Inventory</Name>
+      <DimensionID>Dim Inventory</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b3df9ad7-e3f7-4109-8840-4d168033f9e0">
+          <AttributeID>Dim Inventory</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d247b4cf-a86e-4664-9118-6d0b2d83c1ed">
+          <AttributeID>Inventory Desc 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9662ec10-1e74-41fc-b21e-78d4d8583ae6">
+          <AttributeID>Inventory Desc 2</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="63ebf56d-87ab-404f-81ee-e1f08233a6af">
+          <AttributeID>Inventory Selling</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6cd70c7c-c267-429a-87b9-813143d8ba20">
+          <AttributeID>Inventory Purchasing</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="248d7cc8-042f-45f7-9c92-aad358d000a3">
+          <AttributeID>Inventory Selling Factor</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8743cf94-b8b7-4a98-bb70-fbdaefb53d3c">
+          <AttributeID>Inventory Non Stock</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="95ea2af7-fa58-46f0-a115-8deb5c23d560">
+          <AttributeID>Inventory Cost Last</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="afe707fe-1716-4d7e-ab94-26cd36e5dd28">
+          <AttributeID>Inventory Product Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ab7082ea-a15c-4a21-ae5c-8b8a2bd4985b">
+          <AttributeID>Inventory Avg Cost On Hand</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fb604ac2-df7b-4f22-8bf0-93ea7c63923d">
+          <AttributeID>Dim Productcodes</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="265ca5e1-fb1d-49a5-9fc4-7d921c37614e">
+          <AttributeID>Product Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ae050047-011c-470f-96ea-89b05a912ffc">
+          <AttributeID>Product Description</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5c2f5e68-877d-4fd7-94df-e77996fd86b3">
+          <AttributeID>Product Company Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ec1f6fdc-86d7-44dc-b133-a546fa8c79e6">
+          <AttributeID>Dim Product Code Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="625f98b4-324e-47ea-9381-6bde4ae47950">
+          <AttributeID>Product Primary Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fd0d4ded-1b2a-49cd-8373-0418a6f1db30">
+          <AttributeID>Dim Product Code Subcategory</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2fdf781a-9454-4b38-88e7-a3dc840988c1">
+          <AttributeID>Product Primary Subcategory</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="a4e472d9-2992-449e-bb2d-3c89a64f0a16">
+          <HierarchyID>Inventory Selling Factor - Inventory Purchasing</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="43c42a6b-97b2-4404-96cb-b8d33b5f5e93">
+          <HierarchyID>Dim Product Code Category - Dim Productcodes</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="5a4d0d49-a15a-4c54-8f6a-264e58f14cb1">
+          <HierarchyID>Dim Product Code Subcategory - Dim Productcodes</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="5cd94938-08a7-4798-b28a-b1ba90bda478">
+      <ID>Dim Warehouse</ID>
+      <Name>Dim Warehouse</Name>
+      <DimensionID>Dim Warehouse</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="152c92ab-d1e1-41cf-94f6-1a39354092de">
+          <AttributeID>Dim Warehouse</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7a2d64f5-5fb6-4f33-92db-21bf681c3b1a">
+          <AttributeID>Warehouse Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e690ff65-3cbc-453f-861b-45d3118d2ddc">
+          <AttributeID>Warehouse Contact</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="9f5dadd9-6274-44c7-9ca6-2eb68ddf58f2">
+      <ID>Time</ID>
+      <Name>Time</Name>
+      <DimensionID>Time</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a9173b7d-bf24-40e1-aa85-831f077cf301">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9d42a6cf-402e-4056-bbd9-45cef16d2013">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="23767f21-604e-4306-8c2e-c0ca02492fc7">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b1d3ed4b-f1e0-40a4-84a2-2195a57de5f8">
+          <AttributeID>Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6d1d7dfe-9a61-42ef-87c5-3eb213888b79">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="07efc213-fd8f-4f2c-be91-5fc043769ab5">
+          <AttributeID>Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="80b1829b-bd9b-4eb8-9633-1b6f6c71ca96">
+          <AttributeID>Day Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="19342d2b-31bd-445e-ba39-a354171e702f">
+          <AttributeID>Day Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f87bbff7-4c8b-4dba-9e21-3eb818c5f36b">
+          <AttributeID>Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="016eaeab-a6af-4ac5-9480-887db28b5c96">
+          <AttributeID>Week Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="28fac101-ebce-4daf-84b7-ec26f71bfb83">
+          <AttributeID>Month Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4132725b-0624-498c-9e53-f37782c1fb26">
+          <AttributeID>Month Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7b54b1fe-4ace-4d02-9dcb-60978b8f49b5">
+          <AttributeID>Quarter Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="71d4b10a-1ee5-4df8-81e0-f6290c54880a">
+          <AttributeID>Fiscal Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c11a5a91-5bf6-46cf-beb9-9bebc7a4674a">
+          <AttributeID>Fiscal Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9161e144-11d8-4d94-8ac8-5ef796b75a51">
+          <AttributeID>Fiscal Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="46573fc0-603d-4fbe-a07d-13559886e7cc">
+          <AttributeID>Fiscal Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="09f2b62c-43cd-4fe2-89c3-3d5b1434169f">
+          <AttributeID>Fiscal Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d4187285-e67e-4587-9a26-23c6b672864d">
+          <AttributeID>Fiscal Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b9c69e53-18bf-4f9c-bb06-60d10da44b0d">
+          <AttributeID>Fiscal Day Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="474eeb25-9a6f-48f7-b352-f1f6f790c7dd">
+          <AttributeID>Fiscal Day Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="59f96c80-9bc4-4584-b9f7-2822b35393fc">
+          <AttributeID>Fiscal Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="13d56dfa-fe2f-428f-bdb1-fbd124648b03">
+          <AttributeID>Fiscal Week Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="68b1e91e-d4b4-46f1-a79e-6d3c004a8864">
+          <AttributeID>Fiscal Month Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="89147682-20af-48f9-bc77-5ad8fb8dc2e6">
+          <AttributeID>Fiscal Month Of Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e3394b3a-2080-44bc-a65e-c84a984fc825">
+          <AttributeID>Fiscal Quarter Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0756bc87-f723-4d7a-898b-1c36b4a74ed3">
+          <AttributeID>Fiscal Hierarchy Time Calculations</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5f87a1b7-27e1-482e-aa94-220394a3288a">
+          <AttributeID>Work Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dc545f7c-6767-408b-a482-4106d5b7b132">
+          <AttributeID>Work Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="420f5c28-d82d-467d-b5c0-35eb88301429">
+          <AttributeID>Fiscal Hierarchy Time Calculations 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d702eb73-661d-480e-a723-968f71c2a902">
+          <AttributeID>Fiscal Hierarchy Time Calculations 2</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b9f206e7-1fb2-4e2a-a5e8-16ba1e0beeac">
+          <AttributeID>Calendar Hierarchy Time Calculations</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="94af1938-c59b-47ef-acc6-fc6ad386f83a">
+          <AttributeID>Fiscal Hierarchy Time Calculations 3</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1e7e03b8-2ec3-495d-a64e-5bd1e74883d5">
+          <AttributeID>Calendar Hierarchy Time Calculations 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3b4154bc-7135-4c44-9e06-bbe0ce50e0cb">
+          <AttributeID>Fiscal Hierarchy Time Calculations 4</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="3b27271f-dd33-40a6-93a1-cc4648d2fef0">
+          <HierarchyID>Year -  Quarter -  Month -  Date</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="aaf2362c-2b26-4d61-9305-b9a00845600b">
+          <HierarchyID>Fiscal Year -  Fiscal Quarter -  Fiscal Month -  Fiscal Day</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="c435b6f8-a917-4f42-a04b-474593801ed9">
+      <ID>Fact Inventory</ID>
+      <Name>Fact Inventory</Name>
+      <DimensionID>Fact Inventory</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="fd9ab7d9-24e3-4008-a941-5a9105b550ff">
+          <AttributeID>Fact Inventory</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a0fa2317-7059-40d8-971a-e1148011b1e1">
+          <AttributeID>Transaction Type</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4e36047e-3c06-42ae-8eee-893ace95acc1">
+          <AttributeID>Transaction Quantity</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="788ad362-d55c-4581-b62a-6ef8949c2107">
+          <AttributeID>Invoice Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c001ebea-3df0-4049-9dd6-fdfe0c061425">
+          <AttributeID>Po Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5e2512a2-8589-45e3-85b4-c5def1c000be">
+          <AttributeID>Issue Adj Description</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7d107266-2547-4c45-ab85-3649de0c01df">
+          <AttributeID>Posting Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="992ddd56-ab8b-46d9-8bba-2521ab421838">
+          <AttributeID>Warehouse Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c3abdc5b-b2cb-49ef-acf4-192a19291dad">
+          <AttributeID>Inventory Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="14346726-9af1-4ec6-a4b6-5c174ddc4c93">
+      <ID>Fact Sales Inventory</ID>
+      <Name>Fact Sales Inventory</Name>
+      <DimensionID>Fact Sales 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7b83e5b8-29b7-4284-8a28-62ead0c76add">
+          <AttributeID>Fact Sales</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5cc533b2-adfd-489d-9c29-c7d4f8c1bf12">
+          <AttributeID>Customer Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3362524f-793b-4905-b092-5a7d50f96990">
+          <AttributeID>Salesman Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8c010d14-6f90-4c7b-9c4e-c0852930274c">
+          <AttributeID>Vendor Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="287b5512-f449-46d3-9bdb-f52b0e326ac8">
+          <AttributeID>Originator Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="261f7bdc-5731-45ca-877d-4b091043fb4f">
+          <AttributeID>Division Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="69c7dc51-7c2f-4669-a998-140d8dde8bfb">
+          <AttributeID>Invoice Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3e0bef46-9689-40a8-83dc-9b33dad72baf">
+          <AttributeID>Selling Price</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6324c3d6-4c07-4551-a0dc-83429a09674a">
+          <AttributeID>Cost</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eee2ba67-a8e3-401e-8f34-d859fd0a1a5e">
+          <AttributeID>Quantity Ordered</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0e816977-d93b-4623-9a81-0795242610d1">
+          <AttributeID>Nonstockitem</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d750d64e-9006-409f-a3f9-4d209a4eb52b">
+          <AttributeID>Invoice Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="66d092cc-3549-464a-9447-25f03bf3f7f4">
+          <AttributeID>Inventory Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="68b54297-238b-45e9-b16e-a4d2e06198d7">
+          <AttributeID>Product Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="00d42e0d-1e7e-45cf-a105-5797d86d4ad8">
+      <ID>Dim Productcodes</ID>
+      <Name>Dim Productcodes</Name>
+      <DimensionID>Dim Productcodes</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1fa05a63-7731-44d1-bce5-7a591ff8cf75">
+          <AttributeID>Dim Productcodes</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9420bd70-7870-493b-9427-e12c1346f985">
+          <AttributeID>Product Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cf82183e-a9eb-4101-b84f-bb5fc7756e8c">
+          <AttributeID>Product Description</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bf956ec7-c3e6-4461-b890-9630dc0b2540">
+          <AttributeID>Dim Product Code Subcategory</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="07eb623b-43f9-4921-95dd-21c9be34c962">
+          <AttributeID>Product Primary Subcategory</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4aab1497-8641-4f73-af33-e67f48999002">
+          <AttributeID>Dim Product Code Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d2e4d740-c241-483e-9696-3def914cf6fb">
+          <AttributeID>Product Primary Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="72a75ab9-2f85-46a8-816a-c795e8e674b3">
+          <AttributeID>Product Service Catgory</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f60477e6-07b3-486c-a095-ef13513af4eb">
+          <AttributeID>Department Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="14362cfb-0409-4182-9809-18441e5480eb">
+          <AttributeID>Quote Category</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="a8b21905-0c99-4f03-a680-fe3c0b772847">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="f9e46b18-3a53-428e-82f6-8bbc5c2fbad0">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="5b5ea18d-eb70-495d-aa8b-c93e04f7c842">
+          <HierarchyID>Hierarchy 1 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="ef7c02d2-6ae1-4e81-9c04-7a80b1cb0a6b">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="b6c59386-60d5-4273-b4bd-9c98ca15e41c">
+      <ID>Fact Inventory History</ID>
+      <Name>Fact Inventory History</Name>
+      <DimensionID>Fact Inventory History</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="6d3b7efe-3844-4a3c-b59b-94efbf5eb86d">
+          <AttributeID>Fact Inventory History</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cc76d73c-556e-451d-b7ce-94ad9d273a69">
+          <AttributeID>Transaction Type</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9e338028-c109-4b94-8be5-436ebe11cdeb">
+          <AttributeID>Transaction Qty</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9b45c16e-a5bb-4fc0-aaf9-60050c09418c">
+          <AttributeID>Invoice Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="11b10bcf-5c1e-4de5-97cb-ee1f28c19366">
+          <AttributeID>PO Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="26d827c3-0cdd-441d-8b15-a2f23f00a1d1">
+          <AttributeID>Bef Qty On Hand</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c941bb49-392f-4955-a7f6-301f2f3c730e">
+          <AttributeID>Bef Qty On Order</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="413bb9f1-a91b-4d67-aa8d-95869b6b4459">
+          <AttributeID>Bef Qty BO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="68630c02-eb3e-4b24-a2b0-6eeeb19fab2a">
+          <AttributeID>Bef Qty OR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e34b3744-ca17-466d-9c99-014dc7b0fffb">
+          <AttributeID>Aft Qty On Hand</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0e3fb498-f5d9-4038-a340-d1db84f8ff76">
+          <AttributeID>Aft Qty On Order</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9fb4ab99-8fcf-48bd-99b8-f2f92fb68489">
+          <AttributeID>Aft Qty BO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="732eadc9-5236-4452-8ed6-64919832eea8">
+          <AttributeID>Aft Qty OR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="595fc058-2810-46af-8ac2-fbf793133c1d">
+          <AttributeID>Warehouse Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cab794fb-657b-43c0-a5f0-6e87f41bc4aa">
+          <AttributeID>Inventory Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eb96ec56-fa48-4700-8d20-76d46f88af35">
+          <AttributeID>Posting Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="3b927f61-7ae2-4696-ba6c-0fad12f733f5">
+      <ID>Fact Inventory</ID>
+      <Name>Fact Inventory</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="b74b612b-ec9d-4967-9d0b-d5ad09f568e0">
+          <ID>Transaction Quantity</ID>
+          <Name>Transaction Quantity</Name>
+          <Source dwd:design-time-name="54c1cc68-122d-4c1a-83f5-158cc70c3a77">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ca42ffca-98b6-4c57-8bb9-cfabd9282b7c">
+              <TableID>dbo_fact_inventory</TableID>
+              <ColumnID>transaction_Quantity</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4524bed9-36b7-4d43-8e50-0b2569ced6f5">
+          <CubeDimensionID>Dim Inventory</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d208b0bf-a4b0-4556-8cff-52a9e9d85256">
+              <AttributeID>Dim Inventory</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="917b2bbd-bcb7-4f48-a3de-473af41de716">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5c4353a7-259a-4125-8915-f87c0963eacf">
+                    <TableID>dbo_fact_inventory</TableID>
+                    <ColumnID>inventory_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="92e3707e-b56a-4fa6-9a5d-fe9c71c10841">
+          <CubeDimensionID>Dim Warehouse</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="247c9b31-42ae-4816-9eae-20444bf43de3">
+              <AttributeID>Dim Warehouse</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f75bd877-6b52-4671-aabf-c6a4cbea0d69">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d2df4f01-1266-42da-9f41-81e5e6d31686">
+                    <TableID>dbo_fact_inventory</TableID>
+                    <ColumnID>warehouse_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="d865daf7-f8f8-4e47-a3a0-64c0243967ad">
+          <CubeDimensionID>Fact Inventory</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9f0278b6-2e69-485e-b92e-9b69b4abfb97">
+              <AttributeID>Fact Inventory</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7e894eb1-6ba9-414c-8816-ed87753c9b93">
+                  <DataType>WChar</DataType>
+                  <DataSize>2</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4214d586-cdcb-44a5-80ea-11c893f0005c">
+                    <TableID>dbo_fact_inventory</TableID>
+                    <ColumnID>warehouse_Code</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="d6ab3352-9740-48c6-8d45-91c3b67ac04a">
+                  <DataType>WChar</DataType>
+                  <DataSize>20</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2c249c71-45d4-4336-9a35-5b5e7f25ff38">
+                    <TableID>dbo_fact_inventory</TableID>
+                    <ColumnID>inventory_Number</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="b3eed4d8-94ec-4407-b5f5-47f863b00676">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ba27d2dd-342e-4110-9cc4-4fbf9807b774">
+                    <TableID>dbo_fact_inventory</TableID>
+                    <ColumnID>sequence_Number</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="94f50961-4964-4428-b036-09b0f3f75dc0">
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="86d884ba-68a6-49d2-bd82-4c5b58caee3b">
+              <AttributeID>Dim Productcodes</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Inventory</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Dim Productcodes</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+        </Dimension>
+      </Dimensions>
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="968822c4-733b-427f-a0af-939578b90104">
+      <ID>Dim Inventory</ID>
+      <Name>Dim Inventory</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="af4805e3-b046-4485-afbf-e1a8bfa046ba">
+          <ID>Inventory Selling</ID>
+          <Name>Inventory Selling</Name>
+          <Source dwd:design-time-name="4d5e4c2f-acb8-4d08-984f-17d073a173a3">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="fca90bf9-07fd-4e67-b9ea-1d5a725fc67f">
+              <TableID>dbo_dim_inventory</TableID>
+              <ColumnID>inventory_selling</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>Currency</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="f1dc917e-9f2c-4935-8e86-23a59b4deeb9">
+          <ID>Inventory Purchasing</ID>
+          <Name>Inventory Purchasing</Name>
+          <Source dwd:design-time-name="744bc746-5ae7-48e8-a7bf-1519f2729f74">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="24a795e9-dd7c-48a6-9f88-2c4538b7d717">
+              <TableID>dbo_dim_inventory</TableID>
+              <ColumnID>inventory_purchasing</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>Currency</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="cb8ad74f-d6ba-499e-a683-e63519c8dcb6">
+          <ID>Inventory Selling Factor</ID>
+          <Name>Inventory Selling Factor</Name>
+          <Source dwd:design-time-name="4e22459d-f6fb-4fdb-88cd-6465a235ea45">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f3f7247b-3cae-4a61-908c-3ca61ced1acc">
+              <TableID>dbo_dim_inventory</TableID>
+              <ColumnID>inventory_selling_factor</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="49c830e0-fc24-474e-b5af-e75d6afb1927">
+          <ID>Inventory Non Stock Count</ID>
+          <Name>Inventory Non Stock Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="41ea6315-5586-4981-b11c-1b0b4b2da879">
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ab9b563f-73d3-42a6-b0f4-defb7bef61bc">
+              <TableID>dbo_dim_inventory</TableID>
+              <ColumnID>inventory_non_stock</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="dfa239e9-bd37-4d14-bf20-8068408dc97a">
+          <ID>Inventory Cost Last</ID>
+          <Name>Inventory Cost Last</Name>
+          <Source dwd:design-time-name="0798b10a-dce8-4c08-bfbb-c9b68d1c475e">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="53ac12ec-851f-4ce5-b3e1-720b87202934">
+              <TableID>dbo_dim_inventory</TableID>
+              <ColumnID>inventory_cost_last</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>Currency</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="6e8511d3-9422-4e43-8457-e57e84141d2a">
+          <ID>Inventory Avg Cost On Hand</ID>
+          <Name>Inventory Avg Cost On Hand</Name>
+          <Source dwd:design-time-name="0242bb4d-2461-4154-85d4-d879f39747e1">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7c2a48f4-4717-44fc-9c9e-5dc372b6abc5">
+              <TableID>dbo_dim_inventory</TableID>
+              <ColumnID>inventory_avg_cost_on_hand</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>Currency</FormatString>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="f87b2819-8b3c-47c2-9011-0cda98ec6d2f">
+          <CubeDimensionID>Dim Inventory</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="63d67e3c-7898-4a9e-8620-1fb5f6863039">
+              <AttributeID>Dim Inventory</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9ba62b41-b581-4ec9-999f-e40cc4bc9fa0">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2cb67e8f-11a3-42bb-a3b1-237052b9e1f7">
+                    <TableID>dbo_dim_inventory</TableID>
+                    <ColumnID>inventory_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c8a1408e-3b87-4a1c-9487-036fbcb1689f">
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ea116c63-0047-47f9-9587-46c7f2d7d37a">
+              <AttributeID>Dim Productcodes</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f6187660-1683-4b11-8dc1-d92fd3cf64eb">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="23cc43c1-64be-414b-89c2-89ae1079e54b">
+                    <TableID>dbo_dim_inventory</TableID>
+                    <ColumnID>product_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="047bd0c5-8048-4614-9254-d7a6466db014">
+      <ID>Fact Sales</ID>
+      <Name>Fact Sales</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="e4dfe49b-bd9c-40e7-ac0e-24e97eb8b319">
+          <ID>Selling Price</ID>
+          <Name>Selling Price</Name>
+          <Source dwd:design-time-name="ebc81003-a2f0-468d-b167-85451d95ebdc">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5af0fdec-90cc-4cda-8436-29bd986cd176">
+              <TableID>dbo_fact_sales</TableID>
+              <ColumnID>Selling_price</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>Currency</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="9fe427ab-fb6a-4974-8656-2514e1ea4a70">
+          <ID>Cost</ID>
+          <Name>Cost</Name>
+          <Source dwd:design-time-name="b84bdca8-8901-4428-8de0-fada1a15155b">
+            <NullProcessing>ZeroOrBlank</NullProcessing>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1cc2603a-29da-4bc9-ac66-0afeb4b9b07d">
+              <TableID>dbo_fact_sales</TableID>
+              <ColumnID>Cost</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>Currency</FormatString>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="cfacda11-5f01-48eb-8cae-cabec242f171">
+          <CubeDimensionID>Dim Inventory</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2a6f0143-173c-42f2-ba02-6119992fd404">
+              <AttributeID>Dim Inventory</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f6fc84b7-1ab0-4e7f-bcb9-28927385cc1a">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a9478216-35d8-455a-ba95-952e7482b531">
+                    <TableID>dbo_fact_sales</TableID>
+                    <ColumnID>inventory_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="bbe6df6e-5e46-4737-b285-811ef4722270">
+          <CubeDimensionID>Fact Sales Inventory</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="58098084-dfbd-4071-8d6e-5d40622b2423">
+              <AttributeID>Fact Sales</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1e4561c0-0a9d-480f-88cf-d3043481ba0a">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="23df34c4-9347-428d-b277-014c41ee60a1">
+                    <TableID>dbo_fact_sales</TableID>
+                    <ColumnID>Order_Number</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="7165fa1e-3a24-417c-b2b0-ebd5ae20aa57">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="43533028-1211-4504-b761-9135ddd171d4">
+                    <TableID>dbo_fact_sales</TableID>
+                    <ColumnID>Sequence_Number</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="8d447b5d-6835-4152-b002-c5c363014957">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="63e4788d-9917-418d-9cac-0a2b90f6fab1">
+                    <TableID>dbo_fact_sales</TableID>
+                    <ColumnID>Line_Number</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b4a86621-a130-4395-b0d1-6f54050417d1">
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1e337b0b-77ad-4df1-a5b5-154aee15df62">
+              <AttributeID>Dim Productcodes</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5698d6bf-ac3f-42e1-9797-880253929d52">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="74e9da5c-ac76-41c4-b6f0-f78fa27fcb30">
+                    <TableID>dbo_fact_sales</TableID>
+                    <ColumnID>product_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7b58eb9d-7786-4f43-ad2a-1340d6926b8a">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ae291c30-89e3-4f78-a373-cf429d306dea">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6d5fcc98-fe4a-44ff-9815-c377f0fa924a">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ba710539-0a11-480b-bded-963120e2ed59">
+                    <TableID>dbo_fact_sales</TableID>
+                    <ColumnID>invoice_date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="dbf94713-29f2-4244-a4bc-f0fad81d76f3">
+          <CubeDimensionID>Dim Warehouse</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="80b01028-609b-4712-a16c-6dc0b3f9b700">
+              <AttributeID>Dim Warehouse</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bfe5fc94-7eba-40fa-bb82-d0ba037eba57">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="abc778d9-af3d-45f4-aee9-fe7ae7a07f83">
+                    <TableID>dbo_fact_sales</TableID>
+                    <ColumnID>warehouse_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="2be8a003-2f4f-4348-b136-ea3a43375db4">
+      <ID>Fact Warehouse Inventory</ID>
+      <Name>Fact Warehouse Inventory</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="23492beb-1929-48ba-a12f-3b1b83101bb7">
+          <ID>Qty On Hand</ID>
+          <Name>Qty On Hand</Name>
+          <Source dwd:design-time-name="5c6867b5-bd35-4ea4-9225-802aebf78106">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="aeb3f4d1-dbba-4e35-8c30-67fcdc3f0909">
+              <TableID>dbo_fact_warehouse_inventory</TableID>
+              <ColumnID>qty_on_hand</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c346841f-0de4-4d45-8d15-4411cb5fef43">
+          <ID>Qty On Order</ID>
+          <Name>Qty On Order</Name>
+          <Source dwd:design-time-name="92964341-1054-404c-b08d-c38d2b7c14e4">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9ec92a12-d1e2-47a9-9d2d-d615b40f3322">
+              <TableID>dbo_fact_warehouse_inventory</TableID>
+              <ColumnID>qty_on_order</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2d17b008-672b-4ad4-9207-2fc8c872a291">
+          <ID>Qty Backordered</ID>
+          <Name>Qty Backordered</Name>
+          <Source dwd:design-time-name="7c33f3c0-3222-4f5b-a2e0-511114e78c7f">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1b245538-b5bd-450e-9743-6cbf4d76f03a">
+              <TableID>dbo_fact_warehouse_inventory</TableID>
+              <ColumnID>qty_backordered</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="5f3eea4a-c548-4026-a496-d8385c6e0356">
+          <ID>Qty On Reserve</ID>
+          <Name>Qty On Reserve</Name>
+          <Source dwd:design-time-name="afbf7645-4b85-45be-bf74-06dcde43a868">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ab0c07dd-f288-49cf-ab68-11904c688c46">
+              <TableID>dbo_fact_warehouse_inventory</TableID>
+              <ColumnID>qty_on_reserve</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6e05501c-a9a6-4e7f-9325-cee01ef70cb8">
+          <ID>Date Last Sold</ID>
+          <Name>Date Last Sold</Name>
+          <Source dwd:design-time-name="ec560beb-353b-483d-b6a7-681419808772">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="394c0a40-8acc-44db-8d3a-23f61e6afabc">
+              <TableID>dbo_fact_warehouse_inventory</TableID>
+              <ColumnID>date_last_sold</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a2be3798-1093-42eb-848a-fb244118653c">
+          <CubeDimensionID>Dim Warehouse</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d3b9d2af-27a0-4140-a4cb-131e44588400">
+              <AttributeID>Dim Warehouse</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e18ce57e-318e-4aef-a9ae-fff1633b75f6">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="abf11a4a-83d0-4207-adfc-d3258dc11078">
+                    <TableID>dbo_fact_warehouse_inventory</TableID>
+                    <ColumnID>warehouse_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="12c7a800-c19f-4433-aeee-1383e45c7809">
+          <CubeDimensionID>Dim Inventory</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="413ee7cf-647e-4961-a8db-7e95af2fb8bf">
+              <AttributeID>Dim Inventory</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="416fa6e9-647b-4520-a469-23f4decb28b4">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4ae7d953-6088-40f6-9f44-257d19895cb9">
+                    <TableID>dbo_fact_warehouse_inventory</TableID>
+                    <ColumnID>inventory_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="b2aa0254-7bca-48d8-bd5d-982a0d183135">
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="33dc6503-6415-48c2-b328-8c038e04492c">
+              <AttributeID>Dim Productcodes</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Inventory</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Dim Productcodes</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+        </Dimension>
+      </Dimensions>
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="11cc553d-6950-4bfb-b47f-6bbfd8516f77">
+      <ID>Fact Inventory History</ID>
+      <Name>Fact Inventory History</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="613026cb-6f92-4bd2-8ae1-5ca6c7dab376">
+          <ID>Bef Qty On Hand</ID>
+          <Name>Bef Qty On Hand</Name>
+          <Source dwd:design-time-name="13008357-9c36-43dc-8844-d0084d1d837e">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b41c7ae1-7b67-4c61-963d-7876e8f2eb88">
+              <TableID>dbo_fact_inventory_history</TableID>
+              <ColumnID>Bef_qty_on_hand</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="75519511-59c0-43ef-85f6-85a0e2968777">
+          <ID>Bef Qty On Order</ID>
+          <Name>Bef Qty On Order</Name>
+          <Source dwd:design-time-name="a669808a-3242-4f2d-9119-5de97e91c3fb">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="342036e3-1e72-4881-96d7-f9176f1b78c9">
+              <TableID>dbo_fact_inventory_history</TableID>
+              <ColumnID>Bef_qty_on_order</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ccba4d11-961e-4e74-adaa-fe90e5eaa9f6">
+          <ID>Bef Qty BO</ID>
+          <Name>Bef Qty BO</Name>
+          <Source dwd:design-time-name="38d6c325-71ac-4ea7-b317-d35a5ced43c8">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="bc9eb134-f57b-44f8-9351-adbef67a4766">
+              <TableID>dbo_fact_inventory_history</TableID>
+              <ColumnID>Bef_qty_BO</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9dc01188-2d69-43d6-aa3e-83bbea195a9e">
+          <ID>Bef Qty OR</ID>
+          <Name>Bef Qty OR</Name>
+          <Source dwd:design-time-name="85c5d8e1-dbb2-428c-812a-9ede349d1ba3">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="80ee1381-753b-402b-a605-7834415fbf67">
+              <TableID>dbo_fact_inventory_history</TableID>
+              <ColumnID>Bef_qty_OR</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9c101ead-042c-448e-a882-aa1c35b58b1f">
+          <ID>Aft Qty On Hand</ID>
+          <Name>Aft Qty On Hand</Name>
+          <Source dwd:design-time-name="72a67ff0-764f-4d6b-8aa7-52c4a88a58d6">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cb43f167-4c03-4a90-904f-18dedca4feb3">
+              <TableID>dbo_fact_inventory_history</TableID>
+              <ColumnID>Aft_qty_on_hand</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2cf991bf-2492-4f8d-94c0-f976a0d5c40a">
+          <ID>Aft Qty On Order</ID>
+          <Name>Aft Qty On Order</Name>
+          <Source dwd:design-time-name="416776b4-b114-4c09-a8c9-5311b48b29a5">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b4c3ec32-cef0-4f0d-a1fc-cbf14309e3a9">
+              <TableID>dbo_fact_inventory_history</TableID>
+              <ColumnID>Aft_qty_on_order</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="cf1b53da-05ce-4d90-aef2-00a33cf2079c">
+          <ID>Aft Qty BO</ID>
+          <Name>Aft Qty BO</Name>
+          <Source dwd:design-time-name="beb3b320-1b49-4858-ac56-ced44799ba19">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="47059365-7e0a-4c7c-8c29-f8c51049a355">
+              <TableID>dbo_fact_inventory_history</TableID>
+              <ColumnID>Aft_qty_BO</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a1e55ede-1905-453d-a032-ce7401001df5">
+          <ID>Aft Qty OR</ID>
+          <Name>Aft Qty OR</Name>
+          <Source dwd:design-time-name="77b519de-af52-44e4-a618-40ae321e25a9">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e4e480bc-9fc6-4558-a7b7-b2cbd6cb7f44">
+              <TableID>dbo_fact_inventory_history</TableID>
+              <ColumnID>Aft_qty_OR</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2ab4be57-2b26-436d-bfde-1543b4160390">
+          <CubeDimensionID>Dim Warehouse</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3d50cf63-42a0-4c28-a90b-137da32c840d">
+              <AttributeID>Dim Warehouse</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1eb03bd4-5fbb-4ccd-9809-4e3a4c2a8b60">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0b9e4112-817c-4911-9c6e-73cd1e0a1f22">
+                    <TableID>dbo_fact_inventory_history</TableID>
+                    <ColumnID>warehouse_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="408a8fb2-6c82-4521-a223-77bfabfcebc5">
+          <CubeDimensionID>Dim Inventory</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1c22d92f-6a91-46af-9445-4e940764504d">
+              <AttributeID>Dim Inventory</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6f7c0d67-e4b1-4aae-a615-1320d925f0fa">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="590a41e0-c56c-435a-9cb8-0a15acb93a33">
+                    <TableID>dbo_fact_inventory_history</TableID>
+                    <ColumnID>inventory_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="736fe9ac-f08e-4813-bac9-462f01669227">
+          <CubeDimensionID>Dim Productcodes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="baa2b192-27cb-45bc-95ea-4c8506d98677">
+              <AttributeID>Dim Productcodes</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Inventory</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Dim Productcodes</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="3ebad9f9-bd1a-408e-ab15-8ffc882f6b41">
+          <CubeDimensionID>Fact Inventory History</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5a477eca-0f66-48d4-9c90-e958e366ac16">
+              <AttributeID>Fact Inventory History</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="59e48218-1f99-4f8b-b016-040690a58469">
+                  <DataType>WChar</DataType>
+                  <DataSize>2</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a7fc32be-21d0-40a4-98df-a55702d9379d">
+                    <TableID>dbo_fact_inventory_history</TableID>
+                    <ColumnID>warehouse_code</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="68ec45d1-4de9-438b-8606-7e7e9b389fea">
+                  <DataType>WChar</DataType>
+                  <DataSize>20</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="613db0c6-ffca-49b1-91f5-2480493e1f0b">
+                    <TableID>dbo_fact_inventory_history</TableID>
+                    <ColumnID>inventory_number</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="b7310826-3688-4458-b316-4f046465feff">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="46c99611-c33f-4596-bdc4-ab61fc83d000">
+                    <TableID>dbo_fact_inventory_history</TableID>
+                    <ColumnID>sequence_number</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="2b248bb0-03ad-49fc-9e5d-a443fdff0055">
+    <DataSourceViewID>Nomis Warehouse 1 1</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="a9d243d5-ff81-4429-bbb0-b7e8cc2645af">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE;       
+CREATE SET CURRENTCUBE.[Stock]
+ AS [Fact Sales Inventory].[Nonstockitem].&amp;[N];       
+CREATE SET CURRENTCUBE.[Non Stock]
+ AS {[Fact Sales Inventory].[Nonstockitem].&amp;[Y],[Fact Sales Inventory].[Nonstockitem].&amp;[]};          
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Qty Available To Promise]
+ AS [Measures].[Qty On Hand]-[Measures].[Qty On Reserve]+[Measures].[Qty On Order]-[Measures].[Qty Backordered], 
+VISIBLE = 1;   
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Profit]
+ AS [Measures].[Selling Price]-[Measures].[Cost], 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;         
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Sales From Stock]
+ AS iif(ISEMPTY(Aggregate([Stock],[Measures].[Selling Price])),0.0,Aggregate([Stock],[Measures].[Selling Price])), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;   
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Cost From Stock]
+ AS iif(ISEMPTY(Aggregate([Stock],[Measures].[Cost])),0.0,Aggregate([Stock],[Measures].[Cost])), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1  ;   
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Profit From Stock]
+ AS [Sales From Stock] - [Cost From Stock], 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;       
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Sales From Non Stock]
+ AS iif(ISEMPTY(Aggregate([Non Stock],[Measures].[Selling Price])),0,Aggregate([Non Stock],[Measures].[Selling Price])), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;       
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Stock Sales %]
+ AS iif([Sales From Non Stock] &lt;&gt; 0 ,[Sales From Stock]/[Measures].[Selling Price], iif([Sales From Stock]&gt;0,1,0) ), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;       
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Yearly Cost]
+ AS [Cost From Stock] * 12, 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;       
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Average Inventory]
+ AS Sum (Descendants ([Dim Inventory].[Dim Inventory].CurrentMember, , LEAVES),
+  [Measures].[Qty On Hand]* [Measures].[Inventory Avg Cost On Hand]), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;    
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Inventory Turns]
+ AS iif([Average Inventory] &lt;&gt; 0,[Yearly Cost]/[Average Inventory],0), 
+FORMAT_STRING = "#,#.00", 
+VISIBLE = 1;    
+
+/*
+  Begin Time Intelligence script for the [Time].[Fiscal Hierarchy] hierarchy.
+*/
+
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Year to Date] AS "NA";  
+  
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Quarter to Date] AS "NA";  
+  
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Month to Date] AS "NA";  
+  
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Twelve Months to Date] AS "NA";  
+  
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Twelve Month Moving Average] AS "NA";  
+  
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Six Month Moving Average] AS "NA";  
+  
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Three Month Moving Average] AS "NA";  
+  
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Year Over Year Growth %] AS "NA";  
+  
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Year Over Year Growth] AS "NA";  
+  
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Quarter Over Quarter Growth %] AS "NA";  
+  
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Quarter Over Quarter Growth] AS "NA";  
+  
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Month Over Month Growth %] AS "NA";  
+  
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Month Over Month Growth] AS "NA";  
+  
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Day Over Day Growth %] AS "NA";  
+  
+Create Member CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 3].
+[Day Over Day Growth] AS "NA";  
+  
+
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Year to Date],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Year].[Fiscal Year].Members ) =
+
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember } *
+             PeriodsToDate(
+                            [Time].[Fiscal Hierarchy].[Fiscal Year],
+                            [Time].[Fiscal Hierarchy].CurrentMember
+             )
+  );  
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Quarter to Date],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ) =
+
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember } *
+             PeriodsToDate(
+                            [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                            [Time].[Fiscal Hierarchy].CurrentMember
+             )
+  );  
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Month to Date],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Month].[Fiscal Month].Members ) =
+
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember } *
+             PeriodsToDate(
+                            [Time].[Fiscal Hierarchy].[Fiscal Month],
+                            [Time].[Fiscal Hierarchy].CurrentMember
+             )
+  );  
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Twelve Months to Date],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Month].[Fiscal Month].Members ) =
+    
+  Aggregate(
+             { [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember } *
+             {
+              ParallelPeriod(
+                              [Time].[Fiscal Hierarchy].[Fiscal Month],
+                              11,
+                              [Time].[Fiscal Hierarchy].CurrentMember
+              ) : [Time].[Fiscal Hierarchy].CurrentMember
+             }
+  );  
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Twelve Month Moving Average],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Month].[Fiscal Month].Members ) =
+    
+  Avg(
+       {
+        ParallelPeriod(
+                        [Time].[Fiscal Hierarchy].[Fiscal Month],
+                        11,
+                        [Time].[Fiscal Hierarchy].CurrentMember
+        ) : [Time].[Fiscal Hierarchy].CurrentMember
+       },
+      [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember
+  );  
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Six Month Moving Average],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Month].[Fiscal Month].Members ) =
+    
+  Avg(
+       {
+        ParallelPeriod(
+                        [Time].[Fiscal Hierarchy].[Fiscal Month],
+                        5,
+                        [Time].[Fiscal Hierarchy].CurrentMember
+        ) : [Time].[Fiscal Hierarchy].CurrentMember
+       },
+      [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember
+  );  
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Three Month Moving Average],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Month].[Fiscal Month].Members ) =
+    
+  Avg(
+       {
+        ParallelPeriod(
+                        [Time].[Fiscal Hierarchy].[Fiscal Month],
+                        2,
+                        [Time].[Fiscal Hierarchy].CurrentMember
+        ) : [Time].[Fiscal Hierarchy].CurrentMember
+       },
+      [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember
+  );  
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Year Over Year Growth %],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 1 ) : Null ) =      
+
+  ( 
+    ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Year],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  ) 
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Year],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );  
+  
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Year Over Year Growth %],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 0 ) 
+  ) = Null;   
+  
+  Format_String ( 
+                  [Time].[Fiscal Hierarchy Time Calculations 3].[Year Over Year Growth %] 
+  ) = "Percent";  
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Year Over Year Growth],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 1 ) : Null ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Year],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );  
+  
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Year Over Year Growth],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Year].[Fiscal Year].Members ( 0 ) 
+  ) = Null;  
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Quarter Over Quarter Growth %],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 1 ) : Null ) =      
+
+  (
+    ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  )
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );  
+  
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Quarter Over Quarter Growth %],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 0 ) 
+  ) = Null;   
+  
+  Format_String ( 
+                  [Time].[Fiscal Hierarchy Time Calculations 3].[Quarter Over Quarter Growth %] 
+  ) = "Percent";  
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Quarter Over Quarter Growth],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 1 ) : Null ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Quarter],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );  
+  
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Quarter Over Quarter Growth],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 0 ) 
+  ) = Null;  
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Month Over Month Growth %],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 1 ) : Null ) =      
+
+  (
+    ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Month],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  )
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Month],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );  
+  
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Month Over Month Growth %],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 0 ) 
+  ) = Null;   
+  
+  Format_String ( 
+                  [Time].[Fiscal Hierarchy Time Calculations 3].[Month Over Month Growth %] 
+  ) = "Percent";  
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Month Over Month Growth],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 1 ) : Null ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Month],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );  
+  
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Month Over Month Growth],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Month].[Fiscal Month].Members ( 0 ) 
+  ) = Null;  
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Day Over Day Growth %],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 1 ) : Null ) =      
+
+  (
+    ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember ) -
+    ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember,
+      ParallelPeriod(
+                      [Time].[Fiscal Hierarchy].[Fiscal Day],
+                      1,
+                      [Time].[Fiscal Hierarchy].CurrentMember
+      )
+    )
+  )
+  /
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Day],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );  
+  
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Day Over Day Growth %],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 0 ) 
+  ) = Null;   
+  
+  Format_String ( 
+                  [Time].[Fiscal Hierarchy Time Calculations 3].[Day Over Day Growth %] 
+  ) = "Percent";  
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Day Over Day Growth],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 1 ) : Null ) =      
+
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember ) -
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].DefaultMember,
+    ParallelPeriod(
+                    [Time].[Fiscal Hierarchy].[Fiscal Day],
+                    1,
+                    [Time].[Fiscal Hierarchy].CurrentMember
+    )
+  );  
+  
+  ( [Time].[Fiscal Hierarchy Time Calculations 3].[Day Over Day Growth],    
+    {
+     [Measures].[Qty Available To Promise],
+     [Measures].[Profit],
+     [Measures].[Sales From Stock],
+     [Measures].[Cost From Stock],
+     [Measures].[Profit From Stock],
+     [Measures].[Sales From Non Stock],
+     [Measures].[Stock Sales %],
+     [Measures].[Yearly Cost],
+     [Measures].[Inventory Turns],
+     [Measures].[Average Inventory],
+     [Measures].[Transaction Quantity],
+     [Measures].[Inventory Selling],
+     [Measures].[Inventory Purchasing],
+     [Measures].[Inventory Selling Factor],
+     [Measures].[Inventory Non Stock Count],
+     [Measures].[Inventory Cost Last],
+     [Measures].[Inventory Avg Cost On Hand],
+     [Measures].[Selling Price],
+     [Measures].[Cost],
+     [Measures].[Qty On Hand],
+     [Measures].[Qty On Order],
+     [Measures].[Qty Backordered],
+     [Measures].[Qty On Reserve],
+     [Measures].[Date Last Sold],
+     [Measures].[Bef Qty On Hand],
+     [Measures].[Bef Qty On Order],
+     [Measures].[Bef Qty BO],
+     [Measures].[Bef Qty OR],
+     [Measures].[Aft Qty On Hand],
+     [Measures].[Aft Qty On Order],
+     [Measures].[Aft Qty BO],
+     [Measures].[Aft Qty OR]
+    },
+    [Time].[Fiscal Day].[Fiscal Day].Members ( 0 ) 
+  ) = Null; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+</Cube>

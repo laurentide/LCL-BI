@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Analysis</Name>
+  <DataSourceID>66e0f4ea-d3f4-48e0-a8f2-eea4c835f9b7</DataSourceID>
+  <ConnectionProperties>
+    <Extension>OLEDB</Extension>
+    <ConnectString>Provider=MSOLAP.3;Data Source=lcl-sql2k5-s;Initial Catalog=Nomis_Analysis</ConnectString>
+  </ConnectionProperties>
+</RptDataSource>

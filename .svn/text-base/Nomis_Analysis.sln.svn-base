@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Nomis_Analysis", "Nomis_Analysis\Nomis_Analysis.dwproj", "{02BB7E2A-1BC0-4908-8FA0-DBFAEC24ED35}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02BB7E2A-1BC0-4908-8FA0-DBFAEC24ED35}.Development|Default.ActiveCfg = Development
+		{02BB7E2A-1BC0-4908-8FA0-DBFAEC24ED35}.Development|Default.Build.0 = Development
+		{02BB7E2A-1BC0-4908-8FA0-DBFAEC24ED35}.Development|Default.Deploy.0 = Development
+		{02BB7E2A-1BC0-4908-8FA0-DBFAEC24ED35}.Production|Default.ActiveCfg = Production
+		{02BB7E2A-1BC0-4908-8FA0-DBFAEC24ED35}.Production|Default.Build.0 = Production
+		{02BB7E2A-1BC0-4908-8FA0-DBFAEC24ED35}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

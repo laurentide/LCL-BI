@@ -1,0 +1,45 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="51ec8b15-1676-4e74-9b46-c71fe42db966" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>GL_2008</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fact GL</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="f923db69-0479-4c33-949d-6253ed33a12a">
+          <ID>Fact GL</ID>
+          <Name>Fact GL</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="1ef5f4b7-3eed-4c15-afca-f73aa3bc3ab5">
+            <DataSourceViewID>Nomis Warehouse 1</DataSourceViewID>
+            <TableID>dbo_fact_GL</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Budget</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="9977a073-a926-4d49-8179-388cc17b342c">
+          <ID>Fact Budget</ID>
+          <Name>Fact Budget</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="056e34d2-9333-41b5-b677-e82d6be8786b">
+            <DataSourceViewID>Nomis Warehouse 1</DataSourceViewID>
+            <TableID>dbo_fact_budget</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

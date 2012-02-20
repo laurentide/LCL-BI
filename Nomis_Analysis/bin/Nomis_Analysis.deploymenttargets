@@ -1,0 +1,5 @@
+﻿<DeploymentTarget xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Database>Nomis_Analysis</Database>
+  <Server>lcl-sql2k5-s</Server>
+  <ConnectionString>DataSource=lcl-sql2k5-s;Timeout=0</ConnectionString>
+</DeploymentTarget>

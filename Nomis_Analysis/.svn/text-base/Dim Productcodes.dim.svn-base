@@ -1,0 +1,426 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="325f98bd-e418-43dc-9e1a-bbe1f0b3de5f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Productcodes</ID>
+  <Name>Dim Productcodes</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-747" scrolltop="-9003" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="7885" y="17912" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_product_code_subcategory (dbo.dim_product_code_subcategory)" left="20" top="5549" logicalid="8" controlid="1" masterid="0" hint1="0" hint2="0" width="4895" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800001f13000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_product_code_subcategory" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_product_code_category (dbo.dim_product_code_category)" left="6706" top="635" logicalid="9" controlid="2" masterid="0" hint1="0" hint2="0" width="4445" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800005d11000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_product_code_category" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_productcodes (dbo.dim_productcodes)" left="628" top="0" logicalid="10" controlid="3" masterid="0" hint1="0" hint2="0" width="3678" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800005e0e00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_productcodes" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4006" top="1175" logicalid="11" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_productcodes-dim_product_code_category]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="16" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6706" y="1574" />
+              <point x="4306" y="1574" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="418" top="2849" logicalid="12" controlid="5" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_productcodes-dim_product_code_subcategory]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="2" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="817" y="5549" />
+              <point x="817" y="3149" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_product_code_servicecategory (dbo.dim_product_code_servicecategory)" left="988" top="-4445" logicalid="13" controlid="6" masterid="0" hint1="0" hint2="0" width="4797" height="2364" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000bd1200003c090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_dim_product_code_servicecategory" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-1100" top="-4212" logicalid="14" controlid="7" masterid="0" hint1="0" hint2="0" width="2388" height="4986" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[dim_productcodes-dim_product_code_servicecategory]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="3" sourceattachpoint="18" destattachpoint="14" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="988" y="-3813" />
+              <point x="-400" y="-3813" />
+              <point x="-400" y="74" />
+              <point x="-800" y="74" />
+              <point x="-800" y="474" />
+              <point x="628" y="474" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-747</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-9003</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-4445</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="952f0621-a293-4c01-bfc1-96410a13e673">
+    <DataSourceViewID>Nomis Warehouse</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="ae335e3a-b726-4c4f-b008-b39d80a97bee">
+      <ID>Dim Productcodes</ID>
+      <Name>Dim Productcodes</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>273</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2709b960-7c88-4324-841a-687cbe0001d0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4c5bd984-e505-45dd-b0d3-1d5132e33b8f">
+            <TableID>dbo_dim_productcodes</TableID>
+            <ColumnID>product_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d1da5a41-25ff-4055-bef8-3356929f84b2">
+          <AttributeID>Product Code</AttributeID>
+          <Name>Product Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="167a574e-396e-45da-977c-8707e4bfc7bf">
+          <AttributeID>Product Description</AttributeID>
+          <Name>Product Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="829f1f1b-1cce-4314-b1ce-9d2be4d657ed">
+          <AttributeID>Dim Product Code Subcategory</AttributeID>
+          <Name>Dim Product Code Subcategory</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5fbed08d-d5fe-47c4-a4f1-355ecb9e1679">
+          <AttributeID>Dim Product Code Category</AttributeID>
+          <Name>Dim Product Code Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="af97b7a3-8f6b-4211-a1f9-5ff2d5a3d735">
+          <AttributeID>Product Service Catgory</AttributeID>
+          <Name>Product Service Catgory</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9207ffd4-a894-46dd-a3c3-9ec8c4a83b8d">
+          <AttributeID>Department Name</AttributeID>
+          <Name>Department Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9d58f52a-1a5e-4c89-83ff-36d9bb18c30e">
+          <AttributeID>Quote Category</AttributeID>
+          <Name>Quote Category</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="456ea411-5989-46d1-bc94-93f0633d2430">
+      <ID>Product Code</ID>
+      <Name>Product Code</Name>
+      <EstimatedCount>273</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="46ed48d7-fe25-4f84-b15e-c70936e5d6aa">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="20bc0f65-953f-41f7-8522-bc34ea4f4d48">
+            <TableID>dbo_dim_productcodes</TableID>
+            <ColumnID>product_code</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="9365cd90-483d-4b2c-8c11-354718bdbcf0">
+      <ID>Product Description</ID>
+      <Name>Product Description</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="08df1416-beb7-4577-bffd-7a4b9893b4a6">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d4fb81c3-fb96-4a48-a5a7-defec5e39709">
+            <TableID>dbo_dim_productcodes</TableID>
+            <ColumnID>product_description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="82c8226a-1a07-4421-8910-d0e767e6c2a3">
+      <ID>Dim Product Code Subcategory</ID>
+      <Name>Dim Product Code Subcategory</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f065a877-4633-46de-87ac-d9e590fcf775">
+          <NullProcessing>UnknownMember</NullProcessing>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8c1d206d-7f0d-41af-9ad2-461eae3b1773">
+            <TableID>dbo_dim_product_code_subcategory</TableID>
+            <ColumnID>pc_subcategory_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="7f7154b8-9510-4f88-8ef1-69b19946b96f">
+          <AttributeID>Product Primary Subcategory</AttributeID>
+          <Name>Product Primary Subcategory</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="b1a3bdda-0425-4585-811d-aa3e4965d6e4">
+      <ID>Product Primary Subcategory</ID>
+      <Name>Product Primary Subcategory</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="578ca740-b59f-4a09-a33c-2f1f01527b73">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fa44a458-d1f1-41bb-b85b-92ec3c555563">
+            <TableID>dbo_dim_product_code_subcategory</TableID>
+            <ColumnID>product_primary_subcategory</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="4609605d-fb15-4ecc-a3c0-2eb9bf938dc2">
+      <ID>Dim Product Code Category</ID>
+      <Name>Dim Product Code Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="893b8bbd-95a5-499c-aff1-8acc086ed83d">
+          <NullProcessing>UnknownMember</NullProcessing>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="28ce5333-6da5-4fed-b367-be882d77e3ca">
+            <TableID>dbo_dim_product_code_category</TableID>
+            <ColumnID>pc_category_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="675ee1e0-26a0-479f-9799-73936b897d40">
+          <AttributeID>Product Primary Category</AttributeID>
+          <Name>Product Primary Category</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="7ae108ce-e47a-47c4-9ef1-4062c98a9f41">
+      <ID>Product Primary Category</ID>
+      <Name>Product Primary Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cfb42c96-dda4-4918-bcaa-61c4e0d6ae87">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b64c4f81-b964-47b4-b5b2-e30952d9dbdb">
+            <TableID>dbo_dim_product_code_category</TableID>
+            <ColumnID>product_primary_category</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="8bd1c70a-acb4-4095-9b01-087a7dbf5cbf">
+      <ID>Product Service Catgory</ID>
+      <Name>Product Service Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1aa111d7-2202-46bc-956c-b6bd01f51662">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9307a6f1-c48a-4ae0-b90b-1e7b16a07842">
+            <TableID>dbo_dim_product_code_servicecategory</TableID>
+            <ColumnID>product_service_catgory</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="d302c66e-26bf-4816-8d45-86073926a13d">
+      <ID>Department Name</ID>
+      <Name>Department Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="178210f4-14a3-4705-82d8-df68d57871bf">
+          <DataType>WChar</DataType>
+          <DataSize>128</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f579e88b-956b-42fa-8f5b-9a0a85253f59">
+            <TableID>dbo_dim_product_code_servicecategory</TableID>
+            <ColumnID>department_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="6809f1e4-d27f-46dc-9e2c-fdcd36e85804">
+      <ID>Quote Category</ID>
+      <Name>Quote Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="114f0477-9deb-4c56-9743-5245fe8f8957">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d9ffac6d-bd8c-4b40-9600-3aa3a7cdb590">
+            <TableID>dbo_dim_product_code_category</TableID>
+            <ColumnID>quote_category</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="9da3d211-9121-4cf8-8f0d-bc614c623c5d">
+      <ID>Hierarchy</ID>
+      <Name>Product Codes</Name>
+      <Levels>
+        <Level dwd:design-time-name="2c245085-de73-476f-8e41-302a3fceb6e8">
+          <ID>Product Code</ID>
+          <Name>Product Code</Name>
+          <SourceAttributeID>Product Code</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="60337c99-911f-4724-8ec2-fa6a2246bc82">
+          <ID>Product Description</ID>
+          <Name>Product Description</Name>
+          <SourceAttributeID>Product Description</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="a1eff626-16e5-44eb-8870-c4f6b4cddc54">
+      <ID>Hierarchy 1</ID>
+      <Name>Category</Name>
+      <Levels>
+        <Level dwd:design-time-name="bd210fdf-83a5-4aad-9459-75c724b9e7eb">
+          <ID>Product Primary Category</ID>
+          <Name>Product Primary Category</Name>
+          <SourceAttributeID>Product Primary Category</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="37fc8c11-6b5f-4019-8061-248d731a36c0">
+          <ID>Product Code</ID>
+          <Name>Product Code</Name>
+          <SourceAttributeID>Product Code</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="47800f6f-6405-4627-a0b9-12ae7bb20242">
+      <ID>Hierarchy 1 1</ID>
+      <Name>Subcategory</Name>
+      <Levels>
+        <Level dwd:design-time-name="75dec4a4-900b-4338-83a4-6d440fff9b8a">
+          <ID>Product Primary Subcategory</ID>
+          <Name>Product Primary Subcategory</Name>
+          <SourceAttributeID>Product Primary Subcategory</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="b5dd6070-94a7-4f8c-86a2-bc8990d44be2">
+          <ID>Product Code</ID>
+          <Name>Product Code</Name>
+          <SourceAttributeID>Product Code</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="3552b733-490b-4555-895b-ce31000e83fa">
+      <ID>Hierarchy 2</ID>
+      <Name>Service Category</Name>
+      <Levels>
+        <Level dwd:design-time-name="eb7bea78-a1be-4ff8-8b6e-01a0a4629f58">
+          <ID>Product Service Category</ID>
+          <Name>Product Service Category</Name>
+          <SourceAttributeID>Product Service Catgory</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="1ed96c15-3445-4b82-ab4f-24a8984f019b">
+          <ID>Product Code</ID>
+          <Name>Product Code</Name>
+          <SourceAttributeID>Product Code</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

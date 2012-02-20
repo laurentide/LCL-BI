@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProductVersion>9.0.4035.0</ProductVersion>
+  <SchemaVersion>9.0.1.0</SchemaVersion>
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmR3ZD0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9EYXRhV2FyZWhvdXNlL0Rlc2lnbmVyLzEuMCI+DQogIDxFbmFibGVkPmZhbHNlPC9FbmFibGVkPg0KICA8UHJvamVjdE5hbWU+PC9Qcm9qZWN0TmFtZT4NCiAgPEF1eFBhdGg+PC9BdXhQYXRoPg0KICA8TG9jYWxQYXRoPjwvTG9jYWxQYXRoPg0KICA8UHJvdmlkZXI+PC9Qcm92aWRlcj4NCjwvU291cmNlQ29udHJvbEluZm8+</State>
+  <Database>
+    <Name>Nomis_Integration.database</Name>
+    <FullPath>Nomis_Integration.database</FullPath>
+  </Database>
+  <Cubes />
+  <Dimensions />
+  <DataSources>
+    <ProjectItem>
+      <Name>Nomis Warehouse.ds</Name>
+      <FullPath>Nomis Warehouse.ds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Nomis.ds</Name>
+      <FullPath>Nomis.ds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Foundation.ds</Name>
+      <FullPath>Foundation.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Foundation.dsv</Name>
+      <FullPath>Foundation.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
+  <MiningModels />
+  <Roles />
+  <Miscellaneous />
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <OutputPath>bin</OutputPath>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Nomis 1</Id>
+            <Name>Nomis 1</Name>
+            <Value xsi:type="xsd:string">Dsn=Nomis;uid=;pwd=</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Nomis Warehouse</Id>
+            <Name>Nomis Warehouse</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI.1;Data Source=lcl-sql2k5-s;Integrated Security=SSPI;Initial Catalog=Nomis_Warehouse</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Nomis</Id>
+            <Name>Nomis</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI.1;Data Source=lcl-sql2k5-s;Integrated Security=SSPI;Initial Catalog=Nomis</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Foundation</Id>
+            <Name>Foundation</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI.1;Data Source=lcl-sqla;Integrated Security=SSPI;Initial Catalog=Foundation</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionProviderMappings>
+          <ConfigurationSetting>
+            <Id>Nomis 1</Id>
+            <Name>Nomis 1</Name>
+            <Value xsi:type="xsd:string">System.Data.Odbc</Value>
+          </ConfigurationSetting>
+        </ConnectionProviderMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Nomis 1</Id>
+            <Name>Nomis 1</Name>
+            <Value xsi:type="xsd:int">1</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Nomis Warehouse</Id>
+            <Name>Nomis Warehouse</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Nomis</Id>
+            <Name>Nomis</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Foundation</Id>
+            <Name>Foundation</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
+    </Configuration>
+  </Configurations>
+  <DTSPackages>
+    <DtsPackage>
+      <Name>dim_alliance_rate.dtsx</Name>
+      <FullPath>dim_alliance_rate.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_alliance_resource.dtsx</Name>
+      <FullPath>dim_alliance_resource.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_alliance_work.dtsx</Name>
+      <FullPath>dim_alliance_work.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_customer.dtsx</Name>
+      <FullPath>dim_customer.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_customercontact.dtsx</Name>
+      <FullPath>dim_customercontact.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_employee.dtsx</Name>
+      <FullPath>dim_employee.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_inventory.dtsx</Name>
+      <FullPath>dim_inventory.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_originator.dtsx</Name>
+      <FullPath>dim_originator.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_productcodes.dtsx</Name>
+      <FullPath>dim_productcodes.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_salesman.dtsx</Name>
+      <FullPath>dim_salesman.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_ship_to.dtsx</Name>
+      <FullPath>dim_ship_to.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_vendor.dtsx</Name>
+      <FullPath>dim_vendor.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>fact_alliance_taskdetail.dtsx</Name>
+      <FullPath>fact_alliance_taskdetail.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>fact_bookings.dtsx</Name>
+      <FullPath>fact_bookings.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>fact_inventory.dtsx</Name>
+      <FullPath>fact_inventory.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>fact_inventory_history.dtsx</Name>
+      <FullPath>fact_inventory_history.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>fact_qb.dtsx</Name>
+      <FullPath>fact_qb.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>fact_sales.dtsx</Name>
+      <FullPath>fact_sales.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>fact_tables.dtsx</Name>
+      <FullPath>fact_tables.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>fact_warehouse_history.dtsx</Name>
+      <FullPath>Fact_warehouse_history.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>Master.dtsx</Name>
+      <FullPath>Master.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>Nomis_Prod.dtsx</Name>
+      <FullPath>Nomis_Prod.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>Process_SSAS_DB.dtsx</Name>
+      <FullPath>Process_SSAS_DB.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_alliance_task.dtsx</Name>
+      <FullPath>dim_alliance_task.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+  </DTSPackages>
+</Project>

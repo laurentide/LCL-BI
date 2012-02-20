@@ -1,0 +1,385 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6e57a27d-37b6-48a1-a987-dab769ca83d1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Inventory History</ID>
+  <Name>Fact Inventory History</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="18e78d43-7c5d-4533-857e-18e8e32c1fa1">
+    <DataSourceViewID>Nomis Warehouse 1 1</DataSourceViewID>
+  </Source>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="9652f5c2-bc70-48d0-b6ae-2be47117fada">
+      <ID>Fact Inventory History</ID>
+      <Name>Fact Inventory History</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="627bb76f-e159-4464-9e62-c402a32b6794">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="abfb1c12-2936-444b-a715-0f655dd9762a">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>warehouse_code</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="80f55a4f-de6f-4936-88be-d6b2e80ac4f7">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a9e06b52-bbd6-4eb8-8b67-6b6d4ee9a1a8">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>inventory_number</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="6839e746-3244-4cdf-be5d-64742f73ab00">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="969f4508-0e6e-44ea-b96d-e3fea5d8c4d7">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>sequence_number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="40ce406a-65ee-4b60-af57-6af8e7cc70f8">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0286d7e9-394d-41e6-a1b1-0b728702f5d2">
+          <TableID>dbo_fact_inventory_history</TableID>
+          <ColumnID>sequence_number</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="08ee0da7-00f0-4e21-9dd0-cbc4040b769b">
+          <AttributeID>Transaction Type</AttributeID>
+          <Name>Transaction Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d2db9268-602e-45e8-97ed-9e7b671a530c">
+          <AttributeID>Transaction Qty</AttributeID>
+          <Name>Transaction Qty</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8739a682-f72e-4bb6-bfad-9e1ef0b784c0">
+          <AttributeID>Invoice Number</AttributeID>
+          <Name>Invoice Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4226cab5-3479-4b4b-9a5d-9b28ef8118d4">
+          <AttributeID>PO Number</AttributeID>
+          <Name>PO Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a1189cbd-b4db-4545-917d-6c833de79cb7">
+          <AttributeID>Bef Qty On Hand</AttributeID>
+          <Name>Bef Qty On Hand</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6a14d869-fa26-41e8-a1cf-20a8c5ddc078">
+          <AttributeID>Bef Qty On Order</AttributeID>
+          <Name>Bef Qty On Order</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="67ed5591-56f9-4907-8b10-66bdeac358f7">
+          <AttributeID>Bef Qty BO</AttributeID>
+          <Name>Bef Qty BO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6393d6c2-52a4-4d5e-8f77-15d541b12d75">
+          <AttributeID>Bef Qty OR</AttributeID>
+          <Name>Bef Qty OR</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="38486021-f064-49e3-b34f-e630073e6f4e">
+          <AttributeID>Aft Qty On Hand</AttributeID>
+          <Name>Aft Qty On Hand</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4fdecfcb-df20-490f-9557-3f29f58aa367">
+          <AttributeID>Aft Qty On Order</AttributeID>
+          <Name>Aft Qty On Order</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ca618849-2edf-4dae-ba0e-3424fc5583b3">
+          <AttributeID>Aft Qty BO</AttributeID>
+          <Name>Aft Qty BO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a757ef28-77c0-442f-8372-46dffd9ba773">
+          <AttributeID>Aft Qty OR</AttributeID>
+          <Name>Aft Qty OR</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2c69fdd4-972f-435f-bcfa-2876a3217910">
+          <AttributeID>Warehouse Id</AttributeID>
+          <Name>Warehouse Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c91c941b-a043-4574-a5ac-bcbd5f2997d1">
+          <AttributeID>Inventory Id</AttributeID>
+          <Name>Inventory Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="274ccf7d-e1bc-4b20-8a60-1c54708f6d8f">
+          <AttributeID>Posting Date</AttributeID>
+          <Name>Posting Date</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+    </Attribute>
+    <Attribute dwd:design-time-name="3901d291-43db-47be-8b9a-1f63c9c09cb7">
+      <ID>Transaction Type</ID>
+      <Name>Transaction Type</Name>
+      <EstimatedCount>5</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="30612b08-7393-4836-a6b4-2b04c9dce85a">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e0bb0d9b-508d-4956-b041-3aa34273bbfa">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>transaction_Type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="3f4142f0-f397-445b-8bb4-b3b5ae3d01c5">
+      <ID>Transaction Qty</ID>
+      <Name>Transaction Qty</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="501179ce-cdf0-457b-958d-233edaf1cea2">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f4644115-0a2b-4c66-8ad0-f8467bece723">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>transaction_Qty</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="59c65913-e688-4800-a547-38e239f45d9e">
+      <ID>Invoice Number</ID>
+      <Name>Invoice Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="060f6f75-1825-4e65-918a-1ef27914576a">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="001422de-227d-43d6-86d4-82c7869a8101">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>invoice_number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="8978f0af-57f0-4901-a0ca-d889e4a4256d">
+      <ID>PO Number</ID>
+      <Name>PO Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2e643c62-0672-46c2-a6bd-1ab06553fb4d">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8e5d2786-4d0e-4380-bf3e-125713114e24">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>PO_number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="baa7844a-7f59-4c1c-8bcb-5e7103f80f36">
+      <ID>Bef Qty On Hand</ID>
+      <Name>Bef Qty On Hand</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2ed06819-9c6b-42f3-b1ea-38859d09f31a">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3f8b5782-b35b-4650-a02a-46bb283e9b0e">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>Bef_qty_on_hand</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="266a2ed1-d068-4859-8f0c-023f3a3507d0">
+      <ID>Bef Qty On Order</ID>
+      <Name>Bef Qty On Order</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b0c80af7-ab8d-4fd6-99a0-60dfedb2f8a3">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0dcc03b1-0d62-48ec-9f2b-917b0a0dbb58">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>Bef_qty_on_order</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="b769c48e-71fb-4e04-b9b1-abb89e2679e1">
+      <ID>Bef Qty BO</ID>
+      <Name>Bef Qty BO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1069c885-dcc1-40db-85c5-20aa97513a0a">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3527f2e5-0820-4b1b-9b9d-41814a968b37">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>Bef_qty_BO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="702bd253-3982-4f91-9304-a05aef0d5f95">
+      <ID>Bef Qty OR</ID>
+      <Name>Bef Qty OR</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7d12f558-d22e-4928-a68c-802d0418cab5">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7538f270-f29e-4a1f-a30c-1089c7378987">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>Bef_qty_OR</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="40a04c99-c77c-47e0-8ee3-58eccdaf55b0">
+      <ID>Aft Qty On Hand</ID>
+      <Name>Aft Qty On Hand</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9890af78-c8ed-4c5f-b090-bf4ee8de6501">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3b8895d6-c04a-46fc-84dc-e1e4e66a06eb">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>Aft_qty_on_hand</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="78cc0b58-df07-4f64-9d75-6c05fd24d89e">
+      <ID>Aft Qty On Order</ID>
+      <Name>Aft Qty On Order</Name>
+      <EstimatedCount>76</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="918f3a6b-0967-41c5-95f8-b6c35c5c7887">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4b107376-2692-4e23-8ce2-cecd32cfebc8">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>Aft_qty_on_order</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="33141dfe-2b6c-4229-bbfe-dd6d13e87280">
+      <ID>Aft Qty BO</ID>
+      <Name>Aft Qty BO</Name>
+      <EstimatedCount>35</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3d626e1f-ca91-4836-a68f-4015a218eb2f">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6f0f9874-76de-4b46-afae-8d7c0cd80f31">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>Aft_qty_BO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="e62a3f6b-b83b-4874-911c-0f6a8c16364e">
+      <ID>Aft Qty OR</ID>
+      <Name>Aft Qty OR</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cc97828b-eb84-47d6-89f3-376fe97af5d6">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="536a0295-d0e4-4fb9-8635-d6d1b727ff9d">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>Aft_qty_OR</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="c7d8210f-039e-43ea-aa3f-6721bc299fce">
+      <ID>Warehouse Id</ID>
+      <Name>Warehouse Id</Name>
+      <EstimatedCount>14</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c06d28de-2253-44f4-8720-84e624e7d2e7">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="64bf3b16-22c6-4251-ab78-15eba3e9bda3">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>warehouse_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="6300874a-f1a8-474a-b2c9-78e3737a353f">
+      <ID>Inventory Id</ID>
+      <Name>Inventory Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="92a6b91d-bcb7-474f-aab4-681943c33f69">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3ee1f8b9-eeac-4b66-a66a-b95679551fcc">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>inventory_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="87233b15-f8d1-4fe1-98bf-f5812295c56c">
+      <ID>Posting Date</ID>
+      <Name>Posting Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="31c6847c-ad88-418c-80d2-e50555c17fd7">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="64641ba0-bef2-44cb-bb66-1715499db6fa">
+            <TableID>dbo_fact_inventory_history</TableID>
+            <ColumnID>Posting_Date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+  </Attributes>
+</Dimension>

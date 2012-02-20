@@ -1,0 +1,105 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ebf8f73d-5368-40b5-8888-de9112aca845" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Alliance</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fact Alliance Taskdetail</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a0e80501-9613-407e-a6e8-f8e7c3f4ae8f">
+          <ID>Fact Alliance Taskdetail</ID>
+          <Name>Fact Alliance Taskdetail</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="17980ff0-e9d8-446f-bee4-cf54c6ca9458">
+            <DataSourceViewID>Alliance</DataSourceViewID>
+            <TableID>dbo_fact_alliance_taskdetail</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Service Goals</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="6aec448c-4416-4dc7-94fa-a6d2497bf91d">
+          <ID>Fact Service Goals</ID>
+          <Name>Fact Service Goals</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="13ba4b79-6c35-42f8-a7c2-1b7f45d74d30">
+            <DataSourceViewID>Alliance</DataSourceViewID>
+            <TableID>dbo_fact_service_goals</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Sales</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="9b639a63-c7bf-4dd9-aef5-d6b09735709a">
+          <ID>Fact Sales</ID>
+          <Name>Fact Sales</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="2361b24b-1998-457a-b1d5-a6eeab3a43b0">
+            <DataSourceViewID>Alliance</DataSourceViewID>
+            <TableID>dbo_fact_sales</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Bookings</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="0a6ff361-6f2b-4481-ae7e-c0ae25c93039">
+          <ID>Fact Bookings</ID>
+          <Name>Fact Bookings</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="6f2e89c7-11d9-4226-944c-cc0a77ec57b5">
+            <DataSourceViewID>Alliance</DataSourceViewID>
+            <TableID>dbo_fact_bookings</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Servicecategory Goals</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="690f6d5e-47a0-469b-afbe-4138a488462a">
+          <ID>Fact Servicecategory Goals</ID>
+          <Name>Fact Servicecategory Goals</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="1397b94d-82e6-4f44-99b5-056a8dbab85f">
+            <DataSourceViewID>Alliance</DataSourceViewID>
+            <TableID>dbo_fact_servicecategory_goals</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

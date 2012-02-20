@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="AnalysisDB">
+      <rd:DataSourceID>3887dcfc-b335-43a5-a0d9-d171064c2c53</rd:DataSourceID>
+      <DataSourceReference>AnalysisDB</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="TimeFiscalYear">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>="[Time].[Fiscal Year].&amp;[" &amp; IIf(Month(now()) &gt; 9, Year(now()), Year(now())-1 ) &amp; "-10-01T00:00:00]"</Value>
+          <Value>="[Time].[Fiscal Year].&amp;[" &amp; IIf(Month(now()) &gt; 9, Year(now())-1, Year(now())-2 ) &amp; "-10-01T00:00:00]"</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Fiscal Year</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>TimeFiscalYear</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1in</RightMargin>
+  <LeftMargin>1in</LeftMargin>
+  <BottomMargin>1in</BottomMargin>
+  <rd:ReportID>2354a932-6fbc-40bb-83dc-908977c3a427</rd:ReportID>
+  <DataSets>
+    <DataSet Name="AnalysisDB">
+      <Fields>
+        <Field Name="Fiscal_Month">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Time].[Fiscal Month].[Fiscal Month]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sell____Invoiced">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Sell  - Invoiced]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Cost___Invoiced">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Cost - Invoiced]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Sales_Profit_Margin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Sales Profit Margin]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Goal">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Goal]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText> SELECT NON EMPTY { [Measures].[Goal], [Measures].[Sales Profit Margin], [Measures].[Cost - Invoiced], [Measures].[Sell  - Invoiced] } ON COLUMNS, NON EMPTY { ([Time].[Fiscal Month].[Fiscal Month].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalYear, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]) WHERE ( IIF( STRTOSET(@TimeFiscalYear, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalYear, CONSTRAINED), [Time].[Fiscal Year].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="TimeFiscalYear">
+            <Value>=Parameters!TimeFiscalYear.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Time</DimensionName><HierarchyName>Fiscal Month</HierarchyName><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><LevelName>Fiscal Month</LevelName><UniqueName>[Time].[Fiscal Month].[Fiscal Month]</UniqueName></ID><ItemCaption>Fiscal Month</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Sell  - Invoiced</MeasureName><UniqueName>[Measures].[Sell  - Invoiced]</UniqueName></ID><ItemCaption>Sell  - Invoiced</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Cost - Invoiced</MeasureName><UniqueName>[Measures].[Cost - Invoiced]</UniqueName></ID><ItemCaption>Cost - Invoiced</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Sales Profit Margin</MeasureName><UniqueName>[Measures].[Sales Profit Margin]</UniqueName></ID><ItemCaption>Sales Profit Margin</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Goal</MeasureName><UniqueName>[Measures].[Goal]</UniqueName></ID><ItemCaption>Goal</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><From>Sales_2008</From><Filter><FilterItems><FilterItem><HierarchyUniqueName>[Time].[Fiscal Year]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members /><Parametrized>true</Parametrized></Condition></FilterItem></FilterItems></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[Goal], [Measures].[Sales Profit Margin], [Measures].[Cost - Invoiced], [Measures].[Sell  - Invoiced] } ON COLUMNS, NON EMPTY { ([Time].[Fiscal Month].[Fiscal Month].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalYear, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]) WHERE ( IIF( STRTOSET(@TimeFiscalYear, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalYear, CONSTRAINED), [Time].[Fiscal Year].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions><ParameterDefinition><Name>TimeFiscalYear</Name><DefaultValues /><Caption>Fiscal Year</Caption><HierarchyUniqueName>[Time].[Fiscal Year]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition></ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
+        <rd:SuppressAutoUpdate>true</rd:SuppressAutoUpdate>
+      </Query>
+    </DataSet>
+    <DataSet Name="TimeFiscalYear">
+      <Fields>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM [Sales_2008]</CommandText>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement></Query></QueryDefinition></rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Width>11in</Width>
+  <Body>
+    <ReportItems>
+      <Chart Name="chart1">
+        <Legend>
+          <Visible>true</Visible>
+          <Style>
+            <BorderStyle>
+              <Default>Solid</Default>
+            </BorderStyle>
+          </Style>
+          <Position>BottomCenter</Position>
+          <Layout>Row</Layout>
+        </Legend>
+        <CategoryAxis>
+          <Axis>
+            <Title>
+              <Caption>Fiscal Month</Caption>
+            </Title>
+            <MajorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MajorGridLines>
+            <MinorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MinorGridLines>
+            <MajorTickMarks>Outside</MajorTickMarks>
+            <Min>0</Min>
+            <Visible>true</Visible>
+          </Axis>
+        </CategoryAxis>
+        <DataSetName>AnalysisDB</DataSetName>
+        <PlotArea>
+          <Style>
+            <BackgroundColor>LightGrey</BackgroundColor>
+            <BorderStyle>
+              <Default>Solid</Default>
+            </BorderStyle>
+          </Style>
+        </PlotArea>
+        <ThreeDProperties>
+          <Rotation>30</Rotation>
+          <Inclination>30</Inclination>
+          <Shading>Simple</Shading>
+          <WallThickness>50</WallThickness>
+        </ThreeDProperties>
+        <PointWidth>0</PointWidth>
+        <SeriesGroupings>
+          <SeriesGrouping>
+            <StaticSeries>
+              <StaticMember>
+                <Label>Sales</Label>
+              </StaticMember>
+              <StaticMember>
+                <Label>Cost</Label>
+              </StaticMember>
+              <StaticMember>
+                <Label>Goal</Label>
+              </StaticMember>
+            </StaticSeries>
+          </SeriesGrouping>
+        </SeriesGroupings>
+        <Subtype>Plain</Subtype>
+        <ValueAxis>
+          <Axis>
+            <Title>
+              <Caption>$ Value</Caption>
+            </Title>
+            <MajorGridLines>
+              <ShowGridLines>true</ShowGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MajorGridLines>
+            <MinorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MinorGridLines>
+            <MajorTickMarks>Outside</MajorTickMarks>
+            <Min>0</Min>
+            <Margin>true</Margin>
+            <Visible>true</Visible>
+            <Scalar>true</Scalar>
+          </Axis>
+        </ValueAxis>
+        <Type>Column</Type>
+        <CategoryGroupings>
+          <CategoryGrouping>
+            <DynamicCategories>
+              <Grouping Name="Fiscal_Month">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Fiscal_Month.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Label />
+            </DynamicCategories>
+          </CategoryGrouping>
+        </CategoryGroupings>
+        <Palette>SemiTransparent</Palette>
+        <ChartData>
+          <ChartSeries>
+            <DataPoints>
+              <DataPoint>
+                <DataValues>
+                  <DataValue>
+                    <Value>=Sum(Fields!Sell____Invoiced.Value)</Value>
+                  </DataValue>
+                </DataValues>
+                <DataLabel />
+                <Marker>
+                  <Size>6pt</Size>
+                </Marker>
+              </DataPoint>
+            </DataPoints>
+          </ChartSeries>
+          <ChartSeries>
+            <DataPoints>
+              <DataPoint>
+                <DataValues>
+                  <DataValue>
+                    <Value>=Sum(Fields!Cost___Invoiced.Value)</Value>
+                  </DataValue>
+                </DataValues>
+                <DataLabel />
+                <Style>
+                  <BorderColor>
+                    <Default>Black</Default>
+                  </BorderColor>
+                  <BorderStyle>
+                    <Default>Solid</Default>
+                  </BorderStyle>
+                </Style>
+                <Marker>
+                  <Size>6pt</Size>
+                </Marker>
+              </DataPoint>
+            </DataPoints>
+          </ChartSeries>
+          <ChartSeries>
+            <DataPoints>
+              <DataPoint>
+                <DataValues>
+                  <DataValue>
+                    <Value>=Sum(Fields!Goal.Value)</Value>
+                  </DataValue>
+                </DataValues>
+                <DataLabel />
+                <Marker>
+                  <Size>6pt</Size>
+                </Marker>
+              </DataPoint>
+            </DataPoints>
+            <PlotType>Line</PlotType>
+          </ChartSeries>
+        </ChartData>
+        <Style>
+          <BackgroundColor>White</BackgroundColor>
+        </Style>
+        <Title />
+      </Chart>
+    </ReportItems>
+    <Height>8.5in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>
