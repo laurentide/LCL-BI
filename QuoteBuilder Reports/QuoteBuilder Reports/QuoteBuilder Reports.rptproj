@@ -21,10 +21,6 @@
   </DataSources>
   <Reports>
     <ProjectItem>
-      <Name>Copy of Quote Details.rdl</Name>
-      <FullPath>Copy of Quote Details.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>Day to Day Quote Report With Charts.rdl</Name>
       <FullPath>Day to Day Quote Report With Charts.rdl</FullPath>
     </ProjectItem>
@@ -83,6 +79,14 @@
     <ProjectItem>
       <Name>VAD Quotes By Salesmen.rdl</Name>
       <FullPath>VAD Quotes By Salesmen.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Quote Report OS.rdl</Name>
+      <FullPath>Quote Report OS.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Quote Details OS.rdl</Name>
+      <FullPath>Quote Details OS.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
