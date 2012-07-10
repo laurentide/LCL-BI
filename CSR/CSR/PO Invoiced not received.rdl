@@ -61,6 +61,7 @@
       </Image>
       <Textbox Name="textbox1">
         <rd:DefaultName>textbox1</rd:DefaultName>
+        <Width>3.875in</Width>
         <Style>
           <Color>#1c3a70</Color>
           <FontFamily>Tahoma</FontFamily>
@@ -152,6 +153,10 @@ nY/Zu3/8B3//AC7g/RXxofnPLP8Afzx8fyP0fBu2308t+9Yr7bg+8vzsfs3b/wDgO/8A+XcH6K+ND855
           <DataField>Originator_Code</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Ship_to_Name">
+          <DataField>Ship to Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>lcl-sql2k5-s</DataSourceName>
@@ -162,10 +167,11 @@ H1NFTX as [Vendor Name],
        h3uktx as description,
 	   h3punb as Qty_posted_to_date,
        h3rcnb as received_date,
-	   h3vvnd as qty_paid_to_date,
+       h3vvnd as qty_paid_to_date,
        C6BWDU as date_paid,
-	   convert(int,CONVERT(SMALLDATETIME,getdate(),12) - CONVERT(SMALLDATETIME,(SUBSTRING(CONVERT(CHAR,C6BWDU),2,6)),12)) as Number_of_Days_paid,
-H1RMCD as Originator_Code
+      convert(int,CONVERT(SMALLDATETIME,getdate(),12) - CONVERT(SMALLDATETIME,(SUBSTRING(CONVERT(CHAR,C6BWDU),2,6)),12)) as Number_of_Days_paid,
+    H1RMCD as Originator_Code,
+     H1NYTX as [Ship to Name]
 from Nomis.S1018252.NOMDBF95.POHPHY01
 inner join Nomis.S1018252.NOMDBF95.PODPHY01 
 on h1swtx = h3swtx
@@ -179,6 +185,7 @@ and h1bldt between @startdate and @enddate
 and (name = @Originator or @Originator ='(All)')
 and H1FQZZ &lt;&gt; 'Y'
 and (H3XCSU &lt;&gt; 'D' or H3XCSU IS NULL)
+and H3W3CF &lt;&gt; 'C'
 order by po_date</CommandText>
         <QueryParameters>
           <QueryParameter Name="@startdate">
@@ -211,7 +218,7 @@ order by name</CommandText>
       </Query>
     </DataSet>
   </DataSets>
-  <Width>8in</Width>
+  <Width>8.375in</Width>
   <Body>
     <ReportItems>
       <Table Name="table1">
@@ -253,7 +260,7 @@ order by name</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>21</ZIndex>
+                          <ZIndex>23</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!po_number.Value</Value>
                         </Textbox>
@@ -279,9 +286,35 @@ order by name</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>20</ZIndex>
+                          <ZIndex>22</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!Vendor_Name.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox30">
+                          <rd:DefaultName>textbox30</rd:DefaultName>
+                          <Style>
+                            <Color>White</Color>
+                            <BackgroundColor>#60759b</BackgroundColor>
+                            <BorderColor>
+                              <Default>DimGray</Default>
+                            </BorderColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>21</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!Ship_to_Name.Value</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -305,7 +338,7 @@ order by name</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>19</ZIndex>
+                          <ZIndex>20</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!Originator_Code.Value</Value>
                         </Textbox>
@@ -331,7 +364,7 @@ order by name</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>18</ZIndex>
+                          <ZIndex>19</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>
                           </Value>
@@ -358,7 +391,7 @@ order by name</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>17</ZIndex>
+                          <ZIndex>18</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>
                           </Value>
@@ -385,7 +418,7 @@ order by name</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>16</ZIndex>
+                          <ZIndex>17</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>
                           </Value>
@@ -412,7 +445,7 @@ order by name</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>15</ZIndex>
+                          <ZIndex>16</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>
                           </Value>
@@ -439,7 +472,7 @@ order by name</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>14</ZIndex>
+                          <ZIndex>15</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>
                           </Value>
@@ -466,7 +499,7 @@ order by name</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>13</ZIndex>
+                          <ZIndex>14</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>
                           </Value>
@@ -493,7 +526,7 @@ order by name</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>12</ZIndex>
+                          <ZIndex>13</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>
                           </Value>
@@ -520,7 +553,7 @@ order by name</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>11</ZIndex>
+                          <ZIndex>12</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=max(Fields!Number_of_Days_paid.Value)</Value>
                         </Textbox>
@@ -555,7 +588,7 @@ order by name</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>10</ZIndex>
+                      <ZIndex>11</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>
                       </Value>
@@ -566,6 +599,30 @@ order by name</CommandText>
                   <ReportItems>
                     <Textbox Name="textbox25">
                       <rd:DefaultName>textbox25</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox31">
+                      <rd:DefaultName>textbox31</rd:DefaultName>
                       <Style>
                         <BorderColor>
                           <Default>DimGray</Default>
@@ -834,7 +891,7 @@ order by name</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>32</ZIndex>
+                      <ZIndex>35</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>PO #</Value>
                     </Textbox>
@@ -862,9 +919,37 @@ order by name</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>31</ZIndex>
+                      <ZIndex>34</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Vendor</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox29">
+                      <rd:DefaultName>textbox29</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>33</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Ship to Name</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -890,7 +975,7 @@ order by name</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>30</ZIndex>
+                      <ZIndex>32</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Org</Value>
                     </Textbox>
@@ -918,7 +1003,7 @@ order by name</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>29</ZIndex>
+                      <ZIndex>31</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>PO line #</Value>
                     </Textbox>
@@ -946,7 +1031,7 @@ order by name</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>28</ZIndex>
+                      <ZIndex>30</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>PO date</Value>
                     </Textbox>
@@ -974,7 +1059,7 @@ order by name</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>27</ZIndex>
+                      <ZIndex>29</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Description</Value>
                     </Textbox>
@@ -1002,7 +1087,7 @@ order by name</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>26</ZIndex>
+                      <ZIndex>28</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Qty posted to date</Value>
                     </Textbox>
@@ -1030,7 +1115,7 @@ order by name</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>25</ZIndex>
+                      <ZIndex>27</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Received date</Value>
                     </Textbox>
@@ -1058,7 +1143,7 @@ order by name</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>24</ZIndex>
+                      <ZIndex>26</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>QTY Incvd to date</Value>
                     </Textbox>
@@ -1086,7 +1171,7 @@ order by name</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>23</ZIndex>
+                      <ZIndex>25</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Date Invcd</Value>
                     </Textbox>
@@ -1114,7 +1199,7 @@ order by name</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>22</ZIndex>
+                      <ZIndex>24</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Number of days paid</Value>
                     </Textbox>
@@ -1132,6 +1217,9 @@ order by name</CommandText>
           </TableColumn>
           <TableColumn>
             <Width>1.25in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.375in</Width>
           </TableColumn>
           <TableColumn>
             <Width>0.375in</Width>
@@ -1171,6 +1259,7 @@ order by name</CommandText>
     <PrintOnFirstPage>true</PrintOnFirstPage>
     <ReportItems>
       <Textbox Name="textbox20">
+        <Width>2.125in</Width>
         <Style>
           <FontFamily>Tahoma</FontFamily>
           <FontSize>8pt</FontSize>

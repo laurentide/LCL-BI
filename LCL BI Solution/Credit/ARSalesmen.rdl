@@ -381,6 +381,154 @@
           <DataField>L2FESU</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="GHAQNB">
+          <DataField>GHAQNB</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHZXNB">
+          <DataField>GHZXNB</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHTUSU">
+          <DataField>GHTUSU</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHTYVA">
+          <DataField>GHTYVA</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHTZVA">
+          <DataField>GHTZVA</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHT0VA">
+          <DataField>GHT0VA</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHTQSU">
+          <DataField>GHTQSU</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHV2ST">
+          <DataField>GHV2ST</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHH2NC">
+          <DataField>GHH2NC</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHTRSU">
+          <DataField>GHTRSU</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHMGST">
+          <DataField>GHMGST</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHTSSU">
+          <DataField>GHTSSU</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHMHST">
+          <DataField>GHMHST</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHTTSU">
+          <DataField>GHTTSU</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHT1VA">
+          <DataField>GHT1VA</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHUPVA">
+          <DataField>GHUPVA</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHDYVA">
+          <DataField>GHDYVA</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHPJCD">
+          <DataField>GHPJCD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHDJDT">
+          <DataField>GHDJDT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHPKCD">
+          <DataField>GHPKCD</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHDKDT">
+          <DataField>GHDKDT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHH8DT">
+          <DataField>GHH8DT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHXXCE">
+          <DataField>GHXXCE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHTYSU">
+          <DataField>GHTYSU</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHB4PC">
+          <DataField>GHB4PC</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHUKCE">
+          <DataField>GHUKCE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHK5CD">
+          <DataField>GHK5CD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHPNCD">
+          <DataField>GHPNCD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHK1CD">
+          <DataField>GHK1CD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHISDT">
+          <DataField>GHISDT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHAGTM">
+          <DataField>GHAGTM</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHAKVN">
+          <DataField>GHAKVN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHA0VN">
+          <DataField>GHA0VN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHITDT">
+          <DataField>GHITDT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHAHTM">
+          <DataField>GHAHTM</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="GHALVN">
+          <DataField>GHALVN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GHA1VN">
+          <DataField>GHA1VN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>lcl-sql2k5-s</DataSourceName>
@@ -388,6 +536,8 @@
 on CustNumber= cazxnb 
 inner join Nomis.NOMDBF95.SLSPHY01
 on CARDCD = L2RDCD
+inner join nomis.S1018252.NOMDBF95.UUGHREP
+on custnumber = ghzxnb
 where (cardcd = @SLSNumber or @SLSNumber = 'All')
 orDer by [Total Invoiced] + [sum of payments to date] desc</CommandText>
         <QueryParameters>
@@ -418,7 +568,7 @@ select 'All','All'</CommandText>
       </Query>
     </DataSet>
   </DataSets>
-  <Width>12.25in</Width>
+  <Width>12.75in</Width>
   <Body>
     <ReportItems>
       <Table Name="table1">
@@ -431,6 +581,16 @@ select 'All','All'</CommandText>
                   <ReportItems>
                     <Textbox Name="CustNumber">
                       <rd:DefaultName>CustNumber</rd:DefaultName>
+                      <Action>
+                        <Drillthrough>
+                          <ReportName>ARInvoices</ReportName>
+                          <Parameters>
+                            <Parameter Name="custnumber">
+                              <Value>=Fields!CustNumber.Value</Value>
+                            </Parameter>
+                          </Parameters>
+                        </Drillthrough>
+                      </Action>
                       <Style>
                         <BorderColor>
                           <Default>DimGray</Default>
@@ -439,13 +599,14 @@ select 'All','All'</CommandText>
                           <Default>Solid</Default>
                         </BorderStyle>
                         <FontFamily>Tahoma</FontFamily>
+                        <TextDecoration>Underline</TextDecoration>
                         <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>10</ZIndex>
+                      <ZIndex>11</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!CustNumber.Value</Value>
                     </Textbox>
@@ -468,7 +629,7 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>9</ZIndex>
+                      <ZIndex>10</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Custname.Value</Value>
                     </Textbox>
@@ -492,7 +653,7 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>8</ZIndex>
+                      <ZIndex>9</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Current_Outstanding.Value</Value>
                     </Textbox>
@@ -516,7 +677,7 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>7</ZIndex>
+                      <ZIndex>8</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Over_30.Value</Value>
                     </Textbox>
@@ -540,7 +701,7 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>6</ZIndex>
+                      <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Over_45.Value</Value>
                     </Textbox>
@@ -564,7 +725,7 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>5</ZIndex>
+                      <ZIndex>6</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Over_60.Value</Value>
                     </Textbox>
@@ -588,7 +749,7 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>4</ZIndex>
+                      <ZIndex>5</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Over_90.Value</Value>
                     </Textbox>
@@ -612,7 +773,7 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>3</ZIndex>
+                      <ZIndex>4</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Over_120.Value</Value>
                     </Textbox>
@@ -636,7 +797,7 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>2</ZIndex>
+                      <ZIndex>3</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Total_Invoiced.Value + Fields!Sum_of_Payments_to_Date.Value</Value>
                     </Textbox>
@@ -661,9 +822,34 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>1</ZIndex>
+                      <ZIndex>2</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!credit_limit.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox19">
+                      <rd:DefaultName>textbox19</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <Format>d2</Format>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!GHPNCD.value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -724,7 +910,7 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>21</ZIndex>
+                      <ZIndex>23</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Cust #</Value>
                     </Textbox>
@@ -752,7 +938,7 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>20</ZIndex>
+                      <ZIndex>22</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Custname</Value>
                     </Textbox>
@@ -780,7 +966,7 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>19</ZIndex>
+                      <ZIndex>21</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Current Outstanding</Value>
                     </Textbox>
@@ -808,8 +994,11 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>18</ZIndex>
+                      <ZIndex>20</ZIndex>
                       <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!Over_30.Value</SortExpression>
+                      </UserSort>
                       <Value>Over 30</Value>
                     </Textbox>
                   </ReportItems>
@@ -836,8 +1025,11 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>17</ZIndex>
+                      <ZIndex>19</ZIndex>
                       <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!Over_45.Value</SortExpression>
+                      </UserSort>
                       <Value>Over 45</Value>
                     </Textbox>
                   </ReportItems>
@@ -864,8 +1056,11 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>16</ZIndex>
+                      <ZIndex>18</ZIndex>
                       <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!Over_60.Value</SortExpression>
+                      </UserSort>
                       <Value>Over 60</Value>
                     </Textbox>
                   </ReportItems>
@@ -892,8 +1087,11 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>15</ZIndex>
+                      <ZIndex>17</ZIndex>
                       <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!Over_90.Value</SortExpression>
+                      </UserSort>
                       <Value>Over 90</Value>
                     </Textbox>
                   </ReportItems>
@@ -920,8 +1118,11 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>14</ZIndex>
+                      <ZIndex>16</ZIndex>
                       <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!Over_120.Value</SortExpression>
+                      </UserSort>
                       <Value>Over 120</Value>
                     </Textbox>
                   </ReportItems>
@@ -948,7 +1149,7 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>13</ZIndex>
+                      <ZIndex>15</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Total Invoiced</Value>
                     </Textbox>
@@ -976,9 +1177,38 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>12</ZIndex>
+                      <ZIndex>14</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Credit Limit</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox18">
+                      <rd:DefaultName>textbox18</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>d2</Format>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>13</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Terms</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1005,7 +1235,7 @@ select 'All','All'</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>11</ZIndex>
+                      <ZIndex>12</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Avg Days after Invoice</Value>
                     </Textbox>
@@ -1049,6 +1279,9 @@ select 'All','All'</CommandText>
             <Width>1in</Width>
           </TableColumn>
           <TableColumn>
+            <Width>0.5in</Width>
+          </TableColumn>
+          <TableColumn>
             <Width>1in</Width>
           </TableColumn>
         </TableColumns>
@@ -1072,7 +1305,7 @@ select 'All','All'</CommandText>
         </Style>
         <ZIndex>2</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>10.875in</Left>
+        <Left>11.375in</Left>
         <Height>0.125in</Height>
         <Value>=Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
       </Textbox>

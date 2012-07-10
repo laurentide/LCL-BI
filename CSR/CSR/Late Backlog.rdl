@@ -114,7 +114,8 @@
       <Query>
         <DataSourceName>lcl-sql2k5-s</DataSourceName>
         <CommandText>select * from Nomis_warehouse.dbo.tblLateBacklog
-where csr = @csr or @csr is null</CommandText>
+where csr = @csr or @csr is null
+and originator &lt;&gt; 'OLA'</CommandText>
         <QueryParameters>
           <QueryParameter Name="@csr">
             <Value>=Parameters!csr.Value</Value>

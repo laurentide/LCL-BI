@@ -1273,7 +1273,7 @@ Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___
                       <ZIndex>13</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=iif("Fiscal " &amp; MonthName(Month(today)) &amp; ", " &amp; Year(today) = ltrim(rtrim(parameters!TimeFiscalMonth.Label)),
-(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact_Salesman_Goals.Value/Sum(Fields!Month_Of_Year.Value, "PreviousMonthOfYear")*(Sum(Fields!Month_Of_Year.Value, "PreviousMonthOfYear")-1)) + Sum(Fields!WorkDay.Value, "Today")*Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact_Salesman_Goals.Value/Sum(Fields!WorkMonth.Value, "workmonth"),
+(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact_Salesman_Goals.Value/Sum(Fields!Month_Of_Year.Value, "PreviousMonthOfYear")*(Sum(Fields!Month_Of_Year.Value, "PreviousMonthOfYear")-1)) + Sum(Fields!WorkDay.Value, "Today")*Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Goal___Fact_Salesman_Goals.Value/Sum(Fields!WorkMonth.Value, "workmonth"),
 Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact_Salesman_Goals.Value)</Value>
                     </Textbox>
                   </ReportItems>

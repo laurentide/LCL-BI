@@ -26,35 +26,35 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>SK5nt6WtNvZXt9KXPShf6w==12/19/2011 12:54:06 PM4/16/2009 12:03:06 PM</TimeStamp>
+        <TimeStamp>sCNWoM4mrZc6EAyj+A9DBA==6/22/2012 10:47:42 AM4/16/2009 12:03:06 PM</TimeStamp>
         <ID>
           <String>Nomis Warehouse</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>dnTvFbHU2eWrHsCUa0xk7Q==10/4/2010 2:54:33 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <TimeStamp>AnlaRNmUwPW7Sgw+K0a6fw==6/22/2012 10:47:47 AM3/11/2009 2:25:46 PM</TimeStamp>
         <ID>
           <String>Nomis Warehouse 1</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>x+O040AAkMH09oAxfZbqOw==11/25/2010 4:02:06 PM4/16/2009 12:03:05 PM</TimeStamp>
+        <TimeStamp>cCwdnwx9FnOsG2Ttdt6AOA==6/22/2012 10:47:50 AM4/16/2009 12:03:05 PM</TimeStamp>
         <ID>
           <String>QuoteBuilder</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>kMQ/1sb1HFSfFTh+8aQmMQ==10/4/2010 3:00:33 PM3/11/2009 2:25:46 PM</TimeStamp>
+        <TimeStamp>pDgd6kxt6qqs2doAk4u8gg==6/22/2012 10:47:54 AM3/11/2009 2:25:46 PM</TimeStamp>
         <ID>
           <String>Nomis Warehouse 1 1</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>Xtsf4H8I4utiDtGo8tThVA==2/8/2011 1:53:20 PM10/8/2009 1:56:37 PM</TimeStamp>
+        <TimeStamp>YAphXzC0aElQnmB05DSqFg==6/22/2012 10:47:57 AM10/8/2009 1:56:37 PM</TimeStamp>
         <ID>
           <String>Alliance</String>
         </ID>
@@ -365,5 +365,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2012-02-02T15:22:26Z</LastDeployed>
+  <LastDeployed>2012-06-22T15:28:24Z</LastDeployed>
 </DeploymentSnapshot>

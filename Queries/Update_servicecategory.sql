@@ -68,7 +68,7 @@ where product_Code in ('57','60')
 go
 update dim_productcodes
 set pc_servicecategory_id = 10 --Hours huile
-where product_Code in ('P4','B5') 
+where product_Code in ('P4','B5','PM') 
 go
 update dim_productcodes
 set pc_servicecategory_id = 11 --Training huile
@@ -76,7 +76,7 @@ where product_Code in ('B4','B6')
 go
 update dim_productcodes
 set pc_servicecategory_id = 12 --Products huile
-where product_Code in ('P8') 
+where product_Code in ('P8','PD') 
 go
 update dim_productcodes
 set pc_servicecategory_id = 18 --Rebilled Expenses - Automation

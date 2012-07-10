@@ -9,16 +9,20 @@
   </DataSources>
   <Reports>
     <ProjectItem>
-      <Name>ARTop50.rdl</Name>
-      <FullPath>ARTop50.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>ARSalesmen.rdl</Name>
       <FullPath>ARSalesmen.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>ARTop50.rdl</Name>
+      <FullPath>ARTop50.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>CreditHold.rdl</Name>
       <FullPath>CreditHold.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ARInvoices.rdl</Name>
+      <FullPath>ARInvoices.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

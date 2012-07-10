@@ -978,7 +978,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         </BorderStyle>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <Format>#,###,.</Format>
+                        <Format>c0</Format>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1005,7 +1005,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         </BorderStyle>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <Format>#,###,.</Format>
+                        <Format>c0</Format>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1538,7 +1538,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         </BorderStyle>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <Format>#,###,.</Format>
+                        <Format>c0</Format>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1565,7 +1565,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         </BorderStyle>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <Format>#,###,.</Format>
+                        <Format>c0</Format>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
