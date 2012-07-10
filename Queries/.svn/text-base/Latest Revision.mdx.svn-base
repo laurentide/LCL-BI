@@ -1,8 +1,0 @@
-select 
-GENERATE([Quotes Data].[Quoteid].children
-,TAIL([Quotes Data].[Quoteid].CurrentMember * [Quotes Data].[Revision].children * [Quotes Data].[Date].children, 1)) on rows,
-[Measures].[Total] on columns 
-from [QuoteBuilder]
-
-
-

@@ -1,9 +1,0 @@
-﻿<DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xsi:type="RelationalDataSource" dwd:design-time-name="bcea9dd4-1365-40a6-afd3-aebced10424f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
-  <ID>Foundation</ID>
-  <Name>Foundation</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-  <ConnectionString>Provider=SQLNCLI.1;Data Source=lcl-sqla;Integrated Security=SSPI;Initial Catalog=Foundation</ConnectionString>
-  <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
-  <Timeout>PT0S</Timeout>
-</DataSource>

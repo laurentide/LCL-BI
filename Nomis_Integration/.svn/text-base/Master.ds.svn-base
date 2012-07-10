@@ -1,9 +1,0 @@
-﻿<DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xsi:type="RelationalDataSource" dwd:design-time-name="99877ac2-a97d-492a-b291-304f2d31c016" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
-  <ID>Master</ID>
-  <Name>Master</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-  <ConnectionString>Provider=SQLNCLI.1;Data Source=LCL-SQL2K5-DEV;Integrated Security=SSPI;Initial Catalog=master</ConnectionString>
-  <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
-  <Timeout>PT0S</Timeout>
-</DataSource>
