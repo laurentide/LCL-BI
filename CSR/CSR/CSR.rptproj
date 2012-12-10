@@ -65,12 +65,16 @@
       <FullPath>SIE Exception Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>SIE Stats.rdl</Name>
+      <FullPath>SIE Stats.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Wrong Salesman Number Report.rdl</Name>
       <FullPath>Wrong Salesman Number Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>SIE Stats.rdl</Name>
-      <FullPath>SIE Stats.rdl</FullPath>
+      <Name>Open Orders.rdl</Name>
+      <FullPath>Open Orders.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

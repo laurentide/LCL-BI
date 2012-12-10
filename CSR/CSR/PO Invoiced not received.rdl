@@ -213,6 +213,8 @@ order by po_date</CommandText>
         <CommandText>select name from Nomis.dbo.tblOriginators_CSR
 union
 select '(All)'
+union
+select '   '
 order by name</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>

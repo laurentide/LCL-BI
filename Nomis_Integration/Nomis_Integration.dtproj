@@ -138,11 +138,6 @@
       <References />
     </DtsPackage>
     <DtsPackage>
-      <Name>dim_productcodes.dtsx</Name>
-      <FullPath>dim_productcodes.dtsx</FullPath>
-      <References />
-    </DtsPackage>
-    <DtsPackage>
       <Name>dim_salesman.dtsx</Name>
       <FullPath>dim_salesman.dtsx</FullPath>
       <References />
@@ -188,11 +183,6 @@
       <References />
     </DtsPackage>
     <DtsPackage>
-      <Name>fact_tables.dtsx</Name>
-      <FullPath>fact_tables.dtsx</FullPath>
-      <References />
-    </DtsPackage>
-    <DtsPackage>
       <Name>fact_warehouse_history.dtsx</Name>
       <FullPath>Fact_warehouse_history.dtsx</FullPath>
       <References />
@@ -230,6 +220,21 @@
     <DtsPackage>
       <Name>SSI Tool.dtsx</Name>
       <FullPath>SSI Tool.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>Inventory Report - Stock Status Report.dtsx</Name>
+      <FullPath>Inventory Report - Stock Status Report.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_productcodes.dtsx</Name>
+      <FullPath>dim_productcodes.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>fact_tables 1.dtsx</Name>
+      <FullPath>fact_tables 1.dtsx</FullPath>
       <References />
     </DtsPackage>
   </DTSPackages>

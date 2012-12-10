@@ -941,7 +941,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                           </Style>
                           <ZIndex>76</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=sum(iif(fields!Product_Primary_Category.Value = "Fisher Valves &amp; IVS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                          <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER VALVES &amp; IVS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -1499,7 +1499,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                           </Style>
                           <ZIndex>55</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=sum(iif(fields!Product_Primary_Category.Value = "Fisher Valves &amp; IVS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                          <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER VALVES &amp; IVS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -2047,7 +2047,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                           </Style>
                           <ZIndex>34</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=sum(iif(fields!Product_Primary_Category.Value = "Fisher Valves &amp; IVS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                          <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER VALVES &amp; IVS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -2597,7 +2597,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                       </Style>
                       <ZIndex>11</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=iif(fields!Product_Primary_Category.Value = "Fisher Valves &amp; IVS",fields!Sell___Bookings.Value,0)</Value>
+                      <Value>=iif(fields!Product_Primary_Category.Value = "FISHER VALVES &amp; IVS",fields!Sell___Bookings.Value,0)</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>

@@ -330,7 +330,7 @@ end function</Code>
                           </Style>
                           <ZIndex>59</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.Value = "Fisher Valves &amp; IVS",cdbl(fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell___Bookings.Value),0.0))</Value>
+                          <Value>=sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.Value = "FISHER VALVES &amp; IVS",cdbl(fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell___Bookings.Value),0.0))</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -752,7 +752,7 @@ end function</Code>
                           </Style>
                           <ZIndex>43</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.Value = "Fisher Valves &amp; IVS",cdbl(fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact_Salesman_Goals.Value),0.0))</Value>
+                          <Value>=sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.Value = "FISHER VALVES &amp; IVS",cdbl(fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact_Salesman_Goals.Value),0.0))</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>

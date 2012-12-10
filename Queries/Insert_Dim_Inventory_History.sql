@@ -1,8 +1,9 @@
 use nomis_warehouse
 go
 truncate table fact_warehouse_inventory
+--drop table fact_warehouse_inventory
 go
-insert into fact_warehouse_inventory (warehouse_id,inventory_id, warehouse_code, inventory_number, qty_on_hand, qty_on_order, qty_backordered, qty_on_reserve, date_last_sold)
+insert into fact_warehouse_inventory (warehouse_id,inventory_id, warehouse_code, inventory_number, qty_on_hand, qty_on_order, qty_backordered, qty_on_reserve, date_last_sold, Reorder_Flag)
 select warehouse_id
      , inventory_id
      , EBD6CF AS warehouse_code
@@ -12,6 +13,8 @@ select warehouse_id
      , EBA0NB as qty_backordered
      , EBK7NB as qty_on_reserve
      , EBK8NB as date_last_sold
+     , EBGNST as Reorder_Flag
+--into fact_warehouse_inventory
 FROM NOMIS.NOMDBF95.WIMPHY01
 inner join dim_warehouse
 on EBD6CF = warehouse_code

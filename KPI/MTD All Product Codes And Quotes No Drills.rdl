@@ -237,9 +237,9 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
       </Fields>
       <Query>
         <DataSourceName>Nomis_Warehouse</DataSourceName>
-        <CommandText>SELECT     WorkDay - 1 AS WorkDay
-FROM         DimTime.Time
-WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 101))</CommandText>
+        <CommandText>SELECT        WorkDay - 1 AS WorkDay
+FROM            DimTime.Time
+WHERE        (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 101))</CommandText>
         <rd:SuppressAutoUpdate>true</rd:SuppressAutoUpdate>
       </Query>
     </DataSet>

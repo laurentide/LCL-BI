@@ -393,7 +393,7 @@ WHERE  " &amp; Parameters!TimeFiscalMonth.Value</CommandText>
  ON COLUMNS, 
 NON EMPTY {[Dim Alliance Resource].[Department Name].&amp;[Automation],[Dim Alliance Resource].[Department Name].&amp;[Proaxion],[Dim Alliance Resource].[Department Name].&amp;[Engineering],[Dim Alliance Resource].[Department Name].&amp;[Instrumentation],[Dim Alliance Resource].[Department Name].&amp;[Alcan]}  * [Dim Alliance Resource].[Domain User Cd].children DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME
  ON ROWS FROM [Alliance]
-WHERE (" &amp; Parameters!TimeFiscalMonth.Value &amp; ",[Dim Alliance Resource].[Resource Status Cd].&amp;[AC])"</CommandText>
+WHERE (" &amp; Parameters!TimeFiscalMonth.Value &amp; ",[Dim Alliance Resource].[Resource Status Cd].&amp;[AC],  [Fact Alliance Taskdetail].[Row Status Cd].&amp;[A])"</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
     </DataSet>

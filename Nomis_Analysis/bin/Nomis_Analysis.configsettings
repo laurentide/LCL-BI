@@ -104,6 +104,9 @@
       <Dimension>
         <ID>Time</ID>
       </Dimension>
+      <Dimension>
+        <ID>Fact Warehouse Inventory</ID>
+      </Dimension>
     </Dimensions>
     <MiningStructures>
       <MiningStructure>

@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2084" scrolltop="-6337" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7091" y="20214" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2084" scrolltop="-6337" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9260" y="15690" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -186,6 +186,10 @@
         <AttributeRelationship dwd:design-time-name="939ca9be-498f-4e52-bd03-37ff06d92198">
           <AttributeID>Notes</AttributeID>
           <Name>Notes</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="782ae645-f69a-4128-ab0e-15bd71826357">
+          <AttributeID>SELT Sponsor</AttributeID>
+          <Name>SELT Sponsor</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -582,6 +586,20 @@
           <Source xsi:type="ColumnBinding" dwd:design-time-name="b593d93d-ece0-4233-8981-8e21f9239f4b">
             <TableID>dbo_fact_quotes</TableID>
             <ColumnID>Notes</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="97ff6067-50c5-413d-ada8-e0544905528c">
+      <ID>SELT Sponsor</ID>
+      <Name>SELT Sponsor</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e3d7bdb3-50eb-4712-814f-c29ae66b0ce1">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="35ff53b2-29bd-4a31-a072-e939ac7cc958">
+            <TableID>dbo_fact_quotes</TableID>
+            <ColumnID>SELTSponsor</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>

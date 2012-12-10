@@ -41,6 +41,14 @@
 --Master – 32662
 --Sutton – 60840
 --Marcel Baril - 12332
+--
+--added 9/27/2012
+--
+--Maburco 10782
+--J.U. Houle #9700
+--Gro-Mec #24195
+--Noble Trade #9290
+
 
 
 select DATENAME(month,(CONVERT(SMALLDATETIME,(SUBSTRING(CONVERT(CHAR,IMDGDU),2,6)),12))) + '-' + DateName(year,(CONVERT(SMALLDATETIME,(SUBSTRING(CONVERT(CHAR,IMDGDU),2,6)),12))),
@@ -50,7 +58,7 @@ from Nomis.S1018252.NOMDBF95.SSTPHY01 inner join Nomis.S1018252.NOMDBF95.CUSPHY0
 on imzxnb = cazxnb
 where IMRCCD = 29359
 and imdgdu &gt;= 1110801
-and imzxnb in (09690,17950,17985,21330,09455,32662,60840,12332)
+and imzxnb in (09690,17950,17985,21330,09455,32662,60840,12332,10782,9700,24195,9290)
 and imc5aa = 'HC'
 group by DATENAME(month,(CONVERT(SMALLDATETIME,(SUBSTRING(CONVERT(CHAR,IMDGDU),2,6)),12))) + '-' + DateName(Year,(CONVERT(SMALLDATETIME,(SUBSTRING(CONVERT(CHAR,IMDGDU),2,6)),12))),Month(CONVERT(SMALLDATETIME,(SUBSTRING(CONVERT(CHAR,IMDGDU),2,6)),12)),       case when imzxnb = 17950 or imzxnb = 17985 then '17950 17985 - Crane' else convert(char(5),imzxnb) + ' - ' + cacstx end
 order by month(CONVERT(SMALLDATETIME,(SUBSTRING(CONVERT(CHAR,IMDGDU),2,6)),12))</CommandText>

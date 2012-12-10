@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="60" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="4341" scrolltop="9196" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="55" x="16960" y="11033" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="61" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="4341" scrolltop="9196" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="55" x="29501" y="17013" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
@@ -417,24 +417,6 @@
                   </layoutobject>
                   <shape groupshapeid="0" groupnode="0" />
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline" left="11187" top="28297" logicalid="55" controlid="26" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
-                  <control>
-                    <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
-                    </ddsxmlobj>
-                  </control>
-                  <layoutobject>
-                    <ddsxmlobj>
-                      <property name="LogicalObject" value="dataSet.Relations[fact_bookings-Time]" vartype="8" />
-                      <property name="Virtual" value="0" vartype="11" />
-                      <property name="VisibleAP" value="0" vartype="3" />
-                    </ddsxmlobj>
-                  </layoutobject>
-                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="21" sourceattachpoint="51" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                    <point x="11487" y="28696" />
-                    <point x="13887" y="28696" />
-                  </connector>
-                </ddscontrol>
                 <ddscontrol controlprogid="MSDDS.Polyline" left="8429" top="37330" logicalid="56" controlid="27" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
@@ -491,6 +473,24 @@
                     <point x="15929" y="19896" />
                     <point x="15929" y="16185" />
                     <point x="23835" y="16185" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="11187" top="26097" logicalid="60" controlid="31" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FK_fact_bookings_Time]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="21" sourceattachpoint="43" destattachpoint="14" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="11487" y="26496" />
+                    <point x="13887" y="26496" />
                   </connector>
                 </ddscontrol>
               </dds>
@@ -849,7 +849,7 @@
                   <xs:element name="product_description" msprop:FriendlyName="product_description" msprop:DbColumnName="product_description" msprop:design-time-name="ee587d64-d210-4c31-ac06-8d271ce671c7" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
-                        <xs:maxLength value="20" />
+                        <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
@@ -1098,8 +1098,8 @@
                   <xs:element name="TaskNo" msprop:FriendlyName="TaskNo" msprop:DbColumnName="TaskNo" msprop:design-time-name="a1a9c8da-8400-43af-947c-ecb433c0bc56" type="xs:decimal" />
                   <xs:element name="ResourceNo" msprop:FriendlyName="ResourceNo" msprop:DbColumnName="ResourceNo" msprop:design-time-name="227e3e8e-5029-478b-bbdf-5337788e1321" type="xs:decimal" minOccurs="0" />
                   <xs:element name="TimeIn" msprop:FriendlyName="TimeIn" msprop:DbColumnName="TimeIn" msprop:design-time-name="515d5713-adf5-4c6b-91d8-43b7633b8112" type="xs:dateTime" minOccurs="0" />
-                  <xs:element name="Duration" msprop:FriendlyName="Duration" msprop:DbColumnName="Duration" msprop:design-time-name="9bacd86f-e3d7-43f4-abad-42f2e56fb31d" type="xs:long" />
-                  <xs:element name="BillableDuration" msprop:FriendlyName="BillableDuration" msprop:DbColumnName="BillableDuration" msprop:design-time-name="5d45e674-5858-4f8e-8971-60ce76d1737d" type="xs:long" minOccurs="0" />
+                  <xs:element name="Duration" msprop:FriendlyName="Duration" msprop:DbColumnName="Duration" msprop:design-time-name="9bacd86f-e3d7-43f4-abad-42f2e56fb31d" type="xs:decimal" />
+                  <xs:element name="BillableDuration" msprop:FriendlyName="BillableDuration" msprop:DbColumnName="BillableDuration" msprop:design-time-name="5d45e674-5858-4f8e-8971-60ce76d1737d" type="xs:decimal" minOccurs="0" />
                   <xs:element name="AfterHoursFlag" msprop:FriendlyName="AfterHoursFlag" msprop:DbColumnName="AfterHoursFlag" msprop:design-time-name="e7a0ae86-5a1a-43ed-9871-f922954196bf">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -1392,6 +1392,10 @@
           <xs:selector xpath=".//dbo_fact_servicecategory_goals" />
           <xs:field xpath="service_goal_id" />
         </xs:unique>
+        <xs:keyref name="FK_fact_bookings_Time" refer="DimTime_Time_Constraint1">
+          <xs:selector xpath=".//dbo_fact_bookings" />
+          <xs:field xpath="booking_date" />
+        </xs:keyref>
       </xs:element>
       <xs:annotation>
         <xs:appinfo>
@@ -1407,7 +1411,6 @@
           <msdata:Relationship name="fact_service_goals-dim_alliance_resource" msdata:parent="dbo_dim_alliance_resource" msdata:child="dbo_fact_service_goals" msdata:parentkey="resource_id" msdata:childkey="resource_id" msprop:Description="" msprop:IsLogical="True" />
           <msdata:Relationship name="fact_bookings-dim_productcodes" msdata:parent="dbo_dim_productcodes" msdata:child="dbo_fact_bookings" msdata:parentkey="product_id" msdata:childkey="product_id" msprop:Description="" msprop:IsLogical="True" />
           <msdata:Relationship name="fact_sales-dim_productcodes" msdata:parent="dbo_dim_productcodes" msdata:child="dbo_fact_sales" msdata:parentkey="product_id" msdata:childkey="product_id" msprop:Description="" msprop:IsLogical="True" />
-          <msdata:Relationship name="fact_bookings-Time" msdata:parent="DimTime_Time" msdata:child="dbo_fact_bookings" msdata:parentkey="PK_Date" msdata:childkey="booking_date" msprop:Description="" msprop:IsLogical="True" />
           <msdata:Relationship name="fact_sales-Time" msdata:parent="DimTime_Time" msdata:child="dbo_fact_sales" msdata:parentkey="PK_Date" msdata:childkey="invoice_date" msprop:Description="" msprop:IsLogical="True" />
           <msdata:Relationship name="fact_servicecategory_goals-dim_productcodes" msdata:parent="dbo_dim_productcodes" msdata:child="dbo_fact_servicecategory_goals" msdata:parentkey="pc_servicecategory_id" msdata:childkey="pc_servicecategory_id" msprop:Description="" msprop:IsLogical="True" />
           <msdata:Relationship name="fact_servicecategory_goals-Time" msdata:parent="DimTime_Time" msdata:child="dbo_fact_servicecategory_goals" msdata:parentkey="Fiscal_Month" msdata:childkey="fiscal_month" msprop:Description="" msprop:IsLogical="True" />

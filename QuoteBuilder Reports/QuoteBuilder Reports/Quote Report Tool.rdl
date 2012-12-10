@@ -47,7 +47,7 @@
           <Value>=replace(User!UserID,"LCLMTL\", "")</Value>
         </Values>
       </DefaultValue>
-      <Prompt>Quoted By</Prompt>
+      <Prompt>Quoted By or Outside Salesman</Prompt>
       <ValidValues>
         <DataSetReference>
           <DataSetName>Employees</DataSetName>
@@ -171,6 +171,12 @@
           <LabelField>SELTMember</LabelField>
         </DataSetReference>
       </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="ModelNumber">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ModelNumber</Prompt>
     </ReportParameter>
   </ReportParameters>
   <rd:DrawGrid>true</rd:DrawGrid>
@@ -375,7 +381,7 @@ Parameters!CustomerNumber.Value &amp; " " &amp; Parameters!Customer.Value)</Valu
         <ZIndex>1</ZIndex>
         <CanGrow>true</CanGrow>
         <Height>0.2in</Height>
-        <Value>="Quoted by: " &amp; iif(isnothing(Parameters!QuotedBy.Value) , "Everybody",Parameters!QuotedBy.Value)</Value>
+        <Value>="Quoted by or OS: " &amp; iif(isnothing(Parameters!QuotedBy.Value) , "Everybody",Parameters!QuotedBy.Value)</Value>
       </Textbox>
       <Textbox Name="textbox23">
         <rd:DefaultName>textbox23</rd:DefaultName>
@@ -664,6 +670,7 @@ and (Source =@Source or @Source  = '(All)')
 and (tblcustomers.customerid = @CustomerNumber or @CustomerNumber is Null)
 and (productcode = @ProductCode or @ProductCode is null)
 and (SELTSponsor = @SELTSponsor or @SELTSponsor is null)
+and (ModelNumber like '%' + @ModelNumber + '%' or @ModelNumber = '' or @ModelNumber is null)
 and a1aqnb = '1'
 ORDER BY tblquotes.quoteid DESC
        ,tblquotes.[DATE] DESC
@@ -704,6 +711,9 @@ ORDER BY tblquotes.quoteid DESC
           </QueryParameter>
           <QueryParameter Name="@SELTSponsor">
             <Value>=Parameters!SELTSponsor.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@ModelNumber">
+            <Value>=Parameters!ModelNumber.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>

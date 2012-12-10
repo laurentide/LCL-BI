@@ -9,6 +9,10 @@
   </DataSources>
   <Reports>
     <ProjectItem>
+      <Name>ARInvoices.rdl</Name>
+      <FullPath>ARInvoices.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>ARSalesmen.rdl</Name>
       <FullPath>ARSalesmen.rdl</FullPath>
     </ProjectItem>
@@ -21,8 +25,8 @@
       <FullPath>CreditHold.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>ARInvoices.rdl</Name>
-      <FullPath>ARInvoices.rdl</FullPath>
+      <Name>ARTopOrbite.rdl</Name>
+      <FullPath>ARTopOrbite.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

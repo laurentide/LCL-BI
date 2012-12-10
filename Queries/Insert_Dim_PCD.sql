@@ -54,7 +54,7 @@ where product_Code in ('57','60')
 go
 update dim_productcodes
 set pc_servicecategory_id = 10 --Hours huile
-where product_Code in ('P4','B5') 
+where product_Code in ('P4','B5','PM') 
 go
 update dim_productcodes
 set pc_servicecategory_id = 11 --Training huile
@@ -62,7 +62,7 @@ where product_Code in ('B4','B6')
 go
 update dim_productcodes
 set pc_servicecategory_id = 12 --Products huile
-where product_Code in ('P8') 
+where product_Code in ('P8','PD') 
 go
 update dim_productcodes
 set pc_servicecategory_id = 18 --Rebilled Expenses - Automation
@@ -155,7 +155,7 @@ where product_Code in ('34','37','38','S1','S2','S3','S4','S5','S6','S7','98', '
 go
 update dim_productcodes
 set pc_subcategory_id = 9 --PROAXION 
-where product_Code in ('B1','B2','B4','B5','B6','B7','PE','PM','PR','P0','P1','P2','P3','P4','P5','P6','P7','P8','P9','PV')
+where product_Code in ('B1','B2','B4','B5','B6','B7','PE','PM','PR','P0','P1','P2','P3','P4','P5','P6','P7','P8','P9','PV','PD')
 update dim_productcodes
 set pc_subcategory_id = 12 --PSS 
 where product_Code in ('28','31','32','33','41','42','43','44','45','46','54','81','84','85','FC')
@@ -185,12 +185,3 @@ set pc_subcategory_id = 11 --Le reste
 where pc_subcategory_id is null
 
 
---select * from dim_productcodes
---where pc_Category_id = 315
---go
---update dim_productcodes
---set pc_nomis_secondary_category = a1fytu 
---							from Nomis.NOMDBF95.FRA1REL4 inner join
---							dim_productcodes
---                                 on product_code = A1C5AA
---		

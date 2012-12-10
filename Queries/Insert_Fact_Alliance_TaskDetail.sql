@@ -43,7 +43,7 @@ inner join  dimtime.time
 on CAST(FLOOR(CAST( timein AS float)) as datetime)  = pk_date
 where td.rowstatuscd <> 'I'
 go
---select * from fact_alliance_taskdetail
+select * from fact_alliance_taskdetail where taskdetailno = 108411
 --where resource_id = 29
 --go
 --select * from [LCL-SQLA].Foundation.dbo.TaskDetail

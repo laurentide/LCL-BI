@@ -11,6 +11,10 @@
       <FullPath>AnalysisDB.rds</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>AnalysisServicesOLEDB.rds</Name>
+      <FullPath>AnalysisServicesOLEDB.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Nomis_Warehouse.rds</Name>
       <FullPath>Nomis_Warehouse.rds</FullPath>
     </ProjectItem>
@@ -33,8 +37,16 @@
       <FullPath>Inventory All PC.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Inventory.rdl</Name>
+      <FullPath>Inventory.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Open PO linked to Builds.rdl</Name>
       <FullPath>Open PO linked to Builds.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Stock Reorder Report.rdl</Name>
+      <FullPath>Stock Reorder Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>VAD Inventory.rdl</Name>
@@ -45,8 +57,8 @@
       <FullPath>Velan Stock.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Inventory.rdl</Name>
-      <FullPath>Inventory.rdl</FullPath>
+      <Name>Packing Slip Report.rdl</Name>
+      <FullPath>Packing Slip Report.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
