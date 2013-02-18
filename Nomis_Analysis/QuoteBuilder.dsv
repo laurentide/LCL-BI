@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="88" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="9570" scrolltop="6376" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="80" x="26353" y="17013" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="88" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="9570" scrolltop="6376" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="80" x="36221" y="17701" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
@@ -799,7 +799,7 @@
                   <xs:element name="ValveExtendedID" msprop:design-time-name="7cf3cfdc-4542-479a-9d67-ccbbbfb70295" msprop:DbColumnName="VALVEEXTENDEDID" type="xs:int" minOccurs="0" />
                   <xs:element name="employee_id" msprop:design-time-name="a05d55f4-b55d-44e4-87cb-4bd9c22a465e" msprop:DbColumnName="EMPLOYEE_ID" type="xs:int" minOccurs="0" />
                   <xs:element name="RevisedQuote" msprop:design-time-name="8d41fb26-d168-406f-9b21-63e51d57641d" msprop:DbColumnName="REVISEDQUOTE" type="xs:boolean" minOccurs="0" />
-                  <xs:element name="FollowUp" msprop:design-time-name="e5bcdd5c-3d8e-4145-8e19-60383418194c" msprop:DbColumnName="FOLLOWUP" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="FollowUp" msprop:design-time-name="e5bcdd5c-3d8e-4145-8e19-60383418194c" msprop:DbColumnName="FOLLOWUP" type="xs:int" minOccurs="0" />
                   <xs:element name="quoteidref" msprop:design-time-name="d17df956-ed34-4e2b-a212-84e4fd9f1d6a" msprop:DbColumnName="QUOTEIDREF" type="xs:int" minOccurs="0" />
                   <xs:element name="Alternative" msprop:design-time-name="5eddd8cf-56be-46c4-828a-9e646b2182ec" msprop:DbColumnName="ALTERNATIVE" minOccurs="0">
                     <xs:simpleType>
@@ -843,6 +843,13 @@
                   </xs:element>
                   <xs:element name="Notes" msprop:design-time-name="df6ad64e-08a3-4a11-9373-a1a13540bc76" msprop:DbColumnName="Notes" type="xs:string" minOccurs="0" />
                   <xs:element name="SELTSponsor" msprop:design-time-name="39c1a32a-83c5-423a-b8ba-4a293be9015d" msprop:DbColumnName="SELTSponsor" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="followupby" msprop:design-time-name="124f5bd2-a3d6-4390-b003-05a2b582c01e" msprop:DbColumnName="followupby" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
@@ -1257,7 +1264,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency" msprop:FriendlyName="Reporting Currency" msprop:DbTableName="Reporting Currency" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name],[dbo].[dim_currency].[currency_quote_code]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2],N'Local' AS [Local 3]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:design-time-name="187980c2-39f6-454d-af82-5dc5a8e12a3f" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency" msprop:FriendlyName="Reporting Currency" msprop:design-time-name="187980c2-39f6-454d-af82-5dc5a8e12a3f" msprop:DbTableName="Reporting Currency" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name],[dbo].[dim_currency].[currency_quote_code]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2],N'Local' AS [Local 3]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="5d971278-d888-407e-911d-d4f35bddc980" type="xs:int" minOccurs="0" />
@@ -1272,7 +1279,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency1" msprop:FriendlyName="Reporting Currency1" msprop:DbTableName="Reporting Currency1" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:design-time-name="ba51de0c-c2ec-4ff3-aadb-f0468bf25c62" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency1" msprop:FriendlyName="Reporting Currency1" msprop:design-time-name="ba51de0c-c2ec-4ff3-aadb-f0468bf25c62" msprop:DbTableName="Reporting Currency1" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="4facc14a-8cbe-42ed-8899-e0c24c8b2936" type="xs:int" minOccurs="0" />
@@ -1286,7 +1293,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency2" msprop:FriendlyName="Reporting Currency2" msprop:DbTableName="Reporting Currency2" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:design-time-name="e536cb5a-315e-47f7-bfa6-43c6df875c25" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency2" msprop:FriendlyName="Reporting Currency2" msprop:design-time-name="e536cb5a-315e-47f7-bfa6-43c6df875c25" msprop:DbTableName="Reporting Currency2" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="70c035ef-ea36-4cf8-98ba-cfd19e4adca0" type="xs:int" minOccurs="0" />
@@ -1300,7 +1307,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency3" msprop:FriendlyName="Reporting Currency3" msprop:DbTableName="Reporting Currency3" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:design-time-name="b5326a46-6593-4487-917e-2fd99b629a40" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency3" msprop:FriendlyName="Reporting Currency3" msprop:design-time-name="b5326a46-6593-4487-917e-2fd99b629a40" msprop:DbTableName="Reporting Currency3" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="ba3fea50-70a9-49b7-9b0e-2106ea1880b4" type="xs:int" minOccurs="0" />
@@ -1314,7 +1321,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency4" msprop:FriendlyName="Reporting Currency4" msprop:DbTableName="Reporting Currency4" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:design-time-name="b51ebf35-6f1b-4a50-8fd6-fb220d23c935" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency4" msprop:FriendlyName="Reporting Currency4" msprop:design-time-name="b51ebf35-6f1b-4a50-8fd6-fb220d23c935" msprop:DbTableName="Reporting Currency4" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="2c3e5a3e-c79a-4011-8afd-b9b51549ffa7" type="xs:int" minOccurs="0" />
@@ -1328,7 +1335,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency5" msprop:FriendlyName="Reporting Currency5" msprop:DbTableName="Reporting Currency5" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:design-time-name="0bb231b3-7b23-455e-9f4e-3a4caf0d2187" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency5" msprop:FriendlyName="Reporting Currency5" msprop:design-time-name="0bb231b3-7b23-455e-9f4e-3a4caf0d2187" msprop:DbTableName="Reporting Currency5" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="ff10c569-b975-4251-88a8-a7e7a3435264" type="xs:int" minOccurs="0" />
@@ -1342,7 +1349,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency6" msprop:FriendlyName="Reporting Currency6" msprop:DbTableName="Reporting Currency6" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:design-time-name="f52827d6-c673-460f-be04-f3a907c5093e" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency6" msprop:FriendlyName="Reporting Currency6" msprop:design-time-name="f52827d6-c673-460f-be04-f3a907c5093e" msprop:DbTableName="Reporting Currency6" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="02ff652d-c618-434e-9b65-1e346ac6a046" type="xs:int" minOccurs="0" />
@@ -1356,7 +1363,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency7" msprop:FriendlyName="Reporting Currency7" msprop:DbTableName="Reporting Currency7" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:design-time-name="665ce11d-e885-4a19-89e0-b2c9d07cb86b" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency7" msprop:FriendlyName="Reporting Currency7" msprop:design-time-name="665ce11d-e885-4a19-89e0-b2c9d07cb86b" msprop:DbTableName="Reporting Currency7" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="a1d1e105-ecb2-4049-8a2e-0a39657e5136" type="xs:int" minOccurs="0" />
@@ -1370,7 +1377,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency8" msprop:FriendlyName="Reporting Currency8" msprop:DbTableName="Reporting Currency8" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:design-time-name="a5aed805-f7bf-409a-8b95-1f5b9780711e" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency8" msprop:FriendlyName="Reporting Currency8" msprop:design-time-name="a5aed805-f7bf-409a-8b95-1f5b9780711e" msprop:DbTableName="Reporting Currency8" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="c5b7b0aa-7ed6-4806-9690-2f6d830025b4" type="xs:int" minOccurs="0" />
@@ -1384,7 +1391,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency9" msprop:FriendlyName="Reporting Currency9" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency9" msprop:design-time-name="c6fcfa6a-1a7f-4a63-a2c1-083776c5da76" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency9" msprop:FriendlyName="Reporting Currency9" msprop:DbTableName="Reporting Currency9" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:design-time-name="c6fcfa6a-1a7f-4a63-a2c1-083776c5da76" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="2ec1c5a0-9418-4bad-a5bc-adcd37ae676e" type="xs:int" minOccurs="0" />

@@ -39,12 +39,12 @@ SELECT  D2IWMA       ,
         D2S9NC       ,
         CONVERT(DATETIME,RTRIM(CONVERT(CHAR,
         CASE
-                WHEN D2IZMA < 4
+                WHEN D2IZMA @ 4
                 THEN D2IYMA - 1
                 ELSE D2IYMA
         END)) + '/' + RTRIM(CONVERT(CHAR,
         CASE
-                WHEN D2IZMA < 4
+                WHEN D2IZMA @ 4
                 THEN D2IZMA + 9
                 ELSE D2IZMA - 3
         END))               + '/01') AS DATE,
@@ -64,7 +64,7 @@ FROM    NOMIS.BOOKING.BPTPHY01       AS A
 		LEFT JOIN DIM_Customer_Ship_to
         ON D2RHCD = ship_to_number
         and D2ZXNB = ship_to_customer_number
-WHERE   D2IYMA                   >= 2003
+WHERE   D2IYMA                   = 2003
   AND   D2AQNB = 1
 go
 select * from fact_bookings

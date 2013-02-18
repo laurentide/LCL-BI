@@ -141,6 +141,14 @@
           <DataField>Avg Days after invoice</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="Terms">
+          <DataField>Terms</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Credit_Bucket">
+          <DataField>Credit Bucket</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="CAAQNB">
           <DataField>CAAQNB</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
@@ -539,6 +547,7 @@ on CARDCD = L2RDCD
 inner join nomis.S1018252.NOMDBF95.UUGHREP
 on custnumber = ghzxnb
 where (cardcd = @SLSNumber or @SLSNumber = 'All')
+and caaqnb = '1' and ghaqnb = '1'
 orDer by [Total Invoiced] + [sum of payments to date] desc</CommandText>
         <QueryParameters>
           <QueryParameter Name="@SLSNumber">

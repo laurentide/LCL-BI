@@ -139,6 +139,14 @@
           <DataField>Avg Days after invoice</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="Terms">
+          <DataField>Terms</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Credit_Bucket">
+          <DataField>Credit Bucket</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>lcl-sql2k5-s</DataSourceName>
@@ -151,6 +159,7 @@ left join  Nomis.dbo.ArOutStanding_Grouped b
 
 on CustNumber= ghzxnb
 where ghupva &gt; 0 and ghupva  &lt; 2
+and caaqnb = '1' and ghaqnb = '1'
 --inner join Nomis.NOMDBF95.SLSPHY01
 --on CARDCD = L2RDCD
 --where (cardcd = @SLSNumber or @SLSNumber = 'All')

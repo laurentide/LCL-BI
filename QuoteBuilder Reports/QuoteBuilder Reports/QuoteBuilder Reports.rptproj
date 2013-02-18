@@ -41,8 +41,16 @@
       <FullPath>Quaterly Totals.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Quote Details OS.rdl</Name>
+      <FullPath>Quote Details OS.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Quote Details.rdl</Name>
       <FullPath>Quote Details.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Quote Report OS.rdl</Name>
+      <FullPath>Quote Report OS.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Quote Report Tool.rdl</Name>
@@ -81,12 +89,8 @@
       <FullPath>VAD Quotes By Salesmen.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Quote Report OS.rdl</Name>
-      <FullPath>Quote Report OS.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Quote Details OS.rdl</Name>
-      <FullPath>Quote Details OS.rdl</FullPath>
+      <Name>Quote Followup and Hit Rate Report.rdl</Name>
+      <FullPath>Quote Followup and Hit Rate Report.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

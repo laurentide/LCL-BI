@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="50" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-6008" scrolltop="2779" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="25823" y="15690" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="50" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-6008" scrolltop="2779" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="35692" y="16378" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -851,36 +851,36 @@
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="49f758cb-1087-49d7-8db9-7d4106b09bfc">
+    <Dimension dwd:design-time-name="5cec9cb5-f856-4508-ac10-6a5eace154e6">
       <ID>Fact Warehouse Inventory</ID>
       <Name>Fact Warehouse Inventory</Name>
       <DimensionID>Fact Warehouse Inventory</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="e698753f-72cd-46be-b6c0-d2d1c6b817bf">
+        <Attribute dwd:design-time-name="efc02443-0542-4427-a0fd-d03d8aa3c538">
           <AttributeID>Fact Warehouse Inventory</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="03760d62-01e1-4ded-8671-b091be92b41f">
+        <Attribute dwd:design-time-name="815ee453-b48c-43bc-b47f-99330fcd7e44">
           <AttributeID>Warehouse Code</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="e5f68e10-c8af-4464-9779-a5c1b5504dde">
+        <Attribute dwd:design-time-name="167bdd39-5153-4422-a4ab-4a72c3ff511b">
           <AttributeID>Qty On Hand</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="625c75a1-7b7d-4676-b25d-1fc16f22c614">
+        <Attribute dwd:design-time-name="179501c2-3475-4d2e-89c4-336617fa78b0">
           <AttributeID>Qty On Order</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="fa232f53-3010-4568-b89c-c7c9b91a8cdc">
+        <Attribute dwd:design-time-name="391ee2a8-5f02-4552-8618-c31b3c9e60fd">
           <AttributeID>Qty Backordered</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="891bacff-a3b9-4c67-ad1c-28ba00556e80">
+        <Attribute dwd:design-time-name="9810cd86-ed7a-45a5-be5f-c21f29aec524">
           <AttributeID>Qty On Reserve</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="c6892815-68f9-48ce-8414-f7731b36dfcd">
+        <Attribute dwd:design-time-name="c3a2b70d-8514-49e4-8547-99245797cf35">
           <AttributeID>Reorder Flag</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="70bb7138-e277-4905-964e-5303ee814845">
+        <Attribute dwd:design-time-name="5327b405-48d3-4b47-bc4b-e339c6beca0c">
           <AttributeID>Date Last Sold</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="5c4d690b-ed2e-44a9-b15a-e89598136f4f">
+        <Attribute dwd:design-time-name="5bf87cf4-89ea-403c-80ed-2c1baa71baee">
           <AttributeID>Inventory Id</AttributeID>
         </Attribute>
       </Attributes>
@@ -1012,6 +1012,7 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="968822c4-733b-427f-a0af-939578b90104">
       <ID>Dim Inventory</ID>
@@ -1134,6 +1135,7 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="047bd0c5-8048-4614-9254-d7a6466db014">
       <ID>Fact Sales</ID>
@@ -1292,6 +1294,7 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="2be8a003-2f4f-4348-b136-ea3a43375db4">
       <ID>Fact Warehouse Inventory</ID>
@@ -1409,22 +1412,22 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c31bd9d0-5b0d-4259-8f90-1aecb9a4736e">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1e112313-2654-4400-a783-6e720bb92f02">
           <CubeDimensionID>Fact Warehouse Inventory</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="9676ac22-bf6d-4e0f-8f63-33acd6916617">
+            <Attribute dwd:design-time-name="4ffe40dd-23dd-4789-b3a0-277612d48d15">
               <AttributeID>Fact Warehouse Inventory</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="406d02e8-025a-4796-b791-b4deabeced69">
+                <KeyColumn dwd:design-time-name="99600ff8-7137-42b5-a884-e7f753261981">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="228a0a51-7ec8-4fbe-a13b-549d8654940c">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="bef838a7-60f6-43d5-94ed-e021427b77c7">
                     <TableID>dbo_fact_warehouse_inventory</TableID>
                     <ColumnID>warehouse_id</ColumnID>
                   </Source>
                 </KeyColumn>
-                <KeyColumn dwd:design-time-name="9093d9ef-f24d-4a6b-a55d-c6f39863e4c3">
+                <KeyColumn dwd:design-time-name="09820584-f95b-47de-9bc8-af65226b1909">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1b587558-c67d-4a82-bc1d-1276ec9539b9">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2967d6e4-25ac-46b8-a7c9-b1d53e75130f">
                     <TableID>dbo_fact_warehouse_inventory</TableID>
                     <ColumnID>inventory_id</ColumnID>
                   </Source>
@@ -1435,6 +1438,7 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="11cc553d-6950-4bfb-b47f-6bbfd8516f77">
       <ID>Fact Inventory History</ID>
@@ -1637,6 +1641,7 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
     </MeasureGroup>
   </MeasureGroups>
   <Source dwd:design-time-name="2b248bb0-03ad-49fc-9e5d-a443fdff0055">

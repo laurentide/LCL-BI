@@ -52,7 +52,8 @@ SELECT quot.CONTACTID as CONTACT_ID
                      END))*[qty] AS TOTAL
      , [uslistprice]*[exchrate]  AS CDNLIST
      , REVISEDQUOTE
-     , FOLLOWUP
+     , case when followupby is null then 0 else 1 end as FOLLOWUP
+     , followupby
      , ALTERNATIVE
      , MODELNUMBER
      , RESPONSETIMEHOURS*60+RESPONSETIMEMINUTES as RESPONSETIME

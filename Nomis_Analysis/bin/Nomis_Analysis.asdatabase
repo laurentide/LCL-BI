@@ -566,7 +566,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1978" scrolltop="-5490" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10213" y="15690" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1978" scrolltop="-5490" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9260" y="15690" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -3054,7 +3054,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1925" scrolltop="-7051" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6800" y="20717" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1925" scrolltop="-7051" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12224" y="16298" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -3186,7 +3186,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1700" scrolltop="-7051" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7064" y="10425" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1700" scrolltop="-7051" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12224" y="16298" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -3602,7 +3602,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2317" scrolltop="-12456" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="12118" y="20796" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2317" scrolltop="-12456" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="12224" y="16298" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -4329,7 +4329,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="5481" scrolltop="-2877" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="10213" y="15690" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="5481" scrolltop="-2877" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="9260" y="15690" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -9010,7 +9010,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2084" scrolltop="-6337" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10186" y="15610" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2084" scrolltop="-6337" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12224" y="16298" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -9192,6 +9192,10 @@
             <AttributeRelationship>
               <AttributeID>SELT Sponsor</AttributeID>
               <Name>SELT Sponsor</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Followupby</AttributeID>
+              <Name>Followupby</Name>
             </AttributeRelationship>
           </AttributeRelationships>
           <OrderBy>Key</OrderBy>
@@ -9606,6 +9610,20 @@
             </KeyColumn>
           </KeyColumns>
         </Attribute>
+        <Attribute>
+          <ID>Followupby</ID>
+          <Name>Followupby</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_fact_quotes</TableID>
+                <ColumnID>followupby</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Attribute>
       </Attributes>
     </Dimension>
     <Dimension>
@@ -9618,7 +9636,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1462" scrolltop="-5119" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7620" y="15081" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1462" scrolltop="-5119" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12224" y="16378" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -9629,7 +9647,7 @@
               <layoutmanager>
                 <ddsxmlobj />
               </layoutmanager>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_account (dbo.dim_account)" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4657" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_account (dbo.dim_account)" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4657" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="0008000031120000ea120000" />
                 </control>
@@ -9882,7 +9900,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1276" scrolltop="-4511" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5847" y="15266" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1276" scrolltop="-4511" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12224" y="16298" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -11523,7 +11541,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="94" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="638" scrolltop="13380" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="57" x="28972" y="15690" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="94" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="638" scrolltop="13380" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="57" x="35692" y="16351" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -15470,7 +15488,7 @@ End</Trend>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="68" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-6872" scrolltop="-6655" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="55" x="28919" y="15610" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="68" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4069" scrolltop="-5522" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="55" x="35692" y="11959" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -16013,11 +16031,11 @@ End</Trend>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-          <Value>-6872</Value>
+          <Value>-4069</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-          <Value>-6655</Value>
+          <Value>-5522</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -16374,6 +16392,9 @@ End</Trend>
             </Attribute>
             <Attribute>
               <AttributeID>SELT Sponsor</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Followupby</AttributeID>
             </Attribute>
           </Attributes>
         </Dimension>
@@ -17302,7 +17323,7 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE;                   
+CALCULATE;                     
 CREATE SET CURRENTCUBE.[Day to Day]
  AS {[Quote Employee].[Employee Name].&amp;[Julian Lima],
 [Quote Employee].[Employee Name].&amp;[Jean Rene Carle-Mossdorf],
@@ -17320,75 +17341,112 @@ CREATE SET CURRENTCUBE.[Day to Day]
 [Quote Employee].[Employee Name].&amp;[Kevin Outhouse],
 [Quote Employee].[Employee Name].&amp;[Martin White],
 [Quote Employee].[Employee Name].&amp;[Nikolas Bouras],
-[Quote Employee].[Employee Name].&amp;[Isabelle Paris]} ;                       
+[Quote Employee].[Employee Name].&amp;[Isabelle Paris]};                         
 CREATE SET CURRENTCUBE.[WIN]
- AS [Quote Status].[Status].&amp;[WIN];               
+ AS [Quote Status].[Status].&amp;[WIN];                 
 CREATE SET CURRENTCUBE.[Latest Revisions]
- AS [Quotes Data].[Latest Revision].&amp;[True];                         
+ AS [Quotes Data].[Latest Revision].&amp;[True];                           
 CREATE SET CURRENTCUBE.[LOST]
- AS [Quote Status].[Status].&amp;[LOST];                         
+ AS [Quote Status].[Status].&amp;[LOST];                           
 CREATE SET CURRENTCUBE.[OPEN]
- AS [Quote Status].[Status].&amp;[OPEN];                       
+ AS [Quote Status].[Status].&amp;[OPEN]; 
+CREATE SET CURRENTCUBE.[Quotes over 10k]
+ AS filter([Quotes Data].[Fact Quotes].children,[Measures].[Total]&gt;=10000) ;  
+CREATE SET CURRENTCUBE.[REPLACE]
+ AS [Quote Status].[Status].&amp;[REPLACE];  
+CREATE SET CURRENTCUBE.[DELETE]
+ AS [Quote Status].[Status].&amp;[DELETE];  
+CREATE SET CURRENTCUBE.[CANCEL]
+ AS [Quote Status].[Status].&amp;[CANCEL];  
+CREATE SET CURRENTCUBE.[SELT]
+ AS Except(Except([Quotes Data].[SELT Sponsor].children,[Quotes Data].[SELT Sponsor].&amp;[None]),[Quotes Data].[SELT Sponsor].&amp;[]);  
+CREATE SET CURRENTCUBE.[NON-SELT]
+ AS {[Quotes Data].[SELT Sponsor].&amp;[],[Quotes Data].[SELT Sponsor].&amp;[None]};                         
 CREATE SET CURRENTCUBE.[Revised Quotes]
- AS [Quotes Data].[Revised Quote].&amp;[True];                       
+ AS [Quotes Data].[Revised Quote].&amp;[True];                         
 CREATE SET CURRENTCUBE.[Non Revised Quotes]
- AS [Quotes Data].[Revised Quote].&amp;[False];                       
+ AS [Quotes Data].[Revised Quote].&amp;[False];                         
 CREATE SET CURRENTCUBE.[Non Followed Up Quotes]
- AS [Quotes Data].[Follow Up].&amp;[False];                       
+ AS [Quotes Data].[Follow Up].&amp;[False];                         
 CREATE SET CURRENTCUBE.[Followed Up Quotes]
- AS [Quotes Data].[Follow Up].&amp;[True];         
+ AS [Quotes Data].[Follow Up].&amp;[True];           
 CREATE SET CURRENTCUBE.[Followed Up Notes]
- AS Except([Quotes Data].[Notes].Members,[Quotes Data].[Notes].&amp;[]);         
+ AS Except([Quotes Data].[Notes].Members,[Quotes Data].[Notes].&amp;[]);           
 CREATE SET CURRENTCUBE.[Non Followed Up Notes]
- AS [Quotes Data].[Notes].&amp;[];               
+ AS [Quotes Data].[Notes].&amp;[];                 
 CREATE SET CURRENTCUBE.[Non-Project]
- AS Filter([Quotes Data].[Fact Quotes].children,[Measures].[Total]&lt;=200000 and [Measures].[Total] &gt;= 0);        
+ AS Filter([Quotes Data].[Fact Quotes].children,[Measures].[Total]&lt;=200000 and [Measures].[Total] &gt;= 0);          
 CREATE SET CURRENTCUBE.[Project]
- AS Filter([Quotes Data].[Fact Quotes].children,[Measures].[Total]&gt;200000);                       
+ AS Filter([Quotes Data].[Fact Quotes].children,[Measures].[Total]&gt;200000);                         
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Quote Revision %]
  AS Aggregate([Revised Quotes],[Measures].[Number of Quotes])/(Aggregate([Revised Quotes],[Measures].[Number of Quotes]) + Aggregate([Non Revised Quotes],[Measures].[Number of Quotes])), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;                       
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[MEASURES].[SELT %]
+ AS Aggregate([SELT],[Measures].[Number of Quotes])/(Aggregate([SELT],[Measures].[Number of Quotes]) + Aggregate([NON-SELT],[Measures].[Number of Quotes])), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1;                         
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Quote Follow-Up %]
  AS Aggregate([Followed Up Quotes],[Measures].[Number of Quotes])/(Aggregate([Followed Up Quotes],[Measures].[Number of Quotes])+Aggregate([Non Followed Up Quotes],[Measures].[Number of Quotes])), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;         
+VISIBLE = 1;           
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Quote Follow-Up % Notes]
  AS Aggregate([Followed Up Notes],[Measures].[Number of Quotes])/(Aggregate([Followed Up Notes],[Measures].[Number of Quotes])+Aggregate([Non Followed Up Notes],[Measures].[Number of Quotes])), 
-VISIBLE = 1;                          
+VISIBLE = 1;                            
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Hit Rate]
  AS Aggregate([WIN],[Measures].[Number of Items]) / (Aggregate([WIN],[Measures].[Number of Items]) + Aggregate([LOST],[Measures].[Number of Items])), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;                        
+VISIBLE = 1;                          
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Extended Hit Rate]
  AS Aggregate([WIN],[Measures].[Number of Items]) / (Aggregate([WIN],[Measures].[Number of Items]) + Aggregate([LOST],[Measures].[Number of Items]) + Aggregate([OPEN],[Measures].[Number of Items])), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;              
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Number of Items Won]
+ AS Aggregate([WIN],[Measures].[Number of Items]), 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Number of Items Lost]
+ AS Aggregate([LOST],[Measures].[Number of Items]), 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Number of Items Open]
+ AS Aggregate([OPEN],[Measures].[Number of Items]), 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Number of Items Cancel]
+ AS Aggregate([CANCEL],[Measures].[Number of Items]), 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Number of Items Replace]
+ AS Aggregate([REPLACE],[Measures].[Number of Items]), 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Number of Items Delete]
+ AS Aggregate([DELETE],[Measures].[Number of Items]), 
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Win Rate - Items]
  AS Aggregate([WIN],[Measures].[Number of Items]) / (Aggregate([WIN],[Measures].[Number of Items]) + Aggregate([LOST],[Measures].[Number of Items]) + Aggregate([OPEN],[Measures].[Number of Items])), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;             
+VISIBLE = 1;               
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Win Rate - $]
  AS Aggregate([WIN],[Measures].[Total]) / (Aggregate([WIN],[Measures].[Total]) + Aggregate([LOST],[Measures].[Total]) + Aggregate([OPEN],[Measures].[Total])), 
-VISIBLE = 1;              
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Open Rate - Items]
  AS Aggregate([Open],[Measures].[Number of Items]) / (Aggregate([WIN],[Measures].[Number of Items]) + Aggregate([LOST],[Measures].[Number of Items]) + Aggregate([OPEN],[Measures].[Number of Items])), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;             
+VISIBLE = 1;               
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Open Rate - $]
  AS Aggregate([Open],[Measures].[Total]) / (Aggregate([WIN],[Measures].[Total]) + Aggregate([LOST],[Measures].[Total]) + Aggregate([OPEN],[Measures].[Total])), 
-VISIBLE = 1;              
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Lost Rate - Items]
  AS Aggregate([LOST],[Measures].[Number of Items]) / (Aggregate([WIN],[Measures].[Number of Items]) + Aggregate([LOST],[Measures].[Number of Items]) + Aggregate([OPEN],[Measures].[Number of Items])), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;             
+VISIBLE = 1;               
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Lost Rate - $]
  AS Aggregate([LOST],[Measures].[Total]) / (Aggregate([WIN],[Measures].[Total]) + Aggregate([LOST],[Measures].[Total]) + Aggregate([OPEN],[Measures].[Total])), 
-VISIBLE = 1;                     
+FORMAT_STRING = "Currency", 
+VISIBLE = 1;                       
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Rolling average - 4 periods]
  AS Avg (LastPeriods (3, [Time].[Fiscal Month].CurrentMember), [Measures].[Total]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;               
+VISIBLE = 1;                 
 
 // &lt;Currency conversion&gt;
 		
@@ -17401,41 +17459,41 @@ VISIBLE = 1;
 	
 		// This is the Many to One section	
 		// All currency conversion formulas are calculated for the pivot currency and at leaf of the time dimension	
-		Scope ( { Measures.[Total]} );           
+		Scope ( { Measures.[Total]} );             
 			Scope( Leaves([Time]) ,
 				[Reporting Currency].[Canadian],	
-				Leaves([Dim Currency]));           
+				Leaves([Dim Currency]));             
 		
 				
 		      
 		      // Convert Local value into Pivot currency for selected Measures that must be converted with Measure rate [Average Rate] 
-		      Scope( { Measures.[Total]} );           
+		      Scope( { Measures.[Total]} );             
 			         
-		       This = [Reporting Currency].[Local] / Measures.[Average Rate];           
+		       This = [Reporting Currency].[Local] / Measures.[Average Rate];             
 	
-		      End Scope;           
+		      End Scope;             
 	
 
-			End Scope;           	
+			End Scope;             	
 		
 			// This is the One to Many section
 			// All currency conversion formulas are calculated for the non pivot currency and at leaf of the time dimension	
             Scope( Leaves([Time]) , 	
 				Except([Reporting Currency].[Dim Currency].[Dim Currency].Members, 
 				{[Reporting Currency].[Dim Currency].[Dim Currency].[Canadian],
-				[Reporting Currency].[Dim Currency].[Dim Currency].[Local]}));           
+				[Reporting Currency].[Dim Currency].[Dim Currency].[Local]}));             
 		
 				
 		    
 		    // This section overrides the local values with the Converted value for each selected measures needing to be converted with Measure rate [Average Rate]…	
 		    // LinkMember is used to reference the currency from the source currency dimension in the rate cube. 
-	        Scope( { Measures.[Total]} );           
-		           This = [Reporting Currency].[Dim Currency].[Canadian] * (Measures.[Average Rate], LinkMember([Reporting Currency].[Dim Currency].CurrentMember, [Dim Currency].[Dim Currency]));           
-		    End Scope;           	
+	        Scope( { Measures.[Total]} );             
+		           This = [Reporting Currency].[Dim Currency].[Canadian] * (Measures.[Average Rate], LinkMember([Reporting Currency].[Dim Currency].CurrentMember, [Dim Currency].[Dim Currency]));             
+		    End Scope;             	
 	
 		
-			End Scope;            // Leaves of time, all reporting currencies but local and pivot currency	
-		End Scope;            // Measures
+			End Scope;              // Leaves of time, all reporting currencies but local and pivot currency	
+		End Scope;              // Measures
 
 		// End of the currency conversion wizard generated script 
 	// &lt;/Currency conversion&gt;
@@ -17446,83 +17504,83 @@ VISIBLE = 1;
 
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Year to Date] 
-  As "NA";      
+  As "NA";        
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Quarter to Date] 
-  As "NA";      
+  As "NA";        
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Month to Date] 
-  As "NA";      
+  As "NA";        
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Twelve Months to Date] 
-  As "NA";      
+  As "NA";        
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Twelve Month Moving Average] 
-  As "NA";      
+  As "NA";        
 
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Twelve Month Moving Average Last Year] 
-  As "NA";             
+  As "NA";               
 
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Twelve Months Ago] 
-  As "NA";               
+  As "NA";                 
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Six Month Moving Average] 
-  As "NA";      
+  As "NA";        
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Three Month Moving Average] 
-  As "NA";      
+  As "NA";        
 
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Three Month Moving Average Last Year] 
-  As "NA";      
+  As "NA";        
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Year Over Year Growth %] 
-  As "NA";      
+  As "NA";        
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Year Over Year Growth] 
-  As "NA";      
+  As "NA";        
 
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Previous Quarter] 
-  As "NA";             
+  As "NA";               
 
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Same Quarter Last Year] 
-  As "NA";             
+  As "NA";               
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Quarter Over Quarter Growth %] 
-  As "NA";      
+  As "NA";        
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Quarter Over Quarter Growth] 
-  As "NA";      
+  As "NA";        
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Month Over Month Growth %] 
-  As "NA";      
+  As "NA";        
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Month Over Month Growth] 
-  As "NA";      
+  As "NA";        
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Day Over Day Growth %] 
-  As "NA";      
+  As "NA";        
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 2].[Day Over Day Growth] 
-  As "NA";      
+  As "NA";        
   
 
 
@@ -17571,7 +17629,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Year],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  );      
+  );        
 
   
 // Quarter to Date
@@ -17619,7 +17677,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Quarter],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  );      
+  );        
 
   
 // Month to Date
@@ -17667,7 +17725,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Month],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  );      
+  );        
 
   
 // Twelve Months to Date
@@ -17718,7 +17776,7 @@ Create Member
                                [Time].[Fiscal Hierarchy].CurrentMember
                ) : [Time].[Fiscal Hierarchy].CurrentMember
              }
-  );      
+  );        
 
   
 // Twelve Month Moving Average  
@@ -17769,7 +17827,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember
-  );      
+  );        
 
 // Twelve Month Moving Average Last Year
   ( 
@@ -17809,7 +17867,7 @@ Create Member
          )
        },
       [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember
-  );                
+  );                  
 
 // Twelve Months Ago  
   ( 
@@ -17843,7 +17901,7 @@ Create Member
                                12,
                                [Time].[Fiscal Hierarchy].CurrentMember)
              }
-  );       
+  );         
 
   
 // Six Month Moving Average  
@@ -17894,7 +17952,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember
-  );      
+  );        
 
   
 // Three Month Moving Average  
@@ -17945,7 +18003,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember
-  );      
+  );        
 
 // Three Month Moving Average Last Year
   ( 
@@ -17985,7 +18043,7 @@ Create Member
          )
        },
       [Time].[Fiscal Hierarchy Time Calculations 2].DefaultMember
-  );          
+  );            
 
   
 // Year Over Year Growth %  
@@ -18044,7 +18102,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );      
+  );        
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 2].[Year Over Year Growth %],
@@ -18082,14 +18140,14 @@ Create Member
       [Measures].[Quantity Ordered - Fact Bookings]
     }
    
-  ) = Null;       
+  ) = Null;         
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 2].[Year Over Year Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";      
+  ) = "Percent";        
 
   
 // Year Over Year Growth  
@@ -18138,7 +18196,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );      
+  );        
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 2].[Year Over Year Growth],
@@ -18176,7 +18234,7 @@ Create Member
       [Measures].[Quantity Ordered - Fact Bookings]
     }
    
-  ) = Null;      
+  ) = Null;        
 
 // Previous Quarter
 ( 
@@ -18208,7 +18266,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-   );      
+   );        
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 2].[Previous Quarter],
     [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 0 ),
@@ -18231,7 +18289,7 @@ Create Member
       
     }
    
-  ) = Null;       
+  ) = Null;         
 
 // Same Quarter Last Year
 ( 
@@ -18263,7 +18321,7 @@ Create Member
                    4 ,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-   );      
+   );        
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 2].[Same Quarter Last Year],
     [Time].[Fiscal Quarter].[Fiscal Quarter].Members ( 0 ),
@@ -18286,7 +18344,7 @@ Create Member
       
     }
    
-  ) = Null;       
+  ) = Null;         
 
 
   
@@ -18346,7 +18404,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );      
+  );        
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 2].[Quarter Over Quarter Growth %],
@@ -18384,14 +18442,14 @@ Create Member
       [Measures].[Quantity Ordered - Fact Bookings]
     }
    
-  ) = Null;       
+  ) = Null;         
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 2].[Quarter Over Quarter Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";      
+  ) = "Percent";        
 
   
 // Quarter Over Quarter Growth  
@@ -18440,7 +18498,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );      
+  );        
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 2].[Quarter Over Quarter Growth],
@@ -18478,7 +18536,7 @@ Create Member
       [Measures].[Quantity Ordered - Fact Bookings]
     }
    
-  ) = Null;      
+  ) = Null;        
 
   
 // Month Over Month Growth %  
@@ -18537,7 +18595,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );      
+  );        
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 2].[Month Over Month Growth %],
@@ -18575,14 +18633,14 @@ Create Member
       [Measures].[Quantity Ordered - Fact Bookings]
     }
    
-  ) = Null;       
+  ) = Null;         
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 2].[Month Over Month Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";      
+  ) = "Percent";        
 
   
 // Month Over Month Growth  
@@ -18631,7 +18689,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );      
+  );        
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 2].[Month Over Month Growth],
@@ -18669,7 +18727,7 @@ Create Member
       [Measures].[Quantity Ordered - Fact Bookings]
     }
    
-  ) = Null;      
+  ) = Null;        
 
   
 // Day Over Day Growth %  
@@ -18728,7 +18786,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );      
+  );        
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 2].[Day Over Day Growth %],
@@ -18766,14 +18824,14 @@ Create Member
       [Measures].[Quantity Ordered - Fact Bookings]
     }
    
-  ) = Null;      
+  ) = Null;        
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 2].[Day Over Day Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";      
+  ) = "Percent";        
 
   
 // Day Over Day Growth  
@@ -18822,7 +18880,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );      
+  );        
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 2].[Day Over Day Growth],
@@ -19120,7 +19178,7 @@ End</Trend>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="50" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-6008" scrolltop="2779" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="28919" y="15610" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="50" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-6008" scrolltop="2779" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="35692" y="16378" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -22494,7 +22552,7 @@ Create Member
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="60" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7745" scrolltop="-556" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="28919" y="15610" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="60" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7745" scrolltop="-556" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="35692" y="16351" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -24028,45 +24086,45 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE;           
+CALCULATE;            
 CREATE SET CURRENTCUBE.[Non Billable]
- AS [Dim Productcodes].[Product Code].&amp;[ZZ];           
+ AS {[Dim Productcodes].[Product Code].&amp;[TS],[Dim Productcodes].[Product Code].&amp;[SA],[Dim Productcodes].[Product Code].&amp;[PV],[Dim Productcodes].[Product Code].&amp;[ZZ]} ;            
 CREATE SET CURRENTCUBE.[Billable]
  AS [Dim Productcodes].[Product Code].[All].Children - [Dim Productcodes].[Product Code].&amp;[ZZ] - [Dim Productcodes].[Product Code].&amp;[SA]
-- [Dim Productcodes].[Product Code].&amp;[TS];          
+- [Dim Productcodes].[Product Code].&amp;[TS] - [Dim Productcodes].[Product Code].&amp;[PV] ;           
 CREATE SET CURRENTCUBE.[SA and TS]
- AS {[Dim Productcodes].[Product Code].&amp;[TS],[Dim Productcodes].[Product Code].&amp;[SA],[Dim Productcodes].[Product Code].&amp;[PV]};          
+ AS {[Dim Productcodes].[Product Code].&amp;[TS],[Dim Productcodes].[Product Code].&amp;[SA],[Dim Productcodes].[Product Code].&amp;[PV],[Dim Productcodes].[Product Code].&amp;[ZZ]} ;           
 CREATE SET CURRENTCUBE.[OT2]
- AS [Fact Alliance Taskdetail].[Cost Time Factor].&amp;[2.];   
+ AS [Fact Alliance Taskdetail].[Cost Time Factor].&amp;[2.];    
 CREATE SET CURRENTCUBE.[OT1.5]
- AS [Fact Alliance Taskdetail].[Cost Time Factor].&amp;[1.5];            
+ AS [Fact Alliance Taskdetail].[Cost Time Factor].&amp;[1.5];             
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Non Billable Hours]
  AS sum([Non Billable],[Measures].[Duration]), 
-VISIBLE = 1;            
+VISIBLE = 1;             
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Billable]
  AS sum([Billable],[Measures].[Duration]), 
-VISIBLE = 1;    
+VISIBLE = 1;     
 CREATE MEMBER CURRENTCUBE.[MEASURES].[SA and TS]
  AS sum([SA and TS],[Measures].[Duration]), 
-VISIBLE = 1;          
+VISIBLE = 1;           
 CREATE MEMBER CURRENTCUBE.[MEASURES].[OT1.5]
  AS Aggregate([OT1.5],[Measures].[Duration]), 
-VISIBLE = 1;          
+VISIBLE = 1;           
 CREATE MEMBER CURRENTCUBE.[MEASURES].[OT2.0]
  AS Aggregate([OT2],[Measures].[Duration]), 
-VISIBLE = 1;  
+VISIBLE = 1;   
 CREATE MEMBER CURRENTCUBE.[MEASURES].[OT1.5 Billable]
  AS aggregate([OT1.5]*[Billable],[Measures].[Duration]), 
-VISIBLE = 1;  
+VISIBLE = 1;   
 CREATE MEMBER CURRENTCUBE.[MEASURES].[OT1.5 Non Billable]
  AS aggregate([OT1.5]*[Non Billable],[Measures].[Duration]), 
-VISIBLE = 1;  
+VISIBLE = 1;   
 CREATE MEMBER CURRENTCUBE.[MEASURES].[OT2.0 Billable]
  AS aggregate([OT2]*[Billable],[Measures].[Duration]), 
-VISIBLE = 1;  
+VISIBLE = 1;   
 CREATE MEMBER CURRENTCUBE.[MEASURES].[OT2.0 Non Billable]
  AS aggregate([OT2]*[Non Billable],[Measures].[Duration]), 
-VISIBLE = 1;          
+VISIBLE = 1;           
 
 
 /*
@@ -24075,63 +24133,63 @@ VISIBLE = 1;
 
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date] 
-  As "NA"; 
+  As "NA";  
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date] 
-  As "NA"; 
+  As "NA";  
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Month to Date] 
-  As "NA"; 
+  As "NA";  
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Twelve Months to Date] 
-  As "NA"; 
+  As "NA";  
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Twelve Month Moving Average] 
-  As "NA"; 
+  As "NA";  
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Six Month Moving Average] 
-  As "NA"; 
+  As "NA";  
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Three Month Moving Average] 
-  As "NA"; 
+  As "NA";  
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Year Over Year Growth %] 
-  As "NA"; 
+  As "NA";  
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Year Over Year Growth] 
-  As "NA"; 
+  As "NA";  
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Quarter Over Quarter Growth %] 
-  As "NA"; 
+  As "NA";  
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Quarter Over Quarter Growth] 
-  As "NA"; 
+  As "NA";  
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Month Over Month Growth %] 
-  As "NA"; 
+  As "NA";  
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Month Over Month Growth] 
-  As "NA"; 
+  As "NA";  
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Day Over Day Growth %] 
-  As "NA"; 
+  As "NA";  
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 4].[Day Over Day Growth] 
-  As "NA"; 
+  As "NA";  
   
 
 
@@ -24167,7 +24225,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Year],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  ); 
+  );  
 
   
 // Quarter to Date
@@ -24202,7 +24260,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Quarter],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  ); 
+  );  
 
   
 // Month to Date
@@ -24237,7 +24295,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Month],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  ); 
+  );  
 
   
 // Twelve Months to Date
@@ -24275,7 +24333,7 @@ Create Member
                                [Time].[Fiscal Hierarchy].CurrentMember
                ) : [Time].[Fiscal Hierarchy].CurrentMember
              }
-  ); 
+  );  
 
   
 // Twelve Month Moving Average  
@@ -24313,7 +24371,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember
-  ); 
+  );  
 
   
 // Six Month Moving Average  
@@ -24351,7 +24409,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember
-  ); 
+  );  
 
   
 // Three Month Moving Average  
@@ -24389,7 +24447,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations 4].DefaultMember
-  ); 
+  );  
 
   
 // Year Over Year Growth %  
@@ -24435,7 +24493,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  ); 
+  );  
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 4].[Year Over Year Growth %],
@@ -24460,14 +24518,14 @@ Create Member
       [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
     }
    
-  ) = Null;  
+  ) = Null;   
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 4].[Year Over Year Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent"; 
+  ) = "Percent";  
 
   
 // Year Over Year Growth  
@@ -24503,7 +24561,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  ); 
+  );  
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 4].[Year Over Year Growth],
@@ -24528,7 +24586,7 @@ Create Member
       [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
     }
    
-  ) = Null; 
+  ) = Null;  
 
   
 // Quarter Over Quarter Growth %  
@@ -24574,7 +24632,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  ); 
+  );  
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 4].[Quarter Over Quarter Growth %],
@@ -24599,14 +24657,14 @@ Create Member
       [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
     }
    
-  ) = Null;  
+  ) = Null;   
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 4].[Quarter Over Quarter Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent"; 
+  ) = "Percent";  
 
   
 // Quarter Over Quarter Growth  
@@ -24642,7 +24700,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  ); 
+  );  
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 4].[Quarter Over Quarter Growth],
@@ -24667,7 +24725,7 @@ Create Member
       [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
     }
    
-  ) = Null; 
+  ) = Null;  
 
   
 // Month Over Month Growth %  
@@ -24713,7 +24771,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  ); 
+  );  
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 4].[Month Over Month Growth %],
@@ -24738,14 +24796,14 @@ Create Member
       [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
     }
    
-  ) = Null;  
+  ) = Null;   
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 4].[Month Over Month Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent"; 
+  ) = "Percent";  
 
   
 // Month Over Month Growth  
@@ -24781,7 +24839,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  ); 
+  );  
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 4].[Month Over Month Growth],
@@ -24806,7 +24864,7 @@ Create Member
       [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
     }
    
-  ) = Null; 
+  ) = Null;  
 
   
 // Day Over Day Growth %  
@@ -24852,7 +24910,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  ); 
+  );  
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 4].[Day Over Day Growth %],
@@ -24877,14 +24935,14 @@ Create Member
       [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
     }
    
-  ) = Null; 
+  ) = Null;  
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 4].[Day Over Day Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent"; 
+  ) = "Percent";  
 
   
 // Day Over Day Growth  
@@ -24920,7 +24978,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  ); 
+  );  
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 4].[Day Over Day Growth],
@@ -25029,7 +25087,7 @@ Create Member
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="18" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-18818" scrolltop="-2429" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="16510" y="16457" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="18" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-18818" scrolltop="-2429" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="35639" y="16298" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -30729,7 +30787,7 @@ END
                 <Name>_ALL_TABLES_</Name>
                 <DiagramLayout>
                   <dds>
-                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="88" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="9570" scrolltop="6376" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="80" x="29448" y="16933" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="88" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="9570" scrolltop="6376" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="80" x="36169" y="17621" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                       <font>
                         <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                       </font>
@@ -31501,7 +31559,7 @@ END
                       <xs:element name="ValveExtendedID" msprop:design-time-name="7cf3cfdc-4542-479a-9d67-ccbbbfb70295" msprop:DbColumnName="VALVEEXTENDEDID" type="xs:int" minOccurs="0" />
                       <xs:element name="employee_id" msprop:design-time-name="a05d55f4-b55d-44e4-87cb-4bd9c22a465e" msprop:DbColumnName="EMPLOYEE_ID" type="xs:int" minOccurs="0" />
                       <xs:element name="RevisedQuote" msprop:design-time-name="8d41fb26-d168-406f-9b21-63e51d57641d" msprop:DbColumnName="REVISEDQUOTE" type="xs:boolean" minOccurs="0" />
-                      <xs:element name="FollowUp" msprop:design-time-name="e5bcdd5c-3d8e-4145-8e19-60383418194c" msprop:DbColumnName="FOLLOWUP" type="xs:boolean" minOccurs="0" />
+                      <xs:element name="FollowUp" msprop:design-time-name="e5bcdd5c-3d8e-4145-8e19-60383418194c" msprop:DbColumnName="FOLLOWUP" type="xs:int" minOccurs="0" />
                       <xs:element name="quoteidref" msprop:design-time-name="d17df956-ed34-4e2b-a212-84e4fd9f1d6a" msprop:DbColumnName="QUOTEIDREF" type="xs:int" minOccurs="0" />
                       <xs:element name="Alternative" msprop:design-time-name="5eddd8cf-56be-46c4-828a-9e646b2182ec" msprop:DbColumnName="ALTERNATIVE" minOccurs="0">
                         <xs:simpleType>
@@ -31545,6 +31603,13 @@ END
                       </xs:element>
                       <xs:element name="Notes" msprop:design-time-name="df6ad64e-08a3-4a11-9373-a1a13540bc76" msprop:DbColumnName="Notes" type="xs:string" minOccurs="0" />
                       <xs:element name="SELTSponsor" msprop:design-time-name="39c1a32a-83c5-423a-b8ba-4a293be9015d" msprop:DbColumnName="SELTSponsor" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="followupby" msprop:design-time-name="124f5bd2-a3d6-4390-b003-05a2b582c01e" msprop:DbColumnName="followupby" minOccurs="0">
                         <xs:simpleType>
                           <xs:restriction base="xs:string">
                             <xs:maxLength value="50" />
@@ -31959,7 +32024,7 @@ END
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
-                <xs:element name="Reporting_x0020_Currency" msprop:FriendlyName="Reporting Currency" msprop:design-time-name="187980c2-39f6-454d-af82-5dc5a8e12a3f" msprop:DbTableName="Reporting Currency" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name],[dbo].[dim_currency].[currency_quote_code]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2],N'Local' AS [Local 3]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+                <xs:element name="Reporting_x0020_Currency" msprop:FriendlyName="Reporting Currency" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name],[dbo].[dim_currency].[currency_quote_code]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2],N'Local' AS [Local 3]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency" msprop:design-time-name="187980c2-39f6-454d-af82-5dc5a8e12a3f" msprop:TableType="View" msprop:IsLogical="True">
                   <xs:complexType>
                     <xs:sequence>
                       <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="5d971278-d888-407e-911d-d4f35bddc980" type="xs:int" minOccurs="0" />
@@ -31974,7 +32039,7 @@ END
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
-                <xs:element name="Reporting_x0020_Currency1" msprop:FriendlyName="Reporting Currency1" msprop:design-time-name="ba51de0c-c2ec-4ff3-aadb-f0468bf25c62" msprop:DbTableName="Reporting Currency1" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+                <xs:element name="Reporting_x0020_Currency1" msprop:FriendlyName="Reporting Currency1" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency1" msprop:design-time-name="ba51de0c-c2ec-4ff3-aadb-f0468bf25c62" msprop:TableType="View" msprop:IsLogical="True">
                   <xs:complexType>
                     <xs:sequence>
                       <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="4facc14a-8cbe-42ed-8899-e0c24c8b2936" type="xs:int" minOccurs="0" />
@@ -31988,7 +32053,7 @@ END
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
-                <xs:element name="Reporting_x0020_Currency2" msprop:FriendlyName="Reporting Currency2" msprop:design-time-name="e536cb5a-315e-47f7-bfa6-43c6df875c25" msprop:DbTableName="Reporting Currency2" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+                <xs:element name="Reporting_x0020_Currency2" msprop:FriendlyName="Reporting Currency2" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency2" msprop:design-time-name="e536cb5a-315e-47f7-bfa6-43c6df875c25" msprop:TableType="View" msprop:IsLogical="True">
                   <xs:complexType>
                     <xs:sequence>
                       <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="70c035ef-ea36-4cf8-98ba-cfd19e4adca0" type="xs:int" minOccurs="0" />
@@ -32002,7 +32067,7 @@ END
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
-                <xs:element name="Reporting_x0020_Currency3" msprop:FriendlyName="Reporting Currency3" msprop:design-time-name="b5326a46-6593-4487-917e-2fd99b629a40" msprop:DbTableName="Reporting Currency3" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+                <xs:element name="Reporting_x0020_Currency3" msprop:FriendlyName="Reporting Currency3" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency3" msprop:design-time-name="b5326a46-6593-4487-917e-2fd99b629a40" msprop:TableType="View" msprop:IsLogical="True">
                   <xs:complexType>
                     <xs:sequence>
                       <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="ba3fea50-70a9-49b7-9b0e-2106ea1880b4" type="xs:int" minOccurs="0" />
@@ -32016,7 +32081,7 @@ END
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
-                <xs:element name="Reporting_x0020_Currency4" msprop:FriendlyName="Reporting Currency4" msprop:design-time-name="b51ebf35-6f1b-4a50-8fd6-fb220d23c935" msprop:DbTableName="Reporting Currency4" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+                <xs:element name="Reporting_x0020_Currency4" msprop:FriendlyName="Reporting Currency4" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency4" msprop:design-time-name="b51ebf35-6f1b-4a50-8fd6-fb220d23c935" msprop:TableType="View" msprop:IsLogical="True">
                   <xs:complexType>
                     <xs:sequence>
                       <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="2c3e5a3e-c79a-4011-8afd-b9b51549ffa7" type="xs:int" minOccurs="0" />
@@ -32030,7 +32095,7 @@ END
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
-                <xs:element name="Reporting_x0020_Currency5" msprop:FriendlyName="Reporting Currency5" msprop:design-time-name="0bb231b3-7b23-455e-9f4e-3a4caf0d2187" msprop:DbTableName="Reporting Currency5" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+                <xs:element name="Reporting_x0020_Currency5" msprop:FriendlyName="Reporting Currency5" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency5" msprop:design-time-name="0bb231b3-7b23-455e-9f4e-3a4caf0d2187" msprop:TableType="View" msprop:IsLogical="True">
                   <xs:complexType>
                     <xs:sequence>
                       <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="ff10c569-b975-4251-88a8-a7e7a3435264" type="xs:int" minOccurs="0" />
@@ -32044,7 +32109,7 @@ END
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
-                <xs:element name="Reporting_x0020_Currency6" msprop:FriendlyName="Reporting Currency6" msprop:design-time-name="f52827d6-c673-460f-be04-f3a907c5093e" msprop:DbTableName="Reporting Currency6" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+                <xs:element name="Reporting_x0020_Currency6" msprop:FriendlyName="Reporting Currency6" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency6" msprop:design-time-name="f52827d6-c673-460f-be04-f3a907c5093e" msprop:TableType="View" msprop:IsLogical="True">
                   <xs:complexType>
                     <xs:sequence>
                       <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="02ff652d-c618-434e-9b65-1e346ac6a046" type="xs:int" minOccurs="0" />
@@ -32058,7 +32123,7 @@ END
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
-                <xs:element name="Reporting_x0020_Currency7" msprop:FriendlyName="Reporting Currency7" msprop:design-time-name="665ce11d-e885-4a19-89e0-b2c9d07cb86b" msprop:DbTableName="Reporting Currency7" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+                <xs:element name="Reporting_x0020_Currency7" msprop:FriendlyName="Reporting Currency7" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency7" msprop:design-time-name="665ce11d-e885-4a19-89e0-b2c9d07cb86b" msprop:TableType="View" msprop:IsLogical="True">
                   <xs:complexType>
                     <xs:sequence>
                       <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="a1d1e105-ecb2-4049-8a2e-0a39657e5136" type="xs:int" minOccurs="0" />
@@ -32072,7 +32137,7 @@ END
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
-                <xs:element name="Reporting_x0020_Currency8" msprop:FriendlyName="Reporting Currency8" msprop:design-time-name="a5aed805-f7bf-409a-8b95-1f5b9780711e" msprop:DbTableName="Reporting Currency8" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+                <xs:element name="Reporting_x0020_Currency8" msprop:FriendlyName="Reporting Currency8" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency8" msprop:design-time-name="a5aed805-f7bf-409a-8b95-1f5b9780711e" msprop:TableType="View" msprop:IsLogical="True">
                   <xs:complexType>
                     <xs:sequence>
                       <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="c5b7b0aa-7ed6-4806-9690-2f6d830025b4" type="xs:int" minOccurs="0" />
@@ -32086,7 +32151,7 @@ END
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
-                <xs:element name="Reporting_x0020_Currency9" msprop:FriendlyName="Reporting Currency9" msprop:DbTableName="Reporting Currency9" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:design-time-name="c6fcfa6a-1a7f-4a63-a2c1-083776c5da76" msprop:TableType="View" msprop:IsLogical="True">
+                <xs:element name="Reporting_x0020_Currency9" msprop:FriendlyName="Reporting Currency9" msprop:design-time-name="c6fcfa6a-1a7f-4a63-a2c1-083776c5da76" msprop:DbTableName="Reporting Currency9" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
                   <xs:complexType>
                     <xs:sequence>
                       <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="2ec1c5a0-9418-4bad-a5bc-adcd37ae676e" type="xs:int" minOccurs="0" />
@@ -33347,7 +33412,7 @@ END
                 <Name>_ALL_TABLES_</Name>
                 <DiagramLayout>
                   <dds>
-                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="60" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4183" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="55" x="29448" y="16933" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="61" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="4341" scrolltop="9196" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="55" x="29501" y="17013" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                       <font>
                         <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                       </font>
@@ -33737,7 +33802,7 @@ END
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="8429" top="37330" logicalid="55" controlid="26" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="8429" top="37330" logicalid="56" controlid="27" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -33755,7 +33820,7 @@ END
                         <point x="8828" y="40229" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="23811" top="16204" logicalid="56" controlid="27" masterid="0" hint1="0" hint2="0" width="863" height="5124" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="23811" top="16204" logicalid="57" controlid="28" masterid="0" hint1="0" hint2="0" width="863" height="5124" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -33775,7 +33840,7 @@ END
                         <point x="24374" y="16504" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="11187" top="15885" logicalid="57" controlid="28" masterid="0" hint1="0" hint2="0" width="12948" height="4411" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="11187" top="15885" logicalid="58" controlid="29" masterid="0" hint1="0" hint2="0" width="12948" height="4411" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -33795,7 +33860,7 @@ END
                         <point x="23835" y="16185" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="11187" top="26097" logicalid="58" controlid="29" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="11187" top="26097" logicalid="60" controlid="31" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -33814,11 +33879,11 @@ END
                       </connector>
                     </ddscontrol>
                   </dds>
-</DiagramLayout>
+                </DiagramLayout>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
-                <DiagramViewPortLeft>-4183</DiagramViewPortLeft>
-                <DiagramViewPortTop>-5000</DiagramViewPortTop>
+                <DiagramViewPortLeft>4341</DiagramViewPortLeft>
+                <DiagramViewPortTop>9196</DiagramViewPortTop>
                 <DiagramBoundingLeft>0</DiagramBoundingLeft>
                 <DiagramBoundingTop>0</DiagramBoundingTop>
                 <DiagramZoom>55</DiagramZoom>

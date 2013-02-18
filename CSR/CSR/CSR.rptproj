@@ -45,6 +45,10 @@
       <FullPath>Late Invoices Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Open Orders.rdl</Name>
+      <FullPath>Open Orders.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Open SO Report.rdl</Name>
       <FullPath>Open SO Report.rdl</FullPath>
     </ProjectItem>
@@ -73,8 +77,8 @@
       <FullPath>Wrong Salesman Number Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Open Orders.rdl</Name>
-      <FullPath>Open Orders.rdl</FullPath>
+      <Name>Quote Report Tool.rdl</Name>
+      <FullPath>Quote Report Tool.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

@@ -126,6 +126,10 @@ where pc_servicecategory_id is null
 go
 use nomis_warehouse
 go
+----------------------------------------------
+-------------- SUBCATEGORY -------------------
+----------------------------------------------
+
 update dim_productcodes
 set pc_subcategory_id = null
 go
@@ -162,7 +166,7 @@ where product_Code in ('28','31','32','33','41','42','43','44','45','46','54','8
 go
 update dim_productcodes
 set pc_subcategory_id = 13 --Field Instrumentation
-where product_Code in ('I1','I2','I3','I5','I6','I7', 'CC','FI','AP','IR') 
+where product_Code in ('I1','I2','I3','I5','I6','I7', 'CC','FI','AP','IR','53') 
 go
 update dim_productcodes
 set pc_subcategory_id = 14 --TECHNICAL SERVICES
@@ -179,6 +183,9 @@ go
 update dim_productcodes
 set pc_subcategory_id = 17 --CSI Training
 where product_Code in ('B3') 
+----------------------------------------------
+-------------- SUBCATEGORY -------------------
+----------------------------------------------
 go
 update dim_productcodes
 set pc_subcategory_id = 11 --Le reste 

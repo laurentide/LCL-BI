@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Name>AnalysisServicesOLEDB</Name>
   <DataSourceID>c8be6faf-6560-4360-8130-86afcb7a6504</DataSourceID>
@@ -7,4 +8,5 @@
     <ConnectString>Provider=MSOLAP.3;Data Source=lcl-sql2k5-s;Initial Catalog=Nomis_Analysis</ConnectString>
     <IntegratedSecurity>true</IntegratedSecurity>
   </ConnectionProperties>
+
 </RptDataSource>

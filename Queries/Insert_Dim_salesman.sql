@@ -8,7 +8,7 @@ left join (
 SELECT     *
 FROM         OPENQUERY(ADSI, 
                       'SELECT sn,givenname, sAMAccountName, telephoneNumber, mail FROM
-''LDAP://OU=LCL_USER,DC=ADC,DC=laurentidecontrols, DC=COM'' WHERE
+''LDAP://OU=LCL USERS,DC=ADC,DC=laurentidecontrols, DC=COM'' WHERE
       objectClass = ''user''')) ActiveDirectory
 On rtrim(Upper(ActiveDirectory.givenName + ' ' + sn)) = RTRIM(L2RRTX) 
 go
@@ -20,13 +20,9 @@ update dim_salesman
 set salesman_account_name = null 
 where salesman_name in ('Sylvain Roch')
 go
+SET IDENTITY_INSERT dim_salesman ON
+go
 insert into dbo.dim_salesman ( salesman_id,Salesman_Number, Salesman_Name, salesman_account_name,salesman_active)
 select 0,'','','','A'
 go
-select * from dim_salesman
-select * from fact_bookings 
-inner join Nomis.S1018252.BOOKING.BPTPHY01
-on d2iwma = order_number
-SET IDENTITY_INSERT dim_salesman ON
-where salesman_id is null
-select * from fact_Sales where salesman_id =0
+SET IDENTITY_INSERT dim_salesman OFF

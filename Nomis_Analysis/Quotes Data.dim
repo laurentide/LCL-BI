@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2084" scrolltop="-6337" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9260" y="15690" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2084" scrolltop="-6337" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12224" y="16378" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -190,6 +190,10 @@
         <AttributeRelationship dwd:design-time-name="782ae645-f69a-4128-ab0e-15bd71826357">
           <AttributeID>SELT Sponsor</AttributeID>
           <Name>SELT Sponsor</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e7bbca48-6a8e-4b96-94be-04bf1e2d422e">
+          <AttributeID>Followupby</AttributeID>
+          <Name>Followupby</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -600,6 +604,20 @@
           <Source xsi:type="ColumnBinding" dwd:design-time-name="35ff53b2-29bd-4a31-a072-e939ac7cc958">
             <TableID>dbo_fact_quotes</TableID>
             <ColumnID>SELTSponsor</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="e94f1188-6699-4269-98dc-65fa1be144b2">
+      <ID>Followupby</ID>
+      <Name>Followupby</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="11a64e4a-8bd8-4669-bfa6-5c501c020d9c">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cadb69a1-6c04-49ec-bafd-2cee1c41ece2">
+            <TableID>dbo_fact_quotes</TableID>
+            <ColumnID>followupby</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
