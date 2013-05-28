@@ -261,10 +261,11 @@ nY/Zu3/8B3//AC7g/RXxofnPLP8Afzx8fyP0fBu2308t+9Yr7bg+8vzsfs3b/wDgO/8A+XcH6K+ND855
  ,
     non empty {
       [Non-Project] *
+      NONEMPTY(  [Quotes Data].[Quoteid].children,[Measures].[Total]) *
        NONEMPTY(  [Quotes Data].[Revision].children,[Measures].[Total]) *
         NONEMPTY( [Quotes Data].[Date].children,[Measures].[Total]) *
        NONEMPTY( [Quotes Data].[Model Number].children,[Measures].[Total]) *
-        NONEMPTY({" &amp; join(parameters!QuoteEmployeeEmployeeName.value,",") &amp; "},[Measures].[Total]) *
+        NONEMPTY([Quote Employee].[Employee Name].children,[Measures].[Total]) *
         NONEMPTY( [Customer And Contact].[Customer Name].children,[Measures].[Total])*
        NONEMPTY( [Customer And Contact].[Contact Name].children,[Measures].[Total]) *
        NONEMPTY( [Quote Status].[Status].children,[Measures].[Total]) *

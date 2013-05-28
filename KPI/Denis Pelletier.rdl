@@ -12,7 +12,7 @@
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>[Time].[Fiscal Year].&amp;[2011-10-01T00:00:00]</Value>
+          <Value>[Time].[Fiscal Year].&amp;[2012-10-01T00:00:00]</Value>
         </Values>
       </DefaultValue>
       <Prompt>Fiscal Year</Prompt>
@@ -36,7 +36,7 @@
     <ReportItems>
       <Textbox Name="textbox1">
         <rd:DefaultName>textbox1</rd:DefaultName>
-        <Width>2.375in</Width>
+        <Width>3.44792in</Width>
         <Style>
           <Color>#1c3a70</Color>
           <FontFamily>Tahoma</FontFamily>
@@ -49,8 +49,8 @@
         </Style>
         <ZIndex>1</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>28.20106cm</Left>
-        <Value>Whitespace Report</Value>
+        <Left>11.08466cm</Left>
+        <Value>Report for Denis Pelletier</Value>
       </Textbox>
       <Image Name="image1">
         <Sizing>Fit</Sizing>
@@ -111,6 +111,10 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Customers].[Customer Name].[Customer Name]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Customer_Number">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Customers].[Customer Number].[Customer Number]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Product_Primary_Category">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Product Code Category].[Product Primary Category].[Product Primary Category]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -134,13 +138,13 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
       </Fields>
       <Query>
         <DataSourceName>AnalysisDB</DataSourceName>
-        <CommandText> SELECT NON EMPTY { [Measures].[Sell  - Invoiced], [Measures].[Sell - Bookings], [Measures].[Sales Profit Margin], [Measures].[Cost - Invoiced] } ON COLUMNS, NON EMPTY { ([Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Customers].[Customer Territory Code].[Customer Territory Code].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Product Code Category].[Product Primary Category].[Product Primary Category].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Customers].[Customer Territory Code].&amp;[CS], [Customers].[Customer Territory Code].&amp;[CQ], [Customers].[Customer Territory Code].&amp;[TS], [Customers].[Customer Territory Code].&amp;[TQ], [Customers].[Customer Territory Code].&amp;[WS], [Customers].[Customer Territory Code].&amp;[WQ] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalYear, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[VAD] } ) ON COLUMNS FROM [Sales_2008]))) WHERE ( [Product Codes].[Product Primary Category].CurrentMember, IIF( STRTOSET(@TimeFiscalYear, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalYear, CONSTRAINED), [Time].[Fiscal Year].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <CommandText> SELECT NON EMPTY { [Measures].[Sell  - Invoiced], [Measures].[Sell - Bookings], [Measures].[Sales Profit Margin], [Measures].[Cost - Invoiced] } ON COLUMNS, NON EMPTY { ([Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Customers].[Customer Territory Code].[Customer Territory Code].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Customers].[Customer Number].[Customer Number].ALLMEMBERS * [Product Code Category].[Product Primary Category].[Product Primary Category].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Salesmen].[Salesman Number].&amp;[518], [Salesmen].[Salesman Number].&amp;[515], [Salesmen].[Salesman Number].&amp;[550] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalYear, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS] } ) ON COLUMNS FROM [Sales_2008]))) WHERE ( [Product Codes].[Product Primary Category].CurrentMember, IIF( STRTOSET(@TimeFiscalYear, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalYear, CONSTRAINED), [Time].[Fiscal Year].currentmember ), [Salesmen].[Salesman Number].CurrentMember ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <QueryParameters>
           <QueryParameter Name="TimeFiscalYear">
             <Value>=Parameters!TimeFiscalYear.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Salesmen</DimensionName><HierarchyName>Salesman Name</HierarchyName><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><LevelName>Salesman Name</LevelName><UniqueName>[Salesmen].[Salesman Name].[Salesman Name]</UniqueName></ID><ItemCaption>Salesman Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Customers</DimensionName><HierarchyName>Customer Territory Code</HierarchyName><HierarchyUniqueName>[Customers].[Customer Territory Code]</HierarchyUniqueName><LevelName>Customer Territory Code</LevelName><UniqueName>[Customers].[Customer Territory Code].[Customer Territory Code]</UniqueName></ID><ItemCaption>Customer Territory Code</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Customers</DimensionName><HierarchyName>Customer Name</HierarchyName><HierarchyUniqueName>[Customers].[Customer Name]</HierarchyUniqueName><LevelName>Customer Name</LevelName><UniqueName>[Customers].[Customer Name].[Customer Name]</UniqueName></ID><ItemCaption>Customer Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Product Code Category</DimensionName><HierarchyName>Product Primary Category</HierarchyName><HierarchyUniqueName>[Product Code Category].[Product Primary Category]</HierarchyUniqueName><LevelName>Product Primary Category</LevelName><UniqueName>[Product Code Category].[Product Primary Category].[Product Primary Category]</UniqueName></ID><ItemCaption>Product Primary Category</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Sell - Bookings</MeasureName><UniqueName>[Measures].[Sell - Bookings]</UniqueName></ID><ItemCaption>Sell - Bookings</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Sell  - Invoiced</MeasureName><UniqueName>[Measures].[Sell  - Invoiced]</UniqueName></ID><ItemCaption>Sell  - Invoiced</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Cost - Invoiced</MeasureName><UniqueName>[Measures].[Cost - Invoiced]</UniqueName></ID><ItemCaption>Cost - Invoiced</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Sales Profit Margin</MeasureName><UniqueName>[Measures].[Sales Profit Margin]</UniqueName></ID><ItemCaption>Sales Profit Margin</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><AutoExecute>false</AutoExecute><From>Sales_2008</From><Filter><FilterItems><FilterItem><HierarchyUniqueName>[Product Codes].[Product Primary Category]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[VAD]</MemberUniqueName></Member></Members></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Time].[Fiscal Year]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Time].[Fiscal Year].&amp;[2011-10-01T00:00:00]</MemberUniqueName></Member></Members><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Customers].[Customer Territory Code]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Customers].[Customer Territory Code].&amp;[CS]</MemberUniqueName></Member><Member><MemberUniqueName>[Customers].[Customer Territory Code].&amp;[CQ]</MemberUniqueName></Member><Member><MemberUniqueName>[Customers].[Customer Territory Code].&amp;[TS]</MemberUniqueName></Member><Member><MemberUniqueName>[Customers].[Customer Territory Code].&amp;[TQ]</MemberUniqueName></Member><Member><MemberUniqueName>[Customers].[Customer Territory Code].&amp;[WS]</MemberUniqueName></Member><Member><MemberUniqueName>[Customers].[Customer Territory Code].&amp;[WQ]</MemberUniqueName></Member></Members></Condition></FilterItem></FilterItems></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[Sell  - Invoiced], [Measures].[Sell - Bookings], [Measures].[Sales Profit Margin], [Measures].[Cost - Invoiced] } ON COLUMNS, NON EMPTY { ([Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Customers].[Customer Territory Code].[Customer Territory Code].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Product Code Category].[Product Primary Category].[Product Primary Category].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Customers].[Customer Territory Code].&amp;[CS], [Customers].[Customer Territory Code].&amp;[CQ], [Customers].[Customer Territory Code].&amp;[TS], [Customers].[Customer Territory Code].&amp;[TQ], [Customers].[Customer Territory Code].&amp;[WS], [Customers].[Customer Territory Code].&amp;[WQ] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalYear, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[VAD] } ) ON COLUMNS FROM [Sales_2008]))) WHERE ( [Product Codes].[Product Primary Category].CurrentMember, IIF( STRTOSET(@TimeFiscalYear, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalYear, CONSTRAINED), [Time].[Fiscal Year].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions><ParameterDefinition><Name>TimeFiscalYear</Name><DefaultValues><DefaultValue>[Time].[Fiscal Year].&amp;[2011-10-01T00:00:00]</DefaultValue></DefaultValues><Caption>Fiscal Year</Caption><HierarchyUniqueName>[Time].[Fiscal Year]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[VAD] } ) ON COLUMNS FROM [Sales_2008])</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition></ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
+        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Salesmen</DimensionName><HierarchyName>Salesman Name</HierarchyName><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><LevelName>Salesman Name</LevelName><UniqueName>[Salesmen].[Salesman Name].[Salesman Name]</UniqueName></ID><ItemCaption>Salesman Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Customers</DimensionName><HierarchyName>Customer Territory Code</HierarchyName><HierarchyUniqueName>[Customers].[Customer Territory Code]</HierarchyUniqueName><LevelName>Customer Territory Code</LevelName><UniqueName>[Customers].[Customer Territory Code].[Customer Territory Code]</UniqueName></ID><ItemCaption>Customer Territory Code</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Customers</DimensionName><HierarchyName>Customer Name</HierarchyName><HierarchyUniqueName>[Customers].[Customer Name]</HierarchyUniqueName><LevelName>Customer Name</LevelName><UniqueName>[Customers].[Customer Name].[Customer Name]</UniqueName></ID><ItemCaption>Customer Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Customers</DimensionName><HierarchyName>Customer Number</HierarchyName><HierarchyUniqueName>[Customers].[Customer Number]</HierarchyUniqueName><LevelName>Customer Number</LevelName><UniqueName>[Customers].[Customer Number].[Customer Number]</UniqueName></ID><ItemCaption>Customer Number</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Product Code Category</DimensionName><HierarchyName>Product Primary Category</HierarchyName><HierarchyUniqueName>[Product Code Category].[Product Primary Category]</HierarchyUniqueName><LevelName>Product Primary Category</LevelName><UniqueName>[Product Code Category].[Product Primary Category].[Product Primary Category]</UniqueName></ID><ItemCaption>Product Primary Category</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Sell - Bookings</MeasureName><UniqueName>[Measures].[Sell - Bookings]</UniqueName></ID><ItemCaption>Sell - Bookings</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Sell  - Invoiced</MeasureName><UniqueName>[Measures].[Sell  - Invoiced]</UniqueName></ID><ItemCaption>Sell  - Invoiced</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Cost - Invoiced</MeasureName><UniqueName>[Measures].[Cost - Invoiced]</UniqueName></ID><ItemCaption>Cost - Invoiced</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Sales Profit Margin</MeasureName><UniqueName>[Measures].[Sales Profit Margin]</UniqueName></ID><ItemCaption>Sales Profit Margin</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><AutoExecute>false</AutoExecute><From>Sales_2008</From><Filter><FilterItems><FilterItem><HierarchyUniqueName>[Product Codes].[Product Primary Category]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[VAD]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS]</MemberUniqueName></Member></Members></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Time].[Fiscal Year]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Time].[Fiscal Year].&amp;[2012-10-01T00:00:00]</MemberUniqueName></Member></Members><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Salesmen].[Salesman Number]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Salesmen].[Salesman Number].&amp;[518]</MemberUniqueName></Member><Member><MemberUniqueName>[Salesmen].[Salesman Number].&amp;[515]</MemberUniqueName></Member><Member><MemberUniqueName>[Salesmen].[Salesman Number].&amp;[550]</MemberUniqueName></Member></Members></Condition></FilterItem></FilterItems></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[Sell  - Invoiced], [Measures].[Sell - Bookings], [Measures].[Sales Profit Margin], [Measures].[Cost - Invoiced] } ON COLUMNS, NON EMPTY { ([Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Customers].[Customer Territory Code].[Customer Territory Code].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Customers].[Customer Number].[Customer Number].ALLMEMBERS * [Product Code Category].[Product Primary Category].[Product Primary Category].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Salesmen].[Salesman Number].&amp;[518], [Salesmen].[Salesman Number].&amp;[515], [Salesmen].[Salesman Number].&amp;[550] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalYear, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS] } ) ON COLUMNS FROM [Sales_2008]))) WHERE ( [Product Codes].[Product Primary Category].CurrentMember, IIF( STRTOSET(@TimeFiscalYear, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalYear, CONSTRAINED), [Time].[Fiscal Year].currentmember ), [Salesmen].[Salesman Number].CurrentMember ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions><ParameterDefinition><Name>TimeFiscalYear</Name><DefaultValues><DefaultValue>[Time].[Fiscal Year].&amp;[2012-10-01T00:00:00]</DefaultValue></DefaultValues><Caption>Fiscal Year</Caption><HierarchyUniqueName>[Time].[Fiscal Year]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS] } ) ON COLUMNS FROM [Sales_2008])</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition></ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
         <rd:SuppressAutoUpdate>true</rd:SuppressAutoUpdate>
       </Query>
     </DataSet>
@@ -174,6 +178,52 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
         <rd:Hidden>true</rd:Hidden>
       </Query>
     </DataSet>
+    <DataSet Name="DataSet1">
+      <Fields>
+        <Field Name="Salesman_Name">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Salesmen].[Salesman Name].[Salesman Name]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Customer_Territory_Code">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Customers].[Customer Territory Code].[Customer Territory Code]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Customer_Name">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Customers].[Customer Name].[Customer Name]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Customer_Number">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Customers].[Customer Number].[Customer Number]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Product_Primary_Category">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Product Codes].[Product Primary Category].[Product Primary Category]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sell___Bookings">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Sell - Bookings]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Sell____Invoiced">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Sell  - Invoiced]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Cost___Invoiced">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Cost - Invoiced]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Sales_Profit_Margin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Sales Profit Margin]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText> SELECT NON EMPTY { [Measures].[Sell  - Invoiced], [Measures].[Sell - Bookings], [Measures].[Sales Profit Margin], [Measures].[Cost - Invoiced] } ON COLUMNS, NON EMPTY { ([Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Customers].[Customer Territory Code].[Customer Territory Code].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Customers].[Customer Number].[Customer Number].ALLMEMBERS * [Product Codes].[Product Primary Category].[Product Primary Category].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Customers].[Enterprise Number].&amp;[1.] } ) ON COLUMNS FROM ( SELECT ( { [Customers].[Customer Territory Code].&amp;[SA] } ) ON COLUMNS FROM ( SELECT ( { [Time].[Fiscal Year].&amp;[2011-10-01T00:00:00] } ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)] } ) ON COLUMNS FROM [Sales_2008])))) WHERE ( [Time].[Fiscal Year].&amp;[2011-10-01T00:00:00], [Customers].[Enterprise Number].&amp;[1.] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Salesmen</DimensionName><HierarchyName>Salesman Name</HierarchyName><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><LevelName>Salesman Name</LevelName><UniqueName>[Salesmen].[Salesman Name].[Salesman Name]</UniqueName></ID><ItemCaption>Salesman Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Customers</DimensionName><HierarchyName>Customer Territory Code</HierarchyName><HierarchyUniqueName>[Customers].[Customer Territory Code]</HierarchyUniqueName><LevelName>Customer Territory Code</LevelName><UniqueName>[Customers].[Customer Territory Code].[Customer Territory Code]</UniqueName></ID><ItemCaption>Customer Territory Code</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Customers</DimensionName><HierarchyName>Customer Name</HierarchyName><HierarchyUniqueName>[Customers].[Customer Name]</HierarchyUniqueName><LevelName>Customer Name</LevelName><UniqueName>[Customers].[Customer Name].[Customer Name]</UniqueName></ID><ItemCaption>Customer Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Customers</DimensionName><HierarchyName>Customer Number</HierarchyName><HierarchyUniqueName>[Customers].[Customer Number]</HierarchyUniqueName><LevelName>Customer Number</LevelName><UniqueName>[Customers].[Customer Number].[Customer Number]</UniqueName></ID><ItemCaption>Customer Number</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Product Codes</DimensionName><HierarchyName>Product Primary Category</HierarchyName><HierarchyUniqueName>[Product Codes].[Product Primary Category]</HierarchyUniqueName><LevelName>Product Primary Category</LevelName><UniqueName>[Product Codes].[Product Primary Category].[Product Primary Category]</UniqueName></ID><ItemCaption>Product Primary Category</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Sell - Bookings</MeasureName><UniqueName>[Measures].[Sell - Bookings]</UniqueName></ID><ItemCaption>Sell - Bookings</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Sell  - Invoiced</MeasureName><UniqueName>[Measures].[Sell  - Invoiced]</UniqueName></ID><ItemCaption>Sell  - Invoiced</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Cost - Invoiced</MeasureName><UniqueName>[Measures].[Cost - Invoiced]</UniqueName></ID><ItemCaption>Cost - Invoiced</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Sales Profit Margin</MeasureName><UniqueName>[Measures].[Sales Profit Margin]</UniqueName></ID><ItemCaption>Sales Profit Margin</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><From>Sales_2008</From><Filter><FilterItems><FilterItem><HierarchyUniqueName>[Product Codes].[Product Primary Category]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[VAD]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)]</MemberUniqueName></Member></Members></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Time].[Fiscal Year]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Time].[Fiscal Year].&amp;[2011-10-01T00:00:00]</MemberUniqueName></Member></Members></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Customers].[Customer Territory Code]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Customers].[Customer Territory Code].&amp;[SA]</MemberUniqueName></Member></Members></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Customers].[Enterprise Number]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Customers].[Enterprise Number].&amp;[1.]</MemberUniqueName></Member></Members></Condition></FilterItem></FilterItems></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[Sell  - Invoiced], [Measures].[Sell - Bookings], [Measures].[Sales Profit Margin], [Measures].[Cost - Invoiced] } ON COLUMNS, NON EMPTY { ([Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Customers].[Customer Territory Code].[Customer Territory Code].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Customers].[Customer Number].[Customer Number].ALLMEMBERS * [Product Codes].[Product Primary Category].[Product Primary Category].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Customers].[Enterprise Number].&amp;[1.] } ) ON COLUMNS FROM ( SELECT ( { [Customers].[Customer Territory Code].&amp;[SA] } ) ON COLUMNS FROM ( SELECT ( { [Time].[Fiscal Year].&amp;[2011-10-01T00:00:00] } ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)] } ) ON COLUMNS FROM [Sales_2008])))) WHERE ( [Time].[Fiscal Year].&amp;[2011-10-01T00:00:00], [Customers].[Enterprise Number].&amp;[1.] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions /></Query></QueryDefinition></rd:DesignerState>
+        <rd:SuppressAutoUpdate>true</rd:SuppressAutoUpdate>
+      </Query>
+    </DataSet>
     <DataSet Name="TimeFiscalYear">
       <Fields>
         <Field Name="ParameterValue">
@@ -191,51 +241,21 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
       </Fields>
       <Query>
         <DataSourceName>AnalysisDB</DataSourceName>
-        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[VAD] } ) ON COLUMNS FROM [Sales_2008])</CommandText>
-        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[VAD] } ) ON COLUMNS FROM [Sales_2008])</Statement></Query></QueryDefinition></rd:DesignerState>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS] } ) ON COLUMNS FROM [Sales_2008])</CommandText>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS] } ) ON COLUMNS FROM [Sales_2008])</Statement></Query></QueryDefinition></rd:DesignerState>
         <rd:AutoGenerated>true</rd:AutoGenerated>
         <rd:Hidden>true</rd:Hidden>
       </Query>
     </DataSet>
-    <DataSet Name="DataSet1">
-      <Fields>
-        <Field Name="Salesman_Name">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Salesmen].[Salesman Name].[Salesman Name]" /&gt;</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Customer_Territory_Code">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Customers].[Customer Territory Code].[Customer Territory Code]" /&gt;</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Customer_Name">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Customers].[Customer Name].[Customer Name]" /&gt;</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Product_Primary_Category">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Product Codes].[Product Primary Category].[Product Primary Category]" /&gt;</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Sell___Bookings">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Sell - Bookings]" /&gt;</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>AnalysisDB</DataSourceName>
-        <CommandText> SELECT NON EMPTY { [Measures].[Sell - Bookings] } ON COLUMNS, NON EMPTY { ([Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Customers].[Customer Territory Code].[Customer Territory Code].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Product Codes].[Product Primary Category].[Product Primary Category].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Customers].[Enterprise Number].&amp;[1.] } ) ON COLUMNS FROM ( SELECT ( { [Customers].[Customer Territory Code].&amp;[SA] } ) ON COLUMNS FROM ( SELECT ( { [Time].[Fiscal Year].&amp;[2011-10-01T00:00:00] } ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS] } ) ON COLUMNS FROM [Sales_2008])))) WHERE ( [Time].[Fiscal Year].&amp;[2011-10-01T00:00:00], [Customers].[Enterprise Number].&amp;[1.] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
-        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Salesmen</DimensionName><HierarchyName>Salesman Name</HierarchyName><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><LevelName>Salesman Name</LevelName><UniqueName>[Salesmen].[Salesman Name].[Salesman Name]</UniqueName></ID><ItemCaption>Salesman Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Customers</DimensionName><HierarchyName>Customer Territory Code</HierarchyName><HierarchyUniqueName>[Customers].[Customer Territory Code]</HierarchyUniqueName><LevelName>Customer Territory Code</LevelName><UniqueName>[Customers].[Customer Territory Code].[Customer Territory Code]</UniqueName></ID><ItemCaption>Customer Territory Code</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Customers</DimensionName><HierarchyName>Customer Name</HierarchyName><HierarchyUniqueName>[Customers].[Customer Name]</HierarchyUniqueName><LevelName>Customer Name</LevelName><UniqueName>[Customers].[Customer Name].[Customer Name]</UniqueName></ID><ItemCaption>Customer Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Product Codes</DimensionName><HierarchyName>Product Primary Category</HierarchyName><HierarchyUniqueName>[Product Codes].[Product Primary Category]</HierarchyUniqueName><LevelName>Product Primary Category</LevelName><UniqueName>[Product Codes].[Product Primary Category].[Product Primary Category]</UniqueName></ID><ItemCaption>Product Primary Category</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Sell - Bookings</MeasureName><UniqueName>[Measures].[Sell - Bookings]</UniqueName></ID><ItemCaption>Sell - Bookings</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><From>Sales_2008</From><Filter><FilterItems><FilterItem><HierarchyUniqueName>[Product Codes].[Product Primary Category]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[VAD]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS]</MemberUniqueName></Member></Members></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Time].[Fiscal Year]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Time].[Fiscal Year].&amp;[2011-10-01T00:00:00]</MemberUniqueName></Member></Members></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Customers].[Customer Territory Code]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Customers].[Customer Territory Code].&amp;[SA]</MemberUniqueName></Member></Members></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Customers].[Enterprise Number]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Customers].[Enterprise Number].&amp;[1.]</MemberUniqueName></Member></Members></Condition></FilterItem></FilterItems></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[Sell - Bookings] } ON COLUMNS, NON EMPTY { ([Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Customers].[Customer Territory Code].[Customer Territory Code].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Product Codes].[Product Primary Category].[Product Primary Category].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Customers].[Enterprise Number].&amp;[1.] } ) ON COLUMNS FROM ( SELECT ( { [Customers].[Customer Territory Code].&amp;[SA] } ) ON COLUMNS FROM ( SELECT ( { [Time].[Fiscal Year].&amp;[2011-10-01T00:00:00] } ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS] } ) ON COLUMNS FROM [Sales_2008])))) WHERE ( [Time].[Fiscal Year].&amp;[2011-10-01T00:00:00], [Customers].[Enterprise Number].&amp;[1.] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions /></Query></QueryDefinition></rd:DesignerState>
-        <rd:SuppressAutoUpdate>true</rd:SuppressAutoUpdate>
-      </Query>
-    </DataSet>
   </DataSets>
-  <Width>13.50417in</Width>
+  <Width>7.88959in</Width>
   <Body>
     <ReportItems>
       <Table Name="table2">
         <ZIndex>1</ZIndex>
         <DataSetName>DataSet1</DataSetName>
         <Top>1.13542in</Top>
-        <Width>5.90416in</Width>
+        <Width>7.85416in</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -258,7 +278,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>6</ZIndex>
+                      <ZIndex>9</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Salesman_Name.Value</Value>
                     </Textbox>
@@ -282,7 +302,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>5</ZIndex>
+                      <ZIndex>8</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Customer_Territory_Code.Value</Value>
                     </Textbox>
@@ -305,9 +325,35 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>4</ZIndex>
+                      <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Customer_Name.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox59">
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>#,###,.</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Customer_Number.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -331,10 +377,36 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>3</ZIndex>
+                      <ZIndex>5</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER REGULATORS",
     cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox34">
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>#,###,.</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER VALVES &amp; IVS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -358,7 +430,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>2</ZIndex>
+                      <ZIndex>3</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "SAFETY REL VALVE &amp; REPAIR",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -366,7 +438,34 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox16">
+                    <Textbox Name="textbox43">
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>#,###,.</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "SIE (NON-SAFETY RELIEF)",
+    cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox49">
                       <Style>
                         <BackgroundColor>White</BackgroundColor>
                         <BorderColor>
@@ -386,7 +485,8 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                       </Style>
                       <ZIndex>1</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "VAD",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "VAD" or fields!Product_Primary_Category.Value = "VAD (IVRQ)",
+cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -462,7 +562,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>18</ZIndex>
+                      <ZIndex>26</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Salesman</Value>
                     </Textbox>
@@ -493,7 +593,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>17</ZIndex>
+                      <ZIndex>25</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>TC</Value>
                     </Textbox>
@@ -524,9 +624,37 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>16</ZIndex>
+                      <ZIndex>24</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Customer Name</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox58">
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Arial Narrow</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>23</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Cust #</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -552,7 +680,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>15</ZIndex>
+                      <ZIndex>22</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Fisher Regs</Value>
                     </Textbox>
@@ -560,7 +688,8 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox23">
+                    <Textbox Name="textbox36">
+                      <rd:DefaultName>textbox36</rd:DefaultName>
                       <Style>
                         <Color>White</Color>
                         <BackgroundColor>#1c3a70</BackgroundColor>
@@ -580,7 +709,35 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>14</ZIndex>
+                      <ZIndex>21</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Fisher Valves</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox24">
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Arial Narrow</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>20</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Safety rel valve &amp; repair</Value>
                     </Textbox>
@@ -588,7 +745,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox25">
+                    <Textbox Name="textbox53">
                       <Style>
                         <Color>White</Color>
                         <BackgroundColor>#1c3a70</BackgroundColor>
@@ -608,9 +765,37 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>13</ZIndex>
+                      <ZIndex>19</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>VAD</Value>
+                      <Value>SIE</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox54">
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Arial Narrow</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>18</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>VAD &amp; IVRQ</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -635,7 +820,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>12</ZIndex>
+                      <ZIndex>17</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Total</Value>
                     </Textbox>
@@ -669,13 +854,22 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
           <TableColumn>
             <Width>0.65in</Width>
           </TableColumn>
+          <TableColumn>
+            <Width>0.65in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.65in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.65in</Width>
+          </TableColumn>
         </TableColumns>
         <Footer>
           <TableRows>
             <TableRow>
               <TableCells>
                 <TableCell>
-                  <ColSpan>3</ColSpan>
+                  <ColSpan>4</ColSpan>
                   <ReportItems>
                     <Textbox Name="textbox27">
                       <Style>
@@ -689,7 +883,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>11</ZIndex>
+                      <ZIndex>16</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Total:</Value>
                     </Textbox>
@@ -715,10 +909,36 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>10</ZIndex>
+                      <ZIndex>15</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER REGULATORS",
     cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox35">
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>#,###,.</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>14</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER VALVES &amp; IVS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -742,7 +962,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>9</ZIndex>
+                      <ZIndex>13</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "SAFETY REL VALVE &amp; REPAIR",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -750,7 +970,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox32">
+                    <Textbox Name="textbox48">
                       <Style>
                         <BackgroundColor>White</BackgroundColor>
                         <BorderColor>
@@ -768,9 +988,37 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>8</ZIndex>
+                      <ZIndex>12</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "VAD",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "SIE (NON-SAFETY RELIEF)",
+    cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox50">
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>#,###,.</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>11</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "VAD" or fields!Product_Primary_Category.Value = "VAD (IVRQ)",
+cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -794,7 +1042,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>7</ZIndex>
+                      <ZIndex>10</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(Fields!Sell___Bookings.Value)</Value>
                     </Textbox>
@@ -888,7 +1136,8 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox99">
+                    <Textbox Name="textbox38">
+                      <rd:DefaultName>textbox38</rd:DefaultName>
                       <Style>
                         <BackgroundColor>White</BackgroundColor>
                         <BorderColor>
@@ -908,14 +1157,13 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                       </Style>
                       <ZIndex>6</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER REGULATORS",
-    cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                      <Value>=Fields!Customer_Number.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox71">
+                    <Textbox Name="textbox39">
                       <Style>
                         <BackgroundColor>White</BackgroundColor>
                         <BorderColor>
@@ -935,13 +1183,14 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                       </Style>
                       <ZIndex>5</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "SAFETY REL VALVE &amp; REPAIR",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER REGULATORS",
+    cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox78">
+                    <Textbox Name="textbox41">
                       <Style>
                         <BackgroundColor>White</BackgroundColor>
                         <BorderColor>
@@ -961,7 +1210,60 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                       </Style>
                       <ZIndex>4</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "VAD",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER VALVES &amp; IVS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox42">
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>#,###,.</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "SAFETY REL VALVE &amp; REPAIR",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox44">
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>#,###,.</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "SIE (NON-SAFETY RELIEF)",
+    cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -978,60 +1280,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         </BorderStyle>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <Format>c0</Format>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>3</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER REGULATORS",
-    cdbl(fields!Sell____Invoiced.Value),0.0))</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox47">
-                      <Style>
-                        <BackgroundColor>White</BackgroundColor>
-                        <BorderColor>
-                          <Default>DimGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <Format>c0</Format>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>2</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "SAFETY REL VALVE &amp; REPAIR",cdbl(fields!Cost___Invoiced.Value),0.0))</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox48">
-                      <Style>
-                        <BackgroundColor>White</BackgroundColor>
-                        <BorderColor>
-                          <Default>DimGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <Format>p0</Format>
+                        <Format>#,###,.</Format>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1040,7 +1289,8 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                       </Style>
                       <ZIndex>1</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "VAD",cdbl(fields!Sales_Profit_Margin.Value),0.0))</Value>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "VAD" or fields!Product_Primary_Category.Value = "VAD (IVRQ)",
+cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1116,7 +1366,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>27</ZIndex>
+                      <ZIndex>26</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Salesman</Value>
                     </Textbox>
@@ -1148,7 +1398,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>26</ZIndex>
+                      <ZIndex>25</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>TC</Value>
                     </Textbox>
@@ -1180,9 +1430,38 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>25</ZIndex>
+                      <ZIndex>24</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Customer Name</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox37">
+                      <rd:DefaultName>textbox37</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Arial Narrow</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>23</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Cust #</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1208,7 +1487,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>24</ZIndex>
+                      <ZIndex>22</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Fisher Regs</Value>
                     </Textbox>
@@ -1216,7 +1495,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox24">
+                    <Textbox Name="textbox23">
                       <Style>
                         <Color>White</Color>
                         <BackgroundColor>#1c3a70</BackgroundColor>
@@ -1236,9 +1515,66 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>23</ZIndex>
+                      <ZIndex>21</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Fisher Valves</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox25">
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Arial Narrow</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>20</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Safety rel valve &amp; repair</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox40">
+                      <rd:DefaultName>textbox40</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Arial Narrow</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>19</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>SIE</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1264,93 +1600,9 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>22</ZIndex>
+                      <ZIndex>18</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>VAD</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox35">
-                      <rd:DefaultName>textbox35</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#1c3a70</BackgroundColor>
-                        <BorderColor>
-                          <Default>White</Default>
-                          <Bottom>DimGray</Bottom>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>21</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>Sales Invoiced</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox42">
-                      <rd:DefaultName>textbox42</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#1c3a70</BackgroundColor>
-                        <BorderColor>
-                          <Default>White</Default>
-                          <Bottom>DimGray</Bottom>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>20</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>Cost Invoiced</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox38">
-                      <rd:DefaultName>textbox38</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#1c3a70</BackgroundColor>
-                        <BorderColor>
-                          <Default>White</Default>
-                          <Bottom>DimGray</Bottom>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>19</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>Margin</Value>
+                      <Value>VAD &amp; IVRQ</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1375,7 +1627,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>18</ZIndex>
+                      <ZIndex>17</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>BookingsTotal</Value>
                     </Textbox>
@@ -1425,7 +1677,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
             <TableRow>
               <TableCells>
                 <TableCell>
-                  <ColSpan>3</ColSpan>
+                  <ColSpan>4</ColSpan>
                   <ReportItems>
                     <Textbox Name="textbox13">
                       <rd:DefaultName>textbox13</rd:DefaultName>
@@ -1440,9 +1692,36 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>17</ZIndex>
+                      <ZIndex>16</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Total:</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox47">
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>#,###,.</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>15</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER REGULATORS",
+    cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1466,68 +1745,15 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>16</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER REGULATORS",
-    cdbl(fields!Sell___Bookings.Value),0.0))</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox34">
-                      <Style>
-                        <BackgroundColor>White</BackgroundColor>
-                        <BorderColor>
-                          <Default>DimGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <Format>#,###,.</Format>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>15</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "SAFETY REL VALVE &amp; REPAIR",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox39">
-                      <Style>
-                        <BackgroundColor>White</BackgroundColor>
-                        <BorderColor>
-                          <Default>DimGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <Format>#,###,.</Format>
-                        <TextAlign>Right</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
                       <ZIndex>14</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "VAD",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER VALVES &amp; IVS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox37">
+                    <Textbox Name="textbox16">
                       <Style>
                         <BackgroundColor>White</BackgroundColor>
                         <BorderColor>
@@ -1538,7 +1764,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         </BorderStyle>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <Format>c0</Format>
+                        <Format>#,###,.</Format>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1547,14 +1773,13 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                       </Style>
                       <ZIndex>13</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER REGULATORS",
-    cdbl(fields!Sell____Invoiced.Value),0.0))</Value>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "SAFETY REL VALVE &amp; REPAIR",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox41">
+                    <Textbox Name="textbox32">
                       <Style>
                         <BackgroundColor>White</BackgroundColor>
                         <BorderColor>
@@ -1565,7 +1790,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         </BorderStyle>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <Format>c0</Format>
+                        <Format>#,###,.</Format>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1574,13 +1799,14 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                       </Style>
                       <ZIndex>12</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "SAFETY REL VALVE &amp; REPAIR",cdbl(fields!Cost___Invoiced.Value),0.0))</Value>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "SIE (NON-SAFETY RELIEF)",
+    cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox44">
+                    <Textbox Name="textbox56">
                       <Style>
                         <BackgroundColor>White</BackgroundColor>
                         <BorderColor>
@@ -1591,7 +1817,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         </BorderStyle>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <Format>p0</Format>
+                        <Format>#,###,.</Format>
                         <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1600,7 +1826,8 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                       </Style>
                       <ZIndex>11</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "VAD",cdbl(fields!Sales_Profit_Margin.Value),0.0))</Value>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "VAD" or fields!Product_Primary_Category.Value = "VAD (IVRQ)",
+cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1654,8 +1881,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
         </Style>
         <ZIndex>2</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>12.125in</Left>
-        <Height>0.25in</Height>
+        <Left>6.51042in</Left>
         <Value>=Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
       </Textbox>
       <Textbox Name="textbox7">
@@ -1670,8 +1896,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
         </Style>
         <ZIndex>1</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>5.95833in</Left>
-        <Height>0.25in</Height>
+        <Left>2.47916in</Left>
         <Value>="Execution Time:" &amp; Globals!ExecutionTime</Value>
       </Textbox>
       <Textbox Name="textbox8">
@@ -1685,11 +1910,10 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
         <CanGrow>true</CanGrow>
-        <Height>0.25in</Height>
         <Value>=Globals!ReportName</Value>
       </Textbox>
     </ReportItems>
-    <Height>0.79365cm</Height>
+    <Height>0.63492cm</Height>
     <PrintOnLastPage>true</PrintOnLastPage>
   </PageFooter>
   <TopMargin>0.25in</TopMargin>

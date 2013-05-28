@@ -4,7 +4,7 @@
   <DataSourceID>abd9256b-2339-44cd-8e11-2caf9029499b</DataSourceID>
   <ConnectionProperties>
     <Extension>SQL</Extension>
-    <ConnectString>Data Source=lcl-faxs;Initial Catalog=NCF</ConnectString>
+    <ConnectString>Data Source=lcl-sql2k5-s;Initial Catalog=NCF</ConnectString>
     <IntegratedSecurity>true</IntegratedSecurity>
   </ConnectionProperties>
 </RptDataSource>

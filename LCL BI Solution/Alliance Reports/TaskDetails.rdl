@@ -111,7 +111,7 @@
         </Style>
         <ZIndex>2</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>16.19048cm</Left>
+        <Left>18.73016cm</Left>
         <Value>Task Details</Value>
       </Textbox>
       <Image Name="image1">
@@ -189,6 +189,10 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Alliance Task].[Task No].[Task No]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Resolution">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Fact Alliance Taskdetail].[Resolution].[Resolution]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Description_1">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Alliance Task].[Description].[Description]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -224,7 +228,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
       </Fields>
       <Query>
         <DataSourceName>AnalysisDB</DataSourceName>
-        <CommandText> SELECT NON EMPTY { [Measures].[Duration] } ON COLUMNS, NON EMPTY { ([Dim Alliance Work].[Work No].[Work No].ALLMEMBERS * [Dim Alliance Work].[Description].[Description].ALLMEMBERS * [Dim Alliance Task].[Task No].[Task No].ALLMEMBERS * [Dim Alliance Task].[Description].[Description].ALLMEMBERS * [Time].[Date].[Date].ALLMEMBERS * [Dim Alliance Resource].[Department Name].[Department Name].ALLMEMBERS * [Dim Alliance Resource].[Domain User Cd].[Domain User Cd].ALLMEMBERS * [Dim Productcodes].[Product Code].[Product Code].ALLMEMBERS * [Fact Alliance Taskdetail].[Selltime Factor].[Selltime Factor].ALLMEMBERS * [Fact Alliance Taskdetail].[Cost Time Factor].[Cost Time Factor].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Fact Alliance Taskdetail].[Row Status Cd].&amp;[A] } ) ON COLUMNS FROM ( SELECT ( STRTOMEMBER(@FromTimeDate, CONSTRAINED) : STRTOMEMBER(@ToTimeDate, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@FactAllianceTaskdetailCostTimeFactor, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance])))))) WHERE ( IIF( STRTOSET(@TimeFiscalMonth, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalMonth, CONSTRAINED), [Time].[Fiscal Month].currentmember ), [Fact Alliance Taskdetail].[Row Status Cd].&amp;[A] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <CommandText> SELECT NON EMPTY { [Measures].[Duration] } ON COLUMNS, NON EMPTY { ([Dim Alliance Work].[Work No].[Work No].ALLMEMBERS * [Dim Alliance Work].[Description].[Description].ALLMEMBERS * [Dim Alliance Task].[Task No].[Task No].ALLMEMBERS * [Fact Alliance Taskdetail].[Resolution].[Resolution].ALLMEMBERS * [Dim Alliance Task].[Description].[Description].ALLMEMBERS * [Time].[Date].[Date].ALLMEMBERS * [Dim Alliance Resource].[Department Name].[Department Name].ALLMEMBERS * [Dim Alliance Resource].[Domain User Cd].[Domain User Cd].ALLMEMBERS * [Dim Productcodes].[Product Code].[Product Code].ALLMEMBERS * [Fact Alliance Taskdetail].[Selltime Factor].[Selltime Factor].ALLMEMBERS * [Fact Alliance Taskdetail].[Cost Time Factor].[Cost Time Factor].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Fact Alliance Taskdetail].[Row Status Cd].&amp;[A] } ) ON COLUMNS FROM ( SELECT ( STRTOMEMBER(@FromTimeDate, CONSTRAINED) : STRTOMEMBER(@ToTimeDate, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@FactAllianceTaskdetailCostTimeFactor, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance])))))) WHERE ( IIF( STRTOSET(@TimeFiscalMonth, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalMonth, CONSTRAINED), [Time].[Fiscal Month].currentmember ), [Fact Alliance Taskdetail].[Row Status Cd].&amp;[A] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <QueryParameters>
           <QueryParameter Name="TimeFiscalMonth">
             <Value>=Parameters!TimeFiscalMonth.Value</Value>
@@ -245,7 +249,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
             <Value>=Parameters!ToTimeDate.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Dim Alliance Work</DimensionName><HierarchyName>Work No</HierarchyName><HierarchyUniqueName>[Dim Alliance Work].[Work No]</HierarchyUniqueName><LevelName>Work No</LevelName><UniqueName>[Dim Alliance Work].[Work No].[Work No]</UniqueName></ID><ItemCaption>Work No</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Alliance Work</DimensionName><HierarchyName>Description</HierarchyName><HierarchyUniqueName>[Dim Alliance Work].[Description]</HierarchyUniqueName><LevelName>Description</LevelName><UniqueName>[Dim Alliance Work].[Description].[Description]</UniqueName></ID><ItemCaption>Description</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Alliance Task</DimensionName><HierarchyName>Task No</HierarchyName><HierarchyUniqueName>[Dim Alliance Task].[Task No]</HierarchyUniqueName><LevelName>Task No</LevelName><UniqueName>[Dim Alliance Task].[Task No].[Task No]</UniqueName></ID><ItemCaption>Task No</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Alliance Task</DimensionName><HierarchyName>Description</HierarchyName><HierarchyUniqueName>[Dim Alliance Task].[Description]</HierarchyUniqueName><LevelName>Description</LevelName><UniqueName>[Dim Alliance Task].[Description].[Description]</UniqueName></ID><ItemCaption>Description</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Time</DimensionName><HierarchyName>Date</HierarchyName><HierarchyUniqueName>[Time].[Date]</HierarchyUniqueName><LevelName>Date</LevelName><UniqueName>[Time].[Date].[Date]</UniqueName></ID><ItemCaption>Date</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Alliance Resource</DimensionName><HierarchyName>Department Name</HierarchyName><HierarchyUniqueName>[Dim Alliance Resource].[Department Name]</HierarchyUniqueName><LevelName>Department Name</LevelName><UniqueName>[Dim Alliance Resource].[Department Name].[Department Name]</UniqueName></ID><ItemCaption>Department Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Alliance Resource</DimensionName><HierarchyName>Domain User Cd</HierarchyName><HierarchyUniqueName>[Dim Alliance Resource].[Domain User Cd]</HierarchyUniqueName><LevelName>Domain User Cd</LevelName><UniqueName>[Dim Alliance Resource].[Domain User Cd].[Domain User Cd]</UniqueName></ID><ItemCaption>Domain User Cd</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Productcodes</DimensionName><HierarchyName>Product Code</HierarchyName><HierarchyUniqueName>[Dim Productcodes].[Product Code]</HierarchyUniqueName><LevelName>Product Code</LevelName><UniqueName>[Dim Productcodes].[Product Code].[Product Code]</UniqueName></ID><ItemCaption>Product Code</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Fact Alliance Taskdetail</DimensionName><HierarchyName>Selltime Factor</HierarchyName><HierarchyUniqueName>[Fact Alliance Taskdetail].[Selltime Factor]</HierarchyUniqueName><LevelName>Selltime Factor</LevelName><UniqueName>[Fact Alliance Taskdetail].[Selltime Factor].[Selltime Factor]</UniqueName></ID><ItemCaption>Selltime Factor</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Fact Alliance Taskdetail</DimensionName><HierarchyName>Cost Time Factor</HierarchyName><HierarchyUniqueName>[Fact Alliance Taskdetail].[Cost Time Factor]</HierarchyUniqueName><LevelName>Cost Time Factor</LevelName><UniqueName>[Fact Alliance Taskdetail].[Cost Time Factor].[Cost Time Factor]</UniqueName></ID><ItemCaption>Cost Time Factor</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Duration</MeasureName><UniqueName>[Measures].[Duration]</UniqueName></ID><ItemCaption>Duration</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><AutoExecute>false</AutoExecute><From>Alliance</From><Filter><FilterItems><FilterItem><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members /><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Dim Alliance Resource].[Domain User Cd]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members /><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Dim Productcodes].[Product Code]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members /><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Fact Alliance Taskdetail].[Cost Time Factor]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members /><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Time].[Date]</HierarchyUniqueName><Condition xsi:type="Range"><Basis>Member</Basis><From>[Time].[Date].[All]</From><FromParametrized>true</FromParametrized><To>[Time].[Date].[All]</To><ToParametrized>true</ToParametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Fact Alliance Taskdetail].[Row Status Cd]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Fact Alliance Taskdetail].[Row Status Cd].&amp;[A]</MemberUniqueName></Member></Members></Condition></FilterItem></FilterItems></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[Duration] } ON COLUMNS, NON EMPTY { ([Dim Alliance Work].[Work No].[Work No].ALLMEMBERS * [Dim Alliance Work].[Description].[Description].ALLMEMBERS * [Dim Alliance Task].[Task No].[Task No].ALLMEMBERS * [Dim Alliance Task].[Description].[Description].ALLMEMBERS * [Time].[Date].[Date].ALLMEMBERS * [Dim Alliance Resource].[Department Name].[Department Name].ALLMEMBERS * [Dim Alliance Resource].[Domain User Cd].[Domain User Cd].ALLMEMBERS * [Dim Productcodes].[Product Code].[Product Code].ALLMEMBERS * [Fact Alliance Taskdetail].[Selltime Factor].[Selltime Factor].ALLMEMBERS * [Fact Alliance Taskdetail].[Cost Time Factor].[Cost Time Factor].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Fact Alliance Taskdetail].[Row Status Cd].&amp;[A] } ) ON COLUMNS FROM ( SELECT ( STRTOMEMBER(@FromTimeDate, CONSTRAINED) : STRTOMEMBER(@ToTimeDate, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@FactAllianceTaskdetailCostTimeFactor, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance])))))) WHERE ( IIF( STRTOSET(@TimeFiscalMonth, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalMonth, CONSTRAINED), [Time].[Fiscal Month].currentmember ), [Fact Alliance Taskdetail].[Row Status Cd].&amp;[A] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions><ParameterDefinition><Name>TimeFiscalMonth</Name><DefaultValues /><Caption>Fiscal Month</Caption><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Alliance]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>DimAllianceResourceDomainUserCd</Name><DefaultValues /><Caption>Domain User Cd</Caption><HierarchyUniqueName>[Dim Alliance Resource].[Domain User Cd]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Alliance Resource].[Domain User Cd].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Alliance Resource].[Domain User Cd].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Alliance Resource].[Domain User Cd].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Alliance Resource].[Domain User Cd].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance])</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Alliance Resource].[Domain User Cd].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Alliance Resource].[Domain User Cd].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Alliance Resource].[Domain User Cd].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Alliance Resource].[Domain User Cd].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance])</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>DimProductcodesProductCode</Name><DefaultValues /><Caption>Product Code</Caption><HierarchyUniqueName>[Dim Productcodes].[Product Code]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Productcodes].[Product Code].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Productcodes].[Product Code].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Productcodes].[Product Code].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Productcodes].[Product Code].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance]))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Productcodes].[Product Code].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Productcodes].[Product Code].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Productcodes].[Product Code].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Productcodes].[Product Code].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance]))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>DimAllianceResourceDomainUserCd</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>FactAllianceTaskdetailCostTimeFactor</Name><DefaultValues /><Caption>Cost Time Factor</Caption><HierarchyUniqueName>[Fact Alliance Taskdetail].[Cost Time Factor]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Fact Alliance Taskdetail].[Cost Time Factor].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Fact Alliance Taskdetail].[Cost Time Factor].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Fact Alliance Taskdetail].[Cost Time Factor].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Fact Alliance Taskdetail].[Cost Time Factor].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance])))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Fact Alliance Taskdetail].[Cost Time Factor].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Fact Alliance Taskdetail].[Cost Time Factor].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Fact Alliance Taskdetail].[Cost Time Factor].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Fact Alliance Taskdetail].[Cost Time Factor].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance])))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>DimAllianceResourceDomainUserCd</Name></ReferencedParameter><ReferencedParameter><Name>DimProductcodesProductCode</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>FromTimeDate</Name><Usage>RangeFrom</Usage><DefaultValues><DefaultValue>[Time].[Date].[All]</DefaultValue></DefaultValues><Caption>From Date</Caption><HierarchyUniqueName>[Time].[Date]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Date].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Date].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Date].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Date].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@FactAllianceTaskdetailCostTimeFactor, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance]))))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Date].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Date].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Date].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Date].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@FactAllianceTaskdetailCostTimeFactor, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance]))))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>DimAllianceResourceDomainUserCd</Name></ReferencedParameter><ReferencedParameter><Name>DimProductcodesProductCode</Name></ReferencedParameter><ReferencedParameter><Name>FactAllianceTaskdetailCostTimeFactor</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery></ParameterDefinition><ParameterDefinition><Name>ToTimeDate</Name><Usage>RangeTo</Usage><DefaultValues><DefaultValue>[Time].[Date].[All]</DefaultValue></DefaultValues><Caption>To Date</Caption><HierarchyUniqueName>[Time].[Date]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Date].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Date].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Date].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Date].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@FactAllianceTaskdetailCostTimeFactor, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance]))))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Date].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Date].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Date].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Date].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@FactAllianceTaskdetailCostTimeFactor, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance]))))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>DimAllianceResourceDomainUserCd</Name></ReferencedParameter><ReferencedParameter><Name>DimProductcodesProductCode</Name></ReferencedParameter><ReferencedParameter><Name>FactAllianceTaskdetailCostTimeFactor</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery></ParameterDefinition></ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
+        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Dim Alliance Work</DimensionName><HierarchyName>Work No</HierarchyName><HierarchyUniqueName>[Dim Alliance Work].[Work No]</HierarchyUniqueName><LevelName>Work No</LevelName><UniqueName>[Dim Alliance Work].[Work No].[Work No]</UniqueName></ID><ItemCaption>Work No</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Alliance Work</DimensionName><HierarchyName>Description</HierarchyName><HierarchyUniqueName>[Dim Alliance Work].[Description]</HierarchyUniqueName><LevelName>Description</LevelName><UniqueName>[Dim Alliance Work].[Description].[Description]</UniqueName></ID><ItemCaption>Description</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Alliance Task</DimensionName><HierarchyName>Task No</HierarchyName><HierarchyUniqueName>[Dim Alliance Task].[Task No]</HierarchyUniqueName><LevelName>Task No</LevelName><UniqueName>[Dim Alliance Task].[Task No].[Task No]</UniqueName></ID><ItemCaption>Task No</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Fact Alliance Taskdetail</DimensionName><HierarchyName>Resolution</HierarchyName><HierarchyUniqueName>[Fact Alliance Taskdetail].[Resolution]</HierarchyUniqueName><LevelName>Resolution</LevelName><UniqueName>[Fact Alliance Taskdetail].[Resolution].[Resolution]</UniqueName></ID><ItemCaption>Resolution</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Alliance Task</DimensionName><HierarchyName>Description</HierarchyName><HierarchyUniqueName>[Dim Alliance Task].[Description]</HierarchyUniqueName><LevelName>Description</LevelName><UniqueName>[Dim Alliance Task].[Description].[Description]</UniqueName></ID><ItemCaption>Description</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Time</DimensionName><HierarchyName>Date</HierarchyName><HierarchyUniqueName>[Time].[Date]</HierarchyUniqueName><LevelName>Date</LevelName><UniqueName>[Time].[Date].[Date]</UniqueName></ID><ItemCaption>Date</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Alliance Resource</DimensionName><HierarchyName>Department Name</HierarchyName><HierarchyUniqueName>[Dim Alliance Resource].[Department Name]</HierarchyUniqueName><LevelName>Department Name</LevelName><UniqueName>[Dim Alliance Resource].[Department Name].[Department Name]</UniqueName></ID><ItemCaption>Department Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Alliance Resource</DimensionName><HierarchyName>Domain User Cd</HierarchyName><HierarchyUniqueName>[Dim Alliance Resource].[Domain User Cd]</HierarchyUniqueName><LevelName>Domain User Cd</LevelName><UniqueName>[Dim Alliance Resource].[Domain User Cd].[Domain User Cd]</UniqueName></ID><ItemCaption>Domain User Cd</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Productcodes</DimensionName><HierarchyName>Product Code</HierarchyName><HierarchyUniqueName>[Dim Productcodes].[Product Code]</HierarchyUniqueName><LevelName>Product Code</LevelName><UniqueName>[Dim Productcodes].[Product Code].[Product Code]</UniqueName></ID><ItemCaption>Product Code</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Fact Alliance Taskdetail</DimensionName><HierarchyName>Selltime Factor</HierarchyName><HierarchyUniqueName>[Fact Alliance Taskdetail].[Selltime Factor]</HierarchyUniqueName><LevelName>Selltime Factor</LevelName><UniqueName>[Fact Alliance Taskdetail].[Selltime Factor].[Selltime Factor]</UniqueName></ID><ItemCaption>Selltime Factor</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Fact Alliance Taskdetail</DimensionName><HierarchyName>Cost Time Factor</HierarchyName><HierarchyUniqueName>[Fact Alliance Taskdetail].[Cost Time Factor]</HierarchyUniqueName><LevelName>Cost Time Factor</LevelName><UniqueName>[Fact Alliance Taskdetail].[Cost Time Factor].[Cost Time Factor]</UniqueName></ID><ItemCaption>Cost Time Factor</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Duration</MeasureName><UniqueName>[Measures].[Duration]</UniqueName></ID><ItemCaption>Duration</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><AutoExecute>false</AutoExecute><From>Alliance</From><Filter><FilterItems><FilterItem><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members /><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Dim Alliance Resource].[Domain User Cd]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members /><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Dim Productcodes].[Product Code]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members /><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Fact Alliance Taskdetail].[Cost Time Factor]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members /><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Time].[Date]</HierarchyUniqueName><Condition xsi:type="Range"><Basis>Member</Basis><From>[Time].[Date].[All]</From><FromParametrized>true</FromParametrized><To>[Time].[Date].[All]</To><ToParametrized>true</ToParametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Fact Alliance Taskdetail].[Row Status Cd]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Fact Alliance Taskdetail].[Row Status Cd].&amp;[A]</MemberUniqueName></Member></Members></Condition></FilterItem></FilterItems></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[Duration] } ON COLUMNS, NON EMPTY { ([Dim Alliance Work].[Work No].[Work No].ALLMEMBERS * [Dim Alliance Work].[Description].[Description].ALLMEMBERS * [Dim Alliance Task].[Task No].[Task No].ALLMEMBERS * [Fact Alliance Taskdetail].[Resolution].[Resolution].ALLMEMBERS * [Dim Alliance Task].[Description].[Description].ALLMEMBERS * [Time].[Date].[Date].ALLMEMBERS * [Dim Alliance Resource].[Department Name].[Department Name].ALLMEMBERS * [Dim Alliance Resource].[Domain User Cd].[Domain User Cd].ALLMEMBERS * [Dim Productcodes].[Product Code].[Product Code].ALLMEMBERS * [Fact Alliance Taskdetail].[Selltime Factor].[Selltime Factor].ALLMEMBERS * [Fact Alliance Taskdetail].[Cost Time Factor].[Cost Time Factor].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Fact Alliance Taskdetail].[Row Status Cd].&amp;[A] } ) ON COLUMNS FROM ( SELECT ( STRTOMEMBER(@FromTimeDate, CONSTRAINED) : STRTOMEMBER(@ToTimeDate, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@FactAllianceTaskdetailCostTimeFactor, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance])))))) WHERE ( IIF( STRTOSET(@TimeFiscalMonth, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalMonth, CONSTRAINED), [Time].[Fiscal Month].currentmember ), [Fact Alliance Taskdetail].[Row Status Cd].&amp;[A] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions><ParameterDefinition><Name>TimeFiscalMonth</Name><DefaultValues /><Caption>Fiscal Month</Caption><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Alliance]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>DimAllianceResourceDomainUserCd</Name><DefaultValues /><Caption>Domain User Cd</Caption><HierarchyUniqueName>[Dim Alliance Resource].[Domain User Cd]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Alliance Resource].[Domain User Cd].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Alliance Resource].[Domain User Cd].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Alliance Resource].[Domain User Cd].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Alliance Resource].[Domain User Cd].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance])</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Alliance Resource].[Domain User Cd].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Alliance Resource].[Domain User Cd].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Alliance Resource].[Domain User Cd].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Alliance Resource].[Domain User Cd].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance])</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>DimProductcodesProductCode</Name><DefaultValues /><Caption>Product Code</Caption><HierarchyUniqueName>[Dim Productcodes].[Product Code]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Productcodes].[Product Code].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Productcodes].[Product Code].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Productcodes].[Product Code].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Productcodes].[Product Code].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance]))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Dim Productcodes].[Product Code].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Dim Productcodes].[Product Code].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Dim Productcodes].[Product Code].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Dim Productcodes].[Product Code].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance]))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>DimAllianceResourceDomainUserCd</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>FactAllianceTaskdetailCostTimeFactor</Name><DefaultValues /><Caption>Cost Time Factor</Caption><HierarchyUniqueName>[Fact Alliance Taskdetail].[Cost Time Factor]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Fact Alliance Taskdetail].[Cost Time Factor].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Fact Alliance Taskdetail].[Cost Time Factor].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Fact Alliance Taskdetail].[Cost Time Factor].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Fact Alliance Taskdetail].[Cost Time Factor].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance])))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Fact Alliance Taskdetail].[Cost Time Factor].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Fact Alliance Taskdetail].[Cost Time Factor].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Fact Alliance Taskdetail].[Cost Time Factor].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Fact Alliance Taskdetail].[Cost Time Factor].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance])))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>DimAllianceResourceDomainUserCd</Name></ReferencedParameter><ReferencedParameter><Name>DimProductcodesProductCode</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>FromTimeDate</Name><Usage>RangeFrom</Usage><DefaultValues><DefaultValue>[Time].[Date].[All]</DefaultValue></DefaultValues><Caption>From Date</Caption><HierarchyUniqueName>[Time].[Date]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Date].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Date].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Date].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Date].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@FactAllianceTaskdetailCostTimeFactor, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance]))))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Date].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Date].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Date].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Date].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@FactAllianceTaskdetailCostTimeFactor, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance]))))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>DimAllianceResourceDomainUserCd</Name></ReferencedParameter><ReferencedParameter><Name>DimProductcodesProductCode</Name></ReferencedParameter><ReferencedParameter><Name>FactAllianceTaskdetailCostTimeFactor</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery></ParameterDefinition><ParameterDefinition><Name>ToTimeDate</Name><Usage>RangeTo</Usage><DefaultValues><DefaultValue>[Time].[Date].[All]</DefaultValue></DefaultValues><Caption>To Date</Caption><HierarchyUniqueName>[Time].[Date]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Date].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Date].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Date].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Date].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@FactAllianceTaskdetailCostTimeFactor, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance]))))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Date].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Date].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Date].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Date].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@FactAllianceTaskdetailCostTimeFactor, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimProductcodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DimAllianceResourceDomainUserCd, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Alliance]))))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>DimAllianceResourceDomainUserCd</Name></ReferencedParameter><ReferencedParameter><Name>DimProductcodesProductCode</Name></ReferencedParameter><ReferencedParameter><Name>FactAllianceTaskdetailCostTimeFactor</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery></ParameterDefinition></ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
         <rd:SuppressAutoUpdate>true</rd:SuppressAutoUpdate>
       </Query>
     </DataSet>
@@ -543,7 +547,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
       </Query>
     </DataSet>
   </DataSets>
-  <Width>11.125in</Width>
+  <Width>12.125in</Width>
   <Body>
     <ReportItems>
       <Table Name="table1">
@@ -575,7 +579,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>32</ZIndex>
+                          <ZIndex>35</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!Work_No.Value</Value>
                         </Textbox>
@@ -597,7 +601,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>31</ZIndex>
+                          <ZIndex>34</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!Description.Value</Value>
                         </Textbox>
@@ -619,7 +623,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>30</ZIndex>
+                          <ZIndex>33</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=countdistinct(Fields!Task_No.Value)</Value>
                         </Textbox>
@@ -641,7 +645,29 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>29</ZIndex>
+                          <ZIndex>32</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox51">
+                          <rd:DefaultName>textbox51</rd:DefaultName>
+                          <Style>
+                            <BackgroundColor>LightSteelBlue</BackgroundColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>31</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value />
                         </Textbox>
@@ -662,7 +688,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>28</ZIndex>
+                          <ZIndex>30</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value />
                         </Textbox>
@@ -684,7 +710,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>27</ZIndex>
+                          <ZIndex>29</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value />
                         </Textbox>
@@ -706,7 +732,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>26</ZIndex>
+                          <ZIndex>28</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value />
                         </Textbox>
@@ -728,7 +754,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>25</ZIndex>
+                          <ZIndex>27</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value />
                         </Textbox>
@@ -750,7 +776,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>24</ZIndex>
+                          <ZIndex>26</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value />
                         </Textbox>
@@ -772,7 +798,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>23</ZIndex>
+                          <ZIndex>25</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value />
                         </Textbox>
@@ -794,7 +820,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>22</ZIndex>
+                          <ZIndex>24</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!Duration.Value)</Value>
                         </Textbox>
@@ -826,7 +852,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>10</ZIndex>
+                      <ZIndex>11</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -847,7 +873,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>9</ZIndex>
+                      <ZIndex>10</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -867,7 +893,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>8</ZIndex>
+                      <ZIndex>9</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Task_No.Value</Value>
                     </Textbox>
@@ -887,9 +913,29 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>7</ZIndex>
+                      <ZIndex>8</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Description_1.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox52">
+                      <rd:DefaultName>textbox52</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Resolution.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1066,7 +1112,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>43</ZIndex>
+                      <ZIndex>47</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Work No</Value>
                     </Textbox>
@@ -1091,7 +1137,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>42</ZIndex>
+                      <ZIndex>46</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Work Description</Value>
                     </Textbox>
@@ -1116,7 +1162,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>41</ZIndex>
+                      <ZIndex>45</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Task No</Value>
                     </Textbox>
@@ -1141,9 +1187,34 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>40</ZIndex>
+                      <ZIndex>44</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Task Description</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox50">
+                      <rd:DefaultName>textbox50</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>43</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Resolution</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1165,7 +1236,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>39</ZIndex>
+                      <ZIndex>42</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Date</Value>
                     </Textbox>
@@ -1190,7 +1261,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>38</ZIndex>
+                      <ZIndex>41</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Dept</Value>
                     </Textbox>
@@ -1215,7 +1286,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>37</ZIndex>
+                      <ZIndex>40</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Resource</Value>
                     </Textbox>
@@ -1240,7 +1311,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>36</ZIndex>
+                      <ZIndex>39</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>PC</Value>
                     </Textbox>
@@ -1265,7 +1336,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>35</ZIndex>
+                      <ZIndex>38</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Cost Factor</Value>
                     </Textbox>
@@ -1290,7 +1361,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>34</ZIndex>
+                      <ZIndex>37</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Sell Factor</Value>
                     </Textbox>
@@ -1315,7 +1386,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>33</ZIndex>
+                      <ZIndex>36</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Duration</Value>
                     </Textbox>
@@ -1331,13 +1402,16 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
             <Width>0.5in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.5in</Width>
+            <Width>2in</Width>
           </TableColumn>
           <TableColumn>
             <Width>0.5in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>2.25in</Width>
+            <Width>1.75in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2in</Width>
           </TableColumn>
           <TableColumn>
             <Width>1in</Width>
@@ -1385,7 +1459,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>21</ZIndex>
+                      <ZIndex>23</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1410,7 +1484,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>20</ZIndex>
+                      <ZIndex>22</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1435,7 +1509,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>19</ZIndex>
+                      <ZIndex>21</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1460,7 +1534,32 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>18</ZIndex>
+                      <ZIndex>20</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox53">
+                      <rd:DefaultName>textbox53</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Top>Black</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                        </BorderWidth>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>19</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1484,7 +1583,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>17</ZIndex>
+                      <ZIndex>18</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1509,7 +1608,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>16</ZIndex>
+                      <ZIndex>17</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1534,7 +1633,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>15</ZIndex>
+                      <ZIndex>16</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1559,7 +1658,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>14</ZIndex>
+                      <ZIndex>15</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1587,7 +1686,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>13</ZIndex>
+                      <ZIndex>14</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1611,7 +1710,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>12</ZIndex>
+                      <ZIndex>13</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Total:</Value>
                     </Textbox>
@@ -1633,7 +1732,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>11</ZIndex>
+                      <ZIndex>12</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(Fields!Duration.Value)</Value>
                     </Textbox>
@@ -1663,7 +1762,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
         </Style>
         <ZIndex>2</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>9.75in</Left>
+        <Left>10.75in</Left>
         <Value>=Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
       </Textbox>
       <Textbox Name="textbox7">

@@ -12,7 +12,7 @@
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>1060101</Value>
+          <Value>1091001 </Value>
         </Values>
       </DefaultValue>
       <Prompt>Start Date (Nomis Format)</Prompt>
@@ -220,9 +220,22 @@ order by name</CommandText>
       </Query>
     </DataSet>
   </DataSets>
-  <Width>8.375in</Width>
+  <Width>9.125in</Width>
   <Body>
     <ReportItems>
+      <Textbox Name="textbox32">
+        <Top>0.9375in</Top>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Value>Si il y a des PO qui devraient déjà être reçus, veuillez envoyer un courriel à poreceiving@laurentide.com
+If any of these should be received please send an e-mail to poreceiving@laurentide.com</Value>
+      </Textbox>
       <Table Name="table1">
         <DataSetName>lcl_sql2k5_s</DataSetName>
         <TableGroups>
@@ -568,6 +581,7 @@ order by name</CommandText>
             </Header>
           </TableGroup>
         </TableGroups>
+        <Width>8.375in</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -1254,7 +1268,7 @@ order by name</CommandText>
         <Height>0.92in</Height>
       </Table>
     </ReportItems>
-    <Height>1.125in</Height>
+    <Height>1.4375in</Height>
   </Body>
   <Language>en-US</Language>
   <PageFooter>

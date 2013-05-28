@@ -37,6 +37,18 @@
       <FullPath>Fisher Parts Exception Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Invoice Email.rdl</Name>
+      <FullPath>Invoice Email.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Invoice Printing for Neptune.rdl</Name>
+      <FullPath>Invoice Printing for Neptune.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Invoice Printing for Orbite.rdl</Name>
+      <FullPath>Invoice Printing for Orbite.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Late Backlog.rdl</Name>
       <FullPath>Late Backlog.rdl</FullPath>
     </ProjectItem>
@@ -65,6 +77,10 @@
       <FullPath>PO Invoiced not received.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Quote Report Tool.rdl</Name>
+      <FullPath>Quote Report Tool.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>SIE Exception Report.rdl</Name>
       <FullPath>SIE Exception Report.rdl</FullPath>
     </ProjectItem>
@@ -77,8 +93,8 @@
       <FullPath>Wrong Salesman Number Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Quote Report Tool.rdl</Name>
-      <FullPath>Quote Report Tool.rdl</FullPath>
+      <Name>PO Invoiced not received with links.rdl</Name>
+      <FullPath>PO Invoiced not received with links.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

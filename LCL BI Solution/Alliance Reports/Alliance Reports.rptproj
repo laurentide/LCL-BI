@@ -11,6 +11,10 @@
       <FullPath>AnalysisDB.rds</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Foundation.rds</Name>
+      <FullPath>Foundation.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>lcl-sqla.rds</Name>
       <FullPath>lcl-sqla.rds</FullPath>
     </ProjectItem>
@@ -65,6 +69,14 @@
       <FullPath>PV Tasks.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Service Bank - Hours.rdl</Name>
+      <FullPath>Service Bank - Hours.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Service Bank - Money.rdl</Name>
+      <FullPath>Service Bank - Money.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>TaskDetails.rdl</Name>
       <FullPath>TaskDetails.rdl</FullPath>
     </ProjectItem>
@@ -91,6 +103,18 @@
     <ProjectItem>
       <Name>Time By Team.rdl</Name>
       <FullPath>Time By Team.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Weekly Billable Hours by Team.rdl</Name>
+      <FullPath>Weekly Billable Hours by Team.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TaskDetails_Weekly.rdl</Name>
+      <FullPath>TaskDetails_Weekly.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TaskDetails_Weekly_Non_Billable.rdl</Name>
+      <FullPath>TaskDetails_Weekly_Non_Billable.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

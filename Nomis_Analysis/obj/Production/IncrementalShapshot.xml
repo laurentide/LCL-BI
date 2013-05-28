@@ -306,7 +306,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>7RL3ouGD3BP7iPED4uKkWw==2/11/2013 2:45:42 PM1/17/2013 11:15:38 AMW8AE0+pEcHbXYVEi0W4hpw==1/17/2013 11:15:38 AM1/17/2013 11:15:38 AM</TimeStamp>
+        <TimeStamp>bqt54+mPkmnsYq1K2HrgZQ==4/11/2013 10:18:50 AM1/17/2013 11:15:38 AMW8AE0+pEcHbXYVEi0W4hpw==1/17/2013 11:15:38 AM1/17/2013 11:15:38 AM</TimeStamp>
         <ID>
           <String>Alliance</String>
         </ID>
@@ -372,5 +372,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2013-02-13T19:10:28Z</LastDeployed>
+  <LastDeployed>2013-04-11T14:19:52Z</LastDeployed>
 </DeploymentSnapshot>

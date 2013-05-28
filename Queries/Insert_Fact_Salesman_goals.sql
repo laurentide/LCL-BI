@@ -4,7 +4,7 @@ go
 truncate table fact_salesman_goals
 go
 --INSERT INTO fact_salesman_goals (salesman_id, pc_category_id, Date, Goal)
---select salesman_id,pc_category_id, convert(datetime,convert(char,case when MonthNumber @ 4 then fiscal_year - 1 else fiscal_year  end) + '/' + convert(char,case when MonthNumber @ 4 then MonthNumber + 9 else MonthNumber - 3 end) + '/01') as Date, Goal/12 as Goal
+--select salesman_id,pc_category_id, convert(datetime,convert(char,case when MonthNumber < 4 then fiscal_year - 1 else fiscal_year  end) + '/' + convert(char,case when MonthNumber < 4 then MonthNumber + 9 else MonthNumber - 3 end) + '/01') as Date, Goal/12 as Goal
 ----into fact_goals
 --from (Nomis.dbo.tblSalesmanGoal
 --     left join dbo.dim_product_code_category
@@ -14,7 +14,7 @@ go
 --	 cross join tblMonths
 --go
 --INSERT INTO fact_salesman_goals (salesman_id, pc_category_id, Date, Goal)
---select salesman_id,pc_category_id, convert(datetime,convert(char,case when MonthNumber @ 4 then fiscal_year - 1 else fiscal_year  end) + '/' + convert(char,case when MonthNumber @ 4 then MonthNumber + 9 else MonthNumber - 3 end) + '/01') as Date, Goal/12 as Goal
+--select salesman_id,pc_category_id, convert(datetime,convert(char,case when MonthNumber < 4 then fiscal_year - 1 else fiscal_year  end) + '/' + convert(char,case when MonthNumber < 4 then MonthNumber + 9 else MonthNumber - 3 end) + '/01') as Date, Goal/12 as Goal
 ----into fact_goals
 --from (Nomis.dbo.tblSalesmanGoal_2010
 --     left join dbo.dim_product_code_category
@@ -25,7 +25,7 @@ go
 
 go
 INSERT INTO fact_salesman_goals (salesman_id, pc_category_id, Date, Goal)
-select salesman_id,pc_category_id, convert(datetime,convert(char,case when MonthNumber @ 4 then fiscal_year - 1 else fiscal_year  end) + '/' + convert(char,case when MonthNumber @ 4 then MonthNumber + 9 else MonthNumber - 3 end) + '/01') as Date, Goal/12 as Goal
+select salesman_id,pc_category_id, convert(datetime,convert(char,case when MonthNumber < 4 then fiscal_year - 1 else fiscal_year  end) + '/' + convert(char,case when MonthNumber < 4 then MonthNumber + 9 else MonthNumber - 3 end) + '/01') as Date, Goal/12 as Goal
 --into fact_goals
 from (Nomis.dbo.tblSalesmanGoal_2012
      left join dbo.dim_product_code_category
@@ -35,7 +35,7 @@ from (Nomis.dbo.tblSalesmanGoal_2012
 	 cross join tblMonths
 go
 INSERT INTO fact_salesman_goals (salesman_id, pc_category_id, Date, Goal)
-select salesman_id,pc_category_id, convert(datetime,convert(char,case when MonthNumber @ 4 then fiscal_year - 1 else fiscal_year  end) + '/' + convert(char,case when MonthNumber @ 4 then MonthNumber + 9 else MonthNumber - 3 end) + '/01') as Date, Goal/12 as Goal
+select salesman_id,pc_category_id, convert(datetime,convert(char,case when MonthNumber < 4 then fiscal_year - 1 else fiscal_year  end) + '/' + convert(char,case when MonthNumber < 4 then MonthNumber + 9 else MonthNumber - 3 end) + '/01') as Date, Goal/12 as Goal
 --into fact_goals
 from (Nomis.dbo.tblSalesmanGoal_2012
      left join dbo.dim_product_code_category
@@ -45,12 +45,12 @@ from (Nomis.dbo.tblSalesmanGoal_2012
 	 cross join tblMonths
 go
 delete from fact_salesman_goals
-where date = convert(datetime,'2012-10-01')
+where date >= convert(datetime,'2012-10-01')
 go
 INSERT INTO fact_salesman_goals (salesman_id, pc_category_id, Date, Goal)
 select salesman_id,pc_category_id, 
-convert(datetime,convert(char,case when MonthNumber @ 4 then fiscal_year - 1 else fiscal_year  end) + '/' +
-convert(char,case when MonthNumber @ 4 then MonthNumber + 9 else MonthNumber - 3 end) + '/01') as Date, Goal/12 as Goal
+convert(datetime,convert(char,case when MonthNumber < 4 then fiscal_year - 1 else fiscal_year  end) + '/' +
+convert(char,case when MonthNumber < 4 then MonthNumber + 9 else MonthNumber - 3 end) + '/01') as Date, Goal/12 as Goal
 --into fact_goals
 from (Nomis.dbo.tblSalesmanGoal_2013
      left join dbo.dim_product_code_category

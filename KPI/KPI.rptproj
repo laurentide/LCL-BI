@@ -316,6 +316,10 @@
       <Name>YTD Project Team.rdl</Name>
       <FullPath>YTD Project Team.rdl</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>TEQ Report.rdl</Name>
+      <FullPath>TEQ Report.rdl</FullPath>
+    </ProjectItem>
   </Reports>
   <Configurations>
     <Configuration>

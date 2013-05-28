@@ -21,12 +21,16 @@
       <FullPath>ARTop50.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>ARTopOrbite.rdl</Name>
+      <FullPath>ARTopOrbite.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>CreditHold.rdl</Name>
       <FullPath>CreditHold.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>ARTopOrbite.rdl</Name>
-      <FullPath>ARTopOrbite.rdl</FullPath>
+      <Name>AR Fax.rdl</Name>
+      <FullPath>AR Fax.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
