@@ -14,6 +14,18 @@
       <Name>Nomis_Warehouse.rds</Name>
       <FullPath>Nomis_Warehouse.rds</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>PurchaseRequest.rds</Name>
+      <FullPath>PurchaseRequest.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>QuoteBuilder.rds</Name>
+      <FullPath>QuoteBuilder.rds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>RMagic.rds</Name>
+      <FullPath>RMagic.rds</FullPath>
+    </ProjectItem>
   </DataSources>
   <Reports>
     <ProjectItem>
@@ -21,16 +33,12 @@
       <FullPath>Bolt Credits.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Bookings Details.rdl</Name>
-      <FullPath>Bookings Details.rdl</FullPath>
+      <Name>Commercial Invoice Printing.rdl</Name>
+      <FullPath>Commercial Invoice Printing.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Danfoss.rdl</Name>
       <FullPath>Danfoss.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Expedite.rdl</Name>
-      <FullPath>Expedite.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Fisher Parts Exception Report.rdl</Name>
@@ -49,6 +57,14 @@
       <FullPath>Invoice Printing for Orbite.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Invoice Printing for Tax Invoices.rdl</Name>
+      <FullPath>Invoice Printing for Tax Invoices.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Invoice Printing.rdl</Name>
+      <FullPath>Invoice Printing.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Late Backlog.rdl</Name>
       <FullPath>Late Backlog.rdl</FullPath>
     </ProjectItem>
@@ -59,6 +75,10 @@
     <ProjectItem>
       <Name>Open Orders.rdl</Name>
       <FullPath>Open Orders.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Open Production Orders.rdl</Name>
+      <FullPath>Open Production Orders.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Open SO Report.rdl</Name>
@@ -73,8 +93,20 @@
       <FullPath>OTS.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Packing Slip Printing.rdl</Name>
+      <FullPath>Packing Slip Printing.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PO Invoiced not received with links.rdl</Name>
+      <FullPath>PO Invoiced not received with links.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>PO Invoiced not received.rdl</Name>
       <FullPath>PO Invoiced not received.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PR Pending Approval.rdl</Name>
+      <FullPath>PR Pending Approval.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Quote Report Tool.rdl</Name>
@@ -85,16 +117,24 @@
       <FullPath>SIE Exception Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>SIE Open Orders and Boxes.rdl</Name>
+      <FullPath>SIE Open Orders and Boxes.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>SIE Stats.rdl</Name>
       <FullPath>SIE Stats.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Ultramar.rdl</Name>
+      <FullPath>Ultramar.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Wrong Salesman Number Report.rdl</Name>
       <FullPath>Wrong Salesman Number Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>PO Invoiced not received with links.rdl</Name>
-      <FullPath>PO Invoiced not received with links.rdl</FullPath>
+      <Name>Apollo Report.rdl</Name>
+      <FullPath>Apollo Report.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

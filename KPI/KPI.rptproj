@@ -45,6 +45,14 @@
       <FullPath>Denis Pelletier.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>End Item.rdl</Name>
+      <FullPath>End Item.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Engineering Report.rdl</Name>
+      <FullPath>Engineering Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Fisher Report by Salesman.rdl</Name>
       <FullPath>Fisher Report by Salesman.rdl</FullPath>
     </ProjectItem>
@@ -71,6 +79,22 @@
     <ProjectItem>
       <Name>Margin Chart.rdl</Name>
       <FullPath>Margin Chart.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Margin Matrix AE.rdl</Name>
+      <FullPath>Margin Matrix AE.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Margin Matrix.rdl</Name>
+      <FullPath>Margin Matrix.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Margin Report.rdl</Name>
+      <FullPath>Margin Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Margins.rdl</Name>
+      <FullPath>Margins.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>MMI And Rsmt Liq Analytical.rdl</Name>
@@ -109,8 +133,24 @@
       <FullPath>Nataly Ranger T1-T2-TR-TV-TQ.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Nat-Com Margin Report.rdl</Name>
+      <FullPath>Nat-Com Margin Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Natcom Report.rdl</Name>
+      <FullPath>Natcom Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>New Customers.rdl</Name>
+      <FullPath>New Customers.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Order Type SO.rdl</Name>
       <FullPath>Order Type SO.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Order Viewer.rdl</Name>
+      <FullPath>Order Viewer.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Orders by Margin.rdl</Name>
@@ -177,6 +217,10 @@
       <FullPath>Salesmen Report - Admin.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Salesmen Report - Michel Pomerleau.rdl</Name>
+      <FullPath>Salesmen Report - Michel Pomerleau.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Salesmen Report for Steve.rdl</Name>
       <FullPath>Salesmen Report for Steve.rdl</FullPath>
     </ProjectItem>
@@ -197,12 +241,20 @@
       <FullPath>SOO Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>SST Details.rdl</Name>
+      <FullPath>SST Details.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Strategic Accounts.rdl</Name>
       <FullPath>Strategic Accounts.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>TC Report.rdl</Name>
       <FullPath>TC Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TEQ Report.rdl</Name>
+      <FullPath>TEQ Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Total Quoted by Month of Year.rdl</Name>
@@ -261,8 +313,16 @@
       <FullPath>WhiteSpace - Segmentation.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Whitespace Report - Abitibi.rdl</Name>
+      <FullPath>Whitespace Report - Abitibi.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Whitespace Report - Avg per year.rdl</Name>
       <FullPath>Whitespace Report - Avg per year.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Whitespace Report - Kruger.rdl</Name>
+      <FullPath>Whitespace Report - Kruger.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Whitespace Report - MP.rdl</Name>
@@ -285,6 +345,18 @@
       <FullPath>Whitespace Report - Rio Tinto.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Whitespace Report - ST.rdl</Name>
+      <FullPath>Whitespace Report - ST.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Whitespace Report Margins - MP.rdl</Name>
+      <FullPath>Whitespace Report Margins - MP.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Whitespace Report Margins - ST.rdl</Name>
+      <FullPath>Whitespace Report Margins - ST.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Whitespace Report Overall With Ship-Tos.rdl</Name>
       <FullPath>Whitespace Report Overall With Ship-Tos.rdl</FullPath>
     </ProjectItem>
@@ -293,8 +365,8 @@
       <FullPath>Whitespace Report Overall.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Whitespace Report.rdl</Name>
-      <FullPath>Whitespace Report.rdl</FullPath>
+      <Name>WhiteSpace Report.rdl</Name>
+      <FullPath>WhiteSpace Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>YTD All Product Codes.rdl</Name>
@@ -317,8 +389,8 @@
       <FullPath>YTD Project Team.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>TEQ Report.rdl</Name>
-      <FullPath>TEQ Report.rdl</FullPath>
+      <Name>DailyInvoicingReport.rdl</Name>
+      <FullPath>DailyInvoicingReport.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

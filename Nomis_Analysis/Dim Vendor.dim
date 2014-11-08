@@ -133,7 +133,7 @@
       <KeyColumns>
         <KeyColumn dwd:design-time-name="61312b6d-7f61-47d0-a029-baa171410e6b">
           <DataType>WChar</DataType>
-          <DataSize>10</DataSize>
+          <DataSize>6</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="2ff5b0f6-91e3-493f-af49-ea5f40c0c734">
             <TableID>dbo_dim_vendor</TableID>
             <ColumnID>vendor_number</ColumnID>

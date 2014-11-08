@@ -21,6 +21,10 @@
   </DataSources>
   <Reports>
     <ProjectItem>
+      <Name>Competitive Query.rdl</Name>
+      <FullPath>Competitive Query.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Day to Day Quote Report With Charts.rdl</Name>
       <FullPath>Day to Day Quote Report With Charts.rdl</FullPath>
     </ProjectItem>
@@ -49,8 +53,16 @@
       <FullPath>Quote Details.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Quote Followup and Hit Rate Report.rdl</Name>
+      <FullPath>Quote Followup and Hit Rate Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Quote Report OS.rdl</Name>
       <FullPath>Quote Report OS.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Quote Report Tool Old.rdl</Name>
+      <FullPath>Quote Report Tool Old.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Quote Report Tool.rdl</Name>
@@ -59,6 +71,14 @@
     <ProjectItem>
       <Name>Quote Report.rdl</Name>
       <FullPath>Quote Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Quote to followup.rdl</Name>
+      <FullPath>Quote to followup.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Quote Viewer.rdl</Name>
+      <FullPath>Quote Viewer.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Quotes By Salesmen.rdl</Name>
@@ -71,6 +91,10 @@
     <ProjectItem>
       <Name>Quotes Weekly Regs.rdl</Name>
       <FullPath>Quotes Weekly Regs.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Response Time.rdl</Name>
+      <FullPath>Response Time.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>RmagicOpenBoxes.rdl</Name>
@@ -89,8 +113,8 @@
       <FullPath>VAD Quotes By Salesmen.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Quote Followup and Hit Rate Report.rdl</Name>
-      <FullPath>Quote Followup and Hit Rate Report.rdl</FullPath>
+      <Name>RmagicSIE.rdl</Name>
+      <FullPath>RmagicSIE.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

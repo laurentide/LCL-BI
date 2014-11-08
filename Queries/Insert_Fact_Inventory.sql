@@ -39,7 +39,7 @@ and D1EQCF = a.EBEQCF
 Where d1aqnb = 1
 AND D1JZNB >= 1021001
 go
-
+select * from FACT_INVENTORY
 
 
 

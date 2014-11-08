@@ -162,9 +162,9 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
       </Fields>
       <Query>
         <DataSourceName>Nomis_Warehouse</DataSourceName>
-        <CommandText>SELECT     WorkDay - 1 AS WorkDay
-FROM         DimTime.Time
-WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 101))</CommandText>
+        <CommandText>SELECT        WorkDay - 1 AS WorkDay
+FROM            DimTime.Time
+WHERE        (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 101))</CommandText>
         <rd:SuppressAutoUpdate>true</rd:SuppressAutoUpdate>
       </Query>
     </DataSet>
@@ -914,6 +914,7 @@ WHERE (" &amp; Parameters!TimeFiscalMonth.Value &amp; ",[Dim Alliance Resource].
                         <FontSize>8pt</FontSize>
                         <Format>n0</Format>
                         <TextDecoration>Underline</TextDecoration>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1537,7 +1538,7 @@ WHERE (" &amp; Parameters!TimeFiscalMonth.Value &amp; ",[Dim Alliance Resource].
                       </Style>
                       <ZIndex>71</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>MTD SA and TS and PV</Value>
+                      <Value>MTD Sales and Admin</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1644,7 +1645,7 @@ WHERE (" &amp; Parameters!TimeFiscalMonth.Value &amp; ",[Dim Alliance Resource].
                       </Style>
                       <ZIndex>67</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>YTD SA and TS</Value>
+                      <Value>YTD Sales and Admin</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1723,7 +1724,7 @@ WHERE (" &amp; Parameters!TimeFiscalMonth.Value &amp; ",[Dim Alliance Resource].
                       </Style>
                       <ZIndex>64</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>OT1.5 Non Billable</Value>
+                      <Value>OT1.5 Sales and Admin</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1775,7 +1776,7 @@ WHERE (" &amp; Parameters!TimeFiscalMonth.Value &amp; ",[Dim Alliance Resource].
                       </Style>
                       <ZIndex>62</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>OT2.0 Non Billable</Value>
+                      <Value>OT2.0 Sales and Admin</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1807,7 +1808,7 @@ WHERE (" &amp; Parameters!TimeFiscalMonth.Value &amp; ",[Dim Alliance Resource].
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox25">
+                    <Textbox Name="textbox62">
                       <Style>
                         <Color>White</Color>
                         <BackgroundColor>#1c3a70</BackgroundColor>
@@ -1827,7 +1828,7 @@ WHERE (" &amp; Parameters!TimeFiscalMonth.Value &amp; ",[Dim Alliance Resource].
                       </Style>
                       <ZIndex>60</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>OT1.5 Non Billable</Value>
+                      <Value>OT1.5 Sales and Admin</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1859,7 +1860,7 @@ WHERE (" &amp; Parameters!TimeFiscalMonth.Value &amp; ",[Dim Alliance Resource].
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox77">
+                    <Textbox Name="textbox25">
                       <Style>
                         <Color>White</Color>
                         <BackgroundColor>#1c3a70</BackgroundColor>
@@ -1879,12 +1880,12 @@ WHERE (" &amp; Parameters!TimeFiscalMonth.Value &amp; ",[Dim Alliance Resource].
                       </Style>
                       <ZIndex>58</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>OT2.0 Non Billable</Value>
+                      <Value>OT2.0 Sales and Admin</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
               </TableCells>
-              <Height>0.375in</Height>
+              <Height>0.75in</Height>
             </TableRow>
           </TableRows>
           <RepeatOnNewPage>true</RepeatOnNewPage>
@@ -1939,7 +1940,7 @@ WHERE (" &amp; Parameters!TimeFiscalMonth.Value &amp; ",[Dim Alliance Resource].
             <Width>0.6in</Width>
           </TableColumn>
         </TableColumns>
-        <Height>1.625in</Height>
+        <Height>2in</Height>
         <Footer>
           <TableRows>
             <TableRow>

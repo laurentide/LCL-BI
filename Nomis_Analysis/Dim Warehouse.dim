@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="aa6896e5-5555-4fcf-a0c4-23c190e38d26" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="aa6896e5-5555-4fcf-a0c4-23c190e38d26" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Warehouse</ID>
   <Name>Dim Warehouse</Name>
   <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
@@ -90,7 +90,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="800f1c50-0e12-4a8e-be1d-149c182177a1">
         <DataType>WChar</DataType>
-        <DataSize>10</DataSize>
+        <DataSize>2</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="a6a6b89b-db35-4516-8f74-48655896ba3f">
           <TableID>dbo_dim_warehouse</TableID>
           <ColumnID>warehouse_code</ColumnID>

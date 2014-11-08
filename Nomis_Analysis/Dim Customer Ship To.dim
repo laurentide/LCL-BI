@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e4acf9f2-dbfa-459a-b8e2-cfbc0f8243f2" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e4acf9f2-dbfa-459a-b8e2-cfbc0f8243f2" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Customer Ship To</ID>
   <Name>Dim Customer Ship To</Name>
   <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
@@ -495,7 +495,7 @@
       <KeyColumns>
         <KeyColumn dwd:design-time-name="391bef67-7878-4641-adba-b0ad9f906e92">
           <DataType>WChar</DataType>
-          <DataSize>42</DataSize>
+          <DataSize>50</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="01e114ac-ca83-4ef8-bbe6-2158400d2a87">
             <TableID>dbo_dim_customer_ship_to</TableID>
             <ColumnID>ship_to_segment</ColumnID>

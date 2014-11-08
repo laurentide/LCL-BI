@@ -125,7 +125,7 @@
       <KeyColumns>
         <KeyColumn dwd:design-time-name="80ea2760-c255-400d-927a-ce163d2c9632">
           <DataType>WChar</DataType>
-          <DataSize>255</DataSize>
+          <DataSize>25</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="828e2ee7-2ce4-44da-ae39-91354b675890">
             <TableID>dbo_dim_salesman</TableID>
             <ColumnID>salesman_name</ColumnID>
@@ -141,7 +141,7 @@
       <KeyColumns>
         <KeyColumn dwd:design-time-name="ed239d58-a384-4146-978a-11cbff202b40">
           <DataType>WChar</DataType>
-          <DataSize>10</DataSize>
+          <DataSize>3</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="d918bafc-d4d2-4e27-ad85-4405b971605b">
             <TableID>dbo_dim_salesman</TableID>
             <ColumnID>salesman_number</ColumnID>
@@ -155,7 +155,7 @@
       <KeyColumns>
         <KeyColumn dwd:design-time-name="465e7103-efb4-48ab-a978-646c2b81cfcc">
           <DataType>WChar</DataType>
-          <DataSize>50</DataSize>
+          <DataSize>255</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="3ecff972-856f-4322-b554-0be80102355c">
             <TableID>dbo_dim_salesman</TableID>
             <ColumnID>salesman_account_name</ColumnID>

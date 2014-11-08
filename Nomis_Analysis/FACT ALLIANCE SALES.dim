@@ -1,0 +1,611 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3f5859a1-e53e-43b7-a4f5-f7c6c37e263e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>FACT ALLIANCE SALES</ID>
+  <Name>FACT ALLIANCE SALES</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="56e96765-a146-41c5-8069-cf1494367ed2">
+    <DataSourceViewID>Alliance</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="d57fb6d2-7b25-41a6-9e64-394bab820a56">
+      <ID>FACT ALLIANCE SALES</ID>
+      <Name>FACT ALLIANCE SALES</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="81cc6f16-2224-4028-88ba-230ceaffcbed">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="800693e3-2033-4b1d-9577-925975aba0cf">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>ORDER_NUMBER</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="704a2a7e-1ef1-4e42-978e-4a6f3c3e9eb5">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="59e16a0c-25e5-4267-a0b0-b4cbf4a3b90d">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>SEQUENCE_NUMBER</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="89d2b7c4-ad40-4108-b412-28f39232aa41">
+        <DataType>WChar</DataType>
+        <DataSize>10</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="fe3632e1-8937-44c8-b3b0-7649a5f4e194">
+          <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+          <ColumnID>ORDER_NUMBER</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d582995f-3985-4f09-9eda-73dcf03717b6">
+          <AttributeID>CUSTOMER ID</AttributeID>
+          <Name>CUSTOMER ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d8de8f6b-647b-47c5-9645-91944543ccb5">
+          <AttributeID>SALESMAN ID</AttributeID>
+          <Name>SALESMAN ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4977d7cb-69be-4787-9395-babe4c8ea0e1">
+          <AttributeID>VENDOR ID</AttributeID>
+          <Name>VENDOR ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="28c807cf-71ab-4501-8270-b4c38e22d0b1">
+          <AttributeID>ORIGINATOR ID</AttributeID>
+          <Name>ORIGINATOR ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bd87f538-a3d9-4ef9-89dd-fb7efa6afa60">
+          <AttributeID>DIVISION ID</AttributeID>
+          <Name>DIVISION ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3f6e586b-3d2c-41ad-8f30-3c2d221f83d0">
+          <AttributeID>INVENTORY ID</AttributeID>
+          <Name>INVENTORY ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="13788456-f763-4a1b-8f2e-2f2da57f1fe4">
+          <AttributeID>WAREHOUSE ID</AttributeID>
+          <Name>WAREHOUSE ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="befba9ec-7df3-4fab-afcd-8ba8bf6691db">
+          <AttributeID>WORK ID</AttributeID>
+          <Name>WORK ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d72e769e-2143-4d4d-b421-98ef33760de7">
+          <AttributeID>SELLING PRICE</AttributeID>
+          <Name>SELLING PRICE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9c7d5818-49e4-4c90-8ba3-8a6b089b4f97">
+          <AttributeID>COST</AttributeID>
+          <Name>COST</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1404837f-d687-4324-b88d-a49d67dbe3f5">
+          <AttributeID>QUANTITY ORDERED</AttributeID>
+          <Name>QUANTITY ORDERED</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="12649bc7-cd34-44c6-8d94-569665f17202">
+          <AttributeID>LINE NUMBER</AttributeID>
+          <Name>LINE NUMBER</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cb7fbeb1-213b-4004-85b4-95dd654e4fa2">
+          <AttributeID>INVOICE DATE</AttributeID>
+          <Name>INVOICE DATE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a9c3d36a-c0fe-401f-890c-9fc302f1f210">
+          <AttributeID>NONSTOCKITEM</AttributeID>
+          <Name>NONSTOCKITEM</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f8d45a5e-8da3-4cea-8b6a-471ee870537c">
+          <AttributeID>INVOICE NUMBER</AttributeID>
+          <Name>INVOICE NUMBER</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="34c4a31e-981a-4290-a310-f1c8fca74f91">
+          <AttributeID>Dim Productcodes</AttributeID>
+          <Name>Dim Productcodes</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+    </Attribute>
+    <Attribute dwd:design-time-name="b65b0a7a-e832-4212-8c14-41a981fbd13b">
+      <ID>CUSTOMER ID</ID>
+      <Name>CUSTOMER ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ad039a4d-8eae-4150-b483-fdf38e6f7a0a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0924f602-55b7-4f68-9240-d84bc2e6f758">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>CUSTOMER_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="70cf8985-de68-43f8-91b3-21fc3beca958">
+      <ID>SALESMAN ID</ID>
+      <Name>SALESMAN ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cc7e8926-ed46-49e4-abe9-dc4a037bbd56">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="09e2976a-d3ea-4f04-af19-68032190eca1">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>SALESMAN_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="fd94d000-51da-4385-b63a-af88021f854e">
+      <ID>VENDOR ID</ID>
+      <Name>VENDOR ID</Name>
+      <EstimatedCount>21</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5ecb7922-a29f-4e40-b988-5abdff13e30b">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ba4bab12-1b34-4b52-ac78-d104209a265c">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>VENDOR_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="e2d65027-1218-4dc0-9f94-c9aae8c90ac6">
+      <ID>ORIGINATOR ID</ID>
+      <Name>ORIGINATOR ID</Name>
+      <EstimatedCount>28</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0d9c9369-e97f-49b2-a4d7-d74636dfae80">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a08317a0-54b8-46e4-9c91-187e3641eacf">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>ORIGINATOR_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="8b835682-b7dc-4aa6-9767-dc1a15f6f5cd">
+      <ID>DIVISION ID</ID>
+      <Name>DIVISION ID</Name>
+      <EstimatedCount>4</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9342d49a-9bf5-4be1-99d2-dee85e6f4086">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="16d4fab2-8466-48d1-80a4-af8f5433df91">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>DIVISION_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="6f40f68a-7288-406a-a046-5b1158283a6d">
+      <ID>INVENTORY ID</ID>
+      <Name>INVENTORY ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7d62b774-3e87-488a-b75d-8831dd17cc89">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6a417f96-340c-4f30-8150-0dd68a2b2bbd">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>INVENTORY_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="ab7bc295-bddd-4e09-b72b-4916bb898a8a">
+      <ID>WAREHOUSE ID</ID>
+      <Name>WAREHOUSE ID</Name>
+      <EstimatedCount>4</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="659c91fa-3998-4f96-9b14-a29f425bf683">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6bf05925-84a5-47d9-a1c5-df7781f3f344">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>WAREHOUSE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="98dbbb80-feb8-448f-8e69-12d558077cde">
+      <ID>WORK ID</ID>
+      <Name>WORK ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="08e26ee3-d9af-43f4-b7ae-3e8f0be4fe77">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="53084dc0-912a-4015-94c0-f1bca7975075">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>WORK_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="ec812a6c-28a4-43bb-bf70-50b7a15c875b">
+      <ID>SELLING PRICE</ID>
+      <Name>SELLING PRICE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5787a5a2-9db2-4050-9e79-d864f58b6541">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5e6e06f6-54b9-4821-8c78-1972e0fa439e">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>SELLING_PRICE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="c7e4286d-dc3b-4318-864c-d192a784976d">
+      <ID>COST</ID>
+      <Name>COST</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="16d183a6-4d1d-4a1e-bd45-1ea906fc3421">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c74d961c-2a4f-4b36-af0f-21188bc6e706">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>COST</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="6498a7a5-b2da-46eb-bfb6-04f53956f3a9">
+      <ID>QUANTITY ORDERED</ID>
+      <Name>QUANTITY ORDERED</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bd1b5405-7bf3-4c0c-a1a0-89d1530c8f38">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cb492579-1e36-49e8-ba95-34f85cb5a82e">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>QUANTITY_ORDERED</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="1c3bdd5f-0829-4c8d-90fb-f4bdb4702e68">
+      <ID>LINE NUMBER</ID>
+      <Name>LINE NUMBER</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="da43e1bf-5ac9-4c5c-87f5-a35f7e48bb7e">
+          <DataType>WChar</DataType>
+          <DataSize>4</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="51428f15-b176-421d-a568-614c0762c00c">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>LINE_NUMBER</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="00af7fe7-11c2-4625-8365-fdaaab26e9d3">
+      <ID>INVOICE DATE</ID>
+      <Name>INVOICE DATE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bb4feb63-37b6-445d-a832-45cc65df80a4">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="67171ae1-eb38-437a-a99d-f44a4bf6e7d8">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>INVOICE_DATE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="bc708d59-29cf-4594-8cf7-0e2640c7ea93">
+      <ID>NONSTOCKITEM</ID>
+      <Name>NONSTOCKITEM</Name>
+      <EstimatedCount>3</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ddc42bb3-330e-48e5-95da-273907dffa69">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="60bc8186-72cd-4d9a-8b59-47d95be07218">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>NONSTOCKITEM</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="a63d27cb-75f6-4eb7-9323-9dc1689d91fb">
+      <ID>INVOICE NUMBER</ID>
+      <Name>INVOICE NUMBER</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="09cf3b84-2320-4e99-a3e9-4d5a476ee88f">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="aedbc3e6-dc38-4cbb-8a46-687e0a7abfb1">
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+            <ColumnID>INVOICE_NUMBER</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="741f05aa-c0ca-4888-9b14-12300e3507ed">
+      <ID>Dim Productcodes</ID>
+      <Name>Dim Productcodes</Name>
+      <EstimatedCount>344</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c60b5112-ad73-44d1-8322-8c847d412377">
+          <NullProcessing>UnknownMember</NullProcessing>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d10e9246-1472-45e2-8aa9-ceb26f1eb964">
+            <TableID>dbo_dim_productcodes</TableID>
+            <ColumnID>product_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="66284496-d86a-4dc1-9332-f369b7aa0d42">
+          <AttributeID>Product Code</AttributeID>
+          <Name>Product Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="dcb3f12a-f471-458f-b9d1-9ae016c4d2f4">
+          <AttributeID>Product Description</AttributeID>
+          <Name>Product Description</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="60279946-df89-4292-bdea-a1a7f0a18094">
+          <AttributeID>Product Company Number</AttributeID>
+          <Name>Product Company Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="60752e31-d70a-46f2-a5f9-d93f2875d581">
+          <AttributeID>Pc Servicecategory Id</AttributeID>
+          <Name>Pc Servicecategory Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="feee882c-4e06-4723-bcd6-846b5f9eafa9">
+          <AttributeID>Pc Nomis Secondary Category</AttributeID>
+          <Name>Pc Nomis Secondary Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c596b200-2730-4d4f-ac5e-189522863bbf">
+          <AttributeID>Dim Product Code Category</AttributeID>
+          <Name>Dim Product Code Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ee1ac145-3ab6-4b4f-bb60-4706b02c7683">
+          <AttributeID>Dim Product Code Subcategory</AttributeID>
+          <Name>Dim Product Code Subcategory</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="f4245502-3676-4249-863c-b3d47fb03d8c">
+      <ID>Product Code</ID>
+      <Name>Product Code</Name>
+      <EstimatedCount>344</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b44660e9-84a3-415d-a60d-b861785d9582">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b2549d9e-b7d6-4556-bc19-46840ddce384">
+            <TableID>dbo_dim_productcodes</TableID>
+            <ColumnID>product_code</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>List</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="443478bf-0de6-4c75-81fd-96de3461f0a5">
+      <ID>Product Description</ID>
+      <Name>Product Description</Name>
+      <EstimatedCount>341</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="350ec6f2-1934-4638-8fa2-c6a332c57abb">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4d77847b-3880-4b9e-8ad6-73f5175482b7">
+            <TableID>dbo_dim_productcodes</TableID>
+            <ColumnID>product_description</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>List</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="0436e456-f6eb-4c2b-810f-290a5d1a5473">
+      <ID>Product Company Number</ID>
+      <Name>Product Company Number</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="99c01963-9913-4d36-a0ac-ce4478db6ab6">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b5c3475d-e636-4233-88d5-99fe09530745">
+            <TableID>dbo_dim_productcodes</TableID>
+            <ColumnID>product_company_number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="5bbd43da-d2cc-41d2-ae6e-34001888c350">
+      <ID>Pc Servicecategory Id</ID>
+      <Name>Pc Servicecategory Id</Name>
+      <EstimatedCount>24</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="51899fa6-13e2-4e4f-b850-b08612b9ccd8">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c9f43e05-2ddd-4d2a-9b91-63c6de4aeaef">
+            <TableID>dbo_dim_productcodes</TableID>
+            <ColumnID>pc_servicecategory_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="db1288b6-c9bb-40d3-986a-8c1e10e7dc3c">
+      <ID>Pc Nomis Secondary Category</ID>
+      <Name>Pc Nomis Secondary Category</Name>
+      <EstimatedCount>78</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="064ac641-b918-4ecc-84eb-411abd0ee682">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b1539b2e-9927-4a12-a7c5-188bb14632bd">
+            <TableID>dbo_dim_productcodes</TableID>
+            <ColumnID>pc_nomis_secondary_category</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="83ca2f5c-a30b-4dfb-9099-c3e80e8777a6">
+      <ID>Dim Product Code Category</ID>
+      <Name>Dim Product Code Category</Name>
+      <EstimatedCount>21</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2cd0a654-5b1b-4d5c-941b-a3c4b44718dd">
+          <NullProcessing>UnknownMember</NullProcessing>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6cf32752-f3e3-431d-9fb6-8af6befacf2e">
+            <TableID>dbo_dim_product_code_category</TableID>
+            <ColumnID>pc_category_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="311784f6-d62d-4c92-8918-6ee65b6cc2b4">
+          <AttributeID>Product Primary Category</AttributeID>
+          <Name>Product Primary Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="63d5177a-7a15-4850-bbc8-142df33eefbe">
+          <AttributeID>Quote Category</AttributeID>
+          <Name>Quote Category</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="adfbe209-1e8d-44e4-9908-eced65a8091d">
+      <ID>Product Primary Category</ID>
+      <Name>Product Primary Category</Name>
+      <EstimatedCount>21</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="85d9519b-47b0-48d9-a6e6-6a60345d2e21">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="aa7edbb8-ed6d-434d-81d2-40fbfebf1b19">
+            <TableID>dbo_dim_product_code_category</TableID>
+            <ColumnID>product_primary_category</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="20b7a5f2-35e8-4555-af02-ca0d9b20e0c9">
+      <ID>Quote Category</ID>
+      <Name>Quote Category</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4cd6ec51-6993-44bc-abab-6bdead1c7f8d">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="df61a5bf-2be6-4fc2-a28c-f3c2cb9b8945">
+            <TableID>dbo_dim_product_code_category</TableID>
+            <ColumnID>quote_category</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="6aa89642-27c3-4465-8c69-f4c4832ff1c0">
+      <ID>Dim Product Code Subcategory</ID>
+      <Name>Dim Product Code Subcategory</Name>
+      <EstimatedCount>14</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3a8ee0b4-f208-4e7c-ac56-0317e99991cb">
+          <NullProcessing>UnknownMember</NullProcessing>
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="85fe67bf-84d3-49f3-97c5-d01534f34a26">
+            <TableID>dbo_dim_product_code_subcategory</TableID>
+            <ColumnID>pc_subcategory_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="9ee7d515-44ed-40cd-9153-789861fb3766">
+          <AttributeID>Product Primary Subcategory</AttributeID>
+          <Name>Product Primary Subcategory</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="0818e099-cf31-4a27-9928-b2b882adb174">
+      <ID>Product Primary Subcategory</ID>
+      <Name>Product Primary Subcategory</Name>
+      <EstimatedCount>14</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b0d276ad-d60a-4ba2-9382-7183cb8d34ca">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3024c95b-9593-4495-8e39-fa9a4b72dd99">
+            <TableID>dbo_dim_product_code_subcategory</TableID>
+            <ColumnID>product_primary_subcategory</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+  </Attributes>
+</Dimension>

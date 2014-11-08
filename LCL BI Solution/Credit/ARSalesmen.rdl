@@ -572,7 +572,8 @@ orDer by [Total Invoiced] + [sum of payments to date] desc</CommandText>
         <DataSourceName>lcl-sql2k5-s</DataSourceName>
         <CommandText>select t3rdcd,t3v8tu from Nomis.S1018252.NOMDBF95.SMGPHY01
 union all
-select 'All','All'</CommandText>
+select 'All','All'
+order by t3v8tu</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
     </DataSet>

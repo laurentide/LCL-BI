@@ -109,6 +109,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="f1601f61-1575-42b6-a684-12ff450ccf82">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="9ee3670b-5840-4580-99f4-b506d0454de9">
           <TableID>Time</TableID>
           <ColumnID>Year_Name</ColumnID>
@@ -138,6 +139,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="d3820005-6d16-464c-a9ba-0277857b9704">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="bd15c414-7128-427e-b077-d8cd5ac2cea6">
           <TableID>Time</TableID>
           <ColumnID>Quarter_Name</ColumnID>
@@ -174,6 +176,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="c209b576-c9aa-4b6f-b6f2-7594b2b68417">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="ed126ac5-5c6f-4ee4-b891-3b85cbbf587f">
           <TableID>Time</TableID>
           <ColumnID>Month_Name</ColumnID>
@@ -215,6 +218,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="d603de8b-7358-41d3-a58f-07ff1ff2b4a7">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="21d134e7-f4d6-402d-8e37-940401c85651">
           <TableID>Time</TableID>
           <ColumnID>Week_Name</ColumnID>
@@ -373,6 +377,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="030bec1f-fc38-44ec-bc2a-78b7a0b09c2b">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="df06ffca-2dd6-4aaf-aa42-823b5529355f">
           <TableID>Time</TableID>
           <ColumnID>Day_Of_Year_Name</ColumnID>
@@ -402,6 +407,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="327d258c-e9df-4f95-8457-b007dba3785f">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="306f0a1e-1f41-41e5-82c1-6854af3544cb">
           <TableID>Time</TableID>
           <ColumnID>Day_Of_Quarter_Name</ColumnID>
@@ -431,6 +437,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="de31f827-883b-4116-b238-3ace34d05141">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="63b1e5a9-ebd8-4790-9051-8e8c4625be73">
           <TableID>Time</TableID>
           <ColumnID>Day_Of_Month_Name</ColumnID>
@@ -460,6 +467,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="a01b1328-5f93-4d37-885f-1ed608923049">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="d9fdbd43-9ac6-455b-8407-e29f711f33b8">
           <TableID>Time</TableID>
           <ColumnID>Day_Of_Week_Name</ColumnID>
@@ -489,6 +497,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="22a0a36f-0454-493c-9263-ba442fe790a3">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="42b71501-af58-48ee-81d2-1e853953d885">
           <TableID>Time</TableID>
           <ColumnID>Week_Of_Year_Name</ColumnID>
@@ -518,6 +527,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="abc12f3e-d37b-4e80-8e01-72614c2dcb5c">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="680d1dc3-6d3c-497c-b056-0b541cfd767d">
           <TableID>Time</TableID>
           <ColumnID>Month_Of_Year_Name</ColumnID>
@@ -547,6 +557,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="32a50533-c8fe-457f-88b7-0a3cf5b99dc2">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="bfffa11b-ef04-4cff-ac0f-147c2e2ea75e">
           <TableID>Time</TableID>
           <ColumnID>Month_Of_Quarter_Name</ColumnID>
@@ -576,6 +587,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="2f02db24-e4c0-4a1e-89b7-22e118ea7b90">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="c91bea5b-08b0-4b40-a81c-8d8189a25bdc">
           <TableID>Time</TableID>
           <ColumnID>Quarter_Of_Year_Name</ColumnID>
@@ -605,6 +617,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="911f91dd-0c5f-49c8-976a-2579f6bb4fd0">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="4bfe74ac-3de4-4ebb-991a-f598fe8a2142">
           <TableID>Time</TableID>
           <ColumnID>Fiscal_Year_Name</ColumnID>
@@ -634,6 +647,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="901a1bc9-9bfd-4a1b-b838-227da92f80f1">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="d2d8b5ef-6759-4998-a9da-444d1e15f9fb">
           <TableID>Time</TableID>
           <ColumnID>Fiscal_Quarter_Name</ColumnID>
@@ -670,6 +684,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="37fb10f9-beeb-47b7-a32d-53ba77d54d72">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="37faf144-a83e-4446-b638-f29822031932">
           <TableID>Time</TableID>
           <ColumnID>Fiscal_Month_Name</ColumnID>
@@ -711,6 +726,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="a23afd28-257f-46c1-b0d4-3ce495cf7948">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="e5865e4d-21d9-4764-87ae-fadb745ee7ff">
           <TableID>Time</TableID>
           <ColumnID>Fiscal_Week_Name</ColumnID>
@@ -747,6 +763,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="b6993051-3c21-406d-b58a-abc80d8bb3c0">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="3a59a807-a02e-4c70-a31d-35fca41c81af">
           <TableID>Time</TableID>
           <ColumnID>Fiscal_Day_Name</ColumnID>
@@ -803,6 +820,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="a5d11297-c76d-473d-b53a-7df5ff7ceca2">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="02231666-df04-4dc2-bbef-d0a4d9107f09">
           <TableID>Time</TableID>
           <ColumnID>Fiscal_Day_Of_Year_Name</ColumnID>
@@ -832,6 +850,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="46dc3407-3c0a-4d54-98a5-92452f63727b">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="7f7c2d19-1bff-4675-a8b3-7defce8e4dc0">
           <TableID>Time</TableID>
           <ColumnID>Fiscal_Day_Of_Quarter_Name</ColumnID>
@@ -861,6 +880,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="33bf2277-6a9f-4076-8938-a266f8438cf1">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="7f60e8f5-e43a-4520-bc9b-3c88be057f6c">
           <TableID>Time</TableID>
           <ColumnID>Fiscal_Day_Of_Month_Name</ColumnID>
@@ -890,6 +910,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="572e7bc3-1b3d-4e2b-9d65-c689e3520c96">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="98b25a8a-43e6-4f76-ae33-3d6ab06adf38">
           <TableID>Time</TableID>
           <ColumnID>Fiscal_Day_Of_Week_Name</ColumnID>
@@ -919,6 +940,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="7caa0747-db22-409e-99e8-9b65cf630ac4">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="cd5e7ae7-fc55-440a-ab63-4827de1e306e">
           <TableID>Time</TableID>
           <ColumnID>Fiscal_Week_Of_Year_Name</ColumnID>
@@ -948,6 +970,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="0844a3c2-6c2b-469c-a7ed-5c3fc6e27696">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="9e4b0c72-2190-4f1c-8c0f-d1951842c432">
           <TableID>Time</TableID>
           <ColumnID>Fiscal_Month_Of_Year_Name</ColumnID>
@@ -977,6 +1000,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="933d7d3f-4e4c-4cc8-b437-a1a23116ea21">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="45775b03-9406-45fe-9535-9e46c084a3f9">
           <TableID>Time</TableID>
           <ColumnID>Fiscal_Month_Of_Quarter_Name</ColumnID>
@@ -1006,6 +1030,7 @@
       </KeyColumns>
       <NameColumn dwd:design-time-name="708673ce-72c1-4044-a191-6032a31e832a">
         <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
         <Source xsi:type="ColumnBinding" dwd:design-time-name="7a032be4-1849-4605-9a7d-d086ee03ce81">
           <TableID>Time</TableID>
           <ColumnID>Fiscal_Quarter_Of_Year_Name</ColumnID>

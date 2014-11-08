@@ -1,8 +1,8 @@
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="83daca77-51bd-46a1-ab68-27ddb1fed4f3" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Account</ID>
   <Name>Dim Account</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
@@ -66,7 +66,7 @@
       <Value>100</Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="f5627fe1-8784-4f91-9e48-a3770dc0b77a">
     <DataSourceViewID>Nomis Warehouse 1</DataSourceViewID>
@@ -132,7 +132,7 @@
       <KeyColumns>
         <KeyColumn dwd:design-time-name="bbc04aaa-048a-4ece-b735-a5cfd94d3f95">
           <DataType>WChar</DataType>
-          <DataSize>255</DataSize>
+          <DataSize>45</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="4ac2f1e2-c7f4-4dcd-b5d5-b8d181895494">
             <TableID>dbo_dim_account</TableID>
             <ColumnID>account_gl</ColumnID>
@@ -199,7 +199,7 @@
       <KeyColumns>
         <KeyColumn dwd:design-time-name="4549bdb5-900f-4532-a25a-218b30e8d951">
           <DataType>WChar</DataType>
-          <DataSize>1024</DataSize>
+          <DataSize>5000</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="1a303053-96f0-4474-aac3-7995a72a2f4c">
             <TableID>dbo_dim_account</TableID>
             <ColumnID>account_description</ColumnID>

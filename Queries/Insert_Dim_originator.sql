@@ -17,3 +17,4 @@ LEFT JOIN Nomis.dbo.tblOriginators_csr
 ON case when len(furmcd) = 3 then left(furmcd,1) else null end = One_Letter_Code
 where fuaqnb = 1
 go
+select * from 

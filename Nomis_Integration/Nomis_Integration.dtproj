@@ -133,11 +133,6 @@
       <References />
     </DtsPackage>
     <DtsPackage>
-      <Name>dim_originator.dtsx</Name>
-      <FullPath>dim_originator.dtsx</FullPath>
-      <References />
-    </DtsPackage>
-    <DtsPackage>
       <Name>dim_salesman.dtsx</Name>
       <FullPath>dim_salesman.dtsx</FullPath>
       <References />
@@ -235,6 +230,21 @@
     <DtsPackage>
       <Name>fact_tables 1.dtsx</Name>
       <FullPath>fact_tables 1.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>fact_gl.dtsx</Name>
+      <FullPath>fact_gl.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_account.dtsx</Name>
+      <FullPath>dim_account.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage>
+      <Name>dim_originator 1.dtsx</Name>
+      <FullPath>dim_originator 1.dtsx</FullPath>
       <References />
     </DtsPackage>
   </DTSPackages>

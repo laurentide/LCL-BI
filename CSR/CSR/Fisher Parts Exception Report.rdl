@@ -221,10 +221,10 @@ nY/Zu3/8B3//AC7g/RXxofnPLP8Afzx8fyP0fBu2308t+9Yr7bg+8vzsfs3b/wDgO/8A+XcH6K+ND855
 	   H1RMCD as [Originator on PO],
 	   H3UKTX as [PO Item Description],
 	   H3JJVA as [PO List Price],
-       H3JJVA * (case when  GHUKCE ='CD$' then 1.12 else 1.05 end)  [POD List Price MF],
+       H3JJVA * (case when  GHUKCE ='CD$' then 1.23 else 1.05 end)  [POD List Price MF],
        MCPHVA as [Component Sale Price],
        KFHPVA as [End Item Sale Price],
-       (case when mcq9cd is null then kfhpva else mcphva end) - (H3JJVA * (case when  GHUKCE ='CD$' then 1.12 else 1.05 end)) as Diff,
+       (case when mcq9cd is null then kfhpva else mcphva end) -   H3JJVA * (case when  GHUKCE ='CD$' then 1.23 else 1.05 end)   as Diff,
        BYFHMA as [Fisher Order Type],
 	   KFLFSU as [Order Line Status],
        KFOWSU as [Reason Closed],
@@ -256,7 +256,7 @@ and KBAWDT &gt;= 1101001
 and BYFHMA in ('SE','SO')
 and (KFOWSU &lt;&gt; 'C' or KFOWSU is null)
 and ((case when mcq9cd is null then kfhpva else mcphva end) &gt;
-     (H3JJVA * (case when GHUKCE ='CD$' then 1.12 else 1.05 end)))
+     round(H3JJVA * (case when GHUKCE ='CD$' then 1.23 else 1.05 end),2))
 and (MCL9ND = 2 or MCL9ND is null)
 and CONVERT(SMALLDATETIME,(SUBSTRING(CONVERT(CHAR,KBAWDT),2,6)),12)  between @DateMin and @DateMax
 order by KBAWDT,KFQ9CD,KFTRTX</CommandText>
@@ -802,7 +802,7 @@ End Function</Code>
                         </BorderStyle>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
-                        <Format>c</Format>
+                        <Format>c2</Format>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -827,7 +827,7 @@ End Function</Code>
                         </BorderStyle>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
-                        <Format>p0</Format>
+                        <Format>p2</Format>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>

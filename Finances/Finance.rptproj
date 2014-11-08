@@ -60,6 +60,10 @@
       <Name>Progress Billing.rdl</Name>
       <FullPath>Progress Billing.rdl</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Finance Report Proaxion.rdl</Name>
+      <FullPath>Finance Report Proaxion.rdl</FullPath>
+    </ProjectItem>
   </Reports>
   <Configurations>
     <Configuration>

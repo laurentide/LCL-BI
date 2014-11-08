@@ -25,6 +25,14 @@
   </DataSources>
   <Reports>
     <ProjectItem>
+      <Name>Agreement Report.rdl</Name>
+      <FullPath>Agreement Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Agreement Work Details.rdl</Name>
+      <FullPath>Agreement Work Details.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Agreements - Service Banks Summary.rdl</Name>
       <FullPath>Agreements - Service Banks Summary.rdl</FullPath>
     </ProjectItem>
@@ -57,12 +65,24 @@
       <FullPath>Income By Team.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>InvoiceReleaseLaborReport.rdl</Name>
+      <FullPath>InvoiceReleaseLaborReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>OT Hours by Resource - TC.rdl</Name>
       <FullPath>OT Hours by Resource - TC.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>OT Hours by Resource.rdl</Name>
       <FullPath>OT Hours by Resource.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Proaxion Visa.rdl</Name>
+      <FullPath>Proaxion Visa.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Projects not yet synced.rdl</Name>
+      <FullPath>Projects not yet synced.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>PV Tasks.rdl</Name>
@@ -77,6 +97,10 @@
       <FullPath>Service Bank - Money.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Service Bank Subscriptions.rdl</Name>
+      <FullPath>Service Bank Subscriptions.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>TaskDetails.rdl</Name>
       <FullPath>TaskDetails.rdl</FullPath>
     </ProjectItem>
@@ -87,6 +111,14 @@
     <ProjectItem>
       <Name>TaskDetails_Non_Billable.rdl</Name>
       <FullPath>TaskDetails_Non_Billable.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TaskDetails_Weekly.rdl</Name>
+      <FullPath>TaskDetails_Weekly.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TaskDetails_Weekly_Non_Billable.rdl</Name>
+      <FullPath>TaskDetails_Weekly_Non_Billable.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>TaskDetails_Year.rdl</Name>
@@ -101,20 +133,40 @@
       <FullPath>TaskDetails_Year_Non_Billable.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Time By Team CY.rdl</Name>
+      <FullPath>Time By Team CY.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Time By Team.rdl</Name>
       <FullPath>Time By Team.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Vale Expenses.rdl</Name>
+      <FullPath>Vale Expenses.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Vale Time.rdl</Name>
+      <FullPath>Vale Time.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Visa Alliance.rdl</Name>
+      <FullPath>Visa Alliance.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Weekly Billable Hours by Team.rdl</Name>
       <FullPath>Weekly Billable Hours by Team.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>TaskDetails_Weekly.rdl</Name>
-      <FullPath>TaskDetails_Weekly.rdl</FullPath>
+      <Name>Work Details.rdl</Name>
+      <FullPath>Work Details.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>TaskDetails_Weekly_Non_Billable.rdl</Name>
-      <FullPath>TaskDetails_Weekly_Non_Billable.rdl</FullPath>
+      <Name>Work In Progress.rdl</Name>
+      <FullPath>Work In Progress.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Project Invoicing.rdl</Name>
+      <FullPath>Project Invoicing.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

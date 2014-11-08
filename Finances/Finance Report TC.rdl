@@ -1733,7 +1733,7 @@ WHERE (" &amp; Parameters!TimeFiscalMonth.Value &amp; "," &amp; Parameters!Accou
                               <Value>=Parameters!AccountsAccountDepartmentName.Value</Value>
                             </Parameter>
                             <Parameter Name="AccountsAccountName">
-                              <Value>="[Accounts].[Account Name].&amp;[" &amp; Fields!Accounts_Account_Name_Account_Name.Value &amp; "]"</Value>
+                              <Value>="[Accounts].[Account Name].&amp;[" &amp; Fields!Accounts_Account_Name_Account_Name.value &amp; "]"</Value>
                             </Parameter>
                           </Parameters>
                         </Drillthrough>

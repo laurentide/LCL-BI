@@ -447,7 +447,7 @@
       <KeyColumns>
         <KeyColumn dwd:design-time-name="a69ad9b0-c51a-481d-8a30-aa85446e1be0">
           <DataType>WChar</DataType>
-          <DataSize>20</DataSize>
+          <DataSize>50</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="b023affd-e6fb-4765-8d1b-dcb00cc584d7">
             <TableID>dbo_dim_productcodes</TableID>
             <ColumnID>product_description</ColumnID>

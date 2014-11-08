@@ -12,67 +12,13 @@
     </DataSources>
     <Dimensions>
       <Dimension>
-        <ID>Dim Salesman</ID>
+        <ID>Dim Account</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Originator</ID>
+        <ID>Dim Alliance Rate</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Customer Contact</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Quote Status</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Quote Employee</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Vendor</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Customer</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Fact Sales</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Fact Bookings</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Product Code Category</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Product Code Subcategory</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Quote Type</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Division</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Productcodes</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Fact GL</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Inventory</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Warehouse</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Fact Inventory</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Customer Ship To</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Fact Sales 1</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Fact Inventory History</ID>
+        <ID>Dim Alliance Resource</ID>
       </Dimension>
       <Dimension>
         <ID>Dim Alliance Task</ID>
@@ -81,53 +27,90 @@
         <ID>Dim Alliance Work</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Alliance Resource</ID>
+        <ID>Dim Currency</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Alliance Rate</ID>
+        <ID>Dim Customer Ship To</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Customer</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Division</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Inventory</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Originator</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Product Code Category</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Product Code Subcategory</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Productcodes</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Customer Contact</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Quote Employee</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Quote Status</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Quote Type</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Salesman</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Vendor</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Warehouse</ID>
+      </Dimension>
+      <Dimension>
+        <ID>FACT ALLIANCE SALES</ID>
       </Dimension>
       <Dimension>
         <ID>Fact Alliance Taskdetail</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Currency</ID>
+        <ID>Fact Bookings</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Fact GL</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Fact Inventory History</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Fact Inventory</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Fact Sales 1</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Fact Sales</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Fact Warehouse Inventory</ID>
       </Dimension>
       <Dimension>
         <ID>Reporting Currency</ID>
       </Dimension>
       <Dimension>
-        <ID>Fact Quotes</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Account</ID>
-      </Dimension>
-      <Dimension>
         <ID>Time</ID>
       </Dimension>
       <Dimension>
-        <ID>Fact Warehouse Inventory</ID>
+        <ID>Fact Quotes</ID>
       </Dimension>
     </Dimensions>
-    <MiningStructures>
-      <MiningStructure>
-        <ID>v Time Series Customers</ID>
-      </MiningStructure>
-      <MiningStructure>
-        <ID>v Time Series Segments</ID>
-      </MiningStructure>
-      <MiningStructure>
-        <ID>v Time Series OS</ID>
-      </MiningStructure>
-      <MiningStructure>
-        <ID>TimeSeries PC Monthly</ID>
-      </MiningStructure>
-      <MiningStructure>
-        <ID>v Time Series PC</ID>
-      </MiningStructure>
-      <MiningStructure>
-        <ID>TimeSeries SalefromStock</ID>
-      </MiningStructure>
-    </MiningStructures>
     <Cubes>
       <Cube>
         <ID>Nomis Warehouse</ID>
@@ -308,14 +291,6 @@
             </Partitions>
           </MeasureGroup>
           <MeasureGroup>
-            <ID>Fact Sales</ID>
-            <Partitions>
-              <Partition>
-                <ID>Fact Sales</ID>
-              </Partition>
-            </Partitions>
-          </MeasureGroup>
-          <MeasureGroup>
             <ID>Fact Bookings</ID>
             <Partitions>
               <Partition>
@@ -328,6 +303,22 @@
             <Partitions>
               <Partition>
                 <ID>Fact Servicecategory Goals</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>FACT ALLIANCE SALES</ID>
+            <Partitions>
+              <Partition>
+                <ID>FACT ALLIANCE SALES</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Fact Sales</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Sales</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>

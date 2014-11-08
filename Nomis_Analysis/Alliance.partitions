@@ -42,34 +42,14 @@
       </Partitions>
     </MeasureGroup>
     <MeasureGroup>
-      <ID>Fact Sales</ID>
-      <Partitions>
-        <Partition dwd:design-time-name="9b639a63-c7bf-4dd9-aef5-d6b09735709a">
-          <ID>Fact Sales</ID>
-          <Name>Fact Sales</Name>
-          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
-          <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="2361b24b-1998-457a-b1d5-a6eeab3a43b0">
-            <DataSourceViewID>Alliance</DataSourceViewID>
-            <TableID>dbo_fact_sales</TableID>
-          </Source>
-          <StorageMode>Molap</StorageMode>
-          <CurrentStorageMode>Molap</CurrentStorageMode>
-          <ProcessingMode>Regular</ProcessingMode>
-        </Partition>
-      </Partitions>
-    </MeasureGroup>
-    <MeasureGroup>
       <ID>Fact Bookings</ID>
       <Partitions>
         <Partition dwd:design-time-name="0a6ff361-6f2b-4481-ae7e-c0ae25c93039">
           <ID>Fact Bookings</ID>
           <Name>Fact Bookings</Name>
-          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
           <State>Unprocessed</State>
           <Source xsi:type="DsvTableBinding" dwd:design-time-name="6f2e89c7-11d9-4226-944c-cc0a77ec57b5">
             <DataSourceViewID>Alliance</DataSourceViewID>
@@ -87,13 +67,53 @@
         <Partition dwd:design-time-name="690f6d5e-47a0-469b-afbe-4138a488462a">
           <ID>Fact Servicecategory Goals</ID>
           <Name>Fact Servicecategory Goals</Name>
-          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
           <State>Unprocessed</State>
           <Source xsi:type="DsvTableBinding" dwd:design-time-name="1397b94d-82e6-4f44-99b5-056a8dbab85f">
             <DataSourceViewID>Alliance</DataSourceViewID>
             <TableID>dbo_fact_servicecategory_goals</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>FACT ALLIANCE SALES</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="724d0f8a-3e72-42fc-9ba5-9d3c3e38cf43">
+          <ID>FACT ALLIANCE SALES</ID>
+          <Name>FACT ALLIANCE SALES</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="f193dde4-c272-4867-8d1c-daef8aaf8056">
+            <DataSourceViewID>Alliance</DataSourceViewID>
+            <TableID>dbo_FACT_ALLIANCE_SALES</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Sales</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="e4a6125e-d7ac-435d-96f7-bdeef3923eab">
+          <ID>Fact Sales</ID>
+          <Name>Fact Sales</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="cbd88899-48de-49b4-9e6f-8efbf50636fc">
+            <DataSourceViewID>Alliance</DataSourceViewID>
+            <TableID>dbo_fact_sales</TableID>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>

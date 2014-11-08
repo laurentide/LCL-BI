@@ -31,4 +31,5 @@ on d1eqcf = inventory_number
 where D1EQCF <> '18B0263X012'    
 and D1AQNB = 1
 and d1jznb             >= 1021001
-
+go
+select * from fact_inventory_history

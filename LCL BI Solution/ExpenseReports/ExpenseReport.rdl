@@ -1,0 +1,1882 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="ExpenseReport1">
+      <rd:DataSourceID>0feff3d1-3cc1-46c5-8d28-ce92931d8087</rd:DataSourceID>
+      <DataSourceReference>ExpenseReport</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="ExpenseReportID">
+      <DataType>String</DataType>
+      <Prompt>ExpenseReportID</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.25in</RightMargin>
+  <LeftMargin>0.25in</LeftMargin>
+  <BottomMargin>0.25in</BottomMargin>
+  <rd:ReportID>bbedc94c-7ac3-43b9-97c3-f874291d34c3</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="lcl_scc_header_logo">
+      <MIMEType>image/bmp</MIMEType>
+      <ImageData>Qk3WqgAAAAAAADYAAAAoAAAAzwAAAEYAAAABABgAAAAAAKCqAAAAAAAAAAAAAAAAAAAAAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA////////Hi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UHi3UDh3RrLDu/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+
+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA////////FiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTFiTTBBTQur3x/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA///////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+////wMTydH3ke4Plfobmf4fmgIjngYjng4rnhIvnhIvohYzoho3oh47oiI/oiZDoipHpi5Lpi5PpjZTpjpXpjpbqkJjqkZjqkZjqkZjqkZfqkZfqkZfqkZfqkZfqkZfqkJbqkJbqkJbqj5bqj5bqj5bqj5bqj5bqj5bpj5bpj5bpjpXpjpXpjpXpjpXpjpXpjpXpjpXpjpXpjZXpjZTpjZTpjZTpjZTpjZTpjZPpjZPpjZPpjJPpjJPpjJPpjJ
+PpjJPpjJPoi5Poi5Poi5Loi5Loi5Loi5Loi5Loi5LoipLoi5LoipLoipLoipLoipHoipHoipHoiZDoiZHoiZHoiZDoiZDoiZDoiZDoiZDoiI/oiI/oiI/oiI/oiI/oiI/oh4/oh4/oh4/oh4/oh4/oh47oh47oh47oh47oh47oh47oh47oh47oho7oho7oho7oho7oho7oho7oho3oho3oho3ohY3ohY3ohY3ohY3ohY3ohY3ohY3ohY3ohYzohYzohYzohYzohYzohYzohYzohYzohYzohIzohIzohIzohIzohIzog4vnhIvnhIvnhIvnhIvnhIvng4vng4vng4vng4rng4rngorngorng4rngonngorngorngorngorngorngYnngYnngYnngYjngYnngYnngYnngYnngInngIjme4Pm///////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+///+8fH73N732tz30dT1x8r0uL3xrbLvnqTskpnqi5Lpg4vnd3/laXLiXmjgTlndRFDcPUnbNEDZKDXXGinUDx7SAA7PAAbNAAbNAAjNAAnOAAvOAA3OAA3OAA7PABDPAhHPAxPPBBTQBRXQBxfQCRjQChrRDBvRDBzRDh3RDx7SEB/SEB/SER/SER/SER/SER/SER/SER/SER/SESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSE
+SDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSESDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiDSEiHSEiHSEiHSEiHSEiHSEiHSEiHSEiHSEiHSEiHSEiHSEiHSEiHSEiHSEiHSEiHSEiHSEiHSEiHSEiHSEiHSAA7O1tn3/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+///+///+///+/////////////////////////////////////////////////////////////////////////////////////f3+7e772974ztH1xMjzt7zxpqzul53rho3neoPmcXnkYWrhUFvePkvbMj/YKzjXIS/VFiXTCxrRBxbQCBfQChnRDBvRDh3RDx7SESDSEyLSFSTTFiXTGCfTGinUHCvUHSvUHizUHizUHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3V
+Hy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VEB/Sj5bp/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+///+///+/////////////////////////////////////////////////////////////////Pz99PT85eb5z9P1ur7xq7DunKLsiJDoc3vkYGvhU17eQEzbLDrXFiTTDx7SDRzRCxrRCRnRCxrRDh3REB/SEiHSFSPTFybTGSfTGynUHSvUHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VFybTSlXd/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
++/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+///+///+///+///+///////////////////////////////////////////////////+6er619n3xMfzqq/uj5bpf4fnZm/iSlbdOkXaKTbWFiTTBRXQBhbQCRjRDBvRDx7SEiHSFSPTGCbTGynUHCrUHSzUHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHSvUDRzR///////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v
+7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+///+////////////////////////////////////////////9vb82Nv3ur7xoaftfobmZ3DiSFPcJjTWGijUEB/SCBfQChnRDh3REB/SEyLSFyXTGijUHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VCBjQ1tj2/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+///////////////+/v7+/v7+///////////////+/v7+///+/////////v7+/v7+/////////v7+///+/////////////v7+///+///////////////+///////////+/v7+///+///////////+/v7+/v7+/////////////////////v7+///+///////////////+/v7+/v7+/v7+/v7+/v7+/
+v7+/v7+/v7+/v7+/v7+///+///+///+////////////////////////////////+fr96On6ztH1q7Hvk5rqdX7lUl3eMT7YChnRBRTQCRnRDRzRESDSFCPTGCfTGynUHSvUHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VEB/SkZjq/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///++vr9qK3umJ/rs7jw7u77////////4OL5l53roqjt/f3+/////P39j5bpvsLy////////oabsoKXs////7O36j5bpnKPstrvw////8PH7j5bpmqDr19r32tz3lJrqmqDr2Nr3////////pavtlJrq2tz3////////mZ/rnqTsoafsjpXpjpXp////3N73ycz0jZTpn6Xs9vb8///////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+//7+///+///+//////////////////////////////7+1Nj2tLjwi5Loa3TjQEzbJzTWESDSBhbQCxrRDx7SFCPTGCfTHSvUHizUHizUHy3V
+Hy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VGSfUNUHZ/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////EiHSABDPXWfgm6HrSlbd8PD75uj5AAnOGynUoKbsDRzRZW/h////wsbzQUzb///////+///+IjDV////////vMDyAADMPUna////////naPsAADMZ3Hi////Q0/cAAbNr7Pv////NkLZAArOhY3oS1bdHizU5ef58/T8AArOAAvO1tn3b3jjfYXmq7DuAAjNm6HrhIznAxPQW2Xg///////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+///////////////////////////+7+/7xMjznKLsa3TiP0vbESDSChrRChnRDx7SFCLSGCfTHCrUHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3
+VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHizUCRjQ6+36///+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+///+////AA7OCxrR////////////t7zxvcHyAhLPQ07b////////EyLSHCrU////XmjgzM/1////////JTLWc3zk////////ZW/iAArNw8fz////////SFPcAAzO8vP7iI/oBRTQjJTp////ECDSBRXQ9/j8////d4DlAALMvsLyp6zuAA3OnKPs////4eT5wMTzjZTp////////vsLyAA7OO0fa/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+///+////////////////////8vP7zdD1mqHscHnkQEzbHCrUBRTQCxrREB/SFiTTGynUHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VER/SiZDo/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v
+7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////QEvbBBTQxMjz/////v7+////////FSPTBxbQ6+z6////3+H4AAzOLzzY////JjPW////7/D7CRjQBBTQ6uv6////////DBzRGyrU////////8vP8AxPPQEzbRVHcARHPkpnq////f4fnARHPeYLm////////LjvXAArO8vP8LjrXCBjQ/Pz+///////+6+36///+eoLmFCPTHCrUAAnNwMTy/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+/////////////////////v7+ysz0k5rqWmTfIS/VDRzRChnRER/SFiXTHCrUHizVHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VGynUJTLW/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////5uf6AAvOIS/V///////+///+3uD409b2AAbNP0vb////////WGLfABDPsLXvp
+qvulZzqr7TvDh3RFiXTNULZ////////pqzuAAjNho3o////////h47oAA/PhIzod3/lJzTW3+H4////IC7VAA7P8vL7////y870BRXQOUbZ6er6AAfNVmHf/////v7+////pKrtAAzOHCrUEB/SbXfj///////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+///+////////////////9/j8x8v0jpbpVF7fHSvVAxPPCxvRESDSGCfTHSvUHi3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VBBTQ5Of5/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////sbbwAAfNQEvb////////eYLl4eP5xMfzAAjNbnjj////pqzuAxPPYGvh////PkrbT1rdEiHSRlHcoKXtoqjtmZ/r////Q0/cAA3O/v7+rLHv///+IzHVCxrR////qrDuAADLpKrt////NUHZCxvR////////AhLPCxrR////ZG3hAAvOys70///////+////IC3VAA3O5+j5////bXbj/////v7+/v7+
+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+/////////////////v7+wsbzho3oPkrbEiDSCRjQESDSGCbTHSvUHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VEyLSd3/l/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////5ef5RE/bAAzOQEzbAA7PWmTf////+/v9VmHfKzjXHizUAhHPzdD1////qK3uAAfNBxfQLjvY////AA3Ow8fzHCrUMD3YBBTQIzDVChnRjpXpjJTpAAvOGynUO0jaAxPPFCLT////////mJ7rJDHWNkPZAAvOZG7i////zND1AAfNCxrRwcXy///////+////W2XgAxLPPEjaAADMpqzu/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
++/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+////////////////z9L1iZDoQ0/cChrRChnRESDSGCbTHSvUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHCrUEyPS///////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////7O36///////+/v7+///+////////7/D7/////////v7+///////////////////+/////////////////////////////////////////////////////////v7+/v7+////////9vb8/f3+/////v7+/////////////////v7+/v7+///+////////7O36/////f39/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+////////////////0tX2jJPpR1LcESDSCRnREyLSGynUHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy
+3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VDRzRn6Xs/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+//7+///+///+///+/v7+/v7+/v7+/v7+///+///+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v/+/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+///+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+///+///+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+////////////////ycz0dn/lIzHWCRjRDx7SGCbTHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VGynUHy3V//////7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/
+v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v/++vj48Ojr/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////07vD/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+////////////6er6l53rRlHcBRXQDBvRFCPTHCrUHizVHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHizVCxrRqq/u/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+
+/v7+/v7+/v7+/v7+////////////////////////////////////+vn5TAAJkFBm6Nvf/////v7+/v7+/////////////////v7+/v7+/v7+/v7+/////////////////////////////////////v7+/////////////////////v7+////////SQAFbRo20La//////////////////////////////////////////////v7+/v7+/////////////////v7+/v7+/v7+/////////////////v7+/v7+/v7+/v7+/////////////////////v7+/v7+/v7+/v7+/////////////////v7+/v7+/////////////////////////////v7+/v7+/v7+/v7+/v7+/v7+////////////////////////////////////////uL3xaHLiGinUCBjQFCPTHSvUHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VGynUHy3V///////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////oGt9oW1/o2+Bo2+Bo2+Bo2+Bnmh60Le/////////ZAwqYQcmWAAagz5V////////toyan2l7om6ApHKD/////v7+/v7+////387TsYaVoW1/o2+Bo2+Bo2+Bo2+BnGR38uzu////7OLllltvo2+BnWZ
+44tHX////////6t/jWgAcZg8sWQAcbBk1/Pv7q3yMoGt9o2+Bo2+Bo2+Bo2+Bo2+Bn2l8xqax////////oGx9oW1/oGt9uI+d/////v7+////roCQoGt9oW1/rH2M/////v7+/v7+////7OLllltvo2+BnWV44tLX/////v7+/v7+////o3CBoWx+oWx+soeW////////pnSFoWx+o2+BpHGCvpml28fO/////////////v7+/v7+/v7+////pHGCoWx+o2+Bo2+Bo2+Bo2+Bo2+Bn2l7zK+5////////////////zc/0anPjESDSChnRFSPTHCvUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VDBvRmJ/r/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////wqCrUQAQYQcmYQcmYQcmYQcmYAYlWgAc49PZ////eC1HZQ4rZxEuYgkn////////6NzhUAAPYAclVgAWvZil////////sYaVUQAQXwUkYQcmYQcmYQcmYQcmYQcmXAAfgTpS////////ezBKWwAeXgMiaRMx////////28nPWwAeaRQxaBIvXAAf////2MLJTwAOYQcmYQcmYQcmYQcmYQcmYQcmUwATw6Kt////w6GsUgARYAclVAAV5Nbb////////3MnPTwAOYQcmUwAUzrO8/////v7+/v7+////fjVOWwAeXgMiaRQy/////v
+///v7+////y664UQAQYAclVAAV3cvR////z7S9TwAOYQcmYAclXgMiWgAdWQAckFJn4tLX/////////v7+////zbK7UAAPYQcmYQcmYQcmYQcmYQcmYQcmVAAUy6+4/////v7+///+////////////xcnzY23hEyLTChnRFSTTHSvUHizVHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHSvUDR3R///////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////fTNMZAwqaRQxaRQxZg8tYQgnXwUkUwAT+fb3s4iWXwUkaRQxWAAZ9O/w////////pHKDXwQjZxIvWwAe////////gj1VYwspaRQxaRQxaBIvYAYlXwQjZAwqaBMwWQAbz7S+////9/P1WgAdaBIvXQIhsYWU////3cvRWwAeaRQxZQ4sdypE////////jk9kYgknaRQxaRQxZg8sXwQjXwQjXgMiTwAOy664////fDJLZAwqZQ4rcSE8/////v/+////lFhtYQcmZxEuYQgm/////////v7+////+Pb3WAAaaBIwXQEgsYaU/////v7+/v7+////gz5WYwspZQ8saxg0////////hkJaYwooaRQxaRQxZQ4sYgknYQgmWAAZhD9W9/P1/////v7+////hkFZYwopaRQxaRQxZQ4sXwQjXwQjXgMiTwAO07vD/////v7+/v7+/v7+//7+////////////vsLyX
+WfgDx7SDBvRGCbTHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VEyHSY2zh/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////7+bpVQAVaBMwZg8tgjtTpXKDnmh6m2N2oWx+////VQAWaBMwXwUksoaV////////////ZxEuZxEuYQcmlFht////nWd5YQcmaRQxaBIvZAwqsoeWvpqnhkJZYwopZhAtZxEu////////q3yMXQIhaBIvWwAe////387UWwAeaRQxZA0rfzdO////////////VgAXaBMwZg8sgjxTwqCsuJCeuJCet46cqnuL////7+bpVwAYaBMwWwAewJyo/////////v//YgooZxIvXwQjpXKE/////v7+/v7+////q3yMXQIhaBIvWwAd/Pv7/////v7+////9fHyVgAYaBMwXAAft4+d////9vHzWAAaaBIwZQ4si0pgm2N2XgQiXwQjYgknWQAcxKOu////////9/P1VgAYaBMwZQ4sh0NbwZ+ruJCeuJCeto6crH6N/v39/v/+/v7+/v7+/v7+/v7+/v7+///+////////////r7PvP0raAhLPEiDSGyrUHizVHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHizUAhLP0dP2/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+
+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////om6AXwQjZxIvYwsp////////////////////mF1xYAclZxEuZxEvyqy3w6Ktyqy2n2l7YwspaBMwVwAY5tne6NvfVwAZaBMwYgknpHOD////////////XAAgZxIvXgMipnSF////////ZhAtZhAtYgkojU1i8+3vWwAdaBMwYwspkFJn/////v7+////uZGeXAAfaBMwXQIi/fz8/////////////////v//////pHCCXwQjZxIvXAAf////////////iUddZAwqaBMwVgAX8Ojr/////v7+////////aBQxZg8tYgkoh0Rb/////v7+/v7+////rH6OXQIhaBIvWwAd+/n6////r4KRXQIhaBMwWwAe////////q3uLWQAcZQ4sWAAZllpu////////r4KRXQIhaBIvXwYk/////////////////////v///v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+////////8PH7gonnGynUCRjQFiXTHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VGynUHizU///////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
++/v7+/v7+/v7+/v7+////////YwooZxEuYQcmlVhu/////v7+/v7+////////XQEgZxEuZxEuXgMiXgIhXgIhYwspaRQxaRQxZQ8sbRo2////hD9XYgooZxAuaBIv/////v//////uZOhWwAeaBMwVQAW9fDy////2MLJWAAaaBMwWgAd1sDIXQEgaBMwZA0rgTpR/////////v//////cB46ZQ4sZAwqgTtT4M/V2MPK18HJ2sbN////////////YgknZxAuYQgmklVq////////bBk1ZhAtaRQxZAwqezBK/////v7+/v7+////2cTKVwAYaBMwVgAX2sbN/////v7+////////ZxIvZhAtYgknikde////////aBIvZg8tYgooiUdd////////7uTnYQgmZQ0rWwAfj1Bm////////aRQxZg8tYwooh0Vb4M/V2MLK18HJ3cvR/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+////////xcnzUVzdBRXQDx7SGynUHizVHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VEiDSV2Hf/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////zLC6WQAbaBMwVwAZ49Ta/////v7+/v7+////0bfAVwAYaBMwaRQxaRQxZQ0rYgknYgknZA0raRQxXAAfvZil////WQAcZxIvXQIhs4iX/////v//////cSA8ZQ4sYwwqfzdP////////iU
+ZdYgkoZhAtdytFfDJLWgAcZQ0rZA0roGp9+/r6////////38/UWAAZaBMwZA0qXAAfWwAfWwAfUgARvJej////////zbG6WgAcaBMwWAAZ5NXa////XQEgaBMwaRQxaBMwWgAdyau1/////v7+/v7+////iEVbYgooZg8taxcz/////////v7+////1b3FWQAbaBMwVwAZ28jO////2MLJWAAaaBMwWQAb2MPK////////+vj5YgooZhAtWwAflVpu////1sHJWQAbaBMwZAwqWwAfWwAfWwAeUQAQxaWw/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+///////////+lp3rJTPWCBfQFybTHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHizVBhbQoKbs/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////ezBKZAwqZQ4rciQ//////v/+/v7+/v7+////pHGCWwAeaBMwZQ0rkFFnoGp8mmJ1hD9WYgooZxIvXgIh////xqaxWAAZaBIvWQAc6d3h////////4dHWWAAZaBMwWQAbz7S9////+fX2WgAdaBIvXgIiv5yn4c/VcSA8WwAeXwUkWgAdvJaj////////j1FmYQgnaRQxaRQxZxIvZAwqZAwqUQARy6+5////////fjVOZAwqZQ4sdCVA9/T1WgAdaRQxaBMwaBMwZxEuYQkn/////////v7+////+vf4WQAbaBIvX
+QEgsIST/////v7+/v7+////hkFYYwopZg8taxc0////////hkJZYgooZg8taRYy/////v//////6d7hWQAbaBMwWAAZxqax////h0RbYwooaRQxaRQxZxIvZAwqZAwqUQAP1b3F/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+////////x8r0RlHcCBfQEyHSHSvUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHSvUBxbQ4eL5/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////8OnrWAAZaBMwWwAevZil/////v7+/v7+/v7+////i0pgXAAfZxAubhw48ert////////YggnZQ8sYAYljlBl////mF5yXAAfZhAtYQcl////////////kFJnYQgmZxEuYAYl////////sIOTXAAfZhAuWQAb/v//////uJCdWgAcZxEuWAAakFJn////////WgAdZxIvZxIvcB87ikhfgz1VgjxUdSdC6uDk////9O/xVQAVaBMwYgkogzxUZQ4saBMwaBMwYgkoaBMwXwUkoGp9/////v7+/v7+////sIOSXQEgaBIwWAAa+/n6/////v7+////+/n6VgAWaBMwXAEgs4iW////+fb3WQAbZhAuXAAfr4KS/////v7+////nGR3YgknZxIvWgAc/////v39VgAXaBMwZxIvciM+iUdegz1VgjtTdypE7+fq/////v7+/v7+/v7+/v7+/v7+/v7+
+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////6+z6c3zkCxrRDh3RGinUHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VGijUGyrU///////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////p3WGXgQjaBIvWQAb/////////v7+/v7+////////lVpuWAAaZg8tWAAZroCQ////4dDWYgkoaxg0WwAe4M7U////hUBYXwQjZAwqbhs3////////////XgMiZxEvXwUjoWx+////////cSE9aRUyZg8th0Nb////////6NzgXgMiaBMwWwAemmF1////vJikWwAeaBMwWwAf////////////////////////////qXeJXgMiaRQxZQ4saRQxaBMwYwopyay2XAAfaBMwWAAa6+Dj////////////////cyM+Zg8tYwoohkJY////////////////s4iWXQEhaBIvWAAb+fb3////toyaYwspaxc0XAAf+PX2////////59reXAAfaRQxXwUko2+B////s4iXXQEgaBIwYAUk/////////////////////////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+////////n6XtJjTWCBfQFybTHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VEyHSTFfd///////+/v7+/v7+/v7+/v7+/v7+/v7
++/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////YgkoZxAuYQgmk1ds/////v7+/v7+/v7+/v//////toybVQAXZAwqXwQjXwQjlFlttYuaxaSvwqCsuZKg4tLY////ei5IYAUkYgoobRo2////////uZOgWwAeaBIwWQAc8ers////zrO9vpqmw6KtvZmlwZ6qwJyoy6+4YgooaBMwaBMwVgAX2MLK////bhw5ZQ4sZA0rfjVOxqaxv5yov5yov5youZKf/fz8////YwopZxAuaRQxaRQxZg8tbx46////cyQ/ZQ0rZA0qeCtG////uZKfvZmlxaWwoWx+YwooaBMwXAAgsYWUwZ+rv5youpSh////aRQxZhAtYgkoi0lg////8uzuto2bw6KtwZ+rvZmlwJ2pxKOuhD9WZA0raRQxZxEuZA0q////////aBQwZg8tYwwqhD5Vxaawv5yov5yov5youJGe/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+////////y830RFHcBBTPFSPTHizUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VCxvRa3Xj/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v
+7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////0LW+WQAbaBMwVwAY4NDW/////v7+/v7+/v7+/v7+////8enrdytFWQAbYwspYwooYQcmXwUkXwUkWwAdeCxH////////fTNNXgMiYgooaxc0////////bx45ZQ4sZAwqezBK////9fHyWQAaXQEgXwUkXgMiXgMiXgMiaBMwaRQxaRQxYwophkJZ////5dfcVgAXaBMwZQ0rXgMiXgMiXgMiXgMiUwATxaWw////07rCVwAZaRQxaRQxYgooklVq////6d3hVwAZaBMwWQAcy6645NbbTAAJXQIhYwooaRQxaRQxaBMwYAYlXgMiXgMiVAAUxKSv5NXaVgAXaRQxVgAX2MPK////i0lgVAAUXwUkXgQjXgMiXgMiZA0raRQxaRQxaBIvWwAf+/n6////3cvRVgAXaRQxZA0qXgMiXgMiXgMiXgMiUgASzrO7/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////5ef5YGngCBfQEiHSHSvUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHy3VHizVBxfQgInn/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////fzZPXQEgXgQjZQ4s/////v7+/v7+/v7+/v7+/v7+////////0rjBfzZOWgAdXAAfXwUkYQgnYQgmUwAU9e/x////////ikheWgAdWwAfZQ4s////6NvfVQAVYQgmUwASw
+6Kt////7ePmVwAYYQcmYQgnYQgnYQgnYQgnYQgnYQgnVwAYkFJn////////klVqWwAeYQgnYQgnYQgnYQgnYQgnXAAggz1V////////gjxUXAEgYQgnWAAas4iX////////mmF1WgAdYAYlWQAb////0La/VQAWYQgmYQgnYQgnYQgnYQgnYQgnYQgnXQIhdypE////iUVcXAAfXwQjYwsp////////fjVOXQEgYQgnYQgnYQgnYQgnYQgnYAclWAAZgTpS/////v7+////ikheXAAfYQgnYQgnYQgnYQgnYQgnWwAejEth/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////9vb8dX3kCxrRDx7SHCrUHy3VHy3VHy3VHy3VHy3VHy3VHy3VHizUBRTQnqTs/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////8enrlFdsnGR3klRp2MLJ/////v7+/v7+/v7+/v7+/v7+/v7+////////+vj4z7W+sYWUmmF0nGR3lFlt1b7G////////////qXmJmmF1lltvo2+B////s4mYmWBzmmJ1mmJ1////////0rnBllxwnGR3nGR3nGR3nGR3nGR3m2N2v5yn/////v//////+/n6lVlunGR3nGR3nGR3nGR3nGR3m2R3klVp////////8enslFltnGR3lVlt383S////////////lVhtnGR3lVltxqex////wJ2pmF5ynGR3
+nGR3nGR3nGR3nGR3nGR3nGR3k1Zr/v/+9vLzlFltnGR3klZq0rnC////////lltvnGR3nGR3nGR3nGR3m2N2pnSFyau2/////v///v7+////9vLzlVltnGR3nGR3nGR3nGR3nGR3m2N2l11x/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+////////jZTpFCLSDBzRGinUHizVHy3VHy3VHy3VHy3VHy3VHizUBBPPtbnw/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/////////////////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/////////////////////////////v7+/v7+/v7+/////////////////v7+/////////////////v7+/v7+/////////////////////////////////////v///v7+/v7+/////////////////////////////////////v7+/v7+/////////////////////v7+/v7+/////////////////////v7+/////////////////////////////////////////////////////////////////v7+/////////////////////////////////////v///v7+/v7+/v7+/////////////////////////////////////v7+/v7+/v7+/v7+/v7+/v7
++/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+////////oKftJDHWCRnRGijUHizUHy3VHy3VHy3VHy3VHSzUARHPx8v0/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+////////tbnwJjTWCBjQGSfTHyzVHy3VHy3VHy3VHSvUBBTQvMDy/////v7+/v
+7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///////////////////+/v7+///+/////////////////v7+///+/////////v7+///+/////////v7+///+/////////////v7+///////////////+///////////////+///+///////////////////+///+///////////////////////+///////////////////////+///////////////////////+///+////////vMDxMj/YBhbQGSfTHizUHy3VHy3VHSvUARHPqq/u/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/
+v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////f4bnP0vbRFDcTFfd7O37////+vr9WWPgNEHZXWfhzM/1////5eb5KDbX2dv3////9vb8VF/fnqPs////3uD4QEzbOETZqK3u////zM/1MT3YM0DY///+mJ/rOEXZO0fa+fn9////f4bmN0PZSVTcqq/u////+vr9QEzbQk3bRFDcN0PZYmzh////VF/fP0vbRFDcP0vbIi/W7e77z9P1dH3kNEHZNkLZfIXm8/T8/////v7+/v7+////////xMjzMz/YCBfQGCfTHizVHy3VHizUBBTQm6Hr/////v7+/v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+
+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////sLXvAA3OEyLT9vb86+z6cnvk+Pj8ZnDiAA3Oj5bp6er6ESDSPkrb////tLnwbnfj///////+////GCfU////////1tn3AAnNR1Lc////////j5bpAAfNkpnq////EyLTBxfQ///+s7jvAAnOSVTd////RlLcDx7S6uv66On5AArOQE3a////oqjtjJPp////AAzOFyXT////5OX5W2Xg8vL8BhbQ6er6+Pj9cXnkAAbNqrDv/////v7+/v7+/v7+////////yMv0N0PZBRXQGCbTHizUHizUBRXQi5Pp/////v7+/v7+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
++/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////vMDyBBPQOUXZ///////+////5Ob5f4jnBBTQhIvn////////DRzRFyXT////OkfZ6+z7////z9L1AAbNnaLs////////bHTjAAnOvsLy////////KzjXBxbQ////KDXWBBTQ6Or6zdD0AA/PPEja////////RVDcAAjN6On6eYHmAAvOvMHy////6er64eL5oqftAAvOjJPp////////rbLvpavt////////2Nv3EB/SAAzOz9L1/////v7+/v7+/v7+/v7+////////z9L1PEjaBxbQGCfTHizUBhXQfITm///////+/v7+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+////GCbUAxPP8/P8/////v7+////////ARHPChrR////////u7/yABDPTFfd////M0DY////gonnEB/SChnQ///+////////CRjRFyXT////////3d/4AAvOM0DYEyLSAA
+nN9fb8////LzzXABDP09b2////+vr9CxrRFSPT////DBvRFSPT///////+///+////KjfWAxLP////n6Xs////////+/v9PEjaCBfQGSjUABDPd3/l/////v7+/v7+/v7+/v7+/v7+/v7+////////z9P1OETZBRXQGCbTChnRVF/f///////+/v7+/v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////0NP1AArOLz3Y////////////qq/uyMv0AAXNV2Hf////////JzXWAA3O7e77fITmxMfzMz/YFiXTM0DZV2Hf+Pn9////uL3xAAvOeYLl////9vf8anPjAA/P3d/4o6ntCxrRu8Dy////BRXQFSPT////////a3TiAxPPm6LswMTzAArOdn/l/////v7+////4OH4ARHPBRXQSVTdo6jt7O36///+BBPQFybTO0fatbrx/v79/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////zND1O0faB
+RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////ur7xAArOKjfW2t33////ChnR////2Nr3BBTQXmjg////NkPZAAjNzdD1////KjfXESDSBBTQvcHyanPjy870f4fn4uT5PUraAAnO8vP8UFze///+DRzSGijU////YmzhAADLsrfw////Mj/YJDLW///+g4vnAAvOgYnn////PUnaAAjN4OH4/////v7+////ZG3iAA3Oxsn0+Pj9NEDY////q7DvAAbNX2jg////YGrhvMDx/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////ycz0NEHZAA/PEiHS6er6/////v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+
+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////hIzoNkPZJDHVVF/ftLnx////////mZ/rNULZNULZgYnn////////jZPpY2zhYmzhnKHs1tj2WmTg9PT8TFfdY2zhZ3HiUl3eU17eys70fYbmYWvhUFveX2nhYGrhqK3u////////ub3xT1reMz/YZG3h////////partXmjgY23h5ef5///+////x8v0XmjgV2HfUlzeU17ezdD1////4uT5Zm/iIS/VQEzbeYHl/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////wcXyKzjXAADMvcHy////////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7
++/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+///+/////////////////////v7+///+/////////////////v7+/v7+///////////////////////////+/////////////////////////////////////////////////v7+/v7+////3d/47e779fb82934///+///////////////+/v7+/v7+/////////////////////////v7+/////////////////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////vMDyEiHSipLp////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v
+7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////rbLvABDPxMj0/////v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+////////pKnt////////////////AAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////AAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////AAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////AAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAA</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <DataSets>
+    <DataSet Name="ExpenseReport">
+      <Fields>
+        <Field Name="ExpenseReportID">
+          <DataField>ExpenseReportID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ExpenseReportDept">
+          <DataField>ExpenseReportDept</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EmployeeName">
+          <DataField>EmployeeName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EmployeeDomainUser">
+          <DataField>EmployeeDomainUser</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EmployeeEmail">
+          <DataField>EmployeeEmail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ExpenseReportDate">
+          <DataField>ExpenseReportDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="AdvanceAmount">
+          <DataField>AdvanceAmount</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="BusinessPurpose">
+          <DataField>BusinessPurpose</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ExchangeRate">
+          <DataField>ExchangeRate</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="ManagerName">
+          <DataField>ManagerName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Category">
+          <DataField>Category</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ExpenseType">
+          <DataField>ExpenseType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ExpenseItemAmount">
+          <DataField>ExpenseItemAmount</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="ExpenseItemDescription">
+          <DataField>ExpenseItemDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ExpenseDetailsDate">
+          <DataField>ExpenseDetailsDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Tip">
+          <DataField>Tip</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Lodging_Taxes">
+          <DataField>Lodging_Taxes</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="NonTaxableExtras">
+          <DataField>NonTaxableExtras</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Province">
+          <DataField>Province</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Transaction">
+          <DataField>Transaction</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Currency">
+          <DataField>Currency</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AGST">
+          <DataField>AGST</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="AQST">
+          <DataField>AQST</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Km">
+          <DataField>Km</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Km_Rate">
+          <DataField>Km_Rate</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="ExpenseDetailsDept">
+          <DataField>ExpenseDetailsDept</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="subtotal">
+          <DataField>subtotal</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="GST">
+          <DataField>GST</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PST">
+          <DataField>PST</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="GLgst">
+          <DataField>GLgst</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="GLpst">
+          <DataField>GLpst</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="GLAmount">
+          <DataField>GLAmount</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="GL">
+          <DataField>GL</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>ExpenseReport1</DataSourceName>
+        <CommandText>select * from vwExpenseReportPrintout where expensereportID = @ExpenseReportID</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@ExpenseReportID">
+            <Value>=Parameters!ExpenseReportID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Width>8.00001in</Width>
+  <Body>
+    <ReportItems>
+      <Table Name="table2">
+        <ZIndex>15</ZIndex>
+        <DataSetName>ExpenseReport</DataSetName>
+        <Top>2.125in</Top>
+        <TableGroups>
+          <TableGroup>
+            <Grouping Name="table2_Group1">
+              <GroupExpressions>
+                <GroupExpression>=Fields!GL.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox24">
+                          <rd:DefaultName>textbox24</rd:DefaultName>
+                          <Style>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>14</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!Category.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox42">
+                          <rd:DefaultName>textbox42</rd:DefaultName>
+                          <Style>
+                            <BorderColor>
+                              <Right>Black</Right>
+                            </BorderColor>
+                            <BorderStyle>
+                              <Right>Solid</Right>
+                            </BorderStyle>
+                            <BorderWidth>
+                              <Right>1pt</Right>
+                            </BorderWidth>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>13</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!GL.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox43">
+                          <rd:DefaultName>textbox43</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>c</Format>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>12</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=sum(Fields!GLAmount.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+            </Header>
+          </TableGroup>
+        </TableGroups>
+        <Width>4.125in</Width>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.875in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.375in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.875in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>1.25in</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox22">
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox30">
+                      <Style>
+                        <BorderColor>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>SubTotal:</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox36">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(Fields!GLAmount.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox40">
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox41">
+                      <Style>
+                        <BorderColor>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Total GST:</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox44">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(Fields!GLgst.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox20">
+                      <rd:DefaultName>textbox20</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Total QST:</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox23">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(Fields!GLpst.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox45">
+                      <rd:DefaultName>textbox45</rd:DefaultName>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>11</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox46">
+                      <rd:DefaultName>textbox46</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Total:</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox47">
+                      <rd:DefaultName>textbox47</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>9</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=reportitems!textbox36.Value + reportitems!textbox44.Value + reportitems!textbox23.value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Left>3.75in</Left>
+      </Table>
+      <Textbox Name="textbox11">
+        <Top>0.375in</Top>
+        <Width>3.5in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>12pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>14</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!EmployeeName.Value, "ExpenseReport")</Value>
+      </Textbox>
+      <Textbox Name="textbox5">
+        <Top>3.125in</Top>
+        <Width>3.125in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>13</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.2in</Height>
+        <Value>="Date: ______________"</Value>
+      </Textbox>
+      <Textbox Name="textbox6">
+        <Top>2.375in</Top>
+        <Width>3.125in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>12</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.2in</Height>
+        <Value>="Date: ______________"</Value>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <Top>2.875in</Top>
+        <Width>3.125in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>11</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.2in</Height>
+        <Value>="Signature: ___________________________________"</Value>
+      </Textbox>
+      <Textbox Name="textbox39">
+        <Width>2.875in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>14pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>10</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.375in</Left>
+        <Height>0.375in</Height>
+        <Value>="Expense Report: " &amp; First(Fields!ExpenseReportID.Value, "ExpenseReport")</Value>
+      </Textbox>
+      <Textbox Name="textbox31">
+        <Top>2.125in</Top>
+        <Width>3.125in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>9</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.2in</Height>
+        <Value>="Signature: ___________________________________"</Value>
+      </Textbox>
+      <Textbox Name="textbox37">
+        <Top>1.875in</Top>
+        <Width>3.125in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.2in</Height>
+        <Value>="Employee: " &amp; First(Fields!EmployeeName.Value, "ExpenseReport")</Value>
+      </Textbox>
+      <Textbox Name="textbox35">
+        <Top>2.625in</Top>
+        <Width>3.125in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.2in</Height>
+        <Value>="Manager: " &amp;First(Fields!ManagerName.Value, "ExpenseReport")</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>1.625in</Top>
+        <Width>1in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <TextDecoration>Underline</TextDecoration>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.25in</Height>
+        <Value>Signatures:</Value>
+      </Textbox>
+      <Textbox Name="textbox32">
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.75in</Left>
+        <Height>0.2in</Height>
+        <Value>="Expense Report Date: " &amp; First(Fields!ExpenseReportDate.Value, "ExpenseReport")</Value>
+      </Textbox>
+      <Textbox Name="textbox33">
+        <Top>0.25in</Top>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>6.25in</Left>
+        <Height>0.2in</Height>
+        <Value>="Exchange Rate: " &amp; iif(First(Fields!ExchangeRate.Value, "ExpenseReport") = 0,"N/A",First(Fields!ExchangeRate.value))</Value>
+      </Textbox>
+      <Textbox Name="textbox34">
+        <Top>0.75in</Top>
+        <Width>1.75in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.2in</Height>
+        <Value>="Department: " &amp; First(Fields!ExpenseReportDept.Value, "ExpenseReport")</Value>
+      </Textbox>
+      <Image Name="image1">
+        <Sizing>Fit</Sizing>
+        <Width>1.75in</Width>
+        <Source>Embedded</Source>
+        <Style />
+        <ZIndex>2</ZIndex>
+        <Height>0.625in</Height>
+        <Value>lcl_scc_header_logo</Value>
+      </Image>
+      <Table Name="table1">
+        <ZIndex>1</ZIndex>
+        <DataSetName>ExpenseReport</DataSetName>
+        <Top>3.625in</Top>
+        <TableGroups>
+          <TableGroup>
+            <Grouping Name="table1_Group1">
+              <GroupExpressions>
+                <GroupExpression>=Fields!Province.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ColSpan>14</ColSpan>
+                      <ReportItems>
+                        <Textbox Name="textbox7">
+                          <rd:DefaultName>textbox7</rd:DefaultName>
+                          <Style>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
+                            <TextDecoration>Underline</TextDecoration>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>16</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!Province.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+            </Header>
+          </TableGroup>
+        </TableGroups>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ExpenseDetailsDate">
+                      <rd:DefaultName>ExpenseDetailsDate</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>dd/MM/yyyy</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>13</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ExpenseDetailsDate.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Category">
+                      <rd:DefaultName>Category</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>12</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Category.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ExpenseType">
+                      <rd:DefaultName>ExpenseType</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>11</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ExpenseType.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ExpenseItemDescription">
+                      <rd:DefaultName>ExpenseItemDescription</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ExpenseItemDescription.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Currency">
+                      <rd:DefaultName>Currency</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>9</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Currency.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Km">
+                      <rd:DefaultName>Km</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Km.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Km_Rate">
+                      <rd:DefaultName>Km_Rate</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Km_Rate.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Tip">
+                      <rd:DefaultName>Tip</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Tip.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Lodging_Taxes">
+                      <rd:DefaultName>Lodging_Taxes</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Lodging_Taxes.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="NonTaxableExtras">
+                      <rd:DefaultName>NonTaxableExtras</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!NonTaxableExtras.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox21">
+                      <rd:DefaultName>textbox21</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!subtotal.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="AGST">
+                      <rd:DefaultName>AGST</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!GST.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="AQST">
+                      <rd:DefaultName>AQST</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!PST.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ExpenseItemAmount">
+                      <rd:DefaultName>ExpenseItemAmount</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ExpenseItemAmount.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.21in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>14</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>31</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Expense Lines</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox16">
+                      <rd:DefaultName>textbox16</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>30</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Date</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>29</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Category</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox13">
+                      <rd:DefaultName>textbox13</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>28</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Type</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox15">
+                      <rd:DefaultName>textbox15</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>27</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Description</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox25">
+                      <rd:DefaultName>textbox25</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>26</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Cur</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox28">
+                      <rd:DefaultName>textbox28</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>25</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Km</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox29">
+                      <rd:DefaultName>textbox29</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>24</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Km Rate</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox17">
+                      <rd:DefaultName>textbox17</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>23</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Tip</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox18">
+                      <rd:DefaultName>textbox18</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>22</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Lodging Taxes</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox19">
+                      <rd:DefaultName>textbox19</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>21</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Non Taxable Extras</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>20</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Sub
+Total</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox26">
+                      <rd:DefaultName>textbox26</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>19</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>GST</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox27">
+                      <rd:DefaultName>textbox27</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>18</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>PST</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox14">
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>17</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Full Amount</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.5in</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>0.75in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.625in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.625in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.125in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.375in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.25in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.375in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.5in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.625in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.625in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.5in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.5in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.5in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.625in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>13</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>15</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Total:</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>7pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>14</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(Fields!ExpenseItemAmount.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+      </Table>
+      <Textbox Name="textbox38">
+        <Top>1in</Top>
+        <Width>7.75in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>0.125in</Left>
+        <Height>0.5in</Height>
+        <Value>="Business Purpose: " &amp; First(Fields!BusinessPurpose.Value, "ExpenseReport")</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>5.085in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox214">
+        <Width>1.375in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.875in</Left>
+        <Value>="User: " &amp; replace(User!UserID,"LCLMTL\", "")</Value>
+      </Textbox>
+      <Textbox Name="textbox66">
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>6.75in</Left>
+        <Value>=Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
+      </Textbox>
+      <Textbox Name="textbox67">
+        <Width>2.125in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.875in</Left>
+        <Value>="Execution Time:" &amp; format(Globals!ExecutionTime,"dd/MM/yyyy")</Value>
+      </Textbox>
+      <Textbox Name="textbox68">
+        <Width>1.75in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Value>=Globals!ReportName</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.25in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <TopMargin>0.25in</TopMargin>
+</Report>

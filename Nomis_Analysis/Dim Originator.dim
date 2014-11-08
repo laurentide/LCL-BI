@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2acee3dd-49ae-416d-adc6-e8b15d2ec08e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2acee3dd-49ae-416d-adc6-e8b15d2ec08e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Originator</ID>
   <Name>Dim Originator</Name>
   <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
@@ -146,7 +146,7 @@
       <KeyColumns>
         <KeyColumn dwd:design-time-name="b06c3bae-877a-4e70-8182-5c698e347855">
           <DataType>WChar</DataType>
-          <DataSize>20</DataSize>
+          <DataSize>50</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="0dcb6222-4c61-435a-a008-1df9b9db92c4">
             <TableID>dbo_dim_originator</TableID>
             <ColumnID>originator_name</ColumnID>

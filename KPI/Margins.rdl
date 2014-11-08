@@ -1,0 +1,880 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="AnalysisDB">
+      <rd:DataSourceID>84bc35b5-4c5c-43ea-82b3-d86cfda96a1b</rd:DataSourceID>
+      <DataSourceReference>AnalysisDB</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="TimeFiscalMonth">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>="[Time].[Fiscal Month].&amp;[" &amp; 
+iif(Day(now()) = 1,
+Year(dateadd("m",-1,now())) &amp; "-" &amp; Month(Dateadd("m",-1,now())).toString("D2"),
+Year(now()) &amp; "-" &amp; Month(now()).toString("D2")) 
+&amp; "-01T00:00:00]"</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Fiscal Month</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>TimeFiscalMonth</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="OriginatorsOriginatorOneLetterName">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Originators].[Originator One Letter Name].[All]</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CSR</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>OriginatorsOriginatorOneLetterName1</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="OriginatorsOriginatorTwoLetterName">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Originators].[Originator Two Letter Name].[All]</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AE</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>OriginatorsOriginatorTwoLetterName</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="SalesmenSalesmanName">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Salesmen].[Salesman Name].[All]</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Salesman Name</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>SalesmenSalesmanName1</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="ProductCodesProductPrimaryCategory">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Product Codes].[Product Primary Category].[All]</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Product Primary Category</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>ProductCodesProductPrimaryCategory</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="MarginLowerLimit">
+      <DataType>Float</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>0</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Margin Lower Limit</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="MarginUpperLimit">
+      <DataType>Float</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>100</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Margin Upper Limit</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1in</RightMargin>
+  <LeftMargin>1in</LeftMargin>
+  <BottomMargin>1in</BottomMargin>
+  <rd:ReportID>c761c2ba-6baf-41a4-9b35-a7a2ed68d458</rd:ReportID>
+  <DataSets>
+    <DataSet Name="AnalysisDB">
+      <Fields>
+        <Field Name="Product_Primary_Category">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Product Codes].[Product Primary Category].[Product Primary Category]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Order_Number">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Sales Data].[Order Number].[Order Number]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sales_Profit_Margin">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Sales Profit Margin]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Sell____Invoiced">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Sell  - Invoiced]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Cost___Invoiced">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Cost - Invoiced]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText> SELECT NON EMPTY { [Measures].[Cost - Invoiced], [Measures].[Sell  - Invoiced], [Measures].[Sales Profit Margin] } ON COLUMNS, NON EMPTY { ([Product Codes].[Product Primary Category].[Product Primary Category].ALLMEMBERS * [Sales Data].[Order Number].[Order Number].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@ProductCodesProductPrimaryCategory, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@SalesmenSalesmanName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))))) WHERE ( IIF( STRTOSET(@TimeFiscalMonth, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalMonth, CONSTRAINED), [Time].[Fiscal Month].currentmember ), IIF( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED).Count = 1, STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED), [Originators].[Originator One Letter Name].currentmember ), IIF( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED).Count = 1, STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED), [Originators].[Originator Two Letter Name].currentmember ), IIF( STRTOSET(@SalesmenSalesmanName, CONSTRAINED).Count = 1, STRTOSET(@SalesmenSalesmanName, CONSTRAINED), [Salesmen].[Salesman Name].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="TimeFiscalMonth">
+            <Value>=Parameters!TimeFiscalMonth.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="OriginatorsOriginatorOneLetterName">
+            <Value>=Parameters!OriginatorsOriginatorOneLetterName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="OriginatorsOriginatorTwoLetterName">
+            <Value>=Parameters!OriginatorsOriginatorTwoLetterName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SalesmenSalesmanName">
+            <Value>=Parameters!SalesmenSalesmanName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ProductCodesProductPrimaryCategory">
+            <Value>=Parameters!ProductCodesProductPrimaryCategory.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Product Codes</DimensionName><HierarchyName>Product Primary Category</HierarchyName><HierarchyUniqueName>[Product Codes].[Product Primary Category]</HierarchyUniqueName><LevelName>Product Primary Category</LevelName><UniqueName>[Product Codes].[Product Primary Category].[Product Primary Category]</UniqueName></ID><ItemCaption>Product Primary Category</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Sales Data</DimensionName><HierarchyName>Order Number</HierarchyName><HierarchyUniqueName>[Sales Data].[Order Number]</HierarchyUniqueName><LevelName>Order Number</LevelName><UniqueName>[Sales Data].[Order Number].[Order Number]</UniqueName></ID><ItemCaption>Order Number</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Sales Profit Margin</MeasureName><UniqueName>[Measures].[Sales Profit Margin]</UniqueName></ID><ItemCaption>Sales Profit Margin</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Sell  - Invoiced</MeasureName><UniqueName>[Measures].[Sell  - Invoiced]</UniqueName></ID><ItemCaption>Sell  - Invoiced</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Cost - Invoiced</MeasureName><UniqueName>[Measures].[Cost - Invoiced]</UniqueName></ID><ItemCaption>Cost - Invoiced</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><From>Sales_2008</From><Filter><FilterItems><FilterItem><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Time].[Fiscal Month].&amp;[2014-02-01T00:00:00]</MemberUniqueName></Member></Members><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Originators].[Originator One Letter Name]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Originators].[Originator One Letter Name].[All]</MemberUniqueName></Member></Members><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Originators].[Originator Two Letter Name]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Originators].[Originator Two Letter Name].[All]</MemberUniqueName></Member></Members><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Salesmen].[Salesman Name].[All]</MemberUniqueName></Member></Members><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Product Codes].[Product Primary Category]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Product Codes].[Product Primary Category].[All]</MemberUniqueName></Member></Members><Parametrized>true</Parametrized></Condition></FilterItem></FilterItems></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[Cost - Invoiced], [Measures].[Sell  - Invoiced], [Measures].[Sales Profit Margin] } ON COLUMNS, NON EMPTY { ([Product Codes].[Product Primary Category].[Product Primary Category].ALLMEMBERS * [Sales Data].[Order Number].[Order Number].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@ProductCodesProductPrimaryCategory, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@SalesmenSalesmanName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))))) WHERE ( IIF( STRTOSET(@TimeFiscalMonth, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalMonth, CONSTRAINED), [Time].[Fiscal Month].currentmember ), IIF( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED).Count = 1, STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED), [Originators].[Originator One Letter Name].currentmember ), IIF( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED).Count = 1, STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED), [Originators].[Originator Two Letter Name].currentmember ), IIF( STRTOSET(@SalesmenSalesmanName, CONSTRAINED).Count = 1, STRTOSET(@SalesmenSalesmanName, CONSTRAINED), [Salesmen].[Salesman Name].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions><ParameterDefinition><Name>TimeFiscalMonth</Name><DefaultValues><DefaultValue>[Time].[Fiscal Month].&amp;[2014-02-01T00:00:00]</DefaultValue></DefaultValues><Caption>Fiscal Month</Caption><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>OriginatorsOriginatorOneLetterName</Name><DefaultValues><DefaultValue>[Originators].[Originator One Letter Name].[All]</DefaultValue></DefaultValues><Caption>Originator One Letter Name</Caption><HierarchyUniqueName>[Originators].[Originator One Letter Name]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator One Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator One Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>OriginatorsOriginatorTwoLetterName</Name><DefaultValues><DefaultValue>[Originators].[Originator Two Letter Name].[All]</DefaultValue></DefaultValues><Caption>Originator Two Letter Name</Caption><HierarchyUniqueName>[Originators].[Originator Two Letter Name]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator Two Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator Two Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>OriginatorsOriginatorOneLetterName</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>SalesmenSalesmanName</Name><DefaultValues><DefaultValue>[Salesmen].[Salesman Name].[All]</DefaultValue></DefaultValues><Caption>Salesman Name</Caption><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>OriginatorsOriginatorOneLetterName</Name></ReferencedParameter><ReferencedParameter><Name>OriginatorsOriginatorTwoLetterName</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>ProductCodesProductPrimaryCategory</Name><DefaultValues><DefaultValue>[Product Codes].[Product Primary Category].[All]</DefaultValue></DefaultValues><Caption>Product Primary Category</Caption><HierarchyUniqueName>[Product Codes].[Product Primary Category]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Codes].[Product Primary Category].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Codes].[Product Primary Category].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Codes].[Product Primary Category].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Codes].[Product Primary Category].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@SalesmenSalesmanName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Codes].[Product Primary Category].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Codes].[Product Primary Category].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Codes].[Product Primary Category].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Codes].[Product Primary Category].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@SalesmenSalesmanName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>OriginatorsOriginatorOneLetterName</Name></ReferencedParameter><ReferencedParameter><Name>OriginatorsOriginatorTwoLetterName</Name></ReferencedParameter><ReferencedParameter><Name>SalesmenSalesmanName</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition></ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
+        <rd:SuppressAutoUpdate>true</rd:SuppressAutoUpdate>
+      </Query>
+    </DataSet>
+    <DataSet Name="OriginatorsOriginatorOneLetterName">
+      <Fields>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator One Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="TimeFiscalMonth">
+            <Value>=Parameters!TimeFiscalMonth.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items />
+              </Select>
+              <From>Sales_2008</From>
+            </QuerySpecification>
+            <Query>
+              <Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator One Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</Statement>
+              <ParameterDefinitions>
+<ParameterDefinition><Name>TimeFiscalMonth</Name><DefaultValues><DefaultValue>[Time].[Fiscal Month].&amp;[2014-02-01T00:00:00]</DefaultValue></DefaultValues><Caption>Fiscal Month</Caption><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+</ParameterDefinitions>
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+    </DataSet>
+    <DataSet Name="SalesmenSalesmanName">
+      <Fields>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])))</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="TimeFiscalMonth">
+            <Value>=Parameters!TimeFiscalMonth.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="OriginatorsOriginatorOneLetterName">
+            <Value>=Parameters!OriginatorsOriginatorOneLetterName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="OriginatorsOriginatorTwoLetterName">
+            <Value>=Parameters!OriginatorsOriginatorTwoLetterName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items />
+              </Select>
+              <From>Sales_2008</From>
+            </QuerySpecification>
+            <Query>
+              <Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])))</Statement>
+              <ParameterDefinitions>
+<ParameterDefinition><Name>TimeFiscalMonth</Name><DefaultValues><DefaultValue>[Time].[Fiscal Month].&amp;[2014-02-01T00:00:00]</DefaultValue></DefaultValues><Caption>Fiscal Month</Caption><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+<ParameterDefinition><Name>OriginatorsOriginatorOneLetterName</Name><DefaultValues /><Caption>Originator One Letter Name</Caption><HierarchyUniqueName>[Originators].[Originator One Letter Name]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator One Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator One Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+<ParameterDefinition><Name>OriginatorsOriginatorTwoLetterName</Name><DefaultValues /><Caption>Originator Two Letter Name</Caption><HierarchyUniqueName>[Originators].[Originator Two Letter Name]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator Two Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator Two Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>OriginatorsOriginatorOneLetterName</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+</ParameterDefinitions>
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+    </DataSet>
+    <DataSet Name="TimeFiscalMonth">
+      <Fields>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Sales_2008]</CommandText>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement></Query></QueryDefinition></rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+    </DataSet>
+    <DataSet Name="OriginatorsOriginatorOneLetterName1">
+      <Fields>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator One Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="TimeFiscalMonth">
+            <Value>=Parameters!TimeFiscalMonth.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator One Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</Statement><ParameterDefinitions>
+<ParameterDefinition><Name>TimeFiscalMonth</Name><DefaultValues><DefaultValue>[Time].[Fiscal Month].&amp;[2014-02-01T00:00:00]</DefaultValue></DefaultValues><Caption>Fiscal Month</Caption><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+</ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+    </DataSet>
+    <DataSet Name="OriginatorsOriginatorTwoLetterName">
+      <Fields>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator Two Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="TimeFiscalMonth">
+            <Value>=Parameters!TimeFiscalMonth.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="OriginatorsOriginatorOneLetterName">
+            <Value>=Parameters!OriginatorsOriginatorOneLetterName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator Two Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))</Statement><ParameterDefinitions>
+<ParameterDefinition><Name>TimeFiscalMonth</Name><DefaultValues><DefaultValue>[Time].[Fiscal Month].&amp;[2014-02-01T00:00:00]</DefaultValue></DefaultValues><Caption>Fiscal Month</Caption><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+<ParameterDefinition><Name>OriginatorsOriginatorOneLetterName</Name><DefaultValues><DefaultValue>[Originators].[Originator One Letter Name].[All]</DefaultValue></DefaultValues><Caption>Originator One Letter Name</Caption><HierarchyUniqueName>[Originators].[Originator One Letter Name]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator One Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator One Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+</ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+    </DataSet>
+    <DataSet Name="SalesmenSalesmanName1">
+      <Fields>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])))</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="TimeFiscalMonth">
+            <Value>=Parameters!TimeFiscalMonth.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="OriginatorsOriginatorOneLetterName">
+            <Value>=Parameters!OriginatorsOriginatorOneLetterName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="OriginatorsOriginatorTwoLetterName">
+            <Value>=Parameters!OriginatorsOriginatorTwoLetterName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])))</Statement><ParameterDefinitions>
+<ParameterDefinition><Name>TimeFiscalMonth</Name><DefaultValues><DefaultValue>[Time].[Fiscal Month].&amp;[2014-02-01T00:00:00]</DefaultValue></DefaultValues><Caption>Fiscal Month</Caption><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+<ParameterDefinition><Name>OriginatorsOriginatorOneLetterName</Name><DefaultValues><DefaultValue>[Originators].[Originator One Letter Name].[All]</DefaultValue></DefaultValues><Caption>Originator One Letter Name</Caption><HierarchyUniqueName>[Originators].[Originator One Letter Name]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator One Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator One Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+<ParameterDefinition><Name>OriginatorsOriginatorTwoLetterName</Name><DefaultValues><DefaultValue>[Originators].[Originator Two Letter Name].[All]</DefaultValue></DefaultValues><Caption>Originator Two Letter Name</Caption><HierarchyUniqueName>[Originators].[Originator Two Letter Name]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator Two Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator Two Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>OriginatorsOriginatorOneLetterName</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+</ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+    </DataSet>
+    <DataSet Name="ProductCodesProductPrimaryCategory">
+      <Fields>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Codes].[Product Primary Category].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Codes].[Product Primary Category].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Codes].[Product Primary Category].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Codes].[Product Primary Category].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@SalesmenSalesmanName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))))</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="TimeFiscalMonth">
+            <Value>=Parameters!TimeFiscalMonth.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="OriginatorsOriginatorOneLetterName">
+            <Value>=Parameters!OriginatorsOriginatorOneLetterName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="OriginatorsOriginatorTwoLetterName">
+            <Value>=Parameters!OriginatorsOriginatorTwoLetterName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="SalesmenSalesmanName">
+            <Value>=Parameters!SalesmenSalesmanName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Codes].[Product Primary Category].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Codes].[Product Primary Category].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Codes].[Product Primary Category].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Codes].[Product Primary Category].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@SalesmenSalesmanName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))))</Statement><ParameterDefinitions>
+<ParameterDefinition><Name>TimeFiscalMonth</Name><DefaultValues><DefaultValue>[Time].[Fiscal Month].&amp;[2014-02-01T00:00:00]</DefaultValue></DefaultValues><Caption>Fiscal Month</Caption><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+<ParameterDefinition><Name>OriginatorsOriginatorOneLetterName</Name><DefaultValues><DefaultValue>[Originators].[Originator One Letter Name].[All]</DefaultValue></DefaultValues><Caption>Originator One Letter Name</Caption><HierarchyUniqueName>[Originators].[Originator One Letter Name]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator One Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator One Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator One Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+<ParameterDefinition><Name>OriginatorsOriginatorTwoLetterName</Name><DefaultValues><DefaultValue>[Originators].[Originator Two Letter Name].[All]</DefaultValue></DefaultValues><Caption>Originator Two Letter Name</Caption><HierarchyUniqueName>[Originators].[Originator Two Letter Name]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator Two Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Originators].[Originator Two Letter Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Originators].[Originator Two Letter Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>OriginatorsOriginatorOneLetterName</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+<ParameterDefinition><Name>SalesmenSalesmanName</Name><DefaultValues><DefaultValue>[Salesmen].[Salesman Name].[All]</DefaultValue></DefaultValues><Caption>Salesman Name</Caption><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorTwoLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@OriginatorsOriginatorOneLetterName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter><ReferencedParameter><Name>OriginatorsOriginatorOneLetterName</Name></ReferencedParameter><ReferencedParameter><Name>OriginatorsOriginatorTwoLetterName</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+</ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Width>6.5in</Width>
+  <Body>
+    <ReportItems>
+      <Table Name="table1">
+        <DataSetName>AnalysisDB</DataSetName>
+        <TableGroups>
+          <TableGroup>
+            <Grouping Name="table1_Product_Primary_Category">
+              <GroupExpressions>
+                <GroupExpression>=Fields!Product_Primary_Category.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+            <Sorting>
+              <SortBy>
+                <SortExpression>=Fields!Product_Primary_Category.Value</SortExpression>
+                <Direction>Ascending</Direction>
+              </SortBy>
+            </Sorting>
+          </TableGroup>
+          <TableGroup>
+            <Grouping Name="table1_Group2">
+              <GroupExpressions>
+                <GroupExpression>=Fields!Product_Primary_Category.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Product_Primary_Category">
+                          <rd:DefaultName>Product_Primary_Category</rd:DefaultName>
+                          <HideDuplicates>AnalysisDB</HideDuplicates>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>9</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!Product_Primary_Category.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox12">
+                          <rd:DefaultName>textbox12</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>8</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox13">
+                          <rd:DefaultName>textbox13</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>p2</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>7</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=(sum(Fields!Sell____Invoiced.Value)-sum(Fields!Cost___Invoiced.Value))/sum(Fields!Sell____Invoiced.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox1">
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>c</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>6</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=sum(Fields!Sell____Invoiced.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox7">
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>c</Format>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>5</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=sum(Fields!Cost___Invoiced.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+            </Header>
+          </TableGroup>
+        </TableGroups>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox21">
+                      <rd:DefaultName>textbox21</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Order_Number">
+                      <rd:DefaultName>Order_Number</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Order_Number.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Sales_Profit_Margin">
+                      <rd:DefaultName>Sales_Profit_Margin</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>p2</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Sales_Profit_Margin.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Sell____Invoiced">
+                      <rd:DefaultName>Sell____Invoiced</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Sell____Invoiced.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Cost___Invoiced">
+                      <rd:DefaultName>Cost___Invoiced</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Cost___Invoiced.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+          <Grouping Name="table1_Details_Group">
+            <GroupExpressions>
+              <GroupExpression>=Fields!Order_Number.Value</GroupExpression>
+            </GroupExpressions>
+            <Filters>
+              <Filter>
+                <FilterExpression>=Fields!Sales_Profit_Margin.Value</FilterExpression>
+                <Operator>Between</Operator>
+                <FilterValues>
+                  <FilterValue>=Parameters!MarginLowerLimit.Value/100</FilterValue>
+                  <FilterValue>=Parameters!MarginUpperLimit.Value/100</FilterValue>
+                </FilterValues>
+              </Filter>
+            </Filters>
+          </Grouping>
+          <Sorting>
+            <SortBy>
+              <SortExpression>=Fields!Sales_Profit_Margin.Value</SortExpression>
+              <Direction>Ascending</Direction>
+            </SortBy>
+          </Sorting>
+          <Visibility>
+            <Hidden>true</Hidden>
+            <ToggleItem>Product_Primary_Category</ToggleItem>
+          </Visibility>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>14</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Product Primary Category</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>13</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Order Number</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>12</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Margin</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>11</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Sell</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Cost</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.375in</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>2.5in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+        </TableColumns>
+      </Table>
+    </ReportItems>
+    <Height>0.875in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

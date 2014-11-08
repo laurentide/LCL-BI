@@ -8,17 +8,21 @@
   </DataSources>
   <InteractiveHeight>8.5in</InteractiveHeight>
   <ReportParameters>
-    <ReportParameter Name="TimeFiscalYear">
+    <ReportParameter Name="TimeFiscalMonth">
       <DataType>String</DataType>
       <DefaultValue>
         <Values>
-          <Value>[Time].[Fiscal Year].&amp;[2011-10-01T00:00:00]</Value>
+          <Value>="[Time].[Fiscal Month].&amp;[" &amp; 
+iif(Day(now()) = 1,
+Year(dateadd("m",-1,now())) &amp; "-" &amp; Month(Dateadd("m",-1,now())).toString("D2"),
+Year(now()) &amp; "-" &amp; Month(now()).toString("D2")) 
+&amp; "-01T00:00:00]"</Value>
         </Values>
       </DefaultValue>
-      <Prompt>Fiscal Year</Prompt>
+      <Prompt>Fiscal Month</Prompt>
       <ValidValues>
         <DataSetReference>
-          <DataSetName>TimeFiscalYear</DataSetName>
+          <DataSetName>TimeFiscalMonth</DataSetName>
           <ValueField>ParameterValue</ValueField>
           <LabelField>ParameterCaptionIndented</LabelField>
         </DataSetReference>
@@ -53,7 +57,6 @@
     <ReportItems>
       <Textbox Name="textbox1">
         <rd:DefaultName>textbox1</rd:DefaultName>
-        <Width>2.375in</Width>
         <Style>
           <Color>#1c3a70</Color>
           <FontFamily>Tahoma</FontFamily>
@@ -66,7 +69,7 @@
         </Style>
         <ZIndex>1</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>28.20106cm</Left>
+        <Left>30.95238cm</Left>
         <Value>Whitespace Report</Value>
       </Textbox>
       <Image Name="image1">
@@ -120,16 +123,16 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Salesmen].[Salesman Name].[Salesman Name]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Ship_To_Territory_Code">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Customer Ship To].[Ship To Territory Code].[Ship To Territory Code]" /&gt;</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Ship_To_Customer_Number">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Customer Ship To].[Ship To Customer Number].[Ship To Customer Number]" /&gt;</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="Customer_Name">
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Customers].[Customer Name].[Customer Name]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Customer_Number">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Customers].[Customer Number].[Customer Number]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ship_To_Territory_Code">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Dim Customer Ship To].[Ship To Territory Code].[Ship To Territory Code]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Product_Primary_Category">
@@ -143,16 +146,16 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
       </Fields>
       <Query>
         <DataSourceName>AnalysisDB</DataSourceName>
-        <CommandText> SELECT NON EMPTY { [Measures].[Sell - Bookings] } ON COLUMNS, NON EMPTY { ([Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Dim Customer Ship To].[Ship To Territory Code].[Ship To Territory Code].ALLMEMBERS * [Dim Customer Ship To].[Ship To Customer Number].[Ship To Customer Number].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Product Code Category].[Product Primary Category].[Product Primary Category].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@SalesmenSalesmanName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalYear, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[DET-TRONICS], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS] } ) ON COLUMNS FROM [Sales_2008]))) WHERE ( [Product Codes].[Product Primary Category].CurrentMember, IIF( STRTOSET(@TimeFiscalYear, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalYear, CONSTRAINED), [Time].[Fiscal Year].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <CommandText> SELECT NON EMPTY { [Measures].[Sell - Bookings] } ON COLUMNS, NON EMPTY { ([Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Customers].[Customer Number].[Customer Number].ALLMEMBERS * [Dim Customer Ship To].[Ship To Territory Code].[Ship To Territory Code].ALLMEMBERS * [Product Code Category].[Product Primary Category].[Product Primary Category].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@SalesmenSalesmanName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FIRE &amp; GAS DETECTION] } ) ON COLUMNS FROM [Sales_2008]))) WHERE ( [Product Codes].[Product Primary Category].CurrentMember, IIF( STRTOSET(@TimeFiscalMonth, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalMonth, CONSTRAINED), [Time].[Fiscal Month].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <QueryParameters>
-          <QueryParameter Name="TimeFiscalYear">
-            <Value>=Parameters!TimeFiscalYear.Value</Value>
+          <QueryParameter Name="TimeFiscalMonth">
+            <Value>=Parameters!TimeFiscalMonth.Value</Value>
           </QueryParameter>
           <QueryParameter Name="SalesmenSalesmanName">
             <Value>=Parameters!SalesmenSalesmanName.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Salesmen</DimensionName><HierarchyName>Salesman Name</HierarchyName><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><LevelName>Salesman Name</LevelName><UniqueName>[Salesmen].[Salesman Name].[Salesman Name]</UniqueName></ID><ItemCaption>Salesman Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Customer Ship To</DimensionName><HierarchyName>Ship To Territory Code</HierarchyName><HierarchyUniqueName>[Dim Customer Ship To].[Ship To Territory Code]</HierarchyUniqueName><LevelName>Ship To Territory Code</LevelName><UniqueName>[Dim Customer Ship To].[Ship To Territory Code].[Ship To Territory Code]</UniqueName></ID><ItemCaption>Ship To Territory Code</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Customer Ship To</DimensionName><HierarchyName>Ship To Customer Number</HierarchyName><HierarchyUniqueName>[Dim Customer Ship To].[Ship To Customer Number]</HierarchyUniqueName><LevelName>Ship To Customer Number</LevelName><UniqueName>[Dim Customer Ship To].[Ship To Customer Number].[Ship To Customer Number]</UniqueName></ID><ItemCaption>Ship To Customer Number</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Customers</DimensionName><HierarchyName>Customer Name</HierarchyName><HierarchyUniqueName>[Customers].[Customer Name]</HierarchyUniqueName><LevelName>Customer Name</LevelName><UniqueName>[Customers].[Customer Name].[Customer Name]</UniqueName></ID><ItemCaption>Customer Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Product Code Category</DimensionName><HierarchyName>Product Primary Category</HierarchyName><HierarchyUniqueName>[Product Code Category].[Product Primary Category]</HierarchyUniqueName><LevelName>Product Primary Category</LevelName><UniqueName>[Product Code Category].[Product Primary Category].[Product Primary Category]</UniqueName></ID><ItemCaption>Product Primary Category</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Sell - Bookings</MeasureName><UniqueName>[Measures].[Sell - Bookings]</UniqueName></ID><ItemCaption>Sell - Bookings</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><AutoExecute>false</AutoExecute><From>Sales_2008</From><Filter><FilterItems><FilterItem><HierarchyUniqueName>[Product Codes].[Product Primary Category]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[DET-TRONICS]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[SERVICES - LCL]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[CSI]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[PSS]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[VAD]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[WIRELESS]</MemberUniqueName></Member></Members></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Time].[Fiscal Year]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Time].[Fiscal Year].&amp;[2011-10-01T00:00:00]</MemberUniqueName></Member></Members><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members /><Parametrized>true</Parametrized></Condition></FilterItem></FilterItems></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[Sell - Bookings] } ON COLUMNS, NON EMPTY { ([Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Dim Customer Ship To].[Ship To Territory Code].[Ship To Territory Code].ALLMEMBERS * [Dim Customer Ship To].[Ship To Customer Number].[Ship To Customer Number].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Product Code Category].[Product Primary Category].[Product Primary Category].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@SalesmenSalesmanName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalYear, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[DET-TRONICS], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS] } ) ON COLUMNS FROM [Sales_2008]))) WHERE ( [Product Codes].[Product Primary Category].CurrentMember, IIF( STRTOSET(@TimeFiscalYear, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalYear, CONSTRAINED), [Time].[Fiscal Year].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions><ParameterDefinition><Name>TimeFiscalYear</Name><DefaultValues><DefaultValue>[Time].[Fiscal Year].&amp;[2011-10-01T00:00:00]</DefaultValue></DefaultValues><Caption>Fiscal Year</Caption><HierarchyUniqueName>[Time].[Fiscal Year]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[DET-TRONICS], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS] } ) ON COLUMNS FROM [Sales_2008])</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>SalesmenSalesmanName</Name><DefaultValues /><Caption>Salesman Name</Caption><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalYear, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[DET-TRONICS], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS] } ) ON COLUMNS FROM [Sales_2008]))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalYear, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[DET-TRONICS], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS] } ) ON COLUMNS FROM [Sales_2008]))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalYear</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition></ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
+        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Salesmen</DimensionName><HierarchyName>Salesman Name</HierarchyName><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><LevelName>Salesman Name</LevelName><UniqueName>[Salesmen].[Salesman Name].[Salesman Name]</UniqueName></ID><ItemCaption>Salesman Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Customers</DimensionName><HierarchyName>Customer Name</HierarchyName><HierarchyUniqueName>[Customers].[Customer Name]</HierarchyUniqueName><LevelName>Customer Name</LevelName><UniqueName>[Customers].[Customer Name].[Customer Name]</UniqueName></ID><ItemCaption>Customer Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Customers</DimensionName><HierarchyName>Customer Number</HierarchyName><HierarchyUniqueName>[Customers].[Customer Number]</HierarchyUniqueName><LevelName>Customer Number</LevelName><UniqueName>[Customers].[Customer Number].[Customer Number]</UniqueName></ID><ItemCaption>Customer Number</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Dim Customer Ship To</DimensionName><HierarchyName>Ship To Territory Code</HierarchyName><HierarchyUniqueName>[Dim Customer Ship To].[Ship To Territory Code]</HierarchyUniqueName><LevelName>Ship To Territory Code</LevelName><UniqueName>[Dim Customer Ship To].[Ship To Territory Code].[Ship To Territory Code]</UniqueName></ID><ItemCaption>Ship To Territory Code</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Product Code Category</DimensionName><HierarchyName>Product Primary Category</HierarchyName><HierarchyUniqueName>[Product Code Category].[Product Primary Category]</HierarchyUniqueName><LevelName>Product Primary Category</LevelName><UniqueName>[Product Code Category].[Product Primary Category].[Product Primary Category]</UniqueName></ID><ItemCaption>Product Primary Category</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Sell - Bookings</MeasureName><UniqueName>[Measures].[Sell - Bookings]</UniqueName></ID><ItemCaption>Sell - Bookings</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><AutoExecute>false</AutoExecute><From>Sales_2008</From><Filter><FilterItems><FilterItem><HierarchyUniqueName>[Product Codes].[Product Primary Category]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[SERVICES - LCL]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[CSI]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[PSS]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[VAD]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[WIRELESS]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)]</MemberUniqueName></Member><Member><MemberUniqueName>[Product Codes].[Product Primary Category].&amp;[FIRE &amp; GAS DETECTION]</MemberUniqueName></Member></Members></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members /><Parametrized>true</Parametrized></Condition></FilterItem><FilterItem><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><Condition xsi:type="EqualTo"><Members /><Parametrized>true</Parametrized></Condition></FilterItem></FilterItems></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[Sell - Bookings] } ON COLUMNS, NON EMPTY { ([Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Customers].[Customer Number].[Customer Number].ALLMEMBERS * [Dim Customer Ship To].[Ship To Territory Code].[Ship To Territory Code].ALLMEMBERS * [Product Code Category].[Product Primary Category].[Product Primary Category].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@SalesmenSalesmanName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FIRE &amp; GAS DETECTION] } ) ON COLUMNS FROM [Sales_2008]))) WHERE ( [Product Codes].[Product Primary Category].CurrentMember, IIF( STRTOSET(@TimeFiscalMonth, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalMonth, CONSTRAINED), [Time].[Fiscal Month].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions><ParameterDefinition><Name>TimeFiscalMonth</Name><DefaultValues /><Caption>Fiscal Month</Caption><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FIRE &amp; GAS DETECTION] } ) ON COLUMNS FROM [Sales_2008])</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition><ParameterDefinition><Name>SalesmenSalesmanName</Name><DefaultValues /><Caption>Salesman Name</Caption><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FIRE &amp; GAS DETECTION] } ) ON COLUMNS FROM [Sales_2008]))</Statement><ParameterizedStatement><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FIRE &amp; GAS DETECTION] } ) ON COLUMNS FROM [Sales_2008]))</Statement><ReferencedParameters><ReferencedParameter><Name>TimeFiscalMonth</Name></ReferencedParameter></ReferencedParameters></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition></ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
         <rd:SuppressAutoUpdate>true</rd:SuppressAutoUpdate>
       </Query>
     </DataSet>
@@ -173,14 +176,14 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
       </Fields>
       <Query>
         <DataSourceName>AnalysisDB</DataSourceName>
-        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalYear, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[DET-TRONICS], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[Fisher Valves &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS] } ) ON COLUMNS FROM [Sales_2008]))</CommandText>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FIRE &amp; GAS DETECTION] } ) ON COLUMNS FROM [Sales_2008]))</CommandText>
         <QueryParameters>
-          <QueryParameter Name="TimeFiscalYear">
-            <Value>=Parameters!TimeFiscalYear.Value</Value>
+          <QueryParameter Name="TimeFiscalMonth">
+            <Value>=Parameters!TimeFiscalMonth.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalYear, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[DET-TRONICS], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[Fisher Valves &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS] } ) ON COLUMNS FROM [Sales_2008]))</Statement><ParameterDefinitions>
-<ParameterDefinition><Name>TimeFiscalYear</Name><DefaultValues><DefaultValue>[Time].[Fiscal Year].&amp;[2011-10-01T00:00:00]</DefaultValue></DefaultValues><Caption>Fiscal Year</Caption><HierarchyUniqueName>[Time].[Fiscal Year]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[DET-TRONICS], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[Fisher Valves &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS] } ) ON COLUMNS FROM [Sales_2008])</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FIRE &amp; GAS DETECTION] } ) ON COLUMNS FROM [Sales_2008]))</Statement><ParameterDefinitions>
+<ParameterDefinition><Name>TimeFiscalMonth</Name><DefaultValues /><Caption>Fiscal Month</Caption><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FIRE &amp; GAS DETECTION] } ) ON COLUMNS FROM [Sales_2008])</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery><MultipleValues>true</MultipleValues></ParameterDefinition>
 </ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
         <rd:AutoGenerated>true</rd:AutoGenerated>
         <rd:Hidden>true</rd:Hidden>
@@ -203,18 +206,42 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
       </Fields>
       <Query>
         <DataSourceName>AnalysisDB</DataSourceName>
-        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[DET-TRONICS], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[Fisher Valves &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS] } ) ON COLUMNS FROM [Sales_2008])</CommandText>
-        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[DET-TRONICS], [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[Fisher Valves &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS] } ) ON COLUMNS FROM [Sales_2008])</Statement></Query></QueryDefinition></rd:DesignerState>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FIRE &amp; GAS DETECTION] } ) ON COLUMNS FROM [Sales_2008])</CommandText>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Year].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Year].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Year].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Year].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FIRE &amp; GAS DETECTION] } ) ON COLUMNS FROM [Sales_2008])</Statement></Query></QueryDefinition></rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+      </Query>
+    </DataSet>
+    <DataSet Name="TimeFiscalMonth">
+      <Fields>
+        <Field Name="ParameterValue">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaption">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+        <Field Name="ParameterLevel">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>AnalysisDB</DataSourceName>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FIRE &amp; GAS DETECTION] } ) ON COLUMNS FROM [Sales_2008])</CommandText>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM ( SELECT ( { [Product Codes].[Product Primary Category].&amp;[FISHER REGULATORS], [Product Codes].[Product Primary Category].&amp;[SERVICES - LCL], [Product Codes].[Product Primary Category].&amp;[MISCELLANEOUS], [Product Codes].[Product Primary Category].&amp;[CSI], [Product Codes].[Product Primary Category].&amp;[FISHER VALVES &amp; IVS], [Product Codes].[Product Primary Category].&amp;[PSS], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT FLOW / MMI], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT ANALYTICAL], [Product Codes].[Product Primary Category].&amp;[ROSEMOUNT MEASUREMENT], [Product Codes].[Product Primary Category].&amp;[SAFETY REL VALVE &amp; REPAIR], [Product Codes].[Product Primary Category].&amp;[SIE (NON-SAFETY RELIEF)], [Product Codes].[Product Primary Category].&amp;[VAD], [Product Codes].[Product Primary Category].&amp;[WIRELESS], [Product Codes].[Product Primary Category].&amp;[VAD (IVRQ)], [Product Codes].[Product Primary Category].&amp;[FIRE &amp; GAS DETECTION] } ) ON COLUMNS FROM [Sales_2008])</Statement></Query></QueryDefinition></rd:DesignerState>
         <rd:AutoGenerated>true</rd:AutoGenerated>
         <rd:Hidden>true</rd:Hidden>
       </Query>
     </DataSet>
   </DataSets>
-  <Width>13.50417in</Width>
+  <Width>14.56667in</Width>
   <Body>
     <ReportItems>
       <Table Name="table1">
         <DataSetName>AnalysisDB</DataSetName>
+        <Width>14.55416in</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -238,58 +265,9 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>18</ZIndex>
+                      <ZIndex>19</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Salesman_Name.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox11">
-                      <rd:DefaultName>textbox11</rd:DefaultName>
-                      <Style>
-                        <BackgroundColor>White</BackgroundColor>
-                        <BorderColor>
-                          <Default>DimGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Center</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>17</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!Ship_To_Territory_Code.Value</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox142">
-                      <Style>
-                        <BackgroundColor>White</BackgroundColor>
-                        <BorderColor>
-                          <Default>DimGray</Default>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                        </BorderStyle>
-                        <FontSize>8pt</FontSize>
-                        <TextAlign>Center</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>16</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>=Fields!Ship_To_Customer_Number.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -310,9 +288,61 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>15</ZIndex>
+                      <ZIndex>18</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Customer_Name.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox44">
+                      <rd:DefaultName>textbox44</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <Format>#,###,.</Format>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>17</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Customer_Number.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <Format>#,###,.</Format>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>16</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Ship_To_Territory_Code.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -336,7 +366,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>14</ZIndex>
+                      <ZIndex>15</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "CSI",cDbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -362,9 +392,9 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>13</ZIndex>
+                      <ZIndex>14</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "DET-TRONICS",cDbl(fields!Sell___Bookings.Value),0.0))</Value>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "FIRE &amp; GAS DETECTION",cDbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -388,7 +418,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>12</ZIndex>
+                      <ZIndex>13</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER REGULATORS",
     cdbl(fields!Sell___Bookings.Value),0.0))</Value>
@@ -415,7 +445,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>11</ZIndex>
+                      <ZIndex>12</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER VALVES &amp; IVS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -441,7 +471,7 @@ zEVyypLpQAqUSbpWdKbXvrIOrUCOQN7HHMsZfdWFu0OmLUkJSFKiNkgJACRy8AAB7gMYadmWuSbcCrOQ
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>10</ZIndex>
+                      <ZIndex>11</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "SERVICES - REBILL" or 
 fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
@@ -468,7 +498,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>9</ZIndex>
+                      <ZIndex>10</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "PSS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -494,7 +524,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>8</ZIndex>
+                      <ZIndex>9</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "ROSEMOUNT MEASUREMENT",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -520,7 +550,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>7</ZIndex>
+                      <ZIndex>8</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "ROSEMOUNT FLOW / MMI",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -546,7 +576,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>6</ZIndex>
+                      <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "ROSEMOUNT ANALYTICAL",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -572,7 +602,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>5</ZIndex>
+                      <ZIndex>6</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "SAFETY REL VALVE &amp; REPAIR",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -598,7 +628,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>4</ZIndex>
+                      <ZIndex>5</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "SERVICES - LCL",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -624,7 +654,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>3</ZIndex>
+                      <ZIndex>4</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "SIE (NON-SAFETY RELIEF)",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -650,9 +680,35 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>2</ZIndex>
+                      <ZIndex>3</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "VAD",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox38">
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>#,###,.</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "VAD (IVRQ)",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -714,8 +770,6 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
           <Grouping Name="table1_Details_Group">
             <GroupExpressions>
               <GroupExpression>=Fields!Salesman_Name.Value</GroupExpression>
-              <GroupExpression>=Fields!Ship_To_Territory_Code.Value</GroupExpression>
-              <GroupExpression>=Fields!Ship_To_Customer_Number.Value</GroupExpression>
               <GroupExpression>=Fields!Customer_Name.Value</GroupExpression>
             </GroupExpressions>
           </Grouping>
@@ -755,73 +809,9 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>53</ZIndex>
+                      <ZIndex>59</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Salesman</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox3">
-                      <rd:DefaultName>textbox3</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#1c3a70</BackgroundColor>
-                        <BorderColor>
-                          <Default>White</Default>
-                          <Bottom>DimGray</Bottom>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                          <Bottom>Solid</Bottom>
-                        </BorderStyle>
-                        <BorderWidth>
-                          <Bottom>1pt</Bottom>
-                        </BorderWidth>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>52</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>TC</Value>
-                    </Textbox>
-                  </ReportItems>
-                </TableCell>
-                <TableCell>
-                  <ReportItems>
-                    <Textbox Name="textbox4">
-                      <rd:DefaultName>textbox4</rd:DefaultName>
-                      <Style>
-                        <Color>White</Color>
-                        <BackgroundColor>#1c3a70</BackgroundColor>
-                        <BorderColor>
-                          <Default>White</Default>
-                          <Bottom>DimGray</Bottom>
-                        </BorderColor>
-                        <BorderStyle>
-                          <Default>Solid</Default>
-                          <Bottom>Solid</Bottom>
-                        </BorderStyle>
-                        <BorderWidth>
-                          <Bottom>1pt</Bottom>
-                        </BorderWidth>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>700</FontWeight>
-                        <TextAlign>Center</TextAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                      <ZIndex>51</ZIndex>
-                      <CanGrow>true</CanGrow>
-                      <Value>Cust #</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -851,9 +841,67 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>50</ZIndex>
+                      <ZIndex>58</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Customer Name</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox43">
+                      <rd:DefaultName>textbox43</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Arial Narrow</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>57</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Customer Number</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Arial Narrow</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>56</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>TC</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -879,7 +927,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>49</ZIndex>
+                      <ZIndex>55</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>CSI</Value>
                     </Textbox>
@@ -907,9 +955,9 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>48</ZIndex>
+                      <ZIndex>54</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>Det-tronics</Value>
+                      <Value>Fire and Gas</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -935,7 +983,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>47</ZIndex>
+                      <ZIndex>53</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Fisher Regs</Value>
                     </Textbox>
@@ -963,7 +1011,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>46</ZIndex>
+                      <ZIndex>52</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Fisher Valves &amp; IVS</Value>
                     </Textbox>
@@ -991,7 +1039,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>45</ZIndex>
+                      <ZIndex>51</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Misc</Value>
                     </Textbox>
@@ -1019,7 +1067,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>44</ZIndex>
+                      <ZIndex>50</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>PSS</Value>
                     </Textbox>
@@ -1047,7 +1095,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>43</ZIndex>
+                      <ZIndex>49</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>RSMT  Measurement</Value>
                     </Textbox>
@@ -1075,7 +1123,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>42</ZIndex>
+                      <ZIndex>48</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>RSMT Flow &amp; MMI</Value>
                     </Textbox>
@@ -1103,7 +1151,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>41</ZIndex>
+                      <ZIndex>47</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>RSMT  Analytical</Value>
                     </Textbox>
@@ -1131,7 +1179,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>40</ZIndex>
+                      <ZIndex>46</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Safety rel valve &amp; repair</Value>
                     </Textbox>
@@ -1159,7 +1207,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>39</ZIndex>
+                      <ZIndex>45</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Services LCL</Value>
                     </Textbox>
@@ -1187,7 +1235,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>38</ZIndex>
+                      <ZIndex>44</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>SIE</Value>
                     </Textbox>
@@ -1215,9 +1263,38 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>37</ZIndex>
+                      <ZIndex>43</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>VAD</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox37">
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                          <Bottom>DimGray</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Arial Narrow</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>42</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>VAD
+IVRQ</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1243,7 +1320,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>36</ZIndex>
+                      <ZIndex>41</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Wireless</Value>
                     </Textbox>
@@ -1270,7 +1347,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>35</ZIndex>
+                      <ZIndex>40</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Total</Value>
                     </Textbox>
@@ -1287,13 +1364,16 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
             <Width>1.17708in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>0.45in</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>0.45in</Width>
-          </TableColumn>
-          <TableColumn>
             <Width>1.67708in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.65in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.65in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.65in</Width>
           </TableColumn>
           <TableColumn>
             <Width>0.65in</Width>
@@ -1346,7 +1426,6 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
             <TableRow>
               <TableCells>
                 <TableCell>
-                  <ColSpan>4</ColSpan>
                   <ReportItems>
                     <Textbox Name="textbox13">
                       <rd:DefaultName>textbox13</rd:DefaultName>
@@ -1361,9 +1440,84 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>34</ZIndex>
+                      <ZIndex>39</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Total:</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox40">
+                      <rd:DefaultName>textbox40</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>38</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox46">
+                      <rd:DefaultName>textbox46</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>#,###,.</Format>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>37</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>#,###,.</Format>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>36</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1387,7 +1541,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>33</ZIndex>
+                      <ZIndex>35</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "CSI",cDbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -1413,9 +1567,9 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>32</ZIndex>
+                      <ZIndex>34</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "DET-TRONICS",cDbl(fields!Sell___Bookings.Value),0.0))</Value>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "FIRE &amp; GAS DETECTION",cDbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1439,7 +1593,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>31</ZIndex>
+                      <ZIndex>33</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER REGULATORS",
     cdbl(fields!Sell___Bookings.Value),0.0))</Value>
@@ -1466,7 +1620,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>30</ZIndex>
+                      <ZIndex>32</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "FISHER VALVES &amp; IVS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -1492,7 +1646,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>29</ZIndex>
+                      <ZIndex>31</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "SERVICES - REBILL" or 
 fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
@@ -1519,7 +1673,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>28</ZIndex>
+                      <ZIndex>30</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "PSS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -1545,7 +1699,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>27</ZIndex>
+                      <ZIndex>29</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "ROSEMOUNT MEASUREMENT",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -1571,7 +1725,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>26</ZIndex>
+                      <ZIndex>28</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "ROSEMOUNT FLOW / MMI",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -1597,7 +1751,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>25</ZIndex>
+                      <ZIndex>27</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "ROSEMOUNT ANALYTICAL",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -1623,7 +1777,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>24</ZIndex>
+                      <ZIndex>26</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "SAFETY REL VALVE &amp; REPAIR",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -1649,7 +1803,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>23</ZIndex>
+                      <ZIndex>25</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "SERVICES - LCL",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -1675,7 +1829,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>22</ZIndex>
+                      <ZIndex>24</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "SIE (NON-SAFETY RELIEF)",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -1701,9 +1855,35 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>21</ZIndex>
+                      <ZIndex>23</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "VAD",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox41">
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>#,###,.</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>22</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Primary_Category.Value = "VAD (IVRQ)",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1727,7 +1907,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>20</ZIndex>
+                      <ZIndex>21</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(iif(fields!Product_Primary_Category.Value = "WIRELESS",cdbl(fields!Sell___Bookings.Value),0.0))</Value>
                     </Textbox>
@@ -1753,7 +1933,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>19</ZIndex>
+                      <ZIndex>20</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(Fields!Sell___Bookings.Value)</Value>
                     </Textbox>
@@ -1783,8 +1963,7 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
         </Style>
         <ZIndex>2</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>12.125in</Left>
-        <Height>0.25in</Height>
+        <Left>13.1875in</Left>
         <Value>=Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
       </Textbox>
       <Textbox Name="textbox7">
@@ -1800,7 +1979,6 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
         <ZIndex>1</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>5.95833in</Left>
-        <Height>0.25in</Height>
         <Value>="Execution Time:" &amp; Globals!ExecutionTime</Value>
       </Textbox>
       <Textbox Name="textbox8">
@@ -1814,11 +1992,10 @@ fields!Product_Primary_Category.Value = "MISCELLANEOUS",cdbl(fields!Sell___Booki
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
         <CanGrow>true</CanGrow>
-        <Height>0.25in</Height>
         <Value>=Globals!ReportName</Value>
       </Textbox>
     </ReportItems>
-    <Height>0.79365cm</Height>
+    <Height>0.63492cm</Height>
     <PrintOnLastPage>true</PrintOnLastPage>
   </PageFooter>
   <TopMargin>0.25in</TopMargin>

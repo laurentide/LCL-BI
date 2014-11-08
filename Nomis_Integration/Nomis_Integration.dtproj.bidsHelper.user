@@ -1,0 +1,11 @@
+<Configurations>
+  <Configuration>
+    <Name>Development</Name>
+    <Options>
+      <DeploymentType>SqlServerDestination</DeploymentType>
+      <FilePath />
+      <DestinationServer>lcl-sql2k5-s</DestinationServer>
+      <DestinationFolder />
+    </Options>
+  </Configuration>
+</Configurations>

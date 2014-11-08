@@ -221,20 +221,20 @@ nY/Zu3/8B3//AC7g/RXxofnPLP8Afzx8fyP0fBu2308t+9Yr7bg+8vzsfs3b/wDgO/8A+XcH6K+ND855
     </DataSet>
     <DataSet Name="DataSet1">
       <Fields>
-        <Field Name="Quotes_Data_Quoteid_Quoteid">
-          <DataField>[Quotes Data].[Quoteid].[Quoteid].[MEMBER_CAPTION]</DataField>
+        <Field Name="Quotes_Data_Fact_Quotes_Fact_Quotes">
+          <DataField>[Quotes Data].[Fact Quotes].[Fact Quotes].[MEMBER_CAPTION]</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Quotes_Data_Revision_Revision">
-          <DataField>[Quotes Data].[Revision].[Revision].[MEMBER_CAPTION]</DataField>
+          <DataField>[Quotes Data].[REVISION].[REVISION].[MEMBER_CAPTION]</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Quotes_Data_Date_Date">
           <DataField>[Quotes Data].[Date].[Date].[MEMBER_CAPTION]</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Quotes_Data_Model_Number_Model_Number">
-          <DataField>[Quotes Data].[Model Number].[Model Number].[MEMBER_CAPTION]</DataField>
+        <Field Name="Quotes_Data_MODELNUMBER_MODELNUMBER">
+          <DataField>[Quotes Data].[MODELNUMBER].[MODELNUMBER].[MEMBER_CAPTION]</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Quote_Employee_Employee_Name_Employee_Name">
@@ -243,6 +243,14 @@ nY/Zu3/8B3//AC7g/RXxofnPLP8Afzx8fyP0fBu2308t+9Yr7bg+8vzsfs3b/wDgO/8A+XcH6K+ND855
         </Field>
         <Field Name="Customer_And_Contact_Customer_Name_Customer_Name">
           <DataField>[Customer And Contact].[Customer Name].[Customer Name].[MEMBER_CAPTION]</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Customer_And_Contact_Contact_Name_Contact_Name">
+          <DataField>[Customer And Contact].[Contact Name].[Contact Name].[MEMBER_CAPTION]</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Quote_Status_Status_Status">
+          <DataField>[Quote Status].[Status].[Status].[MEMBER_CAPTION]</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Product_Codes_Product_Primary_Category_Product_Primary_Category">
@@ -261,10 +269,9 @@ nY/Zu3/8B3//AC7g/RXxofnPLP8Afzx8fyP0fBu2308t+9Yr7bg+8vzsfs3b/wDgO/8A+XcH6K+ND855
  ,
     non empty {
       [Non-Project] *
-      NONEMPTY(  [Quotes Data].[Quoteid].children,[Measures].[Total]) *
        NONEMPTY(  [Quotes Data].[Revision].children,[Measures].[Total]) *
         NONEMPTY( [Quotes Data].[Date].children,[Measures].[Total]) *
-       NONEMPTY( [Quotes Data].[Model Number].children,[Measures].[Total]) *
+       NONEMPTY( [Quotes Data].[ModelNumber].children,[Measures].[Total]) *
         NONEMPTY([Quote Employee].[Employee Name].children,[Measures].[Total]) *
         NONEMPTY( [Customer And Contact].[Customer Name].children,[Measures].[Total])*
        NONEMPTY( [Customer And Contact].[Contact Name].children,[Measures].[Total]) *
@@ -347,7 +354,7 @@ FROM [Sales_2008];</CommandText>
                       </Style>
                       <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!Quotes_Data_Quoteid_Quoteid.Value</Value>
+                      <Value>=Fields!Quotes_Data_Fact_Quotes_Fact_Quotes.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -416,7 +423,7 @@ FROM [Sales_2008];</CommandText>
                       </Style>
                       <ZIndex>4</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!Quotes_Data_Model_Number_Model_Number.Value</Value>
+                      <Value>=Fields!Quotes_Data_MODELNUMBER_MODELNUMBER.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>

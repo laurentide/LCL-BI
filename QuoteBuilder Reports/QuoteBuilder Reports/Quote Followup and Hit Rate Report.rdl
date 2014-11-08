@@ -44,13 +44,34 @@
         <Values>
           <Value>="[Time].[Fiscal Month].&amp;[" &amp; 
 iif(Day(now()) = 1,
+Year(dateadd("m",-2,now())) &amp; "-" &amp; Month(Dateadd("m",-2,now())).toString("D2"),
+Year(dateadd("m",-1,now())) &amp; "-" &amp; Month(dateadd("m",-1,now())).toString("D2")) 
+&amp; "-01T00:00:00]"</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>From Fiscal Month</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DataSet1</DataSetName>
+          <ValueField>Measures_ParameterValue</ValueField>
+          <LabelField>Measures_ParameterCaption</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="TimeFiscalMonth2">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>="[Time].[Fiscal Month].&amp;[" &amp; 
+iif(Day(now()) = 1,
 Year(dateadd("m",-1,now())) &amp; "-" &amp; Month(Dateadd("m",-1,now())).toString("D2"),
 Year(now()) &amp; "-" &amp; Month(now()).toString("D2")) 
 &amp; "-01T00:00:00]"</Value>
         </Values>
       </DefaultValue>
       <AllowBlank>true</AllowBlank>
-      <Prompt>Fiscal Month</Prompt>
+      <Prompt>To Fiscal Month</Prompt>
       <ValidValues>
         <DataSetReference>
           <DataSetName>DataSet1</DataSetName>
@@ -171,10 +192,8 @@ Year(now()) &amp; "-" &amp; Month(now()).toString("D2"))
 ON COLUMNS, 
   NON EMPTY 
  {  " &amp; Parameters!Parameter.value &amp;".allmembers } having ([Measures].[Total] &gt; 0)  DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS
-    FROM ( SELECT ( STRTOSET('" &amp; Parameters!TimeFiscalMonth.Value &amp;"]', CONSTRAINED) ) ON COLUMNS 
-  FROM [QuoteBuilder]) 
-WHERE ( IIF( STRTOSET('" &amp; Parameters!TimeFiscalMonth.Value &amp;"', CONSTRAINED).Count = 1, 
-STRTOSET('" &amp; Parameters!TimeFiscalMonth.Value &amp;"', CONSTRAINED), [Time].[Fiscal Month].currentmember) ,filter([Quotes Data].[Fact Quotes].children, [measures].[Total] &gt;= 10000) ) 
+  FROM [QuoteBuilder]
+WHERE (" &amp; Parameters!TimeFiscalMonth.Value &amp;":" &amp; Parameters!TimeFiscalMonth2.Value &amp; ",filter([Quotes Data].[Fact Quotes].children, [measures].[Total] &gt;= 10000) )
 CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS"</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>

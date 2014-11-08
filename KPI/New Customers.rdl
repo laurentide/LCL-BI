@@ -101,11 +101,12 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
       </Query>
     </DataSet>
   </DataSets>
-  <Width>13in</Width>
+  <Width>9.875in</Width>
   <Body>
     <ReportItems>
       <Textbox Name="textbox1">
         <rd:DefaultName>textbox1</rd:DefaultName>
+        <Width>1.875in</Width>
         <Style>
           <Color>#1c3a70</Color>
           <FontFamily>Tahoma</FontFamily>
@@ -284,6 +285,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                         </BorderStyle>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -463,7 +465,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Right</TextAlign>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -471,7 +473,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                       </Style>
                       <ZIndex>25</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>Customer Number</Value>
+                      <Value>Customer #</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -491,6 +493,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -518,6 +521,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -545,6 +549,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -572,6 +577,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -599,6 +605,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -626,6 +633,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -653,6 +661,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -680,6 +689,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -707,6 +717,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -734,6 +745,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -761,7 +773,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Right</TextAlign>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -789,7 +801,7 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <FontWeight>700</FontWeight>
-                        <TextAlign>Right</TextAlign>
+                        <TextAlign>Center</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -802,55 +814,55 @@ Where				CABWDU&gt;='1130516'							---(date d'aujourd'hui - 7)</CommandText>
                   </ReportItems>
                 </TableCell>
               </TableCells>
-              <Height>0.22in</Height>
+              <Height>0.5in</Height>
             </TableRow>
           </TableRows>
           <RepeatOnNewPage>true</RepeatOnNewPage>
         </Header>
         <TableColumns>
           <TableColumn>
-            <Width>1in</Width>
+            <Width>0.75in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.375in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.125in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.125in</Width>
           </TableColumn>
           <TableColumn>
             <Width>1in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>1in</Width>
+            <Width>0.375in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>1in</Width>
+            <Width>0.625in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>1in</Width>
+            <Width>0.625in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>1in</Width>
+            <Width>0.625in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>1in</Width>
+            <Width>0.5in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>1in</Width>
+            <Width>0.375in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>1in</Width>
+            <Width>0.625in</Width>
           </TableColumn>
           <TableColumn>
-            <Width>1in</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>1in</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>1in</Width>
-          </TableColumn>
-          <TableColumn>
-            <Width>1in</Width>
+            <Width>0.75in</Width>
           </TableColumn>
         </TableColumns>
       </Table>
     </ReportItems>
-    <Height>0.76in</Height>
+    <Height>1.04in</Height>
   </Body>
   <Language>en-US</Language>
   <TopMargin>1in</TopMargin>

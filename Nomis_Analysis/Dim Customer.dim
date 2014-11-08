@@ -330,7 +330,7 @@
       <KeyColumns>
         <KeyColumn dwd:design-time-name="d310105f-4cd4-4575-8649-47563228e6cf">
           <DataType>WChar</DataType>
-          <DataSize>50</DataSize>
+          <DataSize>255</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="bb8961aa-7dcd-4ee4-b939-a8721332e1aa">
             <TableID>dbo_dim_salesman</TableID>
             <ColumnID>salesman_account_name</ColumnID>

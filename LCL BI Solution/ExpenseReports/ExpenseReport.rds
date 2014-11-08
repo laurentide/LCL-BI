@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>ExpenseReport</Name>
+  <DataSourceID>da6f1d90-e2d7-444e-b5ac-f91d25f6bdf6</DataSourceID>
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=LCL-SQL2K5-S;Initial Catalog=ExpenseReport</ConnectString>
+  </ConnectionProperties>
+</RptDataSource>

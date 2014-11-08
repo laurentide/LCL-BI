@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="61d1a403-3658-434b-be1a-0543c7a018a1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="61d1a403-3658-434b-be1a-0543c7a018a1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Fact Bookings</ID>
   <Name>Fact Bookings</Name>
   <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
@@ -177,7 +177,8 @@
       <Name>Selling Price</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="504df42b-e429-4859-a462-ca7be2b14fd1">
-          <DataType>Integer</DataType>
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="7946d593-efaf-4353-8478-988cbe8f6cc2">
             <TableID>dbo_fact_bookings</TableID>
             <ColumnID>Selling_price</ColumnID>
@@ -192,7 +193,8 @@
       <Name>Cost</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="186ef949-8f67-4313-9921-247590baab71">
-          <DataType>Integer</DataType>
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="7deb4705-34e2-4980-b515-2c47da36338a">
             <TableID>dbo_fact_bookings</TableID>
             <ColumnID>Cost</ColumnID>

@@ -203,6 +203,10 @@ WHERE        (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Dat
           <DataField>[Dim Productcodes].[Product Service Category].[Product Service Category].[MEMBER_CAPTION]</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Dim_Productcodes_Product_Code_Product_Code">
+          <DataField>[Dim Productcodes].[Product Code].[Product Code].[MEMBER_CAPTION]</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Bookings">
           <DataField>[Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date].[Measures].[Sell - Bookings]</DataField>
           <rd:TypeName>System.Object</rd:TypeName>
@@ -217,6 +221,10 @@ WHERE        (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Dat
         </Field>
         <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Billable">
           <DataField>[Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date].[Measures].[Billable]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date].[Measures].[Duration]</DataField>
           <rd:TypeName>System.Object</rd:TypeName>
         </Field>
         <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_4_Quarter_to_Date_Measures_Sell___Bookings">
@@ -235,6 +243,10 @@ WHERE        (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Dat
           <DataField>[Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date].[Measures].[Billable]</DataField>
           <rd:TypeName>System.Object</rd:TypeName>
         </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration_1">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date].[Measures].[Duration]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
         <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___Bookings">
           <DataField>[Time].[Fiscal Hierarchy Time Calculations 4].[Month to Date].[Measures].[Sell - Bookings]</DataField>
           <rd:TypeName>System.Object</rd:TypeName>
@@ -251,6 +263,10 @@ WHERE        (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Dat
           <DataField>[Time].[Fiscal Hierarchy Time Calculations 4].[Month to Date].[Measures].[Billable]</DataField>
           <rd:TypeName>System.Object</rd:TypeName>
         </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration_2">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date].[Measures].[Duration]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>Analysis</DataSourceName>
@@ -260,25 +276,28 @@ WHERE        (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Dat
 	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date],[Measures].[Sell - Bookings]),
 	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date],[Measures].[Sell - Invoiced]),
 	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date],[Measures].[Goal]),
-                 ([Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date],[Measures].[Billable])
+                 ([Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date],[Measures].[Billable]),
+                 ([Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date],[Measures].[Duration])
 	 },
 	 {
 	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[Measures].[Sell - Bookings]),
 	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[Measures].[Sell - Invoiced]),
 	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[Measures].[Goal]),
-                  ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[Measures].[Billable])
+                  ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[Measures].[Billable]),
+                 ([Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date],[Measures].[Duration])
 	 },
 	 {
 	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Month to Date],[Measures].[Sell - Bookings]),
 	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Month to Date],[Measures].[Sell - Invoiced]),
 	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Month to Date],[Measures].[Goal]),
-                 ([Time].[Fiscal Hierarchy Time Calculations 4].[Month to Date],[Measures].[Billable])
+                 ([Time].[Fiscal Hierarchy Time Calculations 4].[Month to Date],[Measures].[Billable]),
+                 ([Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date],[Measures].[Duration])
 	 }	 
  }  
  ON COLUMNS, 
       {
 ([Dim Productcodes].[Department Name].children - [Dim Productcodes].[Department Name].&amp;[No Category] -  [Dim Productcodes].[Department Name].[All].UNKNOWNMEMBER) * [Dim Productcodes].[Pc servicecategory id].children * 
-[Dim Productcodes].[Product Service Category].children
+[Dim Productcodes].[Product Service Category].children * [Dim Productcodes].[Product Code].children
       }
  ON ROWS FROM [Alliance]
 WHERE  " &amp; Parameters!TimeFiscalMonth.Value</CommandText>
@@ -440,19 +459,19 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <Textbox Name="textbox18">
                           <rd:DefaultName>textbox18</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <BorderStyle>
                               <Default>Solid</Default>
                             </BorderStyle>
                             <FontFamily>Tahoma</FontFamily>
                             <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
                             <TextAlign>Left</TextAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>20</ZIndex>
+                          <ZIndex>27</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!Dim_Productcodes_Department_Name_Department_Name.Value</Value>
                         </Textbox>
@@ -462,19 +481,19 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                       <ReportItems>
                         <Textbox Name="textbox37">
                           <Style>
-                            <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <BorderStyle>
                               <Default>Solid</Default>
                             </BorderStyle>
                             <FontFamily>Tahoma</FontFamily>
                             <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
                             <Format>c</Format>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>19</ZIndex>
+                          <ZIndex>26</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___Invoiced.Value)</Value>
                         </Textbox>
@@ -485,21 +504,21 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <Textbox Name="textbox50">
                           <rd:DefaultName>textbox50</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <BorderStyle>
                               <Default>Solid</Default>
                             </BorderStyle>
                             <FontFamily>Tahoma</FontFamily>
                             <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
                             <Format>c</Format>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>18</ZIndex>
+                          <ZIndex>25</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Goal.Value)</Value>
+                          <Value>=max(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Goal.Value)</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -507,19 +526,19 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                       <ReportItems>
                         <Textbox Name="textbox10">
                           <Style>
-                            <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <BorderStyle>
                               <Default>Solid</Default>
                             </BorderStyle>
                             <FontFamily>Tahoma</FontFamily>
                             <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
                             <Format>c</Format>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>17</ZIndex>
+                          <ZIndex>24</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)</Value>
                         </Textbox>
@@ -527,23 +546,23 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                     </TableCell>
                     <TableCell>
                       <ReportItems>
-                        <Textbox Name="textbox12">
+                        <Textbox Name="textbox22">
                           <Style>
-                            <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <BorderStyle>
                               <Default>Solid</Default>
                             </BorderStyle>
                             <FontFamily>Tahoma</FontFamily>
                             <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
                             <Format>c</Format>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>16</ZIndex>
+                          <ZIndex>23</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Goal.Value)</Value>
+                          <Value>=max(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Goal.Value)</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -552,20 +571,21 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <Textbox Name="textbox24">
                           <rd:DefaultName>textbox24</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <BorderStyle>
                               <Default>Solid</Default>
                             </BorderStyle>
                             <FontFamily>Tahoma</FontFamily>
                             <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
+                            <TextAlign>Right</TextAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>15</ZIndex>
+                          <ZIndex>22</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Billable.Value)</Value>
+                          <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration_2.Value)</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -574,18 +594,24 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <Textbox Name="textbox3">
                           <rd:DefaultName>textbox3</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <BorderStyle>
                               <Default>Solid</Default>
                             </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
+                            <Format>c0</Format>
+                            <TextAlign>Right</TextAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>14</ZIndex>
+                          <ZIndex>21</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value />
+                          <Value>=iif(sum(fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration_2.Value) &lt;&gt;0 , 
+sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)/
+sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration_2.Value),"")</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -610,7 +636,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <Textbox Name="textbox51">
                           <rd:DefaultName>textbox51</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>White</BackgroundColor>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <BorderStyle>
                               <Default>Solid</Default>
                             </BorderStyle>
@@ -622,7 +648,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>13</ZIndex>
+                          <ZIndex>20</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!Dim_Productcodes_Product_Service_Category_Product_Service_Category.Value</Value>
                         </Textbox>
@@ -632,7 +658,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                       <ReportItems>
                         <Textbox Name="textbox19">
                           <Style>
-                            <BackgroundColor>White</BackgroundColor>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <BorderStyle>
                               <Default>Solid</Default>
                             </BorderStyle>
@@ -644,7 +670,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>12</ZIndex>
+                          <ZIndex>19</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___Invoiced.Value)</Value>
                         </Textbox>
@@ -655,7 +681,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <Textbox Name="textbox40">
                           <rd:DefaultName>textbox40</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>White</BackgroundColor>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <BorderStyle>
                               <Default>Solid</Default>
                             </BorderStyle>
@@ -667,9 +693,9 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>11</ZIndex>
+                          <ZIndex>18</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=first(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Goal.Value)</Value>
+                          <Value />
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -677,7 +703,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                       <ReportItems>
                         <Textbox Name="textbox13">
                           <Style>
-                            <BackgroundColor>White</BackgroundColor>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <BorderStyle>
                               <Default>Solid</Default>
                             </BorderStyle>
@@ -689,7 +715,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>10</ZIndex>
+                          <ZIndex>17</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)</Value>
                         </Textbox>
@@ -697,9 +723,9 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                     </TableCell>
                     <TableCell>
                       <ReportItems>
-                        <Textbox Name="textbox16">
+                        <Textbox Name="textbox12">
                           <Style>
-                            <BackgroundColor>White</BackgroundColor>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <BorderStyle>
                               <Default>Solid</Default>
                             </BorderStyle>
@@ -711,9 +737,9 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>9</ZIndex>
+                          <ZIndex>16</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Goal.Value)</Value>
+                          <Value />
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -722,46 +748,46 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <Textbox Name="textbox25">
                           <rd:DefaultName>textbox25</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>White</BackgroundColor>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <BorderStyle>
                               <Default>Solid</Default>
                             </BorderStyle>
                             <FontFamily>Tahoma</FontFamily>
                             <FontSize>8pt</FontSize>
+                            <TextAlign>Right</TextAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>8</ZIndex>
+                          <ZIndex>15</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=iif(Fields!Dim_Productcodes_Product_Service_Category_Product_Service_Category.Value &lt;&gt; "Rebilled Expenses" and 
-     Fields!Dim_Productcodes_Product_Service_Category_Product_Service_Category.Value &lt;&gt; "Product", sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Billable.Value),0)</Value>
+                          <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration_2.Value)</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
                     <TableCell>
                       <ReportItems>
                         <Textbox Name="textbox21">
-                          <rd:DefaultName>textbox21</rd:DefaultName>
                           <Style>
-                            <BackgroundColor>White</BackgroundColor>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
                             <BorderStyle>
                               <Default>Solid</Default>
                             </BorderStyle>
                             <FontFamily>Tahoma</FontFamily>
                             <FontSize>8pt</FontSize>
                             <Format>c0</Format>
+                            <TextAlign>Right</TextAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>7</ZIndex>
+                          <ZIndex>14</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=iif(Fields!Dim_Productcodes_Product_Service_Category_Product_Service_Category.Value &lt;&gt; "Rebilled Expenses" and 
-     Fields!Dim_Productcodes_Product_Service_Category_Product_Service_Category.Value &lt;&gt; "Product",iif(sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Billable.Value) &lt;&gt; 0 ,sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)
-/sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Billable.Value),0),0)</Value>
+                          <Value>=iif(sum(fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration_2.Value) &lt;&gt;0 , 
+sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)/
+sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration_2.Value),"")</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -773,6 +799,169 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
           </TableGroup>
         </TableGroups>
         <Width>7.5in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox35">
+                      <Style>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Dim_Productcodes_Product_Code_Product_Code.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox38">
+                      <Style>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___Invoiced.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox15">
+                      <rd:DefaultName>textbox15</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox41">
+                      <Style>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox28">
+                      <rd:DefaultName>textbox28</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox30">
+                      <Style>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration_2.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox29">
+                      <Style>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c0</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)/Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration_2.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+          <Visibility>
+            <Hidden>true</Hidden>
+            <ToggleItem>textbox51</ToggleItem>
+          </Visibility>
+        </Details>
         <Header>
           <TableRows>
             <TableRow>
@@ -799,7 +988,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>30</ZIndex>
+                      <ZIndex>37</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -829,7 +1018,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>29</ZIndex>
+                      <ZIndex>36</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Parameters!TimeFiscalMonth.Label</Value>
                     </Textbox>
@@ -858,7 +1047,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>28</ZIndex>
+                      <ZIndex>35</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>YTD</Value>
                     </Textbox>
@@ -896,7 +1085,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>27</ZIndex>
+                      <ZIndex>34</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Department/Revenue Stream</Value>
                     </Textbox>
@@ -929,7 +1118,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>26</ZIndex>
+                      <ZIndex>33</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>MTD Invoiced</Value>
                     </Textbox>
@@ -963,7 +1152,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>25</ZIndex>
+                      <ZIndex>32</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Monthly Goal</Value>
                     </Textbox>
@@ -996,7 +1185,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>24</ZIndex>
+                      <ZIndex>31</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Invoiced</Value>
                     </Textbox>
@@ -1029,7 +1218,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>23</ZIndex>
+                      <ZIndex>30</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Goal</Value>
                     </Textbox>
@@ -1063,7 +1252,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>22</ZIndex>
+                      <ZIndex>29</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Billable Hours</Value>
                     </Textbox>
@@ -1098,7 +1287,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>21</ZIndex>
+                      <ZIndex>28</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Billable Rate</Value>
                     </Textbox>
@@ -1133,7 +1322,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
             <Width>1in</Width>
           </TableColumn>
         </TableColumns>
-        <Height>1.455in</Height>
+        <Height>1.705in</Height>
         <Footer>
           <TableRows>
             <TableRow>
@@ -1163,7 +1352,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>6</ZIndex>
+                      <ZIndex>13</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Total:</Value>
                     </Textbox>
@@ -1192,7 +1381,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>5</ZIndex>
+                      <ZIndex>12</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___Invoiced.Value)</Value>
                     </Textbox>
@@ -1200,8 +1389,8 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox52">
-                      <rd:DefaultName>textbox52</rd:DefaultName>
+                    <Textbox Name="textbox31">
+                      <rd:DefaultName>textbox31</rd:DefaultName>
                       <Style>
                         <BorderColor>
                           <Default>DimGray</Default>
@@ -1214,17 +1403,14 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <BorderWidth>
                           <Top>1pt</Top>
                         </BorderWidth>
-                        <FontFamily>Tahoma</FontFamily>
-                        <FontSize>8pt</FontSize>
-                        <Format>c</Format>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>4</ZIndex>
+                      <ZIndex>11</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Goal.Value)</Value>
+                      <Value />
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1251,7 +1437,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>3</ZIndex>
+                      <ZIndex>10</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)</Value>
                     </Textbox>
@@ -1259,7 +1445,8 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox22">
+                    <Textbox Name="textbox32">
+                      <rd:DefaultName>textbox32</rd:DefaultName>
                       <Style>
                         <BorderColor>
                           <Default>DimGray</Default>
@@ -1272,17 +1459,14 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <BorderWidth>
                           <Top>1pt</Top>
                         </BorderWidth>
-                        <FontFamily>Tahoma</FontFamily>
-                        <FontSize>8pt</FontSize>
-                        <Format>c</Format>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>2</ZIndex>
+                      <ZIndex>9</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Goal.Value)</Value>
+                      <Value />
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1304,12 +1488,13 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         </BorderWidth>
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>1</ZIndex>
+                      <ZIndex>8</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Billable.Value)</Value>
                     </Textbox>
@@ -1334,11 +1519,13 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                         <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <Format>c0</Format>
+                        <TextAlign>Right</TextAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
+                      <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>

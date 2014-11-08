@@ -38,7 +38,7 @@ on td.TaskNo = t.TaskNo
 left join dbo.dim_alliance_resource r
 on td.ResourceNo = r.ResourceNo
 left join dbo.dim_productcodes pc
-on td.CoreProductCd = pc.product_code
+on t.CoreProductCd = pc.product_code
 inner join  dimtime.time
 on CAST(FLOOR(CAST( timein AS float)) as datetime)  = pk_date
 where td.rowstatuscd <> 'I'

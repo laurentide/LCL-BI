@@ -357,7 +357,7 @@ WHERE (" &amp; Parameters!TimeFiscalWeek.Value &amp; ",[Dim Alliance Resource].[
         <DataSourceName>Nomis_Warehouse</DataSourceName>
         <CommandText>select distinct department_name 
 from dim_alliance_resource
-where department_name in ('Automation','Engineering','Instrumentation','Proaxion', 'Vibration','Huile')</CommandText>
+where department_name in ('Automation','Engineering','Instrumentation','Proaxion', 'Vibration','Huile','Lube','PMO')</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
     </DataSet>

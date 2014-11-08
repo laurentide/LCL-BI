@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="88" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="9570" scrolltop="6376" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="80" x="36221" y="17701" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="88" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="3447" scrolltop="725" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="80" x="30004" y="23945" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
@@ -49,9 +49,9 @@
                   </layoutobject>
                   <shape groupshapeid="0" groupnode="0" />
                 </ddscontrol>
-                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_quotes (dbo.fact_quotes)" left="16019" top="13623" logicalid="45" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_quotes (dbo.fact_quotes)" left="15986" top="13292" logicalid="45" controlid="2" masterid="0" hint1="0" hint2="0" width="6142" height="8136" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
-                    <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000f40d0000" />
+                    <ddsxmlobjectstreaminitwrapper binary="00080000fe170000c81f0000" />
                   </control>
                   <layoutobject>
                     <ddsxmlobj>
@@ -215,7 +215,7 @@
                     <point x="20419" y="33499" />
                   </connector>
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline" left="17120" top="10724" logicalid="58" controlid="15" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline" left="16007" top="10724" logicalid="58" controlid="15" masterid="0" hint1="0" hint2="0" width="812" height="2868" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
                       <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -228,12 +228,14 @@
                       <property name="VisibleAP" value="0" vartype="3" />
                     </ddsxmlobj>
                   </layoutobject>
-                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="2" sourceattachpoint="5" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                    <point x="17519" y="11223" />
-                    <point x="17519" y="13623" />
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="2" sourceattachpoint="1" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="16419" y="11223" />
+                    <point x="16419" y="12423" />
+                    <point x="16307" y="12423" />
+                    <point x="16307" y="13292" />
                   </connector>
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline" left="18319" top="16895" logicalid="59" controlid="16" masterid="0" hint1="0" hint2="0" width="15620" height="3914" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline" left="21828" top="20360" logicalid="59" controlid="16" masterid="0" hint1="0" hint2="0" width="10511" height="950" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
                       <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -246,14 +248,14 @@
                       <property name="VisibleAP" value="0" vartype="3" />
                     </ddsxmlobj>
                   </layoutobject>
-                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="2" sourceattachpoint="4" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                    <point x="33539" y="20309" />
-                    <point x="33539" y="18752" />
-                    <point x="18619" y="18752" />
-                    <point x="18619" y="17195" />
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="2" sourceattachpoint="10" destattachpoint="49" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="32039" y="20910" />
+                    <point x="27100" y="20910" />
+                    <point x="27100" y="20660" />
+                    <point x="22128" y="20660" />
                   </connector>
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline" left="5153" top="16895" logicalid="60" controlid="17" masterid="0" hint1="0" hint2="0" width="11566" height="9330" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline" left="7739" top="20910" logicalid="60" controlid="17" masterid="0" hint1="0" hint2="0" width="8547" height="5689" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
                       <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -266,14 +268,14 @@
                       <property name="VisibleAP" value="0" vartype="3" />
                     </ddsxmlobj>
                   </layoutobject>
-                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="2" sourceattachpoint="8" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                    <point x="5552" y="25725" />
-                    <point x="5552" y="21460" />
-                    <point x="16419" y="21460" />
-                    <point x="16419" y="17195" />
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="2" sourceattachpoint="19" destattachpoint="50" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="8039" y="26199" />
+                    <point x="12029" y="26199" />
+                    <point x="12029" y="21210" />
+                    <point x="15986" y="21210" />
                   </connector>
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline" left="13319" top="15009" logicalid="61" controlid="18" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline" left="13319" top="15009" logicalid="61" controlid="18" masterid="0" hint1="0" hint2="0" width="2967" height="1001" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
                       <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -286,11 +288,11 @@
                       <property name="VisibleAP" value="0" vartype="3" />
                     </ddsxmlobj>
                   </layoutobject>
-                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="2" sourceattachpoint="13" destattachpoint="16" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="2" sourceattachpoint="13" destattachpoint="30" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
                     <point x="13619" y="15408" />
                     <point x="14819" y="15408" />
-                    <point x="14819" y="15409" />
-                    <point x="16019" y="15409" />
+                    <point x="14819" y="15710" />
+                    <point x="15986" y="15710" />
                   </connector>
                 </ddscontrol>
                 <ddscontrol controlprogid="MSDDS.Polyline" left="1903" top="28574" logicalid="62" controlid="19" masterid="0" hint1="0" hint2="0" width="2849" height="8616" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
@@ -344,7 +346,7 @@
                   </layoutobject>
                   <shape groupshapeid="0" groupnode="0" />
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline" left="17219" top="16895" logicalid="65" controlid="22" masterid="0" hint1="0" hint2="0" width="10753" height="11023" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline" left="17107" top="21128" logicalid="65" controlid="22" masterid="0" hint1="0" hint2="0" width="10865" height="6790" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
                       <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -360,8 +362,8 @@
                   <connector lineroutestyle="MSDDS.Rectilinear" sourceid="21" destid="2" sourceattachpoint="6" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
                     <point x="27572" y="27418" />
                     <point x="27572" y="22307" />
-                    <point x="17519" y="22307" />
-                    <point x="17519" y="17195" />
+                    <point x="17407" y="22307" />
+                    <point x="17407" y="21428" />
                   </connector>
                 </ddscontrol>
                 <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_currencyrate (dbo.fact_currencyrate)" left="26034" top="32199" logicalid="66" controlid="23" masterid="0" hint1="0" hint2="0" width="3076" height="2381" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
@@ -625,27 +627,7 @@
                     <point x="11105" y="39190" />
                   </connector>
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline" left="17670" top="16696" logicalid="85" controlid="42" masterid="0" hint1="0" hint2="0" width="849" height="12103" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
-                  <control>
-                    <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
-                    </ddsxmlobj>
-                  </control>
-                  <layoutobject>
-                    <ddsxmlobj>
-                      <property name="LogicalObject" value="dataSet.Relations[Time-fact_quotes]" vartype="8" />
-                      <property name="Virtual" value="0" vartype="11" />
-                      <property name="VisibleAP" value="0" vartype="3" />
-                    </ddsxmlobj>
-                  </layoutobject>
-                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="12" sourceattachpoint="7" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                    <point x="18069" y="17195" />
-                    <point x="18069" y="22847" />
-                    <point x="18219" y="22847" />
-                    <point x="18219" y="28499" />
-                  </connector>
-                </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline" left="18719" top="13204" logicalid="86" controlid="43" masterid="0" hint1="0" hint2="0" width="6374" height="855" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline" left="21828" top="13204" logicalid="85" controlid="42" masterid="0" hint1="0" hint2="0" width="3265" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
                       <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -658,19 +640,39 @@
                       <property name="VisibleAP" value="0" vartype="3" />
                     </ddsxmlobj>
                   </layoutobject>
-                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="20" destattachpoint="11" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="20" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
                     <point x="24793" y="13603" />
-                    <point x="21906" y="13603" />
-                    <point x="21906" y="13759" />
-                    <point x="19019" y="13759" />
+                    <point x="23477" y="13603" />
+                    <point x="23477" y="13510" />
+                    <point x="22128" y="13510" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="17657" top="21128" logicalid="86" controlid="43" masterid="0" hint1="0" hint2="0" width="962" height="7871" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[Time-fact_quotes]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="12" destid="2" sourceattachpoint="0" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="18219" y="28499" />
+                    <point x="18219" y="24964" />
+                    <point x="17957" y="24964" />
+                    <point x="17957" y="21428" />
                   </connector>
                 </ddscontrol>
               </dds>
 </DiagramLayout>
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
-            <DiagramViewPortLeft>9570</DiagramViewPortLeft>
-            <DiagramViewPortTop>6376</DiagramViewPortTop>
+            <DiagramViewPortLeft>3447</DiagramViewPortLeft>
+            <DiagramViewPortTop>725</DiagramViewPortTop>
             <DiagramBoundingLeft>0</DiagramBoundingLeft>
             <DiagramBoundingTop>0</DiagramBoundingTop>
             <DiagramZoom>80</DiagramZoom>
@@ -795,8 +797,8 @@
                   <xs:element name="product_id" msprop:design-time-name="5030ad30-d129-4922-850e-faa9e9308228" msprop:DbColumnName="PRODUCT_ID" type="xs:int" minOccurs="0" />
                   <xs:element name="OnlyDate" msdata:ReadOnly="true" msprop:design-time-name="ec1decbc-bcd9-4c71-aa45-5893f5a02282" msprop:DbColumnName="OnlyDate" msprop:ComputedColumnExpression="cast(floor(cast(date as float)) as datetime)" msprop:Description="" msprop:IsLogical="True" type="xs:dateTime" minOccurs="0" />
                   <xs:element name="status_id" msprop:design-time-name="f3f060e3-e9c2-4387-844b-254779a8c6f3" msprop:DbColumnName="STATUS_ID" type="xs:int" minOccurs="0" />
-                  <xs:element name="QuotedProductID" msprop:design-time-name="030a3c04-744e-414f-9b75-47b2541edd9e" msprop:DbColumnName="QUOTEDPRODUCTID" type="xs:int" minOccurs="0" />
-                  <xs:element name="ValveExtendedID" msprop:design-time-name="7cf3cfdc-4542-479a-9d67-ccbbbfb70295" msprop:DbColumnName="VALVEEXTENDEDID" type="xs:int" minOccurs="0" />
+                  <xs:element name="QuotedProductID" msprop:design-time-name="030a3c04-744e-414f-9b75-47b2541edd9e" msprop:DbColumnName="QUOTEDPRODUCTID" type="xs:int" />
+                  <xs:element name="ValveExtendedID" msprop:design-time-name="7cf3cfdc-4542-479a-9d67-ccbbbfb70295" msprop:DbColumnName="VALVEEXTENDEDID" type="xs:int" />
                   <xs:element name="employee_id" msprop:design-time-name="a05d55f4-b55d-44e4-87cb-4bd9c22a465e" msprop:DbColumnName="EMPLOYEE_ID" type="xs:int" minOccurs="0" />
                   <xs:element name="RevisedQuote" msprop:design-time-name="8d41fb26-d168-406f-9b21-63e51d57641d" msprop:DbColumnName="REVISEDQUOTE" type="xs:boolean" minOccurs="0" />
                   <xs:element name="FollowUp" msprop:design-time-name="e5bcdd5c-3d8e-4145-8e19-60383418194c" msprop:DbColumnName="FOLLOWUP" type="xs:int" minOccurs="0" />
@@ -856,6 +858,8 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
+                  <xs:element name="FollowupComment" msprop:design-time-name="6e74b850-c61a-4de2-962d-5b6cb78bdd57" msprop:DbColumnName="FollowupComment" type="xs:string" minOccurs="0" />
+                  <xs:element name="FollowupDoneDate" msprop:design-time-name="4fee86a1-f5a7-4a6d-aa77-45288ad124d1" msprop:DbColumnName="FollowupDoneDate" type="xs:dateTime" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -1264,7 +1268,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency" msprop:FriendlyName="Reporting Currency" msprop:design-time-name="187980c2-39f6-454d-af82-5dc5a8e12a3f" msprop:DbTableName="Reporting Currency" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name],[dbo].[dim_currency].[currency_quote_code]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2],N'Local' AS [Local 3]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency" msprop:FriendlyName="Reporting Currency" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name],[dbo].[dim_currency].[currency_quote_code]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2],N'Local' AS [Local 3]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency" msprop:design-time-name="187980c2-39f6-454d-af82-5dc5a8e12a3f" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="5d971278-d888-407e-911d-d4f35bddc980" type="xs:int" minOccurs="0" />
@@ -1279,7 +1283,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency1" msprop:FriendlyName="Reporting Currency1" msprop:design-time-name="ba51de0c-c2ec-4ff3-aadb-f0468bf25c62" msprop:DbTableName="Reporting Currency1" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency1" msprop:FriendlyName="Reporting Currency1" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency1" msprop:design-time-name="ba51de0c-c2ec-4ff3-aadb-f0468bf25c62" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="4facc14a-8cbe-42ed-8899-e0c24c8b2936" type="xs:int" minOccurs="0" />
@@ -1293,7 +1297,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency2" msprop:FriendlyName="Reporting Currency2" msprop:design-time-name="e536cb5a-315e-47f7-bfa6-43c6df875c25" msprop:DbTableName="Reporting Currency2" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency2" msprop:FriendlyName="Reporting Currency2" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency2" msprop:design-time-name="e536cb5a-315e-47f7-bfa6-43c6df875c25" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="70c035ef-ea36-4cf8-98ba-cfd19e4adca0" type="xs:int" minOccurs="0" />
@@ -1307,7 +1311,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency3" msprop:FriendlyName="Reporting Currency3" msprop:design-time-name="b5326a46-6593-4487-917e-2fd99b629a40" msprop:DbTableName="Reporting Currency3" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency3" msprop:FriendlyName="Reporting Currency3" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency3" msprop:design-time-name="b5326a46-6593-4487-917e-2fd99b629a40" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="ba3fea50-70a9-49b7-9b0e-2106ea1880b4" type="xs:int" minOccurs="0" />
@@ -1321,7 +1325,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency4" msprop:FriendlyName="Reporting Currency4" msprop:design-time-name="b51ebf35-6f1b-4a50-8fd6-fb220d23c935" msprop:DbTableName="Reporting Currency4" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency4" msprop:FriendlyName="Reporting Currency4" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency4" msprop:design-time-name="b51ebf35-6f1b-4a50-8fd6-fb220d23c935" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="2c3e5a3e-c79a-4011-8afd-b9b51549ffa7" type="xs:int" minOccurs="0" />
@@ -1335,7 +1339,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency5" msprop:FriendlyName="Reporting Currency5" msprop:design-time-name="0bb231b3-7b23-455e-9f4e-3a4caf0d2187" msprop:DbTableName="Reporting Currency5" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency5" msprop:FriendlyName="Reporting Currency5" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency5" msprop:design-time-name="0bb231b3-7b23-455e-9f4e-3a4caf0d2187" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="ff10c569-b975-4251-88a8-a7e7a3435264" type="xs:int" minOccurs="0" />
@@ -1349,7 +1353,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency6" msprop:FriendlyName="Reporting Currency6" msprop:design-time-name="f52827d6-c673-460f-be04-f3a907c5093e" msprop:DbTableName="Reporting Currency6" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency6" msprop:FriendlyName="Reporting Currency6" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency6" msprop:design-time-name="f52827d6-c673-460f-be04-f3a907c5093e" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="02ff652d-c618-434e-9b65-1e346ac6a046" type="xs:int" minOccurs="0" />
@@ -1363,7 +1367,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency7" msprop:FriendlyName="Reporting Currency7" msprop:design-time-name="665ce11d-e885-4a19-89e0-b2c9d07cb86b" msprop:DbTableName="Reporting Currency7" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency7" msprop:FriendlyName="Reporting Currency7" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency7" msprop:design-time-name="665ce11d-e885-4a19-89e0-b2c9d07cb86b" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="a1d1e105-ecb2-4049-8a2e-0a39657e5136" type="xs:int" minOccurs="0" />
@@ -1377,7 +1381,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency8" msprop:FriendlyName="Reporting Currency8" msprop:design-time-name="a5aed805-f7bf-409a-8b95-1f5b9780711e" msprop:DbTableName="Reporting Currency8" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency8" msprop:FriendlyName="Reporting Currency8" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:DbTableName="Reporting Currency8" msprop:design-time-name="a5aed805-f7bf-409a-8b95-1f5b9780711e" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="c5b7b0aa-7ed6-4806-9690-2f6d830025b4" type="xs:int" minOccurs="0" />
@@ -1391,7 +1395,7 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Reporting_x0020_Currency9" msprop:FriendlyName="Reporting Currency9" msprop:DbTableName="Reporting Currency9" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:design-time-name="c6fcfa6a-1a7f-4a63-a2c1-083776c5da76" msprop:TableType="View" msprop:IsLogical="True">
+            <xs:element name="Reporting_x0020_Currency9" msprop:FriendlyName="Reporting Currency9" msprop:design-time-name="c6fcfa6a-1a7f-4a63-a2c1-083776c5da76" msprop:DbTableName="Reporting Currency9" msprop:QueryDefinition="&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT [dbo].[dim_currency].[currency_id],[dbo].[dim_currency].[currency_name]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]&#xD;&#xA;&#x9;&#x9;WHERE [currency_name] IN ('Canadian','US') UNION &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;SELECT &#xD;&#xA;&#x9;&#x9;DISTINCT&#xD;&#xA;&#x9;2147483647 AS [Local],N'Local' AS [Local 2]&#xD;&#xA;&#x9;&#x9;FROM [dbo].[dim_currency]" msprop:TableType="View" msprop:IsLogical="True">
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="currency_id" msdata:ReadOnly="true" msprop:FriendlyName="currency_id" msprop:DbColumnName="currency_id" msprop:design-time-name="2ec1c5a0-9418-4bad-a5bc-adcd37ae676e" type="xs:int" minOccurs="0" />
@@ -1556,8 +1560,8 @@
           <msdata:Relationship name="fact_sales-dim_productcodes" msdata:parent="dbo_dim_productcodes" msdata:child="dbo_fact_sales" msdata:parentkey="product_id" msdata:childkey="product_id" msprop:Description="" msprop:IsLogical="True" />
           <msdata:Relationship name="fact_sales-Time" msdata:parent="Time" msdata:child="dbo_fact_sales" msdata:parentkey="Date" msdata:childkey="invoice_date" msprop:Description="" msprop:IsLogical="True" />
           <msdata:Relationship name="fact_bookings-Time" msdata:parent="Time" msdata:child="dbo_fact_bookings" msdata:parentkey="Date" msdata:childkey="booking_date" msprop:Description="" msprop:IsLogical="True" />
-          <msdata:Relationship name="Time-fact_quotes" msdata:parent="dbo_fact_quotes" msdata:child="Time" msdata:parentkey="Date" msdata:childkey="Date" msprop:Description="" msprop:IsLogical="True" />
           <msdata:Relationship name="fact_quotes-dim_customerContact" msdata:parent="dbo_dim_customerContact" msdata:child="dbo_fact_quotes" msdata:parentkey="ContactID" msdata:childkey="contact_id" msprop:Description="" msprop:IsLogical="True" />
+          <msdata:Relationship name="Time-fact_quotes" msdata:parent="Time" msdata:child="dbo_fact_quotes" msdata:parentkey="Date" msdata:childkey="Date" msprop:Description="" msprop:IsLogical="True" />
         </xs:appinfo>
       </xs:annotation>
     </xs:schema>

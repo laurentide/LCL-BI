@@ -43,8 +43,8 @@ SELECT CUSTOMER_ID,
 FROM
        (SELECT *
        FROM   NOMIS.NOMDBF95.SSTPHY01
-       WHERE  LEN(IMDGDU)  6
-          AND IMDGDU      @ 1500101
+       WHERE  LEN(IMDGDU)  > 6
+          AND IMDGDU      < 1500101
        ) AS A
        LEFT JOIN DIM_CUSTOMER
        ON     DIM_CUSTOMER.CUSTOMER_NUMBER = A.IMZXNB
@@ -62,8 +62,8 @@ FROM
        ON     DIVISION_IDENT = A.IMRJCD
        LEFT JOIN DIM_WAREHOUSE
 	   ON     WAREHOUSE_code = A.IMD6CF
-WHERE  A.IMDGDU             = 1021001
+WHERE  A.IMDGDU             >= 1021001
   AND IMAQNB = 1
-  and a.imdgdu @ 1404002
+  and a.imdgdu < 1404002
 go
 select * from fact_sales

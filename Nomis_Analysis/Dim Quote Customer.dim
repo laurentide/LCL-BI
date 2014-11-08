@@ -289,6 +289,7 @@
       <KeyColumns>
         <KeyColumn dwd:design-time-name="f2aa4b1a-2a43-4cb3-b675-c29fef13615d">
           <DataType>WChar</DataType>
+          <DataSize>101</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="185f0177-c08d-4f64-8bbf-3b1fa3d97e8d">
             <TableID>dbo_dim_customerContact</TableID>
             <ColumnID>Contact_Name</ColumnID>

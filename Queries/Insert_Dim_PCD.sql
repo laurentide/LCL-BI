@@ -30,7 +30,7 @@ where product_Code in ('S1','S2','S4','S9','98')
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 4 --Hours Engineering
-where product_Code in ('39','36')
+where product_Code in ('39','36','C9')
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 5 --Training Engineering
@@ -54,7 +54,7 @@ where product_Code in ('57','60')
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 10 --Hours huile
-where product_Code in ('P4','B5','PM','P5','PH') 
+where product_Code in ('P4','B5','PM','P5','PH','BM') 
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 11 --Training huile
@@ -70,7 +70,7 @@ where product_Code in ('38')
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 19 --Rebilled Expenses - Engineerting
-where product_Code in ('30') 
+where product_Code in ('30','C0') 
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 20 --Rebilled Expenses - Intrumentation
@@ -98,15 +98,15 @@ where product_Code in ('Y9')
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 26 --Hours Vibration
-where product_Code in ('P1','P2','P3','B1','B2') 
+where product_Code in ('P1','P2','P3','B1','B2','PG') 
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 27 --Training Vibration
-where product_Code in ('P0','P6') 
+where product_Code in ('P0','P6','B3') 
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 28 --Products Vibration
-where product_Code in ('PR') 
+where product_Code in ('PR','73') 
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 29 --CSI Hours
@@ -114,15 +114,15 @@ where product_Code in ('96')
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 30 --CSI Product
-where product_Code in ('62','65','67','73','C2','82','83','91','92','93','94','96','97') 
+where product_Code in ('62','65','67','C2','82','83','91','92','93','94','96','97') 
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 31 --CSI Training
-where product_Code in ('B3') 
+where product_Code in ('') 
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 32 --Sub-Contractors Engineering
-where product_Code in ('35') 
+where product_Code in ('35','C5') 
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 33 --Sub-Contractors Huile
@@ -155,7 +155,7 @@ where product_code in ('49','50')
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_subcategory_id = 2 --CSI online
-where product_code in ('62')
+where product_code in ('62','WV')
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_subcategory_id = 3 --CSI offline
@@ -167,7 +167,7 @@ where product_Code in ('A9','N1','47','48')
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_subcategory_id = 7 --ENGINEERING
-where product_Code in ('30','39','36','29')
+where product_Code in ('30','39','36','29','35','C0','C5','C9') 
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_subcategory_id = 8 --Automation 
@@ -175,7 +175,7 @@ where product_Code in ('34','37','38','S1','S2','S3','S4','S5','S6','S7','98', '
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_subcategory_id = 9 --PROAXION 
-where product_Code in ('B1','B2','B4','B5','B6','B7','PE','PM','PR','P0','P1','P2','P3','P4','P5','P6','P7','P8','P9','PV','PD')
+where product_Code in ('B1','B2','B4','B5','B6','B7','PE','PM','PR','P0','P1','P2','P3','P4','P5','P6','P7','P8','P9','PV','PD','CV','CH','B3')
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_subcategory_id = 12 --PSS 
 where product_Code in ('28','31','32','33','41','42','43','44','45','46','54','81','84','85','FC')
@@ -193,12 +193,18 @@ set pc_subcategory_id = 16 --TECHNICAL SERVICES
 where product_Code in ('Y9') 
 go
 update Nomis_Warehouse.dbo.dim_productcodes
+set pc_subcategory_id = 18 --Others
+where product_Code in ('P8','PD') 
+go
+update Nomis_Warehouse.dbo.dim_productcodes
 set pc_subcategory_id = 15 --Others
-where product_Code in ('01','02','03','75','AQ','35','FS','X7','X8','X9','SA','TS','ZZ') 
+where product_Code in ('01','02','03','75','AQ','FS','X7','X8','X9','SA','TS','ZZ') 
+go
+
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_subcategory_id = 17 --CSI Training
-where product_Code in ('B3') 
+where product_Code in ('') 
 ----------------------------------------------
 -------------- SUBCATEGORY -------------------
 ----------------------------------------------

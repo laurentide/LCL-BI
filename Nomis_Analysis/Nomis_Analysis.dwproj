@@ -60,88 +60,16 @@
   </Cubes>
   <Dimensions>
     <ProjectItem>
-      <Name>Dim Salesman.dim</Name>
-      <FullPath>Dim Salesman.dim</FullPath>
+      <Name>Dim Account.dim</Name>
+      <FullPath>Dim Account.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Originator.dim</Name>
-      <FullPath>Dim Originator.dim</FullPath>
+      <Name>Dim Alliance Rate.dim</Name>
+      <FullPath>Dim Alliance Rate.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Quote Customer.dim</Name>
-      <FullPath>Dim Quote Customer.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Quote Status.dim</Name>
-      <FullPath>Dim Quote Status.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Quote Employee.dim</Name>
-      <FullPath>Dim Quote Employee.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Vendor.dim</Name>
-      <FullPath>Dim Vendor.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Customer.dim</Name>
-      <FullPath>Dim Customer.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Fact Sales.dim</Name>
-      <FullPath>Fact Sales.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Fact Bookings.dim</Name>
-      <FullPath>Fact Bookings.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Product Code Category.dim</Name>
-      <FullPath>Dim Product Code Category.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Product Code Subcategory.dim</Name>
-      <FullPath>Dim Product Code Subcategory.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Quote Type.dim</Name>
-      <FullPath>Dim Quote Type.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Division.dim</Name>
-      <FullPath>Dim Division.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Productcodes.dim</Name>
-      <FullPath>Dim Productcodes.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Fact GL.dim</Name>
-      <FullPath>Fact GL.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Inventory.dim</Name>
-      <FullPath>Dim Inventory.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Warehouse.dim</Name>
-      <FullPath>Dim Warehouse.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Fact Inventory.dim</Name>
-      <FullPath>Fact Inventory.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Customer Ship To.dim</Name>
-      <FullPath>Dim Customer Ship To.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Fact Sales Inventory.dim</Name>
-      <FullPath>Fact Sales Inventory.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Fact Inventory History.dim</Name>
-      <FullPath>Fact Inventory History.dim</FullPath>
+      <Name>Dim Alliance Resource.dim</Name>
+      <FullPath>Dim Alliance Resource.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Dim Alliance Task.dim</Name>
@@ -152,40 +80,116 @@
       <FullPath>Dim Alliance Work.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Alliance Resource.dim</Name>
-      <FullPath>Dim Alliance Resource.dim</FullPath>
+      <Name>Dim Currency.dim</Name>
+      <FullPath>Dim Currency.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Alliance Rate.dim</Name>
-      <FullPath>Dim Alliance Rate.dim</FullPath>
+      <Name>Dim Customer Ship To.dim</Name>
+      <FullPath>Dim Customer Ship To.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Customer.dim</Name>
+      <FullPath>Dim Customer.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Division.dim</Name>
+      <FullPath>Dim Division.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Inventory.dim</Name>
+      <FullPath>Dim Inventory.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Originator.dim</Name>
+      <FullPath>Dim Originator.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Product Code Category.dim</Name>
+      <FullPath>Dim Product Code Category.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Product Code Subcategory.dim</Name>
+      <FullPath>Dim Product Code Subcategory.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Productcodes.dim</Name>
+      <FullPath>Dim Productcodes.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Quote Customer.dim</Name>
+      <FullPath>Dim Quote Customer.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Quote Employee.dim</Name>
+      <FullPath>Dim Quote Employee.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Quote Status.dim</Name>
+      <FullPath>Dim Quote Status.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Quote Type.dim</Name>
+      <FullPath>Dim Quote Type.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Salesman.dim</Name>
+      <FullPath>Dim Salesman.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Vendor.dim</Name>
+      <FullPath>Dim Vendor.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Warehouse.dim</Name>
+      <FullPath>Dim Warehouse.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>FACT ALLIANCE SALES.dim</Name>
+      <FullPath>FACT ALLIANCE SALES.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Fact Alliance Taskdetail.dim</Name>
       <FullPath>Fact Alliance Taskdetail.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Currency.dim</Name>
-      <FullPath>Dim Currency.dim</FullPath>
+      <Name>Fact Bookings.dim</Name>
+      <FullPath>Fact Bookings.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fact GL.dim</Name>
+      <FullPath>Fact GL.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fact Inventory History.dim</Name>
+      <FullPath>Fact Inventory History.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fact Inventory.dim</Name>
+      <FullPath>Fact Inventory.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fact Sales Inventory.dim</Name>
+      <FullPath>Fact Sales Inventory.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fact Sales.dim</Name>
+      <FullPath>Fact Sales.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fact Warehouse Inventory.dim</Name>
+      <FullPath>Fact Warehouse Inventory.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Reporting Currency.dim</Name>
       <FullPath>Reporting Currency.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Quotes Data.dim</Name>
-      <FullPath>Quotes Data.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Dim Account.dim</Name>
-      <FullPath>Dim Account.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>Time.dim</Name>
       <FullPath>Time.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Fact Warehouse Inventory.dim</Name>
-      <FullPath>Fact Warehouse Inventory.dim</FullPath>
+      <Name>Quotes Data.dim</Name>
+      <FullPath>Quotes Data.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
@@ -216,32 +220,6 @@
       <FullPath>Alliance.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
-  <MiningModels>
-    <ProjectItem>
-      <Name>TimeSeries_Customers.dmm</Name>
-      <FullPath>TimeSeries_Customers.dmm</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>TimeSeries_Segments.dmm</Name>
-      <FullPath>TimeSeries_Segments.dmm</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>TimeSeries_OS.dmm</Name>
-      <FullPath>TimeSeries_OS.dmm</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>TimeSeries PC Monthly.dmm</Name>
-      <FullPath>TimeSeries PC Monthly.dmm</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>TimeSeries PC.dmm</Name>
-      <FullPath>TimeSeries PC.dmm</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>TimeSeries SalefromStock.dmm</Name>
-      <FullPath>TimeSeries SalefromStock.dmm</FullPath>
-    </ProjectItem>
-  </MiningModels>
   <Configurations>
     <Configuration>
       <Name>Development</Name>

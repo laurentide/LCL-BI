@@ -1,8 +1,8 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="86f6c657-e842-4302-876c-9a6e428ad22b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="86f6c657-e842-4302-876c-9a6e428ad22b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Fact Alliance Taskdetail</ID>
   <Name>Fact Alliance Taskdetail</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
@@ -40,7 +40,7 @@
       <Value>100</Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="f1e125a2-38ff-491d-bc41-05a559921357">
     <DataSourceViewID>Alliance</DataSourceViewID>
@@ -189,7 +189,8 @@
       <EstimatedCount>30</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="1c9303f0-99ce-4d7e-9de3-496787c0e921">
-          <DataType>BigInt</DataType>
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="1b95e6fe-4303-4e32-b929-79cf1d6c0f3d">
             <TableID>dbo_fact_alliance_taskdetail</TableID>
             <ColumnID>Duration</ColumnID>
@@ -205,7 +206,8 @@
       <EstimatedCount>28</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="066010c7-4738-4fdd-b884-1269bd0b1e56">
-          <DataType>BigInt</DataType>
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="a100b79c-fd02-4832-b623-d9017779877f">
             <TableID>dbo_fact_alliance_taskdetail</TableID>
             <ColumnID>BillableDuration</ColumnID>

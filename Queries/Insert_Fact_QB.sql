@@ -21,6 +21,7 @@ INTO   FACT_QUOTES
             , CDNLIST
             , REVISEDQUOTE
             , FOLLOWUP
+            , followupby
             , ALTERNATIVE
             , MODELNUMBER
             , RESPONSETIME
@@ -31,6 +32,8 @@ INTO   FACT_QUOTES
             , source
             , Notes
             ,SELTSponsor
+            ,FollowupComment
+            ,FollowupDoneDate
        )
 SELECT quot.CONTACTID as CONTACT_ID
      , PRODUCT_ID
@@ -43,14 +46,14 @@ SELECT quot.CONTACTID as CONTACT_ID
      , PROD.QUOTEDPRODUCTID
      , VALV.VALVEEXTENDEDID
      , CAST(FLOOR(CAST(date AS float)) as datetime) as [date]
-     , ((
-                     CASE WHEN [discount] IS NOT NULL THEN 0
-                            ELSE[uslistprice]*[exchrate]*(1-ISNULL([Base],0)/100)*(1-ISNULL([Ext],0)/100)
-                     END)+ISNULL([USNet],0)*[exchrate]+ISNULL([Valve_uslist],0)*[exchrate]*(1-ISNULL([Valve_Base],0)/100)*(1-ISNULL([Valve_Ext],0)/100)+ISNULL([Actuator_uslist],0)*[exchrate]*(1-ISNULL([Actuator_Base],0)/100)*(1-ISNULL([Actuator_Ext],0)/100)+ISNULL([Positioner_uslist],0)*[exchrate]*(1-ISNULL([Positioner_Base],0)/100)*(1-ISNULL([Positioner_Ext],0)/100)+(
-                     CASE WHEN [discount] IS NULL THEN 0
-                            ELSE ISNULL([uslistprice],0)*[exchrate]*(1-ISNULL([discount],0)/100)
-                     END))*[qty] AS TOTAL
-     , [uslistprice]*[exchrate]  AS CDNLIST
+     , (CASE WHEN [discount] IS NOT NULL THEN 0 ELSE ISNULL([uslistprice],0)*ISNULL([exchrate],0)*(1-ISNULL([Base],0)/100)*(1-ISNULL([Ext],0)/100) END)
+      +(CASE WHEN [discount] IS NULL THEN 0 ELSE ISNULL(ISNULL([uslistprice],0),0)*ISNULL([exchrate],0)*(1-ISNULL([discount],0)/100) END)
+      +ISNULL([USNet],0)*ISNULL([exchrate],0)
+      +ISNULL([Valve_uslist],0)*ISNULL([exchrate],0)*(1-ISNULL([Valve_Base],0)/100)*(1-ISNULL([Valve_Ext],0)/100)
+      +ISNULL([Actuator_uslist],0)*ISNULL([exchrate],0)*(1-ISNULL([Actuator_Base],0)/100)*(1-ISNULL([Actuator_Ext],0)/100)
+      +ISNULL([Positioner_uslist],0)*ISNULL([exchrate],0)*(1-ISNULL([Positioner_Base],0)/100)*(1-ISNULL([Positioner_Ext],0)/100)
+      *ISNULL([Qty],0)  AS TOTAL
+     , ISNULL([uslistprice],0)*ISNULL([exchrate],0) AS CDNLIST
      , REVISEDQUOTE
      , case when followupby is null then 0 else 1 end as FOLLOWUP
      , followupby
@@ -64,6 +67,8 @@ SELECT quot.CONTACTID as CONTACT_ID
      , source
      , Notes
      , SELTSponsor
+     ,left(FollowupComment,100)
+     ,FollowupDoneDate
 --into fact_Quotes
 FROM   QUOTEBUILDER.DBO.TBLQUOTES AS QUOT
        INNER JOIN QUOTEBUILDER.DBO.TBLQUOTEDPRODUCTS PROD
@@ -84,4 +89,5 @@ FROM   QUOTEBUILDER.DBO.TBLQUOTES AS QUOT
        LEFT JOIN DIM_CURRENCY CURR
        ON     CURR.Currency_quote_code = QUOT.Currency	  
 WHERE  PRODUCT_COMPANY_NUMBER=1
+and quot.quoteid is not null
 go

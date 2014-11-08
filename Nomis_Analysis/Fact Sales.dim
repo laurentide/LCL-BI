@@ -163,7 +163,8 @@
       <Name>Selling Price</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="05d431d7-793e-4b3c-938c-ce7cd6fc5771">
-          <DataType>Integer</DataType>
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="6c1fd7e2-c799-449e-a445-f7bd049c0391">
             <TableID>dbo_fact_sales</TableID>
             <ColumnID>Selling_price</ColumnID>
@@ -178,7 +179,8 @@
       <Name>Cost</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="99105177-dc28-49d5-8e2a-8e56931085c2">
-          <DataType>Integer</DataType>
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
           <Source xsi:type="ColumnBinding" dwd:design-time-name="042c3e6f-1b2c-4810-b62e-e8f1376ff506">
             <TableID>dbo_fact_sales</TableID>
             <ColumnID>Cost</ColumnID>

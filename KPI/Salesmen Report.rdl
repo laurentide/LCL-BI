@@ -38,11 +38,6 @@ Year(now()) &amp; "-" &amp; Month(now()).toString("D2"))
     </ReportParameter>
     <ReportParameter Name="UserID">
       <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>=Code.Username()</Value>
-        </Values>
-      </DefaultValue>
       <Prompt>UserID</Prompt>
       <ValidValues>
         <DataSetReference>
@@ -180,6 +175,10 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
           <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Year to Date].[Measures].[Sell  - Invoiced]</DataField>
           <rd:TypeName>System.Object</rd:TypeName>
         </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Cost___Invoiced">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Year to Date].[Measures].[Cost - Invoiced]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
         <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact_Salesman_Goals">
           <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Year to Date].[Measures].[Goal - Fact Salesman Goals]</DataField>
           <rd:TypeName>System.Object</rd:TypeName>
@@ -208,6 +207,10 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
           <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date].[Measures].[Sell  - Invoiced]</DataField>
           <rd:TypeName>System.Object</rd:TypeName>
         </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Quarter_to_Date_Measures_Cost___Invoiced">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date].[Measures].[Cost - Invoiced]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
         <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Quarter_to_Date_Measures_Goal___Fact_Salesman_Goals">
           <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date].[Measures].[Goal - Fact Salesman Goals]</DataField>
           <rd:TypeName>System.Object</rd:TypeName>
@@ -230,6 +233,10 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
         </Field>
         <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell____Invoiced">
           <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Month to Date].[Measures].[Sell  - Invoiced]</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Cost___Invoiced">
+          <DataField>[Time].[Fiscal Hierarchy Time Calculations].[Month to Date].[Measures].[Cost - Invoiced]</DataField>
           <rd:TypeName>System.Object</rd:TypeName>
         </Field>
         <Field Name="Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Goal___Fact_Salesman_Goals">
@@ -257,6 +264,7 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
 	 ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Sell - Bookings]),
 	 ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Sales Profit Margin]) ,
 	 ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Sell  - Invoiced]),
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Cost - Invoiced]),
 	 ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Goal - Fact Salesman Goals]),
 	 ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Profit Margin Goal]),
 	 ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Manager Budget]),
@@ -266,6 +274,7 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
 	 ([Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date],[Measures].[Sell - Bookings]),
 	 ([Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date],[Measures].[Sales Profit Margin]),
 	 ([Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date],[Measures].[Sell  - Invoiced]) ,	
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date],[Measures].[Cost - Invoiced]),
      ([Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date],[Measures].[Goal - Fact Salesman Goals]), 
      ([Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date],[Measures].[Profit Margin Goal]),
      ([Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date],[Measures].[Sales Profit])
@@ -274,6 +283,7 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
 	 ([Time].[Fiscal Hierarchy Time Calculations].[Month to Date],[Measures].[Sell - Bookings]),
 	 ([Time].[Fiscal Hierarchy Time Calculations].[Month to Date],[Measures].[Sales Profit Margin]),
 	 ([Time].[Fiscal Hierarchy Time Calculations].[Month to Date],[Measures].[Sell  - Invoiced]) ,	
+	 ([Time].[Fiscal Hierarchy Time Calculations].[Month to Date],[Measures].[Cost - Invoiced]),
      ([Time].[Fiscal Hierarchy Time Calculations].[Month to Date],[Measures].[Goal - Fact Salesman Goals]) ,
      ([Time].[Fiscal Hierarchy Time Calculations].[Month to Date],[Measures].[Profit Margin Goal]),
      ([Time].[Fiscal Hierarchy Time Calculations].[Month to Date],[Measures].[Manager Budget]),
@@ -283,7 +293,7 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
  ON COLUMNS, 
        [Salesmen].[Salesman Name].children * [Product Codes].[Product Primary Category].Children Having (([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Goal - Fact Salesman Goals]) &gt; 0 or 	 ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Sell - Bookings]) &lt;&gt; 0)
  ON ROWS FROM [Sales_2008] 
-WHERE ("  &amp; Parameters!TimeFiscalMonth.Value &amp; ", [Salesmen].[Salesman Account Name].&amp;[" &amp; Parameters!UserID.Value &amp; "])"</CommandText>
+WHERE ("  &amp; Parameters!TimeFiscalMonth.Value &amp; ", [Salesmen].[Salesman Account Name].&amp;[" &amp; Parameters!UserID.Value &amp; "], Except([Product Codes].[Product Code].children,{[Product Codes].[Product Code].&amp;[TX],[Product Code].[Product Code].&amp;[FT]}))"</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
     </DataSet>
@@ -373,7 +383,7 @@ end function</Code>
   <Body>
     <ReportItems>
       <Textbox Name="textbox23">
-        <Top>1.5in</Top>
+        <Top>1.875in</Top>
         <Width>10in</Width>
         <Style>
           <BorderStyle>
@@ -1048,7 +1058,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>65</ZIndex>
+                      <ZIndex>86</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1088,7 +1098,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>64</ZIndex>
+                      <ZIndex>85</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>YTD</Value>
                     </Textbox>
@@ -1125,7 +1135,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>63</ZIndex>
+                      <ZIndex>84</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Parameters!TimeFiscalMonth.Label</Value>
                     </Textbox>
@@ -1163,7 +1173,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>62</ZIndex>
+                      <ZIndex>83</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Product Description</Value>
                     </Textbox>
@@ -1198,7 +1208,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>61</ZIndex>
+                      <ZIndex>82</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Invoiced</Value>
                     </Textbox>
@@ -1231,7 +1241,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>60</ZIndex>
+                      <ZIndex>81</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Margin</Value>
                     </Textbox>
@@ -1266,7 +1276,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>59</ZIndex>
+                      <ZIndex>80</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Profit Margin</Value>
                     </Textbox>
@@ -1301,7 +1311,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>58</ZIndex>
+                      <ZIndex>79</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Profit Margin Goal</Value>
                     </Textbox>
@@ -1337,7 +1347,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>57</ZIndex>
+                      <ZIndex>78</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1372,7 +1382,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>56</ZIndex>
+                      <ZIndex>77</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Bookings</Value>
                     </Textbox>
@@ -1407,7 +1417,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>55</ZIndex>
+                      <ZIndex>76</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Goal</Value>
                     </Textbox>
@@ -1443,7 +1453,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>54</ZIndex>
+                      <ZIndex>75</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1479,7 +1489,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>53</ZIndex>
+                      <ZIndex>74</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>%</Value>
                     </Textbox>
@@ -1515,7 +1525,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>52</ZIndex>
+                      <ZIndex>73</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Coef</Value>
                     </Textbox>
@@ -1548,7 +1558,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>51</ZIndex>
+                      <ZIndex>72</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Invoiced</Value>
                     </Textbox>
@@ -1576,7 +1586,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>50</ZIndex>
+                      <ZIndex>71</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Margin</Value>
                     </Textbox>
@@ -1605,7 +1615,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>49</ZIndex>
+                      <ZIndex>70</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Profit Margin</Value>
                     </Textbox>
@@ -1634,7 +1644,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>48</ZIndex>
+                      <ZIndex>69</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Profit Margin Goal</Value>
                     </Textbox>
@@ -1667,7 +1677,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>47</ZIndex>
+                      <ZIndex>68</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1699,7 +1709,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>46</ZIndex>
+                      <ZIndex>67</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Bookings</Value>
                     </Textbox>
@@ -1727,7 +1737,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>45</ZIndex>
+                      <ZIndex>66</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>MTD Goal</Value>
                     </Textbox>
@@ -1755,7 +1765,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>44</ZIndex>
+                      <ZIndex>65</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Extrapolated Bookings</Value>
                     </Textbox>
@@ -1788,7 +1798,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>43</ZIndex>
+                      <ZIndex>64</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Goal</Value>
                     </Textbox>
@@ -1821,7 +1831,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>42</ZIndex>
+                      <ZIndex>63</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1898,7 +1908,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
             <Width>0.125in</Width>
           </TableColumn>
         </TableColumns>
-        <Height>1.375in</Height>
+        <Height>1.625in</Height>
         <Footer>
           <TableRows>
             <TableRow>
@@ -1913,7 +1923,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                           <Default>DimGray</Default>
                           <Left>DimGray</Left>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -1948,7 +1958,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                           <Default>DimGray</Default>
                           <Left>DimGray</Left>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -1977,12 +1987,13 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox42">
+                    <Textbox Name="textbox17">
+                      <rd:DefaultName>textbox17</rd:DefaultName>
                       <Style>
                         <BorderColor>
                           <Default>DimGray</Default>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2003,7 +2014,8 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                       </Style>
                       <ZIndex>39</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Avg(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sales_Profit_Margin.Value)</Value>
+                      <Value>=(Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell____Invoiced.Value)-Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Cost___Invoiced.Value))
+/Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell____Invoiced.Value)</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -2015,7 +2027,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <BorderColor>
                           <Default>DimGray</Default>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2049,7 +2061,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <BorderColor>
                           <Default>DimGray</Default>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2084,7 +2096,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <BorderColor>
                           <Default>DimGray</Default>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2115,7 +2127,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                           <Default>DimGray</Default>
                           <Right>DimGray</Right>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2150,7 +2162,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                           <Default>DimGray</Default>
                           <Left>DimGray</Left>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2174,8 +2186,8 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                       <ZIndex>34</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=iif("Fiscal " &amp; MonthName(Month(today)) &amp; ", " &amp; Year(today) = ltrim(rtrim(parameters!TimeFiscalMonth.Label)),
-sum((Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact_Salesman_Goals.Value))/Sum(Fields!Month_Of_Year.Value, "PreviousMonthOfYear")*(Sum(Fields!Month_Of_Year.Value, "PreviousMonthOfYear")-1) + Sum(Fields!WorkDay.Value, "Today")*Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact_Salesman_Goals.Value/Sum(Fields!workmonth.Value, "WorkMonth"),
-Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact_Salesman_Goals.Value)</Value>
+sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact_Salesman_Goals.Value)/Sum(Fields!Month_Of_Year.Value, "PreviousMonthOfYear")*(Sum(Fields!Month_Of_Year.Value, "PreviousMonthOfYear")-1) + Sum(Fields!WorkDay.Value, "Today")*sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Goal___Fact_Salesman_Goals.Value)/Sum(Fields!workmonth.Value, "WorkMonth"),
+sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact_Salesman_Goals.Value))</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -2188,7 +2200,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <BorderColor>
                           <Default>DimGray</Default>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2219,7 +2231,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <BorderColor>
                           <Right>DimGray</Right>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2250,7 +2262,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <BorderColor>
                           <Right>DimGray</Right>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2301,7 +2313,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                           <Default>DimGray</Default>
                           <Left>DimGray</Left>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2330,19 +2342,22 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="textbox50">
+                    <Textbox Name="textbox24">
                       <Style>
                         <BorderColor>
                           <Default>DimGray</Default>
+                          <Left>DimGray</Left>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
+                          <Left>Solid</Left>
                           <Top>Solid</Top>
                           <Bottom>Solid</Bottom>
                         </BorderStyle>
                         <BorderWidth>
+                          <Left>1.5pt</Left>
                           <Top>1.5pt</Top>
                           <Bottom>1pt</Bottom>
                         </BorderWidth>
@@ -2356,7 +2371,8 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                       </Style>
                       <ZIndex>29</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Avg(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sales_Profit_Margin.Value)</Value>
+                      <Value>=(Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell____Invoiced.Value)-Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Cost___Invoiced.Value))
+/Sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell____Invoiced.Value)</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -2368,7 +2384,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <BorderColor>
                           <Default>DimGray</Default>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2401,7 +2417,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <BorderColor>
                           <Default>DimGray</Default>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2435,7 +2451,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                         <BorderColor>
                           <Default>DimGray</Default>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2465,7 +2481,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                           <Default>DimGray</Default>
                           <Right>DimGray</Right>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2501,7 +2517,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                           <Default>DimGray</Default>
                           <Right>DimGray</Right>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2536,7 +2552,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                           <Default>DimGray</Default>
                           <Right>DimGray</Right>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2571,7 +2587,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                           <Default>DimGray</Default>
                           <Right>DimGray</Right>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2608,7 +2624,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
                           <Default>DimGray</Default>
                           <Right>DimGray</Right>
                           <Top>Black</Top>
-                          <Bottom>DimGray</Bottom>
+                          <Bottom>Black</Bottom>
                         </BorderColor>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -2635,11 +2651,469 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Goal___Fact
               </TableCells>
               <Height>0.375in</Height>
             </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox21">
+                      <rd:DefaultName>textbox21</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Maroon</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>62</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Product total:</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox77">
+                      <Style>
+                        <BorderColor>
+                          <Left>Black</Left>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1pt</Left>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>61</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.value = "SERVICES - LCL",cdbl("0"),cdbl(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell____Invoiced.Value)))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox44">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>p0</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>60</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=(sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.value = "SERVICES - LCL",cdbl("0"),cdbl(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell____Invoiced.Value)))-
+sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.value = "SERVICES - LCL",cdbl("0"),cdbl(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Cost___Invoiced.Value))))/
+sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.value = "SERVICES - LCL",cdbl("0"),cdbl(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell____Invoiced.Value)))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox50">
+                      <Style>
+                        <BorderColor>
+                          <Left>Black</Left>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1pt</Left>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>59</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.value = "SERVICES - LCL",cdbl("0"),cdbl(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sales_Profit.Value)))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox45">
+                      <rd:DefaultName>textbox45</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>58</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox46">
+                      <rd:DefaultName>textbox46</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                      <ZIndex>57</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox42">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>56</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.value = "SERVICES - LCL",cdbl("0"),cdbl(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Year_to_Date_Measures_Sell___Bookings.Value)))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox25">
+                      <rd:DefaultName>textbox25</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>55</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox59">
+                      <rd:DefaultName>textbox59</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                      <ZIndex>54</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox61">
+                      <rd:DefaultName>textbox61</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>p0</Format>
+                      </Style>
+                      <ZIndex>53</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox64">
+                      <rd:DefaultName>textbox64</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Center</TextAlign>
+                      </Style>
+                      <ZIndex>52</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox53">
+                      <Style>
+                        <BorderColor>
+                          <Left>Black</Left>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1pt</Left>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>51</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.value = "SERVICES - LCL",cdbl("0"),cdbl(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell____Invoiced.Value)))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox78">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>p0</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>50</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=(sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.value = "SERVICES - LCL",cdbl("0"),cdbl(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell____Invoiced.Value)))-
+sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.value = "SERVICES - LCL",cdbl("0"),cdbl(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Cost___Invoiced.Value))))/
+sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.value = "SERVICES - LCL",cdbl("0"),cdbl(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell____Invoiced.Value)))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox79">
+                      <Style>
+                        <BorderColor>
+                          <Left>Black</Left>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Left>1pt</Left>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>49</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.value = "SERVICES - LCL",cdbl("0"),cdbl(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sales_Profit.Value)))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox70">
+                      <rd:DefaultName>textbox70</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>48</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox71">
+                      <rd:DefaultName>textbox71</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                      <ZIndex>47</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox67">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>46</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.value = "SERVICES - LCL",cdbl("0"),cdbl(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Sell___Bookings.Value)))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox69">
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>45</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Sum(Fields!WorkDay.Value, "Today")*reportitems!textbox68.Value/Sum(Fields!workmonth.Value, "WorkMonth")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox72">
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>44</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Sum(Fields!workmonth.Value, "WorkMonth")*reportitems!textbox67.Value/Sum(Fields!WorkDay.Value, "Today")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox68">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>43</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum(iif(fields!Product_Codes_Product_Primary_Category_Product_Primary_Category.value = "SERVICES - LCL",cdbl("0"),cdbl(Fields!Time_Fiscal_Hierarchy_Time_Calculations_Month_to_Date_Measures_Goal___Fact_Salesman_Goals.Value)))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox76">
+                      <rd:DefaultName>textbox76</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                      </Style>
+                      <ZIndex>42</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
           </TableRows>
         </Footer>
       </Table>
     </ReportItems>
-    <Height>1.875in</Height>
+    <Height>2.25in</Height>
   </Body>
   <Language>en-US</Language>
   <PageFooter>

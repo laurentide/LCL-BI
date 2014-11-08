@@ -22,11 +22,13 @@ SELECT  account_id,
         BHAFCD                       AS Fiscal_Month ,		
 		-BHBKVA                      AS Amount       ,
         BHAQNA                       AS Description_1,
-        BHARNA                       AS Description_2
+        BHARNA                       AS Description_2,
+        BHBQTX                       AS Reference
 --INTO    fact_GL
-FROM    Nomis.YGLWBFIL2.GLBHCPP
+	FROM    Nomis.YGLWBFIL2.GLBHCPP
         INNER JOIN dim_account
         ON      BHBBTX = dim_account.account_gl
 WHERE   BHAGCD         > 2008
 AND     BHAACD = '001' 
 go
+
