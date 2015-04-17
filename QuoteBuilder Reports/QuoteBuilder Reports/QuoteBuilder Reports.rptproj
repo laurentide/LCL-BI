@@ -33,6 +33,10 @@
       <FullPath>Day to Day Quote Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Hit Rates.rdl</Name>
+      <FullPath>Hit Rates.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Number of lines Quoted by Month of Year.rdl</Name>
       <FullPath>Number of lines Quoted by Month of Year.rdl</FullPath>
     </ProjectItem>
@@ -101,6 +105,10 @@
       <FullPath>RmagicOpenBoxes.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>RmagicSIE.rdl</Name>
+      <FullPath>RmagicSIE.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Total Quoted by Month of Year.rdl</Name>
       <FullPath>Total Quoted by Month of Year.rdl</FullPath>
     </ProjectItem>
@@ -113,8 +121,8 @@
       <FullPath>VAD Quotes By Salesmen.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>RmagicSIE.rdl</Name>
-      <FullPath>RmagicSIE.rdl</FullPath>
+      <Name>RmagicOpenBoxes - Instruments.rdl</Name>
+      <FullPath>RmagicOpenBoxes - Instruments.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

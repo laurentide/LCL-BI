@@ -110,7 +110,7 @@ where product_Code in ('PR','73')
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 29 --CSI Hours
-where product_Code in ('96') 
+where product_Code in ('') 
 go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 30 --CSI Product
@@ -131,6 +131,27 @@ go
 update Nomis_Warehouse.dbo.dim_productcodes
 set pc_servicecategory_id = 34 --Sub-Contractors Vibration
 where product_Code in ('CV') 
+go
+update Nomis_Warehouse.dbo.dim_productcodes
+set pc_servicecategory_id = 35 --Products Reliability Products 
+where product_Code in ('62','65','67','82','91','92','93','94','96','P8','PD','73','PR','52','59','75','PS','WV') 
+go
+update Nomis_Warehouse.dbo.dim_productcodes
+set pc_servicecategory_id = 36 --Hours Reliability Services 
+where product_Code in ('P4','B5','PM','P5','BM','P1','P2','P3','B1','B2','PG') 
+go
+update Nomis_Warehouse.dbo.dim_productcodes
+set pc_servicecategory_id = 37 --Sub-Contractors Reliability Services
+where product_Code in ('CV','CH') 
+go
+update Nomis_Warehouse.dbo.dim_productcodes
+set pc_servicecategory_id = 38 --Training Reliability Services
+where product_Code in ('P0','P6','B3','B4','B6') 
+go
+update Nomis_Warehouse.dbo.dim_productcodes
+set pc_servicecategory_id = 39 --Rebilled Expenses Reliability Services
+where product_Code in ('B7','P7') 
+                                                                             
 go
 --32	Sub-Contractors                                                                                     	Engineering
 --33	Sub-Contractors                                                                                     	Huile

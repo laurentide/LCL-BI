@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1276" scrolltop="-4511" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5847" y="15266" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1276" scrolltop="-4511" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10292" y="12965" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -351,6 +351,10 @@
         <AttributeRelationship dwd:design-time-name="c90ed912-3906-476b-9d92-dd81d0766fda">
           <AttributeID>Work Month</AttributeID>
           <Name>Work Month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6d56c251-5ffe-402c-b380-38d2431cb7e5">
+          <AttributeID>Fiscal Month Valid</AttributeID>
+          <Name>Fiscal Month Valid</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -1147,6 +1151,19 @@
           <Source xsi:type="ColumnBinding" dwd:design-time-name="85cc33ec-a970-46fd-bef1-a1155240325b">
             <TableID>Time</TableID>
             <ColumnID>WorkMonth</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Attribute>
+    <Attribute dwd:design-time-name="37d7cbd1-b260-460a-9f2f-27b8f45fb4e7">
+      <ID>Fiscal Month Valid</ID>
+      <Name>Fiscal Month Valid</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9032a6a0-6bf4-4aa9-a495-922c6fc56e29">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5c2ce576-aff9-43f0-9497-0658db4a88dd">
+            <TableID>Time</TableID>
+            <ColumnID>Fiscal_Month_Valid</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>

@@ -41,6 +41,10 @@
       <FullPath>Customer Bookings By PC Cat.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>DailyInvoicingReport.rdl</Name>
+      <FullPath>DailyInvoicingReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Denis Pelletier.rdl</Name>
       <FullPath>Denis Pelletier.rdl</FullPath>
     </ProjectItem>
@@ -193,6 +197,14 @@
       <FullPath>Quote Details.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Reliablity Products Report.rdl</Name>
+      <FullPath>Reliablity Products Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Reliablity Services Report.rdl</Name>
+      <FullPath>Reliablity Services Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Report by Enterprise.rdl</Name>
       <FullPath>Report by Enterprise.rdl</FullPath>
     </ProjectItem>
@@ -219,6 +231,10 @@
     <ProjectItem>
       <Name>Salesmen Report - Michel Pomerleau.rdl</Name>
       <FullPath>Salesmen Report - Michel Pomerleau.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Salesmen Report Backup.rdl</Name>
+      <FullPath>Salesmen Report Backup.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Salesmen Report for Steve.rdl</Name>
@@ -389,8 +405,8 @@
       <FullPath>YTD Project Team.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>DailyInvoicingReport.rdl</Name>
-      <FullPath>DailyInvoicingReport.rdl</FullPath>
+      <Name>Reliablity Report.rdl</Name>
+      <FullPath>Reliablity Report.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

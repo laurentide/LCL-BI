@@ -41,6 +41,10 @@
       <FullPath>Inventory All PC.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Inventory Report.rdl</Name>
+      <FullPath>Inventory Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Inventory.rdl</Name>
       <FullPath>Inventory.rdl</FullPath>
     </ProjectItem>
@@ -69,8 +73,8 @@
       <FullPath>Velan Stock.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Inventory Report.rdl</Name>
-      <FullPath>Inventory Report.rdl</FullPath>
+      <Name>Pulp Paper Stocking Program.rdl</Name>
+      <FullPath>Pulp Paper Stocking Program.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

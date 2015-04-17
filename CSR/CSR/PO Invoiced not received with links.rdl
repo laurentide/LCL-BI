@@ -28,11 +28,6 @@
     </ReportParameter>
     <ReportParameter Name="Originator">
       <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>="(All)"</Value>
-        </Values>
-      </DefaultValue>
       <Prompt>Originator</Prompt>
       <ValidValues>
         <DataSetReference>

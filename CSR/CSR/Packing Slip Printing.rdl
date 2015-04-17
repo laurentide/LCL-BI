@@ -1449,9 +1449,7 @@ and					KFLFSU='O'</CommandText>
   <Body>
     <ReportItems>
       <Table Name="table1">
-        <ZIndex>2</ZIndex>
         <DataSetName>Nomis_Warehouse</DataSetName>
-        <Top>1in</Top>
         <TableGroups>
           <TableGroup>
             <Grouping Name="table1_Group1">
@@ -1462,6 +1460,391 @@ and					KFLFSU='O'</CommandText>
             </Grouping>
             <Header>
               <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox14">
+                          <rd:DefaultName>textbox14</rd:DefaultName>
+                          <Style>
+                            <Color>Sienna</Color>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>6pt</FontSize>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>118</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>VENDEUR
+SELLER
+</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox79">
+                          <rd:DefaultName>textbox79</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>6pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>117</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox100">
+                          <rd:DefaultName>textbox100</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>6pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>116</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox109">
+                          <rd:DefaultName>textbox109</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>6pt</FontSize>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>115</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox110">
+                          <rd:DefaultName>textbox110</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>6pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>114</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox111">
+                          <rd:DefaultName>textbox111</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>6pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>113</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox112">
+                          <rd:DefaultName>textbox112</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>6pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>112</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox113">
+                          <rd:DefaultName>textbox113</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>6pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>111</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox114">
+                          <rd:DefaultName>textbox114</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>110</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox115">
+                          <rd:DefaultName>textbox115</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>109</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ColSpan>3</ColSpan>
+                      <ReportItems>
+                        <Textbox Name="textbox13">
+                          <Style>
+                            <FontFamily>Courier New</FontFamily>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>108</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=iif(Fields!DIV_Division_ID.Value = "AT"
+,"ATLANTIC CONTROLS" &amp; vbcrlf &amp; "32 MCILVEEN DR" &amp; vbcrlf &amp; "SAINT JOHN,NB,CANADA" &amp; vbcrlf &amp; "E2J 4Y7"
+,"CONTROLES LAURENTIDE CONTROLS" &amp; vbcrlf &amp; "18000 TRANSCANADA HIGHWAY" &amp; vbcrlf &amp; "KIRKLAND,QC,CANADA" &amp; vbcrlf &amp; "H9J4A1")</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox52">
+                          <rd:DefaultName>textbox52</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>6pt</FontSize>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>107</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox62">
+                          <rd:DefaultName>textbox62</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>6pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>106</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox72">
+                          <rd:DefaultName>textbox72</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>6pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>105</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox73">
+                          <rd:DefaultName>textbox73</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>6pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>104</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox74">
+                          <rd:DefaultName>textbox74</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>6pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>103</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox75">
+                          <rd:DefaultName>textbox75</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>102</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox76">
+                          <rd:DefaultName>textbox76</rd:DefaultName>
+                          <Style>
+                            <Color>Maroon</Color>
+                            <BackgroundColor>White</BackgroundColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>101</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.75in</Height>
+                </TableRow>
                 <TableRow>
                   <TableCells>
                     <TableCell>
@@ -3764,7 +4147,7 @@ ITEM SHIP DATE</Value>
                       </Style>
                       <ZIndex>4</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!Qty_Ordered.Value</Value>
+                      <Value>=Fields!Qty_B_O.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -3903,43 +4286,6 @@ ITEM SHIP DATE</Value>
           </TableColumn>
         </TableColumns>
       </Table>
-      <Textbox Name="textbox13">
-        <Top>0.25in</Top>
-        <Width>2.875in</Width>
-        <Style>
-          <FontFamily>Courier New</FontFamily>
-          <TextAlign>Left</TextAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>1</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Height>0.75in</Height>
-        <Value>CONTROLES LAURENTIDE CONTROLS
-18000 TRANSCANADA HIGHWAY
-KIRKLAND,QC,CANADA
-H9J4A1</Value>
-      </Textbox>
-      <Textbox Name="textbox14">
-        <rd:DefaultName>textbox14</rd:DefaultName>
-        <Width>0.875in</Width>
-        <Style>
-          <Color>Sienna</Color>
-          <FontFamily>Courier New</FontFamily>
-          <FontSize>6pt</FontSize>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <CanGrow>true</CanGrow>
-        <Height>0.25in</Height>
-        <Value>VENDEUR
-SELLER
-</Value>
-      </Textbox>
     </ReportItems>
     <Height>5in</Height>
   </Body>

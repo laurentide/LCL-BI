@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="68" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-10708" scrolltop="11739" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="31300" y="15505" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="68" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-10708" scrolltop="11739" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="29263" y="18627" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -1025,6 +1025,9 @@
         <Attribute dwd:design-time-name="17fb1b13-b9e0-45eb-a646-44da83bdef58">
           <AttributeID>Work Month</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="e38f93cb-9f44-4d2d-8128-184499f616b4">
+          <AttributeID>Fiscal Month Valid</AttributeID>
+        </Attribute>
       </Attributes>
       <Hierarchies>
         <Hierarchy dwd:design-time-name="7e374f40-15b6-4301-84d2-ff5a4e8310f9">
@@ -1215,24 +1218,6 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e7e82f59-43f9-4fd0-ac2b-887cf81226b2">
-          <CubeDimensionID>Dim Alliance Resource</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="b67cc2bf-d2bc-4282-aaa2-e21b7976ed41">
-              <AttributeID>Dim Alliance Resource</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="d00a577c-d1ec-4aa9-845c-4c3ac0b07cd3">
-                  <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="64a1c493-ceaf-48fb-a981-ccc42d235fce">
-                    <TableID>dbo_fact_alliance_taskdetail</TableID>
-                    <ColumnID>resource_id</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
         <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="976df4ff-49cb-497e-a18c-2e8bd277b703">
           <CubeDimensionID>Fact Alliance Taskdetail</CubeDimensionID>
           <Attributes>
@@ -1324,6 +1309,25 @@
                   <Source xsi:type="ColumnBinding" dwd:design-time-name="6ff73ca4-0d2f-4214-b9af-bebf5e3b8cd1">
                     <TableID>dbo_fact_alliance_taskdetail</TableID>
                     <ColumnID>TimeIn</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9c090805-9372-40d0-8275-aed6f84ffcbb">
+          <CubeDimensionID>Dim Alliance Resource</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="10d899af-9ea7-4538-86e0-00665e425b25">
+              <AttributeID>Dim Alliance Resource</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1f94f666-ee4a-4ee7-9c58-57b1e17ba87f">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d8691fae-02cd-495f-a39d-86505eb4c464">
+                    <TableID>dbo_fact_alliance_taskdetail</TableID>
+                    <ColumnID>resource_id</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
@@ -1885,7 +1889,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =
@@ -1920,7 +1924,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =
@@ -1955,7 +1959,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =
@@ -1990,7 +1994,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =
@@ -2028,7 +2032,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =
@@ -2066,7 +2070,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =
@@ -2104,7 +2108,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =
@@ -2142,7 +2146,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =      
@@ -2186,7 +2190,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null;     
@@ -2220,7 +2224,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =      
@@ -2254,7 +2258,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null;    
@@ -2281,7 +2285,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =      
@@ -2325,7 +2329,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null;     
@@ -2359,7 +2363,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =      
@@ -2393,7 +2397,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null;    
@@ -2420,7 +2424,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =      
@@ -2464,7 +2468,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null;     
@@ -2498,7 +2502,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =      
@@ -2532,7 +2536,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null;    
@@ -2559,7 +2563,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
   
   ) =      
@@ -2603,7 +2607,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null;    
@@ -2637,7 +2641,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =      
@@ -2671,7 +2675,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null; </Text>

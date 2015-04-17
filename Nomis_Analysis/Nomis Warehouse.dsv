@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="118" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="3589" scrolltop="13063" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="16960" y="11033" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="118" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="3589" scrolltop="13063" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="29792" y="14288" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
@@ -664,26 +664,6 @@
                     <point x="13316" y="23788" />
                     <point x="16099" y="23788" />
                     <point x="16099" y="25099" />
-                  </connector>
-                </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline" left="4727" top="15379" logicalid="99" controlid="41" masterid="0" hint1="0" hint2="0" width="23386" height="20238" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
-                  <control>
-                    <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
-                    </ddsxmlobj>
-                  </control>
-                  <layoutobject>
-                    <ddsxmlobj>
-                      <property name="LogicalObject" value="dataSet.Relations[FK_fact_bookings_dim_division]" vartype="8" />
-                      <property name="Virtual" value="0" vartype="11" />
-                      <property name="VisibleAP" value="0" vartype="3" />
-                    </ddsxmlobj>
-                  </layoutobject>
-                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="15" destid="5" sourceattachpoint="12" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                    <point x="27813" y="15778" />
-                    <point x="16420" y="15778" />
-                    <point x="16420" y="35317" />
-                    <point x="5027" y="35317" />
                   </connector>
                 </ddscontrol>
                 <ddscontrol controlprogid="MSDDS.Polyline" left="30721" top="15379" logicalid="100" controlid="42" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
@@ -1875,6 +1855,7 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
+                  <xs:element name="Fiscal_Month_Valid" msprop:design-time-name="d0f0ed92-d338-4e62-b4e6-94e921b6e961" msprop:DbColumnName="Fiscal_Month_Valid" type="xs:boolean" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -2113,17 +2094,13 @@
           <xs:selector xpath=".//dbo_fact_subgoals" />
           <xs:field xpath="pc_subcategory_id" />
         </xs:keyref>
-        <xs:keyref name="FK_fact_bookings_dim_division" refer="dbo_dim_division_Constraint1">
-          <xs:selector xpath=".//dbo_fact_bookings" />
+        <xs:keyref name="FK_fact_sales_dim_division" refer="dbo_dim_division_Constraint1">
+          <xs:selector xpath=".//dbo_fact_sales" />
           <xs:field xpath="division_id" />
         </xs:keyref>
         <xs:keyref name="FK_fact_sales_dim_Vendor" refer="dbo_dim_vendor_Constraint1">
           <xs:selector xpath=".//dbo_fact_sales" />
           <xs:field xpath="vendor_id" />
-        </xs:keyref>
-        <xs:keyref name="FK_fact_sales_dim_division" refer="dbo_dim_division_Constraint1">
-          <xs:selector xpath=".//dbo_fact_sales" />
-          <xs:field xpath="division_id" />
         </xs:keyref>
       </xs:element>
       <xs:annotation>

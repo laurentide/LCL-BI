@@ -81,6 +81,10 @@
       <FullPath>Proaxion Visa.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Project Invoicing.rdl</Name>
+      <FullPath>Project Invoicing.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Projects not yet synced.rdl</Name>
       <FullPath>Projects not yet synced.rdl</FullPath>
     </ProjectItem>
@@ -165,8 +169,8 @@
       <FullPath>Work In Progress.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Project Invoicing.rdl</Name>
-      <FullPath>Project Invoicing.rdl</FullPath>
+      <Name>Invoice Details.rdl</Name>
+      <FullPath>Invoice Details.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

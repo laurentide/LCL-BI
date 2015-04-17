@@ -28,6 +28,10 @@
       <Name>Wireless.rdl</Name>
       <FullPath>Wireless.rdl</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Reliablity Products Report.rdl</Name>
+      <FullPath>Reliablity Products Report.rdl</FullPath>
+    </ProjectItem>
   </Reports>
   <Configurations>
     <Configuration>

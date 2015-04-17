@@ -102,6 +102,10 @@
           <DataField>coresalesordercd</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Salesman">
+          <DataField>Salesman</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="comments">
           <DataField>comments</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -200,7 +204,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
       </Query>
     </DataSet>
   </DataSets>
-  <Width>24.625in</Width>
+  <Width>25.875in</Width>
   <Body>
     <ReportItems>
       <Table Name="table1">
@@ -231,7 +235,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>45</ZIndex>
+                          <ZIndex>47</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!workno.Value</Value>
                         </Textbox>
@@ -252,7 +256,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>44</ZIndex>
+                          <ZIndex>46</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!description.Value</Value>
                         </Textbox>
@@ -273,9 +277,30 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>43</ZIndex>
+                          <ZIndex>45</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!domainusercd.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox49">
+                          <rd:DefaultName>textbox49</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>44</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!Salesman.Value</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -294,7 +319,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>42</ZIndex>
+                          <ZIndex>43</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!comments.Value</Value>
                         </Textbox>
@@ -315,7 +340,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>41</ZIndex>
+                          <ZIndex>42</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!invoicenote.Value</Value>
                         </Textbox>
@@ -336,7 +361,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>40</ZIndex>
+                          <ZIndex>41</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!sitename.Value</Value>
                         </Textbox>
@@ -358,7 +383,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>39</ZIndex>
+                          <ZIndex>40</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!worktypecd.Value</Value>
                         </Textbox>
@@ -380,7 +405,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>38</ZIndex>
+                          <ZIndex>39</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!workstatuscd.Value</Value>
                         </Textbox>
@@ -402,7 +427,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>37</ZIndex>
+                          <ZIndex>38</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!islumpsum.Value</Value>
                         </Textbox>
@@ -425,7 +450,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>36</ZIndex>
+                          <ZIndex>37</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!sst.Value</Value>
                         </Textbox>
@@ -446,7 +471,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>35</ZIndex>
+                          <ZIndex>36</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!coresalesordercd.Value</Value>
                         </Textbox>
@@ -465,7 +490,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>34</ZIndex>
+                          <ZIndex>35</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value />
                         </Textbox>
@@ -484,7 +509,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>33</ZIndex>
+                          <ZIndex>34</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value />
                         </Textbox>
@@ -504,7 +529,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>32</ZIndex>
+                          <ZIndex>33</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=first(Fields!coreproductcd.Value)</Value>
                         </Textbox>
@@ -524,7 +549,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>31</ZIndex>
+                          <ZIndex>32</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=first(Fields!department.Value)</Value>
                         </Textbox>
@@ -545,7 +570,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>30</ZIndex>
+                          <ZIndex>31</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!sell.Value)</Value>
                         </Textbox>
@@ -566,7 +591,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>29</ZIndex>
+                          <ZIndex>30</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!sellinvoiced.Value)</Value>
                         </Textbox>
@@ -587,7 +612,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>28</ZIndex>
+                          <ZIndex>29</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!sellnoninvoiced.Value)</Value>
                         </Textbox>
@@ -608,7 +633,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>27</ZIndex>
+                          <ZIndex>28</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!cost.Value)</Value>
                         </Textbox>
@@ -629,7 +654,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>26</ZIndex>
+                          <ZIndex>27</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!costinvoiced.Value)</Value>
                         </Textbox>
@@ -650,7 +675,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>25</ZIndex>
+                          <ZIndex>26</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!costnoninvoiced.Value)</Value>
                         </Textbox>
@@ -669,7 +694,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>24</ZIndex>
+                          <ZIndex>25</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value />
                         </Textbox>
@@ -688,7 +713,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>23</ZIndex>
+                          <ZIndex>24</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value />
                         </Textbox>
@@ -701,7 +726,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
             </Header>
           </TableGroup>
         </TableGroups>
-        <Width>24.125in</Width>
+        <Width>25.5in</Width>
         <Details>
           <TableRows>
             <TableRow>
@@ -720,7 +745,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>22</ZIndex>
+                      <ZIndex>23</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -740,7 +765,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>21</ZIndex>
+                      <ZIndex>22</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -750,6 +775,26 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                   <ReportItems>
                     <Textbox Name="textbox47">
                       <rd:DefaultName>textbox47</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>21</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox50">
+                      <rd:DefaultName>textbox50</rd:DefaultName>
                       <Style>
                         <BackgroundColor>LightGrey</BackgroundColor>
                         <BorderStyle>
@@ -1239,7 +1284,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>68</ZIndex>
+                      <ZIndex>71</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Work #</Value>
                     </Textbox>
@@ -1272,7 +1317,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>67</ZIndex>
+                      <ZIndex>70</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>description</Value>
                     </Textbox>
@@ -1305,9 +1350,42 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>66</ZIndex>
+                      <ZIndex>69</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Owner</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox48">
+                      <rd:DefaultName>textbox48</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>68</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Salesman</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1338,7 +1416,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>65</ZIndex>
+                      <ZIndex>67</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Comments</Value>
                     </Textbox>
@@ -1371,7 +1449,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>64</ZIndex>
+                      <ZIndex>66</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Order and Invoice Comments</Value>
                     </Textbox>
@@ -1404,7 +1482,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>63</ZIndex>
+                      <ZIndex>65</ZIndex>
                       <CanGrow>true</CanGrow>
                       <UserSort>
                         <SortExpression>=Fields!sitename.Value</SortExpression>
@@ -1442,7 +1520,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>62</ZIndex>
+                      <ZIndex>64</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Work Type</Value>
                     </Textbox>
@@ -1475,7 +1553,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>61</ZIndex>
+                      <ZIndex>63</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Work Status</Value>
                     </Textbox>
@@ -1507,7 +1585,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>60</ZIndex>
+                      <ZIndex>62</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Lump</Value>
                     </Textbox>
@@ -1540,7 +1618,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>59</ZIndex>
+                      <ZIndex>61</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Nomis invoiced</Value>
                     </Textbox>
@@ -1572,7 +1650,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>58</ZIndex>
+                      <ZIndex>60</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>SO#</Value>
                     </Textbox>
@@ -1605,7 +1683,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>57</ZIndex>
+                      <ZIndex>59</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Table Name</Value>
                     </Textbox>
@@ -1638,7 +1716,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>56</ZIndex>
+                      <ZIndex>58</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Invoice Status</Value>
                     </Textbox>
@@ -1671,7 +1749,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>55</ZIndex>
+                      <ZIndex>57</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>PC</Value>
                     </Textbox>
@@ -1704,7 +1782,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>54</ZIndex>
+                      <ZIndex>56</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Department</Value>
                     </Textbox>
@@ -1737,7 +1815,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>53</ZIndex>
+                      <ZIndex>55</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Total Sell</Value>
                     </Textbox>
@@ -1770,7 +1848,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>52</ZIndex>
+                      <ZIndex>54</ZIndex>
                       <CanGrow>true</CanGrow>
                       <UserSort>
                         <SortExpression>=sum(Fields!sellinvoiced.Value)</SortExpression>
@@ -1808,7 +1886,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>51</ZIndex>
+                      <ZIndex>53</ZIndex>
                       <CanGrow>true</CanGrow>
                       <UserSort>
                         <SortExpression>=sum(Fields!sellnoninvoiced.Value)</SortExpression>
@@ -1846,7 +1924,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>50</ZIndex>
+                      <ZIndex>52</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Cost</Value>
                     </Textbox>
@@ -1879,7 +1957,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>49</ZIndex>
+                      <ZIndex>51</ZIndex>
                       <CanGrow>true</CanGrow>
                       <UserSort>
                         <SortExpression>=sum(Fields!costinvoiced.Value)</SortExpression>
@@ -1917,7 +1995,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>48</ZIndex>
+                      <ZIndex>50</ZIndex>
                       <CanGrow>true</CanGrow>
                       <UserSort>
                         <SortExpression>=sum(Fields!costnoninvoiced.Value)</SortExpression>
@@ -1955,7 +2033,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>47</ZIndex>
+                      <ZIndex>49</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Duration</Value>
                     </Textbox>
@@ -1988,7 +2066,7 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>46</ZIndex>
+                      <ZIndex>48</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Billable duration</Value>
                     </Textbox>
@@ -2009,6 +2087,9 @@ and (workstatuscd = @workstatuscd or @workstatuscd ='(All)')</CommandText>
           </TableColumn>
           <TableColumn>
             <Width>1.25in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.375in</Width>
           </TableColumn>
           <TableColumn>
             <Width>1.75in</Width>

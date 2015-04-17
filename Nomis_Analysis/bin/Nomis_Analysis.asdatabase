@@ -103,7 +103,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1462" scrolltop="-5119" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7620" y="15081" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1462" scrolltop="-5119" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10292" y="12965" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -114,7 +114,7 @@
               <layoutmanager>
                 <ddsxmlobj />
               </layoutmanager>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_account (dbo.dim_account)" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4657" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_account (dbo.dim_account)" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4657" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="0008000031120000ea120000" />
                 </control>
@@ -215,6 +215,10 @@
             <AttributeRelationship>
               <AttributeID>Account Department Id</AttributeID>
               <Name>Account Department Id</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Account Department Grouping</AttributeID>
+              <Name>Account Department Grouping</Name>
             </AttributeRelationship>
           </AttributeRelationships>
           <OrderBy>Key</OrderBy>
@@ -355,7 +359,39 @@
           <OrderBy>Key</OrderBy>
           <InstanceSelection>DropDown</InstanceSelection>
         </Attribute>
+        <Attribute>
+          <ID>Account Department Grouping</ID>
+          <Name>Account Department Grouping</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_dim_account</TableID>
+                <ColumnID>account_department_grouping</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Attribute>
       </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <ID>Hierarchy</ID>
+          <Name>Department Hierarchy</Name>
+          <Levels>
+            <Level>
+              <ID>Account Department Grouping</ID>
+              <Name>Account Department Grouping</Name>
+              <SourceAttributeID>Account Department Grouping</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Account Department Name</ID>
+              <Name>Account Department Name</Name>
+              <SourceAttributeID>Account Department Name</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+      </Hierarchies>
     </Dimension>
     <Dimension>
       <ID>Dim Alliance Rate</ID>
@@ -651,7 +687,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1739" scrolltop="-7713" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7435" y="20426" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1739" scrolltop="-7713" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10292" y="18627" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -662,7 +698,7 @@
               <layoutmanager>
                 <ddsxmlobj />
               </layoutmanager>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_alliance_resource (dbo.dim_alliance_resource)" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3916" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dim_alliance_resource (dbo.dim_alliance_resource)" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3916" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000800004c0f000088130000" />
                 </control>
@@ -714,6 +750,7 @@
       <Source xsi:type="DataSourceViewBinding">
         <DataSourceViewID>Alliance</DataSourceViewID>
       </Source>
+      <UnknownMember>Hidden</UnknownMember>
       <CurrentStorageMode>Molap</CurrentStorageMode>
       <Attributes>
         <Attribute>
@@ -4629,7 +4666,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2317" scrolltop="-12456" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="12383" y="16404" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2317" scrolltop="-12456" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="10292" y="17489" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -7307,6 +7344,32 @@
       <Annotations>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3354" scrolltop="-6813" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10292" y="18627" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="fact_alliance_taskdetail (dbo.fact_alliance_taskdetail)" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3545" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="00080000d90d000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_fact_alliance_taskdetail" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+            </dds>
+          </Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -7322,15 +7385,15 @@
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-          <Value>0</Value>
+          <Value>-3354</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-          <Value>0</Value>
+          <Value>-6813</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-          <Value>0</Value>
+          <Value>20</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -7346,6 +7409,7 @@
       <Source xsi:type="DataSourceViewBinding">
         <DataSourceViewID>Alliance</DataSourceViewID>
       </Source>
+      <UnknownMember>Hidden</UnknownMember>
       <CurrentStorageMode>Molap</CurrentStorageMode>
       <Attributes>
         <Attribute>
@@ -10366,7 +10430,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1276" scrolltop="-4511" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5847" y="15266" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1276" scrolltop="-4511" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10292" y="12965" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -10709,6 +10773,10 @@
             <AttributeRelationship>
               <AttributeID>Work Month</AttributeID>
               <Name>Work Month</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Fiscal Month Valid</AttributeID>
+              <Name>Fiscal Month Valid</Name>
             </AttributeRelationship>
           </AttributeRelationships>
           <OrderBy>Key</OrderBy>
@@ -11509,6 +11577,19 @@
             </KeyColumn>
           </KeyColumns>
         </Attribute>
+        <Attribute>
+          <ID>Fiscal Month Valid</ID>
+          <Name>Fiscal Month Valid</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Boolean</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>Time</TableID>
+                <ColumnID>Fiscal_Month_Valid</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Attribute>
       </Attributes>
       <Hierarchies>
         <Hierarchy>
@@ -12240,7 +12321,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="94" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="638" scrolltop="13380" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="57" x="25718" y="12091" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="94" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="638" scrolltop="13380" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="57" x="29289" y="17568" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -12884,26 +12965,6 @@
                   </ddsxmlobj>
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
-              </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline" left="26248" top="15309" logicalid="87" controlid="41" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
-                <control>
-                  <ddsxmlobj>
-                    <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
-                  </ddsxmlobj>
-                </control>
-                <layoutobject>
-                  <ddsxmlobj>
-                    <property name="LogicalObject" value="dataSet.Relations[FK_fact_bookings_dim_division]" vartype="8" />
-                    <property name="Virtual" value="0" vartype="11" />
-                    <property name="VisibleAP" value="0" vartype="3" />
-                  </ddsxmlobj>
-                </layoutobject>
-                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="4" sourceattachpoint="11" destattachpoint="20" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                  <point x="26548" y="15708" />
-                  <point x="27748" y="15708" />
-                  <point x="27748" y="15709" />
-                  <point x="28948" y="15709" />
-                </connector>
               </ddscontrol>
               <ddscontrol controlprogid="MSDDS.Polyline" left="4704" top="15859" logicalid="88" controlid="42" masterid="0" hint1="0" hint2="0" width="18900" height="16305" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
@@ -13644,6 +13705,9 @@
             </Attribute>
             <Attribute>
               <AttributeID>Work Month</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Fiscal Month Valid</AttributeID>
             </Attribute>
           </Attributes>
           <Hierarchies>
@@ -14774,7 +14838,7 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE;                    
+CALCULATE;                     
 CREATE SET CURRENTCUBE.[Fisher Monthly Report]
  AS {[Product Codes].[Product Codes].[Product Code].&amp;[18],
 [Product Codes].[Product Codes].[Product Code].&amp;[26],
@@ -14784,44 +14848,86 @@ CREATE SET CURRENTCUBE.[Fisher Monthly Report]
 [Product Codes].[Product Codes].[Product Code].&amp;[12],
 [Product Codes].[Product Codes].[Product Code].&amp;[63],
 [Product Codes].[Product Codes].[Product Code].&amp;[64],
-[Product Codes].[Product Codes].[Product Code].&amp;[11]};                      
+[Product Codes].[Product Codes].[Product Code].&amp;[11]}; 
+CREATE SET CURRENTCUBE.[ReliabilityPC]
+ AS {[Product Codes].[Product Code].&amp;[B1],
+[Product Codes].[Product Code].&amp;[B2],
+[Product Codes].[Product Code].&amp;[B3],
+[Product Codes].[Product Code].&amp;[B4],
+[Product Codes].[Product Code].&amp;[B5],
+[Product Codes].[Product Code].&amp;[B6],
+[Product Codes].[Product Code].&amp;[B7],
+[Product Codes].[Product Code].&amp;[BM],
+[Product Codes].[Product Code].&amp;[P0],
+[Product Codes].[Product Code].&amp;[P1],
+[Product Codes].[Product Code].&amp;[P2],
+[Product Codes].[Product Code].&amp;[P3],
+[Product Codes].[Product Code].&amp;[P4],
+[Product Codes].[Product Code].&amp;[P5],
+[Product Codes].[Product Code].&amp;[P6],
+[Product Codes].[Product Code].&amp;[P7],
+[Product Codes].[Product Code].&amp;[P9],
+[Product Codes].[Product Code].&amp;[PG],
+[Product Codes].[Product Code].&amp;[PH],
+[Product Codes].[Product Code].&amp;[PM],
+[Product Codes].[Product Code].&amp;[PV],
+[Product Codes].[Product Code].&amp;[PU],
+[Product Codes].[Product Code].&amp;[59],
+[Product Codes].[Product Code].&amp;[52],
+[Product Codes].[Product Code].&amp;[62],
+[Product Codes].[Product Code].&amp;[67],
+[Product Codes].[Product Code].&amp;[73],
+[Product Codes].[Product Code].&amp;[83],
+[Product Codes].[Product Code].&amp;[91],
+[Product Codes].[Product Code].&amp;[92],
+[Product Codes].[Product Code].&amp;[93],
+[Product Codes].[Product Code].&amp;[94],
+[Product Codes].[Product Code].&amp;[96],
+[Product Codes].[Product Code].&amp;[97],
+[Product Codes].[Product Code].&amp;[P8],
+[Product Codes].[Product Code].&amp;[82],
+[Product Codes].[Product Code].&amp;[65],
+[Product Codes].[Product Code].&amp;[WV],
+[Product Codes].[Product Code].&amp;[PD],
+[Product Codes].[Product Code].&amp;[PS]
+} ;                       
 CREATE SET CURRENTCUBE.[Services]
  AS {[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[PROAXION],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[FIELD INSTRUMENTATION],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[ENGINEERING],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[Automation],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[OTHERS],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[TECHNICAL SERVICES (S8 - ALCAN)],
-[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[TECHNICAL SERVICES (Y9 - PWC)],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[CSI SERVICES TRAINING (B3)]};                      
+[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[TECHNICAL SERVICES (Y9 - PWC)],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[CSI SERVICES TRAINING (B3)]};                       
 CREATE SET CURRENTCUBE.[Performance Products]
- AS {[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[CSI Off-Line],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[CSI On-Line],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[AMS],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[FIELD COMMUNICATORS],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[PSS],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[ENGINEERING],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[CSI SERVICES TRAINING (B3)],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[Produits Lub/Thermo/Ultrason]} ;                              
+ AS {[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[CSI Off-Line],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[CSI On-Line],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[AMS],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[FIELD COMMUNICATORS],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[PSS],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[ENGINEERING],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[CSI SERVICES TRAINING (B3)],[Product Code Subcategory].[Sub Category].[Product Primary Subcategory].&amp;[Produits Lub/Thermo/Ultrason]};                               
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Sales Profit Margin]
  AS iif ([Measures].[Sell  - Invoiced] = 0,null,([Measures].[Sell  - Invoiced]-[Measures].[Cost - Invoiced]) / [Measures].[Sell  - Invoiced]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;                
+VISIBLE = 1;                 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Percentage of goal]
  AS [Measures].[Sell - Bookings]/[Measures].[Goal], 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;                             
+VISIBLE = 1;                              
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Sales Profit]
  AS [Measures].[Sell  - Invoiced]-[Measures].[Cost - Invoiced], 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;                             
+VISIBLE = 1;                              
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Bookings Profit Margin]
  AS iif ([Measures].[Sell - Bookings] = 0,null,([Measures].[Sell - Bookings]-[Measures].[Cost - Bookings]) / [Measures].[Sell - Bookings]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;                             
+VISIBLE = 1;                              
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Bookings Profit]
  AS [Measures].[Sell - Bookings]-[Measures].[Cost - Bookings], 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;                   
+VISIBLE = 1;                    
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Scope Temp]
  AS Count(Except([Product Codes].[Product Primary Category].children,
 		     [Product Codes].[Product Primary Category].&amp;[TAX]) *
 			{([Sales Data].[Order Number].currentmember , 
               [Measures].[Sell  - Invoiced])},EXCLUDEEMPTY), 
-VISIBLE = 0;               
+VISIBLE = 0;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Scope]
  AS iif( [Measures].[scope temp] = 0, null, [Measures].[scope temp] ), 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Scope by Salesman]
  AS Avg( NonEmptyCrossJoin([Sales Data].[Order Number].members,[Time].[Fiscal Hierarchy].currentmember),[Measures].[scope]), 
-VISIBLE = 1;               
+VISIBLE = 1;                
 
 
 /*
@@ -14830,63 +14936,63 @@ VISIBLE = 1;
 
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Year to Date] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Quarter to Date] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Month to Date] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Twelve Months to Date] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Twelve Month Moving Average] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Six Month Moving Average] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Three Month Moving Average] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Year Over Year Growth %] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Year Over Year Growth] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Quarter Over Quarter Growth %] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Quarter Over Quarter Growth] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Month Over Month Growth %] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Month Over Month Growth] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Day Over Day Growth %] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations].[Day Over Day Growth] 
-  As "NA";  
+  As "NA";   
   
 
 
@@ -14927,7 +15033,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Year],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  );  
+  );   
 
   
 // Quarter to Date
@@ -14967,7 +15073,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Quarter],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  );  
+  );   
 
   
 // Month to Date
@@ -15007,7 +15113,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Month],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  );  
+  );   
 
   
 // Twelve Months to Date
@@ -15050,7 +15156,7 @@ Create Member
                                [Time].[Fiscal Hierarchy].CurrentMember
                ) : [Time].[Fiscal Hierarchy].CurrentMember
              }
-  );  
+  );   
 
   
 // Twelve Month Moving Average  
@@ -15093,7 +15199,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations].DefaultMember
-  );  
+  );   
 
   
 // Six Month Moving Average  
@@ -15136,7 +15242,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations].DefaultMember
-  );  
+  );   
 
   
 // Three Month Moving Average  
@@ -15179,7 +15285,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations].DefaultMember
-  );  
+  );   
 
   
 // Year Over Year Growth %  
@@ -15230,7 +15336,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations].[Year Over Year Growth %],
@@ -15260,14 +15366,14 @@ Create Member
       [Measures].[Profit Margin Goal],[Measures].[Budgeted],[Measures].[Manager Budget]
     }
    
-  ) = Null;   
+  ) = Null;    
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations].[Year Over Year Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";  
+  ) = "Percent";   
 
   
 // Year Over Year Growth  
@@ -15308,7 +15414,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations].[Year Over Year Growth],
@@ -15338,7 +15444,7 @@ Create Member
       [Measures].[Profit Margin Goal],[Measures].[Budgeted],[Measures].[Manager Budget]
     }
    
-  ) = Null;  
+  ) = Null;   
 
   
 // Quarter Over Quarter Growth %  
@@ -15389,7 +15495,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations].[Quarter Over Quarter Growth %],
@@ -15419,14 +15525,14 @@ Create Member
       [Measures].[Profit Margin Goal],[Measures].[Budgeted],[Measures].[Manager Budget]
     }
    
-  ) = Null;   
+  ) = Null;    
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations].[Quarter Over Quarter Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";  
+  ) = "Percent";   
 
   
 // Quarter Over Quarter Growth  
@@ -15467,7 +15573,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations].[Quarter Over Quarter Growth],
@@ -15497,7 +15603,7 @@ Create Member
       [Measures].[Profit Margin Goal],[Measures].[Budgeted],[Measures].[Manager Budget]
     }
    
-  ) = Null;  
+  ) = Null;   
 
   
 // Month Over Month Growth %  
@@ -15548,7 +15654,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations].[Month Over Month Growth %],
@@ -15578,14 +15684,14 @@ Create Member
       [Measures].[Profit Margin Goal],[Measures].[Budgeted],[Measures].[Manager Budget]
     }
    
-  ) = Null;   
+  ) = Null;    
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations].[Month Over Month Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";  
+  ) = "Percent";   
 
   
 // Month Over Month Growth  
@@ -15626,7 +15732,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations].[Month Over Month Growth],
@@ -15656,7 +15762,7 @@ Create Member
       [Measures].[Profit Margin Goal],[Measures].[Budgeted],[Measures].[Manager Budget]
     }
    
-  ) = Null;  
+  ) = Null;   
 
   
 // Day Over Day Growth %  
@@ -15707,7 +15813,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations].[Day Over Day Growth %],
@@ -15737,14 +15843,14 @@ Create Member
       [Measures].[Profit Margin Goal],[Measures].[Budgeted],[Measures].[Manager Budget]
     }
    
-  ) = Null;  
+  ) = Null;   
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations].[Day Over Day Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";  
+  ) = "Percent";   
 
   
 // Day Over Day Growth  
@@ -15785,7 +15891,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations].[Day Over Day Growth],
@@ -16190,7 +16296,7 @@ End</Trend>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="68" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4069" scrolltop="-9331" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="55" x="34184" y="16854" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="68" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4069" scrolltop="-9331" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="55" x="29236" y="17489" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -17115,6 +17221,9 @@ End</Trend>
             </Attribute>
             <Attribute>
               <AttributeID>Work Month</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Fiscal Month Valid</AttributeID>
             </Attribute>
           </Attributes>
           <Hierarchies>
@@ -19897,7 +20006,7 @@ End</Trend>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="50" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-6008" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="29475" y="22622" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="50" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-6008" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="29289" y="17568" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -20728,6 +20837,9 @@ End</Trend>
             </Attribute>
             <Attribute>
               <AttributeID>Work Month</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Fiscal Month Valid</AttributeID>
             </Attribute>
           </Attributes>
           <Hierarchies>
@@ -23276,7 +23388,7 @@ Create Member
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="68" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-10708" scrolltop="11739" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="31300" y="15505" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="68" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-10708" scrolltop="11739" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="29263" y="18627" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -24293,6 +24405,9 @@ Create Member
             <Attribute>
               <AttributeID>Work Month</AttributeID>
             </Attribute>
+            <Attribute>
+              <AttributeID>Fiscal Month Valid</AttributeID>
+            </Attribute>
           </Attributes>
           <Hierarchies>
             <Hierarchy>
@@ -24483,24 +24598,6 @@ Create Member
           <StorageMode>Molap</StorageMode>
           <ProcessingMode>Regular</ProcessingMode>
           <Dimensions>
-            <Dimension xsi:type="RegularMeasureGroupDimension">
-              <CubeDimensionID>Dim Alliance Resource</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>Dim Alliance Resource</AttributeID>
-                  <KeyColumns>
-                    <KeyColumn>
-                      <DataType>Integer</DataType>
-                      <Source xsi:type="ColumnBinding">
-                        <TableID>dbo_fact_alliance_taskdetail</TableID>
-                        <ColumnID>resource_id</ColumnID>
-                      </Source>
-                    </KeyColumn>
-                  </KeyColumns>
-                  <Type>Granularity</Type>
-                </Attribute>
-              </Attributes>
-            </Dimension>
             <Dimension xsi:type="DegenerateMeasureGroupDimension">
               <CubeDimensionID>Fact Alliance Taskdetail</CubeDimensionID>
               <Attributes>
@@ -24592,6 +24689,25 @@ Create Member
                       <Source xsi:type="ColumnBinding">
                         <TableID>dbo_fact_alliance_taskdetail</TableID>
                         <ColumnID>TimeIn</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Dim Alliance Resource</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Alliance Resource</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <NullProcessing>UnknownMember</NullProcessing>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_fact_alliance_taskdetail</TableID>
+                        <ColumnID>resource_id</ColumnID>
                       </Source>
                     </KeyColumn>
                   </KeyColumns>
@@ -25249,7 +25365,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =
@@ -25284,7 +25400,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =
@@ -25319,7 +25435,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =
@@ -25354,7 +25470,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =
@@ -25392,7 +25508,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =
@@ -25430,7 +25546,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =
@@ -25468,7 +25584,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =
@@ -25506,7 +25622,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =      
@@ -25550,7 +25666,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null;     
@@ -25584,7 +25700,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =      
@@ -25618,7 +25734,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null;    
@@ -25645,7 +25761,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =      
@@ -25689,7 +25805,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null;     
@@ -25723,7 +25839,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =      
@@ -25757,7 +25873,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null;    
@@ -25784,7 +25900,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =      
@@ -25828,7 +25944,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null;     
@@ -25862,7 +25978,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =      
@@ -25896,7 +26012,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null;    
@@ -25923,7 +26039,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
   
   ) =      
@@ -25967,7 +26083,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null;    
@@ -26001,7 +26117,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) =      
@@ -26035,7 +26151,7 @@ Create Member
       [Measures].[Selltime Factor],
       [Measures].[Sell Duration],
       [Measures].[Cost Duration],
-      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal]
+      [Measures].[Hours Goal],[Measures].[Sell - Bookings], [Measures].[Sell - Invoiced],[Measures].[Goal],[Cost - Fact Sales]
     }
    
   ) = Null; </Text>
@@ -26122,7 +26238,7 @@ Create Member
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="18" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-18818" scrolltop="6736" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="36195" y="22622" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="18" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-18818" scrolltop="12847" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="29263" y="12965" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -26274,7 +26390,7 @@ Create Member
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-          <Value>6736</Value>
+          <Value>12847</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -26364,7 +26480,15 @@ Create Member
             <Attribute>
               <AttributeID>Account Department Id</AttributeID>
             </Attribute>
+            <Attribute>
+              <AttributeID>Account Department Grouping</AttributeID>
+            </Attribute>
           </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Hierarchy</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
         </Dimension>
         <Dimension>
           <ID>Time</ID>
@@ -26469,6 +26593,9 @@ Create Member
             </Attribute>
             <Attribute>
               <AttributeID>Work Month</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Fiscal Month Valid</AttributeID>
             </Attribute>
           </Attributes>
           <Hierarchies>
@@ -26682,44 +26809,46 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE;           
+CALCULATE;            
 CREATE SET CURRENTCUBE.[Services]
- AS {[Accounts].[Account Department Name].&amp;[Vibration],
+ AS {[Accounts].[Account Department Name].&amp;[Reliability Products],
+ [Accounts].[Account Department Name].&amp;[Reliability Services],
  [Accounts].[Account Department Name].&amp;[Field Instrumentation],
- [Accounts].[Account Department Name].&amp;[CSI],
  [Accounts].[Account Department Name].&amp;[Alcan],
  [Accounts].[Account Department Name].&amp;[Engineering],
  [Accounts].[Account Department Name].&amp;[Automation],
- [Accounts].[Account Department Name].&amp;[Pratt &amp; Whitney],
- [Accounts].[Account Department Name].&amp;[Huile]} ;      
+ [Accounts].[Account Department Name].&amp;[Pratt &amp; Whitney]
+} ;       
 CREATE SET CURRENTCUBE.[No Revenue Departments]
  AS {[Accounts].[Account Department Name].&amp;[Warehouse],
- [Accounts].[Account Department Name].&amp;[Sales Operation],
- [Accounts].[Account Department Name].&amp;[Finance]} ;                  
+ [Accounts].[Account Department Name].&amp;[Sales Operation Atlantic],
+ [Accounts].[Account Department Name].&amp;[Sales Operation Montreal],
+ [Accounts].[Account Department Name].&amp;[Service Support Team],
+ [Accounts].[Account Department Name].&amp;[Finance]} ;                   
 CREATE SET CURRENTCUBE.[Expenses]
- AS {[Accounts].[Account Category Id].&amp;[4],[Accounts].[Account Category Id].&amp;[5],[Accounts].[Account Category Id].&amp;[6]} ;                 
+ AS {[Accounts].[Account Category Id].&amp;[4],[Accounts].[Account Category Id].&amp;[5],[Accounts].[Account Category Id].&amp;[6]};                  
 CREATE SET CURRENTCUBE.[Sales]
- AS [Accounts].[Account Category Id].&amp;[1];                 
+ AS [Accounts].[Account Category Id].&amp;[1];                  
 CREATE SET CURRENTCUBE.[COGS]
- AS [Accounts].[Account Category Id].&amp;[2];            
+ AS [Accounts].[Account Category Id].&amp;[2];             
 CREATE SET CURRENTCUBE.[Q&amp;O]
- AS {[Accounts].[Account Department Name].&amp;[Sales],[Accounts].[Account Department Name].&amp;[Sales Operation]} ;       
+ AS {[Accounts].[Account Department Name].&amp;[Sales Montreal],[Accounts].[Account Department Name].&amp;[Sales Operation Montreal],[Accounts].[Account Department Name].&amp;[Sales Operation Atlantic]} ;        
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Department Profit]
  AS iif([Sales Actual] &lt;&gt; 0,([Sales Actual]+[COGS Actual]), null), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;       
+VISIBLE = 1;        
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Department Profit Budget]
  AS iif([Sales Budget] &lt;&gt; 0,([Sales Budget]+[COGS Budget]), null), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;         
+VISIBLE = 1;          
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Department Margin]
  AS iif([Sales Actual] &lt;&gt; 0,([Sales Actual]+[COGS Actual])/[Sales Actual], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;         
+VISIBLE = 1;          
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Department Margin Budget]
  AS iif([Sales Budget] &lt;&gt; 0,([Sales Budget]+[COGS Budget])/[Sales Budget], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;             
+VISIBLE = 1;              
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Percentage of goal]
  AS case [Accounts].[Account Department Name].currentmember.name 
 when "Warehouse"
@@ -26729,59 +26858,59 @@ then (([Measures].[Total]-[Measures].[Amount])/[Measures].[Amount])+1
 when "Finance"
 then (([Measures].[Total]-[Measures].[Amount])/[Measures].[Amount])+1
 else [Measures].[Amount]/[Measures].[Total] end, 
-VISIBLE = 1  ;                 
+VISIBLE = 1;                  
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Gross Margin]
  AS Aggregate([Sales], [Measures].[Amount]) + Aggregate([COGS], [Measures].[Amount]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Gross Margin Budget]
  AS Aggregate([Sales], [Measures].[Total]) + Aggregate([COGS], [Measures].[Total]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;                 
+VISIBLE = 1;                  
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Gross Margin %]
  AS iif(Aggregate([Sales], [Measures].[Amount]) = 0, 0, (Aggregate([Sales], [Measures].[Amount]) + Aggregate([COGS], [Measures].[Amount])) / Aggregate([Sales], [Measures].[Amount])), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Gross Margin % Budget]
  AS iif(Aggregate([Sales], [Measures].[Total]) = 0, 0, (Aggregate([Sales], [Measures].[Total]) + Aggregate([COGS], [Measures].[Total])) / Aggregate([Sales], [Measures].[Total])), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;                
+VISIBLE = 1;                 
 CREATE MEMBER CURRENTCUBE.[MEASURES].Contribution
  AS [Measures].[Amount], 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;                
+VISIBLE = 1;                 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Sales Actual]
  AS Aggregate([Sales], [Measures].[Amount]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Sales Budget]
  AS Aggregate([Sales], [Measures].[Total]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;                
+VISIBLE = 1;                 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Expenses Actual]
  AS Aggregate([Expenses], [Measures].[Amount]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Expenses Budget]
  AS Aggregate([Expenses], [Measures].[Total]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;                
+VISIBLE = 1;                 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[COGS Actual]
  AS Aggregate([COGS], [Measures].[Amount]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[COGS Budget]
  AS Aggregate([COGS], [Measures].[Total]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Var %]
  AS iif([Measures].[Amount] = 0, null,([Measures].[Amount]-[Measures].[Total])/[Measures].[Amount]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Var $]
  AS iif([Measures].[Amount] = 0,null,[Measures].[Amount]-[Measures].[Total]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;              
+VISIBLE = 1;               
 
 
 /*
@@ -26790,63 +26919,63 @@ VISIBLE = 1;
 
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Year to Date] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Quarter to Date] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Month to Date] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Twelve Months to Date] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Twelve Month Moving Average] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Six Month Moving Average] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Three Month Moving Average] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth %] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth %] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth %] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth %] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth] 
-  As "NA";  
+  As "NA";   
   
 
 
@@ -26886,7 +27015,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Year],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  );  
+  );   
 
   
 // Quarter to Date
@@ -26925,7 +27054,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Quarter],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  );  
+  );   
 
   
 // Month to Date
@@ -26964,7 +27093,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Month],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  );  
+  );   
 
   
 // Twelve Months to Date
@@ -27006,7 +27135,7 @@ Create Member
                                [Time].[Fiscal Hierarchy].CurrentMember
                ) : [Time].[Fiscal Hierarchy].CurrentMember
              }
-  );  
+  );   
 
   
 // Twelve Month Moving Average  
@@ -27048,7 +27177,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember
-  );  
+  );   
 
   
 // Six Month Moving Average  
@@ -27090,7 +27219,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember
-  );  
+  );   
 
   
 // Three Month Moving Average  
@@ -27132,7 +27261,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember
-  );  
+  );   
 
   
 // Year Over Year Growth %  
@@ -27182,7 +27311,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth %],
@@ -27211,14 +27340,14 @@ Create Member
       [Measures].[Amount]
     }
    
-  ) = Null;   
+  ) = Null;    
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";  
+  ) = "Percent";   
 
   
 // Year Over Year Growth  
@@ -27258,7 +27387,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth],
@@ -27287,7 +27416,7 @@ Create Member
       [Measures].[Amount]
     }
    
-  ) = Null;  
+  ) = Null;   
 
   
 // Quarter Over Quarter Growth %  
@@ -27337,7 +27466,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth %],
@@ -27366,14 +27495,14 @@ Create Member
       [Measures].[Amount]
     }
    
-  ) = Null;   
+  ) = Null;    
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";  
+  ) = "Percent";   
 
   
 // Quarter Over Quarter Growth  
@@ -27413,7 +27542,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth],
@@ -27442,7 +27571,7 @@ Create Member
       [Measures].[Amount]
     }
    
-  ) = Null;  
+  ) = Null;   
 
   
 // Month Over Month Growth %  
@@ -27492,7 +27621,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth %],
@@ -27521,14 +27650,14 @@ Create Member
       [Measures].[Amount]
     }
    
-  ) = Null;   
+  ) = Null;    
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";  
+  ) = "Percent";   
 
   
 // Month Over Month Growth  
@@ -27568,7 +27697,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth],
@@ -27597,7 +27726,7 @@ Create Member
       [Measures].[Amount]
     }
    
-  ) = Null;  
+  ) = Null;   
 
   
 // Day Over Day Growth %  
@@ -27647,7 +27776,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth %],
@@ -27676,14 +27805,14 @@ Create Member
       [Measures].[Amount]
     }
    
-  ) = Null;  
+  ) = Null;   
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";  
+  ) = "Percent";   
 
   
 // Day Over Day Growth  
@@ -27723,7 +27852,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth],
@@ -28035,7 +28164,7 @@ END
                 <Name>_ALL_TABLES_</Name>
                 <DiagramLayout>
                   <dds>
-                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="118" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="3589" scrolltop="13063" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="16960" y="11033" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="118" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="3589" scrolltop="13063" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="60" x="29792" y="14288" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                       <font>
                         <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                       </font>
@@ -28672,26 +28801,6 @@ END
                         <point x="13316" y="23788" />
                         <point x="16099" y="23788" />
                         <point x="16099" y="25099" />
-                      </connector>
-                    </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="4727" top="15379" logicalid="99" controlid="41" masterid="0" hint1="0" hint2="0" width="23386" height="20238" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
-                      <control>
-                        <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
-                        </ddsxmlobj>
-                      </control>
-                      <layoutobject>
-                        <ddsxmlobj>
-                          <property name="LogicalObject" value="dataSet.Relations[FK_fact_bookings_dim_division]" vartype="8" />
-                          <property name="Virtual" value="0" vartype="11" />
-                          <property name="VisibleAP" value="0" vartype="3" />
-                        </ddsxmlobj>
-                      </layoutobject>
-                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="15" destid="5" sourceattachpoint="12" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="27813" y="15778" />
-                        <point x="16420" y="15778" />
-                        <point x="16420" y="35317" />
-                        <point x="5027" y="35317" />
                       </connector>
                     </ddscontrol>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="30721" top="15379" logicalid="100" controlid="42" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
@@ -29883,6 +29992,7 @@ END
                           </xs:restriction>
                         </xs:simpleType>
                       </xs:element>
+                      <xs:element name="Fiscal_Month_Valid" msprop:design-time-name="d0f0ed92-d338-4e62-b4e6-94e921b6e961" msprop:DbColumnName="Fiscal_Month_Valid" type="xs:boolean" minOccurs="0" />
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
@@ -30121,17 +30231,13 @@ END
               <xs:selector xpath=".//dbo_fact_subgoals" />
               <xs:field xpath="pc_subcategory_id" />
             </xs:keyref>
-            <xs:keyref name="FK_fact_bookings_dim_division" refer="dbo_dim_division_Constraint1">
-              <xs:selector xpath=".//dbo_fact_bookings" />
-              <xs:field xpath="division_id" />
+            <xs:keyref name="FK_fact_sales_dim_Vendor" refer="dbo_dim_vendor_Constraint1">
+              <xs:selector xpath=".//dbo_fact_sales" />
+              <xs:field xpath="vendor_id" />
             </xs:keyref>
             <xs:keyref name="FK_fact_sales_dim_division" refer="dbo_dim_division_Constraint1">
               <xs:selector xpath=".//dbo_fact_sales" />
               <xs:field xpath="division_id" />
-            </xs:keyref>
-            <xs:keyref name="FK_fact_sales_dim_Vendor" refer="dbo_dim_vendor_Constraint1">
-              <xs:selector xpath=".//dbo_fact_sales" />
-              <xs:field xpath="vendor_id" />
             </xs:keyref>
           </xs:element>
           <xs:annotation>
@@ -30196,7 +30302,7 @@ END
                 <Name>_ALL_TABLES_</Name>
                 <DiagramLayout>
                   <dds>
-                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="18" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3624" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="33179" y="17780" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="18" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3624" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="29792" y="14288" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                       <font>
                         <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                       </font>
@@ -30376,7 +30482,7 @@ END
                       <xs:element name="account_description" msprop:FriendlyName="account_description" msprop:DbColumnName="account_description" msprop:design-time-name="e357f051-7d87-4b8f-aef3-37114d10b153" minOccurs="0">
                         <xs:simpleType>
                           <xs:restriction base="xs:string">
-                            <xs:maxLength value="5000" />
+                            <xs:maxLength value="50" />
                           </xs:restriction>
                         </xs:simpleType>
                       </xs:element>
@@ -30398,6 +30504,13 @@ END
                         <xs:simpleType>
                           <xs:restriction base="xs:string">
                             <xs:maxLength value="15" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="account_department_grouping" msprop:design-time-name="e116c8c1-e2cc-4ce8-8b97-39b97f76a5c4" msprop:DbColumnName="account_department_grouping" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
                           </xs:restriction>
                         </xs:simpleType>
                       </xs:element>
@@ -30706,6 +30819,7 @@ END
                       </xs:element>
                       <xs:element name="WorkDay" msprop:design-time-name="d5401062-1d7a-420c-b540-6958d3af9f7e" msprop:DbColumnName="WorkDay" type="xs:int" minOccurs="0" />
                       <xs:element name="WorkMonth" msprop:design-time-name="8db00cbe-e762-4c62-92fc-7a8ce94b3e6c" msprop:DbColumnName="WorkMonth" type="xs:int" minOccurs="0" />
+                      <xs:element name="Fiscal_Month_Valid" msprop:design-time-name="dd8bb554-25a2-4ccf-b5d7-5d86d1284d85" msprop:DbColumnName="Fiscal_Month_Valid" type="xs:boolean" minOccurs="0" />
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>

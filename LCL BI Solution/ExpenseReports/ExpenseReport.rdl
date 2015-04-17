@@ -219,6 +219,30 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
           <DataField>GL</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Paid">
+          <DataField>Paid</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PaidDate">
+          <DataField>PaidDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Visible">
+          <DataField>Visible</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ExpenseDate">
+          <DataField>ExpenseDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Total">
+          <DataField>Total</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Guests">
+          <DataField>Guests</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>ExpenseReport1</DataSourceName>
@@ -884,7 +908,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>16</ZIndex>
+                          <ZIndex>18</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!Province.Value</Value>
                         </Textbox>
@@ -917,7 +941,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>13</ZIndex>
+                      <ZIndex>17</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!ExpenseDetailsDate.Value</Value>
                     </Textbox>
@@ -938,7 +962,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>12</ZIndex>
+                      <ZIndex>16</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Category.Value</Value>
                     </Textbox>
@@ -959,7 +983,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>11</ZIndex>
+                      <ZIndex>15</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!ExpenseType.Value</Value>
                     </Textbox>
@@ -980,7 +1004,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>10</ZIndex>
+                      <ZIndex>14</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!ExpenseItemDescription.Value</Value>
                     </Textbox>
@@ -1001,7 +1025,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>9</ZIndex>
+                      <ZIndex>13</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Currency.Value</Value>
                     </Textbox>
@@ -1022,7 +1046,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>8</ZIndex>
+                      <ZIndex>12</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Km.Value</Value>
                     </Textbox>
@@ -1043,7 +1067,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>7</ZIndex>
+                      <ZIndex>11</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Km_Rate.Value</Value>
                     </Textbox>
@@ -1065,7 +1089,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>6</ZIndex>
+                      <ZIndex>10</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Tip.Value</Value>
                     </Textbox>
@@ -1087,7 +1111,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>5</ZIndex>
+                      <ZIndex>9</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Lodging_Taxes.Value</Value>
                     </Textbox>
@@ -1109,7 +1133,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>4</ZIndex>
+                      <ZIndex>8</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!NonTaxableExtras.Value</Value>
                     </Textbox>
@@ -1131,7 +1155,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>3</ZIndex>
+                      <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!subtotal.Value</Value>
                     </Textbox>
@@ -1153,7 +1177,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>2</ZIndex>
+                      <ZIndex>6</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!GST.Value</Value>
                     </Textbox>
@@ -1175,7 +1199,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>1</ZIndex>
+                      <ZIndex>5</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!PST.Value</Value>
                     </Textbox>
@@ -1197,6 +1221,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
+                      <ZIndex>4</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!ExpenseItemAmount.Value</Value>
                     </Textbox>
@@ -1204,6 +1229,60 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                 </TableCell>
               </TableCells>
               <Height>0.21in</Height>
+            </TableRow>
+            <TableRow>
+              <Visibility>
+                <Hidden>=iif(Fields!Guests.Value="",true,false)</Hidden>
+              </Visibility>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox48">
+                      <rd:DefaultName>textbox48</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>dd/MM/yyyy</Format>
+                        <TextDecoration>Underline</TextDecoration>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Guests:</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ColSpan>13</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox49">
+                      <rd:DefaultName>textbox49</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>dd/MM/yyyy</Format>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Guests.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
             </TableRow>
           </TableRows>
         </Details>
@@ -1237,7 +1316,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>31</ZIndex>
+                      <ZIndex>33</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Expense Lines</Value>
                     </Textbox>
@@ -1273,7 +1352,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>30</ZIndex>
+                      <ZIndex>32</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Date</Value>
                     </Textbox>
@@ -1304,7 +1383,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>29</ZIndex>
+                      <ZIndex>31</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Category</Value>
                     </Textbox>
@@ -1335,7 +1414,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>28</ZIndex>
+                      <ZIndex>30</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Type</Value>
                     </Textbox>
@@ -1366,7 +1445,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>27</ZIndex>
+                      <ZIndex>29</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Description</Value>
                     </Textbox>
@@ -1397,7 +1476,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>26</ZIndex>
+                      <ZIndex>28</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Cur</Value>
                     </Textbox>
@@ -1428,7 +1507,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>25</ZIndex>
+                      <ZIndex>27</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Km</Value>
                     </Textbox>
@@ -1459,7 +1538,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>24</ZIndex>
+                      <ZIndex>26</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Km Rate</Value>
                     </Textbox>
@@ -1490,7 +1569,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>23</ZIndex>
+                      <ZIndex>25</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Tip</Value>
                     </Textbox>
@@ -1521,7 +1600,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>22</ZIndex>
+                      <ZIndex>24</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Lodging Taxes</Value>
                     </Textbox>
@@ -1552,7 +1631,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>21</ZIndex>
+                      <ZIndex>23</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Non Taxable Extras</Value>
                     </Textbox>
@@ -1583,7 +1662,7 @@ RXQChrRLTvX/////////v7+/v7+////////////////AAAA/////////v7+/v7+/v7+/v7+/v7+/v7+/
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>20</ZIndex>
+                      <ZIndex>22</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Sub
 Total</Value>
@@ -1615,7 +1694,7 @@ Total</Value>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>19</ZIndex>
+                      <ZIndex>21</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>GST</Value>
                     </Textbox>
@@ -1646,7 +1725,7 @@ Total</Value>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>18</ZIndex>
+                      <ZIndex>20</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>PST</Value>
                     </Textbox>
@@ -1677,7 +1756,7 @@ Total</Value>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>17</ZIndex>
+                      <ZIndex>19</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Full Amount</Value>
                     </Textbox>
@@ -1755,7 +1834,7 @@ Total</Value>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>15</ZIndex>
+                      <ZIndex>3</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Total:</Value>
                     </Textbox>
@@ -1778,7 +1857,7 @@ Total</Value>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>14</ZIndex>
+                      <ZIndex>2</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(Fields!ExpenseItemAmount.Value)</Value>
                     </Textbox>
@@ -1807,7 +1886,7 @@ Total</Value>
         <Value>="Business Purpose: " &amp; First(Fields!BusinessPurpose.Value, "ExpenseReport")</Value>
       </Textbox>
     </ReportItems>
-    <Height>5.085in</Height>
+    <Height>5.335in</Height>
   </Body>
   <Language>en-US</Language>
   <PageFooter>

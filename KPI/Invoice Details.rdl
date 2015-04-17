@@ -10,6 +10,11 @@
   <ReportParameters>
     <ReportParameter Name="ProductCodeSubcategorySubCategory">
       <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Product Code Subcategory].[Sub Category].[All]</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>Sub Category</Prompt>
       <ValidValues>
         <DataSetReference>
@@ -18,10 +23,14 @@
           <LabelField>ParameterCaptionIndented</LabelField>
         </DataSetReference>
       </ValidValues>
-      <MultiValue>true</MultiValue>
     </ReportParameter>
     <ReportParameter Name="TimeFiscalMonth">
       <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Time].[Fiscal Month].[All]</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>Fiscal Month</Prompt>
       <ValidValues>
         <DataSetReference>
@@ -30,10 +39,14 @@
           <LabelField>ParameterCaptionIndented</LabelField>
         </DataSetReference>
       </ValidValues>
-      <MultiValue>true</MultiValue>
     </ReportParameter>
     <ReportParameter Name="ProductCodeCategoryProductPrimaryCategory">
       <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Product Code Category].[Product Primary Category].[All]</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>Product Primary Category</Prompt>
       <ValidValues>
         <DataSetReference>
@@ -42,10 +55,14 @@
           <LabelField>ParameterCaptionIndented</LabelField>
         </DataSetReference>
       </ValidValues>
-      <MultiValue>true</MultiValue>
     </ReportParameter>
     <ReportParameter Name="ProductCodesProductCode">
       <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Product Codes].[Product Code].[All]</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>Product Code</Prompt>
       <ValidValues>
         <DataSetReference>
@@ -54,10 +71,14 @@
           <LabelField>ParameterCaptionIndented</LabelField>
         </DataSetReference>
       </ValidValues>
-      <MultiValue>true</MultiValue>
     </ReportParameter>
     <ReportParameter Name="SalesmenSalesmanName">
       <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>[Salesmen].[Salesman Name].[All]</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>Salesman Name</Prompt>
       <ValidValues>
         <DataSetReference>
@@ -66,7 +87,6 @@
           <LabelField>ParameterCaptionIndented</LabelField>
         </DataSetReference>
       </ValidValues>
-      <MultiValue>true</MultiValue>
     </ReportParameter>
   </ReportParameters>
   <rd:DrawGrid>true</rd:DrawGrid>
@@ -166,15 +186,77 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
   <PageWidth>11in</PageWidth>
   <DataSets>
     <DataSet Name="AnalysisDB">
+      <Fields>
+        <Field Name="Order_Number">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Sales Data].[Orders].[Order Number]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Line_Number">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Sales Data].[Orders].[Line Number]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Invoice_Date">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Sales Data].[Invoice Date].[Invoice Date]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Salesman_Name">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Salesmen].[Salesman Name].[Salesman Name]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Customer_Name">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Customers].[Customer Name].[Customer Name]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Product_Code">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Product Codes].[Product Code].[Product Code]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Vendor_Name">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Vendors].[Vendor Name].[Vendor Name]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Originator_Ident">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Originators].[Originator Ident].[Originator Ident]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Originator_Name">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Originators].[Originator Name].[Originator Name]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sell____Invoiced">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Sell  - Invoiced]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Qty_Ordered___Invoiced">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Qty Ordered - Invoiced]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Cost___Invoiced">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Cost - Invoiced]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
       <Query>
         <DataSourceName>AnalysisDB</DataSourceName>
         <CommandText> SELECT NON EMPTY { [Measures].[Sell  - Invoiced], [Measures].[Qty Ordered - Invoiced], [Measures].[Cost - Invoiced] } ON COLUMNS, NON EMPTY { ([Sales Data].[Orders].[Line Number].ALLMEMBERS * [Sales Data].[Invoice Date].[Invoice Date].ALLMEMBERS * [Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Product Codes].[Product Code].[Product Code].ALLMEMBERS * [Vendors].[Vendor Name].[Vendor Name].ALLMEMBERS * [Originators].[Originator Ident].[Originator Ident].ALLMEMBERS * [Originators].[Originator Name].[Originator Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@SalesmenSalesmanName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductCodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductCodeCategoryProductPrimaryCategory, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductCodeSubcategorySubCategory, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))))) WHERE ( IIF( STRTOSET(@ProductCodeSubcategorySubCategory, CONSTRAINED).Count = 1, STRTOSET(@ProductCodeSubcategorySubCategory, CONSTRAINED), [Product Code Subcategory].[Sub Category].currentmember ), IIF( STRTOSET(@TimeFiscalMonth, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalMonth, CONSTRAINED), [Time].[Fiscal Month].currentmember ), IIF( STRTOSET(@ProductCodeCategoryProductPrimaryCategory, CONSTRAINED).Count = 1, STRTOSET(@ProductCodeCategoryProductPrimaryCategory, CONSTRAINED), [Product Code Category].[Product Primary Category].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <QueryParameters>
+          <QueryParameter Name="TimeFiscalMonth">
+            <Value>=Parameters!TimeFiscalMonth.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ProductCodeCategoryProductPrimaryCategory">
+            <Value>=Parameters!ProductCodeCategoryProductPrimaryCategory.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="ProductCodesProductCode">
+            <Value>=Parameters!ProductCodesProductCode.Value</Value>
+          </QueryParameter>
           <QueryParameter Name="SalesmenSalesmanName">
             <Value>=Parameters!SalesmenSalesmanName.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="ProductCodeSubcategorySubCategory">
+            <Value>=Parameters!ProductCodeSubcategorySubCategory.Value</Value>
+          </QueryParameter>
         </QueryParameters>
-        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From><Filter><FilterItems /></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[Sell  - Invoiced], [Measures].[Qty Ordered - Invoiced], [Measures].[Cost - Invoiced] } ON COLUMNS, NON EMPTY { ([Sales Data].[Orders].[Line Number].ALLMEMBERS * [Sales Data].[Invoice Date].[Invoice Date].ALLMEMBERS * [Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Product Codes].[Product Code].[Product Code].ALLMEMBERS * [Vendors].[Vendor Name].[Vendor Name].ALLMEMBERS * [Originators].[Originator Ident].[Originator Ident].ALLMEMBERS * [Originators].[Originator Name].[Originator Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@SalesmenSalesmanName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductCodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductCodeCategoryProductPrimaryCategory, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductCodeSubcategorySubCategory, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))))) WHERE ( IIF( STRTOSET(@ProductCodeSubcategorySubCategory, CONSTRAINED).Count = 1, STRTOSET(@ProductCodeSubcategorySubCategory, CONSTRAINED), [Product Code Subcategory].[Sub Category].currentmember ), IIF( STRTOSET(@TimeFiscalMonth, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalMonth, CONSTRAINED), [Time].[Fiscal Month].currentmember ), IIF( STRTOSET(@ProductCodeCategoryProductPrimaryCategory, CONSTRAINED).Count = 1, STRTOSET(@ProductCodeCategoryProductPrimaryCategory, CONSTRAINED), [Product Code Category].[Product Primary Category].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions /></Query></QueryDefinition></rd:DesignerState>
+        <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Sales Data</DimensionName><HierarchyName>Orders</HierarchyName><HierarchyUniqueName>[Sales Data].[Orders]</HierarchyUniqueName><LevelName>Order Number</LevelName><UniqueName>[Sales Data].[Orders].[Order Number]</UniqueName></ID><ItemCaption>Order Number</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Sales Data</DimensionName><HierarchyName>Orders</HierarchyName><HierarchyUniqueName>[Sales Data].[Orders]</HierarchyUniqueName><LevelName>Line Number</LevelName><UniqueName>[Sales Data].[Orders].[Line Number]</UniqueName></ID><ItemCaption>Line Number</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Sales Data</DimensionName><HierarchyName>Invoice Date</HierarchyName><HierarchyUniqueName>[Sales Data].[Invoice Date]</HierarchyUniqueName><LevelName>Invoice Date</LevelName><UniqueName>[Sales Data].[Invoice Date].[Invoice Date]</UniqueName></ID><ItemCaption>Invoice Date</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Salesmen</DimensionName><HierarchyName>Salesman Name</HierarchyName><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><LevelName>Salesman Name</LevelName><UniqueName>[Salesmen].[Salesman Name].[Salesman Name]</UniqueName></ID><ItemCaption>Salesman Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Customers</DimensionName><HierarchyName>Customer Name</HierarchyName><HierarchyUniqueName>[Customers].[Customer Name]</HierarchyUniqueName><LevelName>Customer Name</LevelName><UniqueName>[Customers].[Customer Name].[Customer Name]</UniqueName></ID><ItemCaption>Customer Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Product Codes</DimensionName><HierarchyName>Product Code</HierarchyName><HierarchyUniqueName>[Product Codes].[Product Code]</HierarchyUniqueName><LevelName>Product Code</LevelName><UniqueName>[Product Codes].[Product Code].[Product Code]</UniqueName></ID><ItemCaption>Product Code</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Vendors</DimensionName><HierarchyName>Vendor Name</HierarchyName><HierarchyUniqueName>[Vendors].[Vendor Name]</HierarchyUniqueName><LevelName>Vendor Name</LevelName><UniqueName>[Vendors].[Vendor Name].[Vendor Name]</UniqueName></ID><ItemCaption>Vendor Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Originators</DimensionName><HierarchyName>Originator Ident</HierarchyName><HierarchyUniqueName>[Originators].[Originator Ident]</HierarchyUniqueName><LevelName>Originator Ident</LevelName><UniqueName>[Originators].[Originator Ident].[Originator Ident]</UniqueName></ID><ItemCaption>Originator Ident</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Level"><DimensionName>Originators</DimensionName><HierarchyName>Originator Name</HierarchyName><HierarchyUniqueName>[Originators].[Originator Name]</HierarchyUniqueName><LevelName>Originator Name</LevelName><UniqueName>[Originators].[Originator Name].[Originator Name]</UniqueName></ID><ItemCaption>Originator Name</ItemCaption><UniqueName>true</UniqueName></Item><Item><ID xsi:type="Measure"><MeasureName>Sell  - Invoiced</MeasureName><UniqueName>[Measures].[Sell  - Invoiced]</UniqueName></ID><ItemCaption>Sell  - Invoiced</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Qty Ordered - Invoiced</MeasureName><UniqueName>[Measures].[Qty Ordered - Invoiced]</UniqueName></ID><ItemCaption>Qty Ordered - Invoiced</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item><Item><ID xsi:type="Measure"><MeasureName>Cost - Invoiced</MeasureName><UniqueName>[Measures].[Cost - Invoiced]</UniqueName></ID><ItemCaption>Cost - Invoiced</ItemCaption><BackColor>true</BackColor><ForeColor>true</ForeColor><FontFamily>true</FontFamily><FontSize>true</FontSize><FontWeight>true</FontWeight><FontStyle>true</FontStyle><FontDecoration>true</FontDecoration><FormattedValue>true</FormattedValue><FormatString>true</FormatString></Item></Items></Select><From>Sales_2008</From><Filter><FilterItems /></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement> SELECT NON EMPTY { [Measures].[Sell  - Invoiced], [Measures].[Qty Ordered - Invoiced], [Measures].[Cost - Invoiced] } ON COLUMNS, NON EMPTY { ([Sales Data].[Orders].[Line Number].ALLMEMBERS * [Sales Data].[Invoice Date].[Invoice Date].ALLMEMBERS * [Salesmen].[Salesman Name].[Salesman Name].ALLMEMBERS * [Customers].[Customer Name].[Customer Name].ALLMEMBERS * [Product Codes].[Product Code].[Product Code].ALLMEMBERS * [Vendors].[Vendor Name].[Vendor Name].ALLMEMBERS * [Originators].[Originator Ident].[Originator Ident].ALLMEMBERS * [Originators].[Originator Name].[Originator Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@SalesmenSalesmanName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductCodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductCodeCategoryProductPrimaryCategory, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductCodeSubcategorySubCategory, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))))) WHERE ( IIF( STRTOSET(@ProductCodeSubcategorySubCategory, CONSTRAINED).Count = 1, STRTOSET(@ProductCodeSubcategorySubCategory, CONSTRAINED), [Product Code Subcategory].[Sub Category].currentmember ), IIF( STRTOSET(@TimeFiscalMonth, CONSTRAINED).Count = 1, STRTOSET(@TimeFiscalMonth, CONSTRAINED), [Time].[Fiscal Month].currentmember ), IIF( STRTOSET(@ProductCodeCategoryProductPrimaryCategory, CONSTRAINED).Count = 1, STRTOSET(@ProductCodeCategoryProductPrimaryCategory, CONSTRAINED), [Product Code Category].[Product Primary Category].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement><ParameterDefinitions><ParameterDefinition><Name>TimeFiscalMonth</Name><DefaultValues><DefaultValue>[Time].[Fiscal Month].[All]</DefaultValue></DefaultValues><Caption>TimeFiscalMonth</Caption><HierarchyUniqueName>[Time].[Fiscal Month]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery></ParameterDefinition><ParameterDefinition><Name>ProductCodeCategoryProductPrimaryCategory</Name><DefaultValues><DefaultValue>[Product Code Category].[Product Primary Category].[All]</DefaultValue></DefaultValues><Caption>ProductCodeCategoryProductPrimaryCategory</Caption><HierarchyUniqueName>[Product Code Category].[Product Primary Category]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Code Category].[Product Primary Category].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Code Category].[Product Primary Category].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Code Category].[Product Primary Category].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Code Category].[Product Primary Category].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery></ParameterDefinition><ParameterDefinition><Name>ProductCodesProductCode</Name><DefaultValues><DefaultValue>[Product Codes].[Product Code].[All]</DefaultValue></DefaultValues><Caption>ProductCodesProductCode</Caption><HierarchyUniqueName>[Product Codes].[Product Code]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Codes].[Product Code].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Codes].[Product Code].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Codes].[Product Code].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Codes].[Product Code].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery></ParameterDefinition><ParameterDefinition><Name>SalesmenSalesmanName</Name><DefaultValues><DefaultValue>[Salesmen].[Salesman Name].[All]</DefaultValue></DefaultValues><Caption>SalesmenSalesmanName</Caption><HierarchyUniqueName>[Salesmen].[Salesman Name]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery></ParameterDefinition><ParameterDefinition><Name>ProductCodeSubcategorySubCategory</Name><DefaultValues><DefaultValue>[Product Code Subcategory].[Sub Category].[All]</DefaultValue></DefaultValues><Caption>ProductCodeSubcategorySubCategory</Caption><HierarchyUniqueName>[Product Code Subcategory].[Sub Category]</HierarchyUniqueName><ParameterValuesQuery><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Code Subcategory].[Sub Category].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Code Subcategory].[Sub Category].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Code Subcategory].[Sub Category].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Code Subcategory].[Sub Category].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement><ParameterizedStatement><ReferencedParameters /></ParameterizedStatement></ParameterValuesQuery></ParameterDefinition></ParameterDefinitions></Query></QueryDefinition></rd:DesignerState>
         <rd:SuppressAutoUpdate>true</rd:SuppressAutoUpdate>
       </Query>
     </DataSet>
@@ -196,6 +278,7 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
       <Query>
         <DataSourceName>AnalysisDB</DataSourceName>
         <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Code Subcategory].[Sub Category].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Code Subcategory].[Sub Category].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Code Subcategory].[Sub Category].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Code Subcategory].[Sub Category].ALLMEMBERS ON ROWS FROM [Sales_2008]</CommandText>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Code Subcategory].[Sub Category].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Code Subcategory].[Sub Category].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Code Subcategory].[Sub Category].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Code Subcategory].[Sub Category].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement></Query></QueryDefinition></rd:DesignerState>
         <rd:AutoGenerated>true</rd:AutoGenerated>
         <rd:Hidden>true</rd:Hidden>
       </Query>
@@ -217,12 +300,13 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
       </Fields>
       <Query>
         <DataSourceName>AnalysisDB</DataSourceName>
-        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@ProductCodeSubcategorySubCategory, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])</CommandText>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Sales_2008]</CommandText>
         <QueryParameters>
           <QueryParameter Name="ProductCodeSubcategorySubCategory">
             <Value>=Parameters!ProductCodeSubcategorySubCategory.Value</Value>
           </QueryParameter>
         </QueryParameters>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Time].[Fiscal Month].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Time].[Fiscal Month].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Time].[Fiscal Month].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Time].[Fiscal Month].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement></Query></QueryDefinition></rd:DesignerState>
         <rd:AutoGenerated>true</rd:AutoGenerated>
         <rd:Hidden>true</rd:Hidden>
       </Query>
@@ -244,7 +328,7 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
       </Fields>
       <Query>
         <DataSourceName>AnalysisDB</DataSourceName>
-        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Code Category].[Product Primary Category].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Code Category].[Product Primary Category].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Code Category].[Product Primary Category].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Code Category].[Product Primary Category].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductCodeSubcategorySubCategory, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))</CommandText>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Code Category].[Product Primary Category].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Code Category].[Product Primary Category].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Code Category].[Product Primary Category].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Code Category].[Product Primary Category].ALLMEMBERS ON ROWS FROM [Sales_2008]</CommandText>
         <QueryParameters>
           <QueryParameter Name="ProductCodeSubcategorySubCategory">
             <Value>=Parameters!ProductCodeSubcategorySubCategory.Value</Value>
@@ -253,6 +337,7 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
             <Value>=Parameters!TimeFiscalMonth.Value</Value>
           </QueryParameter>
         </QueryParameters>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Code Category].[Product Primary Category].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Code Category].[Product Primary Category].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Code Category].[Product Primary Category].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Code Category].[Product Primary Category].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement></Query></QueryDefinition></rd:DesignerState>
         <rd:AutoGenerated>true</rd:AutoGenerated>
         <rd:Hidden>true</rd:Hidden>
       </Query>
@@ -274,7 +359,7 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
       </Fields>
       <Query>
         <DataSourceName>AnalysisDB</DataSourceName>
-        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Codes].[Product Code].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Codes].[Product Code].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Codes].[Product Code].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Codes].[Product Code].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@ProductCodeCategoryProductPrimaryCategory, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductCodeSubcategorySubCategory, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008])))</CommandText>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Codes].[Product Code].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Codes].[Product Code].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Codes].[Product Code].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Codes].[Product Code].ALLMEMBERS ON ROWS FROM [Sales_2008]</CommandText>
         <QueryParameters>
           <QueryParameter Name="ProductCodeSubcategorySubCategory">
             <Value>=Parameters!ProductCodeSubcategorySubCategory.Value</Value>
@@ -286,6 +371,7 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
             <Value>=Parameters!ProductCodeCategoryProductPrimaryCategory.Value</Value>
           </QueryParameter>
         </QueryParameters>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Product Codes].[Product Code].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Product Codes].[Product Code].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Product Codes].[Product Code].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Product Codes].[Product Code].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement></Query></QueryDefinition></rd:DesignerState>
         <rd:AutoGenerated>true</rd:AutoGenerated>
         <rd:Hidden>true</rd:Hidden>
       </Query>
@@ -307,7 +393,7 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
       </Fields>
       <Query>
         <DataSourceName>AnalysisDB</DataSourceName>
-        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@ProductCodesProductCode, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductCodeCategoryProductPrimaryCategory, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@TimeFiscalMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductCodeSubcategorySubCategory, CONSTRAINED) ) ON COLUMNS FROM [Sales_2008]))))</CommandText>
+        <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM [Sales_2008]</CommandText>
         <QueryParameters>
           <QueryParameter Name="ProductCodeSubcategorySubCategory">
             <Value>=Parameters!ProductCodeSubcategorySubCategory.Value</Value>
@@ -322,6 +408,7 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
             <Value>=Parameters!ProductCodesProductCode.Value</Value>
           </QueryParameter>
         </QueryParameters>
+        <rd:DesignerState><QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items /></Select><From>Sales_2008</From></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.MEMBER_CAPTION' MEMBER [Measures].[ParameterValue] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.UNIQUENAME' MEMBER [Measures].[ParameterLevel] AS '[Salesmen].[Salesman Name].CURRENTMEMBER.LEVEL.ORDINAL' SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Salesmen].[Salesman Name].ALLMEMBERS ON ROWS FROM [Sales_2008]</Statement></Query></QueryDefinition></rd:DesignerState>
         <rd:AutoGenerated>true</rd:AutoGenerated>
         <rd:Hidden>true</rd:Hidden>
       </Query>

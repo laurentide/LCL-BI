@@ -357,8 +357,8 @@ Date</CommandText>
         <DataSourceName>Foundation1</DataSourceName>
         <CommandText>SELECT Agreement.Name + ' - SB:' + convert(nvarchar,AgreementSiteServiceBank.ServiceBankNo) + ' - ' + AgreementSTatusCd as Name, Agreement.AgreementNo, AgreementSiteServiceBank.ServiceBankNo, ServiceBank.RowStatusCd, AgreementSTatusCd, Servicebankquantity
 FROM (Agreement INNER JOIN AgreementSiteServiceBank ON Agreement.AgreementNo = AgreementSiteServiceBank.AgreementNo) INNER JOIN ServiceBank ON AgreementSiteServiceBank.ServiceBankNo = ServiceBank.ServiceBankNo
-GROUP BY Agreement.Name, Agreement.AgreementNo, AgreementSiteServiceBank.ServiceBankNo, ServiceBank.RowStatusCd, agreement.rowStatusCd, AgreementSTatusCd,Servicebankquantity
-HAVING  ServiceBank.RowStatusCd ='A' and AgreementSTatusCd in (@AgreementStatus)
+GROUP BY Agreement.Name, Agreement.AgreementNo, AgreementSiteServiceBank.ServiceBankNo, ServiceBank.RowStatusCd, agreement.rowStatusCd, AgreementSTatusCd,Servicebankquantity,servicebankamount 
+HAVING  ServiceBank.RowStatusCd ='A' and AgreementSTatusCd in (@AgreementStatus) and servicebankamount is null
 ORDER BY Agreement.Name, Agreement.AgreementNo;</CommandText>
         <QueryParameters>
           <QueryParameter Name="@AgreementStatus">

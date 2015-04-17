@@ -91,7 +91,9 @@
       </Fields>
       <Query>
         <DataSourceName>Foundation</DataSourceName>
-        <CommandText>/* ------- */
+        <CommandText>select a.* from work w inner join
+(
+/* ------- */
 /* Revenue */
 /* ------- */
 /* Look at revenue milestone inside the project */ 
@@ -117,9 +119,12 @@ inner join purchaseorder po
 on por.purchaseorderno = po.purchaseorderno
 inner join workproject wp
 on ppo.workno = wp.workno
+inner join work w 
+on w.workno = wp.workno
 where por.rowstatuscd = 'A'
 --and ppo.workno = 27200
 and po.rowstatuscd = 'A'
+--and w.workstatuscd = 'O'
 and invoicestatuscd = 'IP' --Invoiced only
 and wp.createdate &gt;= @CreateDate
 union all
@@ -152,6 +157,7 @@ where invoicestatuscd = 'IP'
 --and parentworkno = 27200
 and tablename &lt;&gt; 'WorkInvoiceProductBooking'
 and wp.createdate &gt;= @CreateDate
+--and w.workstatuscd = 'O'
 group by w.parentworkno,wp.name,w.workno,tablename,w.description,invoicestatuscd, po.customerpurchaseordercode,po.description,coreproductcd,revenuerecognitioncd
 union all
 /* ------- */
@@ -185,6 +191,7 @@ where tablename &lt;&gt; 'WorkInvoiceProductBooking'
 --and invoicestatuscd = 'IP'
 --and parentworkno = 27200
 and revenuerecognitioncd = 'M'
+--and w.workstatuscd = 'O'
 and wp.createdate &gt;= @CreateDate
 group by w.parentworkno,
        wp.name,
@@ -224,6 +231,7 @@ inner join workproject wp
 on w.parentworkno = wp.workno
 where invoicestatuscd = 'IP'
 --and parentworkno = 27200
+--and w.workstatuscd = 'O'
 and tablename &lt;&gt; 'WorkInvoiceProductBooking'
 and wp.createdate &gt;= @CreateDate
 and revenuerecognitioncd = 'T'
@@ -255,17 +263,28 @@ select 'Cost' as Stream,
        0 as duration, 
        0 as billableduration,
        sum(estimatedcost*totalquantityRequired) as amount
-from dbo.ProjectPurchaseOrderBillOfMaterial ppobom
+from ProjectPurchaseOrder ppo inner join
+dbo.ProjectPurchaseOrderBillOfMaterial ppobom
+on ppo.purchaseorderno = ppobom.purchaseorderno
 inner join billofmaterial bom
 on ppobom.billofmaterialno = bom.billofmaterialno 
 inner join purchaseorder po
 on ppobom.purchaseorderno = po.purchaseorderno 
 inner join workproject wp
 on ppobom.workno = wp.workno
+inner join work w
+on wp.workno = w.workno
 where po.rowstatuscd = 'A'
 and wp.createdate &gt;= @CreateDate
+--and w.workstatuscd = 'O'
 --and workno = 27200
-group by ppobom.workno,wp.name,customerpurchaseordercode,po.description,coreproductcd</CommandText>
+and revenuerecognitioncd = 'M'
+group by ppobom.workno,wp.name,po.customerpurchaseordercode,po.description,coreproductcd
+) a
+on w.workno = a.projectno
+where worktypecd = 'PH'
+and workstatuscd = 'O'
+order by projectno</CommandText>
         <QueryParameters>
           <QueryParameter Name="@CreateDate">
             <Value>=Parameters!CreateDate.Value</Value>

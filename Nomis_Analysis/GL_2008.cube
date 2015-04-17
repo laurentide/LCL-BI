@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="18" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-18818" scrolltop="6736" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="36195" y="22622" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="18" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-18818" scrolltop="12847" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="29263" y="12965" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -160,7 +160,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>6736</Value>
+      <Value>12847</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -250,7 +250,15 @@
         <Attribute dwd:design-time-name="76e1a591-7f59-49c0-8e88-6c5d24b701bd">
           <AttributeID>Account Department Id</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="40cc4a78-90ea-43aa-8425-06c4d1f7f532">
+          <AttributeID>Account Department Grouping</AttributeID>
+        </Attribute>
       </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="89d03a19-ea88-4368-865c-abd0c596d5f0">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
     </Dimension>
     <Dimension dwd:design-time-name="8a3f0434-6dfc-460a-99bf-36d71359b7bc">
       <ID>Time</ID>
@@ -356,6 +364,9 @@
         <Attribute dwd:design-time-name="861e5882-9ae9-4e7c-a29e-d161170247f2">
           <AttributeID>Work Month</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="3823f644-1b13-47b9-9707-d5a1a30908f9">
+          <AttributeID>Fiscal Month Valid</AttributeID>
+        </Attribute>
       </Attributes>
       <Hierarchies>
         <Hierarchy dwd:design-time-name="bcd92052-6b4b-4d95-a671-be76ef443500">
@@ -436,6 +447,7 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="236bdd18-b0df-4f6f-a5c6-26313cbe4a68">
       <ID>Fact GL</ID>
@@ -516,6 +528,7 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
     </MeasureGroup>
   </MeasureGroups>
   <Source dwd:design-time-name="d19e89ea-b6f4-4ee1-9bcd-ec17bcc8fa69">
@@ -534,44 +547,46 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE;           
+CALCULATE;            
 CREATE SET CURRENTCUBE.[Services]
- AS {[Accounts].[Account Department Name].&amp;[Vibration],
+ AS {[Accounts].[Account Department Name].&amp;[Reliability Products],
+ [Accounts].[Account Department Name].&amp;[Reliability Services],
  [Accounts].[Account Department Name].&amp;[Field Instrumentation],
- [Accounts].[Account Department Name].&amp;[CSI],
  [Accounts].[Account Department Name].&amp;[Alcan],
  [Accounts].[Account Department Name].&amp;[Engineering],
  [Accounts].[Account Department Name].&amp;[Automation],
- [Accounts].[Account Department Name].&amp;[Pratt &amp; Whitney],
- [Accounts].[Account Department Name].&amp;[Huile]} ;      
+ [Accounts].[Account Department Name].&amp;[Pratt &amp; Whitney]
+} ;       
 CREATE SET CURRENTCUBE.[No Revenue Departments]
  AS {[Accounts].[Account Department Name].&amp;[Warehouse],
- [Accounts].[Account Department Name].&amp;[Sales Operation],
- [Accounts].[Account Department Name].&amp;[Finance]} ;                  
+ [Accounts].[Account Department Name].&amp;[Sales Operation Atlantic],
+ [Accounts].[Account Department Name].&amp;[Sales Operation Montreal],
+ [Accounts].[Account Department Name].&amp;[Service Support Team],
+ [Accounts].[Account Department Name].&amp;[Finance]} ;                   
 CREATE SET CURRENTCUBE.[Expenses]
- AS {[Accounts].[Account Category Id].&amp;[4],[Accounts].[Account Category Id].&amp;[5],[Accounts].[Account Category Id].&amp;[6]} ;                 
+ AS {[Accounts].[Account Category Id].&amp;[4],[Accounts].[Account Category Id].&amp;[5],[Accounts].[Account Category Id].&amp;[6]};                  
 CREATE SET CURRENTCUBE.[Sales]
- AS [Accounts].[Account Category Id].&amp;[1];                 
+ AS [Accounts].[Account Category Id].&amp;[1];                  
 CREATE SET CURRENTCUBE.[COGS]
- AS [Accounts].[Account Category Id].&amp;[2];            
+ AS [Accounts].[Account Category Id].&amp;[2];             
 CREATE SET CURRENTCUBE.[Q&amp;O]
- AS {[Accounts].[Account Department Name].&amp;[Sales],[Accounts].[Account Department Name].&amp;[Sales Operation]} ;       
+ AS {[Accounts].[Account Department Name].&amp;[Sales Montreal],[Accounts].[Account Department Name].&amp;[Sales Operation Montreal],[Accounts].[Account Department Name].&amp;[Sales Operation Atlantic]} ;        
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Department Profit]
  AS iif([Sales Actual] &lt;&gt; 0,([Sales Actual]+[COGS Actual]), null), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;       
+VISIBLE = 1;        
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Department Profit Budget]
  AS iif([Sales Budget] &lt;&gt; 0,([Sales Budget]+[COGS Budget]), null), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;         
+VISIBLE = 1;          
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Department Margin]
  AS iif([Sales Actual] &lt;&gt; 0,([Sales Actual]+[COGS Actual])/[Sales Actual], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;         
+VISIBLE = 1;          
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Department Margin Budget]
  AS iif([Sales Budget] &lt;&gt; 0,([Sales Budget]+[COGS Budget])/[Sales Budget], null), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;             
+VISIBLE = 1;              
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Percentage of goal]
  AS case [Accounts].[Account Department Name].currentmember.name 
 when "Warehouse"
@@ -581,59 +596,59 @@ then (([Measures].[Total]-[Measures].[Amount])/[Measures].[Amount])+1
 when "Finance"
 then (([Measures].[Total]-[Measures].[Amount])/[Measures].[Amount])+1
 else [Measures].[Amount]/[Measures].[Total] end, 
-VISIBLE = 1  ;                 
+VISIBLE = 1;                  
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Gross Margin]
  AS Aggregate([Sales], [Measures].[Amount]) + Aggregate([COGS], [Measures].[Amount]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Gross Margin Budget]
  AS Aggregate([Sales], [Measures].[Total]) + Aggregate([COGS], [Measures].[Total]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;                 
+VISIBLE = 1;                  
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Gross Margin %]
  AS iif(Aggregate([Sales], [Measures].[Amount]) = 0, 0, (Aggregate([Sales], [Measures].[Amount]) + Aggregate([COGS], [Measures].[Amount])) / Aggregate([Sales], [Measures].[Amount])), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Gross Margin % Budget]
  AS iif(Aggregate([Sales], [Measures].[Total]) = 0, 0, (Aggregate([Sales], [Measures].[Total]) + Aggregate([COGS], [Measures].[Total])) / Aggregate([Sales], [Measures].[Total])), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;                
+VISIBLE = 1;                 
 CREATE MEMBER CURRENTCUBE.[MEASURES].Contribution
  AS [Measures].[Amount], 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;                
+VISIBLE = 1;                 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Sales Actual]
  AS Aggregate([Sales], [Measures].[Amount]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Sales Budget]
  AS Aggregate([Sales], [Measures].[Total]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;                
+VISIBLE = 1;                 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Expenses Actual]
  AS Aggregate([Expenses], [Measures].[Amount]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Expenses Budget]
  AS Aggregate([Expenses], [Measures].[Total]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;                
+VISIBLE = 1;                 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[COGS Actual]
  AS Aggregate([COGS], [Measures].[Amount]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[COGS Budget]
  AS Aggregate([COGS], [Measures].[Total]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Var %]
  AS iif([Measures].[Amount] = 0, null,([Measures].[Amount]-[Measures].[Total])/[Measures].[Amount]), 
 FORMAT_STRING = "Percent", 
-VISIBLE = 1;               
+VISIBLE = 1;                
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Var $]
  AS iif([Measures].[Amount] = 0,null,[Measures].[Amount]-[Measures].[Total]), 
 FORMAT_STRING = "Currency", 
-VISIBLE = 1;              
+VISIBLE = 1;               
 
 
 /*
@@ -642,63 +657,63 @@ VISIBLE = 1;
 
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Year to Date] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Quarter to Date] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Month to Date] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Twelve Months to Date] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Twelve Month Moving Average] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Six Month Moving Average] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Three Month Moving Average] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth %] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth %] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth %] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth %] 
-  As "NA";  
+  As "NA";   
   
 Create Member 
   CurrentCube.[Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth] 
-  As "NA";  
+  As "NA";   
   
 
 
@@ -738,7 +753,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Year],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  );  
+  );   
 
   
 // Quarter to Date
@@ -777,7 +792,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Quarter],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  );  
+  );   
 
   
 // Month to Date
@@ -816,7 +831,7 @@ Create Member
                             [Time].[Fiscal Hierarchy].[Fiscal Month],
                             [Time].[Fiscal Hierarchy].CurrentMember
              )
-  );  
+  );   
 
   
 // Twelve Months to Date
@@ -858,7 +873,7 @@ Create Member
                                [Time].[Fiscal Hierarchy].CurrentMember
                ) : [Time].[Fiscal Hierarchy].CurrentMember
              }
-  );  
+  );   
 
   
 // Twelve Month Moving Average  
@@ -900,7 +915,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember
-  );  
+  );   
 
   
 // Six Month Moving Average  
@@ -942,7 +957,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember
-  );  
+  );   
 
   
 // Three Month Moving Average  
@@ -984,7 +999,7 @@ Create Member
          ) : [Time].[Fiscal Hierarchy].CurrentMember
        },
       [Time].[Fiscal Hierarchy Time Calculations 1].DefaultMember
-  );  
+  );   
 
   
 // Year Over Year Growth %  
@@ -1034,7 +1049,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth %],
@@ -1063,14 +1078,14 @@ Create Member
       [Measures].[Amount]
     }
    
-  ) = Null;   
+  ) = Null;    
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";  
+  ) = "Percent";   
 
   
 // Year Over Year Growth  
@@ -1110,7 +1125,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Year Over Year Growth],
@@ -1139,7 +1154,7 @@ Create Member
       [Measures].[Amount]
     }
    
-  ) = Null;  
+  ) = Null;   
 
   
 // Quarter Over Quarter Growth %  
@@ -1189,7 +1204,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth %],
@@ -1218,14 +1233,14 @@ Create Member
       [Measures].[Amount]
     }
    
-  ) = Null;   
+  ) = Null;    
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";  
+  ) = "Percent";   
 
   
 // Quarter Over Quarter Growth  
@@ -1265,7 +1280,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Quarter Over Quarter Growth],
@@ -1294,7 +1309,7 @@ Create Member
       [Measures].[Amount]
     }
    
-  ) = Null;  
+  ) = Null;   
 
   
 // Month Over Month Growth %  
@@ -1344,7 +1359,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth %],
@@ -1373,14 +1388,14 @@ Create Member
       [Measures].[Amount]
     }
    
-  ) = Null;   
+  ) = Null;    
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";  
+  ) = "Percent";   
 
   
 // Month Over Month Growth  
@@ -1420,7 +1435,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Month Over Month Growth],
@@ -1449,7 +1464,7 @@ Create Member
       [Measures].[Amount]
     }
    
-  ) = Null;  
+  ) = Null;   
 
   
 // Day Over Day Growth %  
@@ -1499,7 +1514,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth %],
@@ -1528,14 +1543,14 @@ Create Member
       [Measures].[Amount]
     }
    
-  ) = Null;  
+  ) = Null;   
   
   Format_String( 
                  ( 
 				   [Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth %],
 				   [Time].[Date].Members
 				 )
-  ) = "Percent";  
+  ) = "Percent";   
 
   
 // Day Over Day Growth  
@@ -1575,7 +1590,7 @@ Create Member
                     1,
                     [Time].[Fiscal Hierarchy].CurrentMember
     )
-  );  
+  );   
   
   ( 
     [Time].[Fiscal Hierarchy Time Calculations 1].[Day Over Day Growth],

@@ -934,6 +934,9 @@
         <Attribute dwd:design-time-name="7610a91a-c224-44ea-ab54-5e1595e96d14">
           <AttributeID>Work Month</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="26e5b739-5dcd-4f9a-8832-154e535453d7">
+          <AttributeID>Fiscal Month Valid</AttributeID>
+        </Attribute>
       </Attributes>
       <Hierarchies>
         <Hierarchy dwd:design-time-name="3e67e2b2-a577-4ab2-979d-2c9dbc05c87b">

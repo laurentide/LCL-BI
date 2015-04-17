@@ -1473,7 +1473,7 @@ and					KFLFSU='O'</CommandText>
       </Query>
     </DataSet>
   </DataSets>
-  <Width>7.875in</Width>
+  <Width>7.87501in</Width>
   <Body>
     <ReportItems>
       <Table Name="table1">
@@ -2392,7 +2392,12 @@ SUPPLIER/MANUFACTURER
                           </Style>
                           <ZIndex>58</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>ROSEMOUNT INC. 8200 MARKET BOULEVARD, CHANHASSEN, MN 55317 USA</Value>
+                          <Value>=rtrim(Fields!Division_Name.Value) &amp; " " &amp; chr(10) &amp; chr(13) &amp;
+rtrim(Fields!Division_Address_1.Value) &amp; " " &amp;
+rtrim(Fields!Division_Address_2.Value) &amp; " " &amp; chr(10) &amp; chr(13) &amp;
+rtrim(Fields!Division_City.Value) &amp; " " &amp;
+rtrim(Fields!Division_Province.Value) &amp; " " &amp; chr(10) &amp; chr(13) &amp;
+rtrim(Fields!Division_Postal_Code.Value)</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>

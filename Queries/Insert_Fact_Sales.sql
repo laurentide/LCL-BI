@@ -15,7 +15,7 @@ INTO   FACT_SALES
 		      WAREHOUSE_ID,
               SELLING_PRICE,
               COST,
-              QUANTITY_ORDERED,
+              QUANTITY_ORDERED, 
               ORDER_NUMBER,
               LINE_NUMBER,
               SEQUENCE_NUMBER,

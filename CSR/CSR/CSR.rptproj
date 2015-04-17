@@ -29,12 +29,20 @@
   </DataSources>
   <Reports>
     <ProjectItem>
+      <Name>Apollo Report.rdl</Name>
+      <FullPath>Apollo Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Bolt Credits.rdl</Name>
       <FullPath>Bolt Credits.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Commercial Invoice Printing.rdl</Name>
       <FullPath>Commercial Invoice Printing.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>CTR.rdl</Name>
+      <FullPath>CTR.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Danfoss.rdl</Name>
@@ -109,6 +117,10 @@
       <FullPath>PR Pending Approval.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>PurchaseRequestCleanup.rdl</Name>
+      <FullPath>PurchaseRequestCleanup.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Quote Report Tool.rdl</Name>
       <FullPath>Quote Report Tool.rdl</FullPath>
     </ProjectItem>
@@ -133,8 +145,8 @@
       <FullPath>Wrong Salesman Number Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Apollo Report.rdl</Name>
-      <FullPath>Apollo Report.rdl</FullPath>
+      <Name>Originators Table.rdl</Name>
+      <FullPath>Originators Table.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

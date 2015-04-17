@@ -343,18 +343,6 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
 	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Year to Date],[MEASURES].[OT2.0 Non Billable])
 	 },
 	 {
-	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[Measures].[OT2.0]),
-	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[Measures].[Duration]),
-	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[Measures].[OT1.5]),
-	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[Measures].[Billable]),
-	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[Measures].[SA and TS]),
-	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[Measures].[Hours Goal]),
-	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[MEASURES].[OT1.5 Billable]),
-	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[MEASURES].[OT1.5 Non Billable]),
-	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[MEASURES].[OT2.0 Billable]),
-	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Quarter to Date],[MEASURES].[OT2.0 Non Billable])
-	 },
-	 {
 	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Month to Date],[Measures].[OT2.0]),
 	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Month to Date],[Measures].[Duration]),
 	 ([Time].[Fiscal Hierarchy Time Calculations 4].[Month to Date],[Measures].[OT1.5]),

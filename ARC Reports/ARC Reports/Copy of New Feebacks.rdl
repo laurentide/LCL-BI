@@ -1,0 +1,924 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="NCF">
+      <rd:DataSourceID>7d1d0075-a3af-4174-9f95-ed56881a2bce</rd:DataSourceID>
+      <DataSourceReference>NCF</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.25in</RightMargin>
+  <LeftMargin>0.25in</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Image Name="image1">
+        <Sizing>Fit</Sizing>
+        <Width>1.25in</Width>
+        <MIMEType>image/jpeg</MIMEType>
+        <Source>Embedded</Source>
+        <Style />
+        <ZIndex>1</ZIndex>
+        <Value>laurentide_logo_vector_small</Value>
+      </Image>
+      <Textbox Name="textbox33">
+        <Style>
+          <Color>#1c3a70</Color>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>18pt</FontSize>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>5.625in</Left>
+        <Value>New Feedbacks</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.33in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>0.25in</BottomMargin>
+  <rd:ReportID>4e173b2d-0870-4f69-a9c1-93757b32f265</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="laurentide_logo_vector_small">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <DataSets>
+    <DataSet Name="NCF">
+      <Fields>
+        <Field Name="NCFNo">
+          <DataField>NCFNo</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CategoryNo">
+          <DataField>CategoryNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Status_EN">
+          <DataField>Status_EN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IssuedBy">
+          <DataField>IssuedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IssueDate">
+          <DataField>IssueDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="FollowUpDate">
+          <DataField>FollowUpDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TargetCloseOutDate">
+          <DataField>TargetCloseOutDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CloseOutDate">
+          <DataField>CloseOutDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Deficiency">
+          <DataField>Deficiency</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ActionT">
+          <DataField>ActionT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Cause">
+          <DataField>Cause</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Suggestions">
+          <DataField>Suggestions</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssignedTo">
+          <DataField>AssignedTo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CUSTOMERNAME">
+          <DataField>CUSTOMERNAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrderNo">
+          <DataField>OrderNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VendorNo">
+          <DataField>VendorNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PONo">
+          <DataField>PONo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Vendor_Name">
+          <DataField>Vendor_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>NCF</DataSourceName>
+        <CommandText>SELECT     dbo.NCF_General.NCFNo, dbo.NCF_General.CategoryNo, dbo.Status.Status_EN, dbo.AD_LCL_USERS.displayName AS IssuedBy, 
+                      dbo.NCF_General.IssueDate, dbo.NCF_Admin.FollowUpDate, dbo.NCF_Admin.TargetCloseOutDate, dbo.NCF_Admin.CloseOutDate, 
+                      dbo.NCF_General.Deficiency, dbo.NCF_General.ActionT, dbo.NCF_General.Cause, dbo.NCF_General.Suggestions, 
+                      dbo.Assignments.EmployeeName AS AssignedTo, dbo.QRY_Customers.CUSTOMERNAME, dbo.NCF_General.OrderNo, dbo.NCF_General.VendorNo, 
+                      dbo.NCF_General.PONo, dbo.VENPHY01.LRRKTX AS Vendor_Name
+FROM         dbo.QRY_Customers INNER JOIN
+                      dbo.NCF_General INNER JOIN
+                      dbo.Contact ON dbo.NCF_General.ContactNo = dbo.Contact.ContactNo INNER JOIN
+                      dbo.Status ON dbo.NCF_General.Status = dbo.Status.StatusNo INNER JOIN
+                      dbo.NCF_Admin ON dbo.NCF_General.NCFNo = dbo.NCF_Admin.NCFNo ON dbo.QRY_Customers.CUSTOMERNO = dbo.Contact.CustomerNo INNER JOIN
+                      dbo.AD_LCL_USERS ON dbo.NCF_General.EmployeeWN = dbo.AD_LCL_USERS.sAMAccountName LEFT OUTER JOIN
+                      dbo.VENPHY01 ON dbo.NCF_General.VendorNo = dbo.VENPHY01.LRRCCD LEFT OUTER JOIN
+                      dbo.Assignments ON dbo.NCF_Admin.AssignedTo = dbo.Assignments.EmployeeNo
+where status_EN &lt;&gt; 'Closed' and status_en &lt;&gt; 'Incomplete'
+ORDER BY dbo.NCF_General.NCFNo</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Width>8in</Width>
+  <Body>
+    <ReportItems>
+      <List Name="List1">
+        <Sorting>
+          <SortBy>
+            <SortExpression>=Fields!NCFNo.Value</SortExpression>
+            <Direction>Ascending</Direction>
+          </SortBy>
+        </Sorting>
+        <DataSetName>NCF</DataSetName>
+        <ReportItems>
+          <Textbox Name="textbox34">
+            <Width>0.5in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>33</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.125in</Left>
+            <Height>0.25in</Height>
+            <Value>ID#:</Value>
+          </Textbox>
+          <Textbox Name="textbox31">
+            <Top>4.625in</Top>
+            <Width>1in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>32</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>Suggestions:</Value>
+          </Textbox>
+          <Textbox Name="textbox32">
+            <Top>4.875in</Top>
+            <Width>7.75in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>31</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!Suggestions.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox29">
+            <Top>4in</Top>
+            <Width>2in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>30</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>Suspected Cause:</Value>
+          </Textbox>
+          <Textbox Name="textbox30">
+            <Top>4.25in</Top>
+            <Width>7.75in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>29</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!Cause.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox27">
+            <Top>3.375in</Top>
+            <Width>2in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>28</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>Immediate Action:</Value>
+          </Textbox>
+          <Textbox Name="textbox28">
+            <Top>3.625in</Top>
+            <Width>7.75in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>27</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!ActionT.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox25">
+            <Top>2.75in</Top>
+            <Width>2in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>26</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>Description of Deficiency:</Value>
+          </Textbox>
+          <Textbox Name="textbox26">
+            <Top>3in</Top>
+            <Width>7.75in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>25</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!Deficiency.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox5">
+            <Top>2.25in</Top>
+            <Width>1in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>24</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>Customer:</Value>
+          </Textbox>
+          <Textbox Name="textbox6">
+            <Top>2in</Top>
+            <Width>1in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>23</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>Vendor:</Value>
+          </Textbox>
+          <Textbox Name="textbox23">
+            <Top>2.25in</Top>
+            <Width>6.75in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>22</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!CUSTOMERNAME.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox24">
+            <Top>2in</Top>
+            <Width>6.75in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>21</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.125in</Left>
+            <Height>0.25in</Height>
+            <Value>= Fields!Vendor_Name.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox13">
+            <Top>1.375in</Top>
+            <Width>1.5in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>20</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.75in</Left>
+            <Height>0.25in</Height>
+            <Value>PO Number:</Value>
+          </Textbox>
+          <Textbox Name="textbox14">
+            <Top>1.125in</Top>
+            <Width>1.5in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>19</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.75in</Left>
+            <Height>0.25in</Height>
+            <Value>Closed-Out Date:</Value>
+          </Textbox>
+          <Textbox Name="textbox15">
+            <Top>0.875in</Top>
+            <Width>1.5in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>18</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.75in</Left>
+            <Height>0.25in</Height>
+            <Value>Target Close-Out Date:</Value>
+          </Textbox>
+          <Textbox Name="textbox16">
+            <Top>0.625in</Top>
+            <Width>1.5in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>17</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.75in</Left>
+            <Height>0.25in</Height>
+            <Value>Follow-Up Date:</Value>
+          </Textbox>
+          <Textbox Name="textbox17">
+            <Top>0.375in</Top>
+            <Width>1.5in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>16</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.75in</Left>
+            <Height>0.25in</Height>
+            <Value>Issue Date:</Value>
+          </Textbox>
+          <Textbox Name="textbox18">
+            <Top>1.375in</Top>
+            <Width>2.625in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>15</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.25in</Left>
+            <Height>0.25in</Height>
+            <Value>= Fields!PONo.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox19">
+            <Top>1.125in</Top>
+            <Width>2.625in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>14</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.25in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!CloseOutDate.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox20">
+            <Top>0.875in</Top>
+            <Width>2.625in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>13</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.25in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!TargetCloseOutDate.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox21">
+            <Top>0.625in</Top>
+            <Width>2.625in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>12</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.25in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!FollowUpDate.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox22">
+            <Top>0.375in</Top>
+            <Width>2.625in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>11</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>5.25in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!IssueDate.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox8">
+            <Top>1.375in</Top>
+            <Width>1in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>10</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>Order No:</Value>
+          </Textbox>
+          <Textbox Name="textbox9">
+            <Top>1.125in</Top>
+            <Width>1in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>9</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>Assigned to:</Value>
+          </Textbox>
+          <Textbox Name="textbox10">
+            <Top>0.875in</Top>
+            <Width>1in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>8</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>Issued By:</Value>
+          </Textbox>
+          <Textbox Name="textbox11">
+            <Top>0.625in</Top>
+            <Width>1in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>7</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>Status</Value>
+          </Textbox>
+          <Textbox Name="textbox12">
+            <Top>0.375in</Top>
+            <Width>1in</Width>
+            <Style>
+              <Color>White</Color>
+              <BackgroundColor>#1c3a70</BackgroundColor>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>6</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.125in</Left>
+            <Height>0.25in</Height>
+            <Value>Category:</Value>
+          </Textbox>
+          <Textbox Name="textbox7">
+            <Top>1.375in</Top>
+            <Width>2.375in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>5</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!OrderNo.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox3">
+            <Top>1.125in</Top>
+            <Width>2.375in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>4</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!AssignedTo.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox4">
+            <Top>0.875in</Top>
+            <Width>2.375in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>3</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!IssuedBy.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox1">
+            <Top>0.625in</Top>
+            <Width>2.375in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>2</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!Status_EN.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox2">
+            <rd:DefaultName>textbox2</rd:DefaultName>
+            <Top>0.375in</Top>
+            <Width>2.375in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!CategoryNo.Value</Value>
+          </Textbox>
+          <Textbox Name="NCFNo">
+            <rd:DefaultName>NCFNo</rd:DefaultName>
+            <Width>0.375in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Center</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Left>3.625in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!NCFNo.Value</Value>
+          </Textbox>
+        </ReportItems>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>8pt</FontSize>
+        </Style>
+        <Grouping Name="list1_NCFNo">
+          <GroupExpressions>
+            <GroupExpression>=Fields!NCFNo.Value</GroupExpression>
+          </GroupExpressions>
+          <PageBreakAtEnd>true</PageBreakAtEnd>
+        </Grouping>
+      </List>
+    </ReportItems>
+    <Height>5.25in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox52">
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>6.625in</Left>
+        <Value>=Globals!PageNumber &amp; " of " &amp; Globals!TotalPages</Value>
+      </Textbox>
+      <Textbox Name="textbox53">
+        <Width>3.125in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.625in</Left>
+        <Value>="Execution Time:" &amp; Globals!ExecutionTime</Value>
+      </Textbox>
+      <Textbox Name="textbox54">
+        <Width>1.375in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Value>=Globals!ReportName</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.25in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <TopMargin>0.25in</TopMargin>
+</Report>

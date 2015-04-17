@@ -35,6 +35,8 @@ Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Purchasing", "Purchasing\Pu
 EndProject
 Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "ExpenseReports", "ExpenseReports\ExpenseReports.rptproj", "{D89FB7B7-7477-4B09-A1AA-9D0C247A07A5}"
 EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "AE Metrics", "Report Project1\AE Metrics.rptproj", "{E1796200-662C-46AE-AA34-85007AE553FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Default = Debug|Default
@@ -368,6 +370,23 @@ Global
 		{D89FB7B7-7477-4B09-A1AA-9D0C247A07A5}.Test|Default.ActiveCfg = Production
 		{D89FB7B7-7477-4B09-A1AA-9D0C247A07A5}.Test|Default.Build.0 = Production
 		{D89FB7B7-7477-4B09-A1AA-9D0C247A07A5}.Test|Default.Deploy.0 = Production
+		{E1796200-662C-46AE-AA34-85007AE553FA}.Debug|Default.ActiveCfg = DebugLocal
+		{E1796200-662C-46AE-AA34-85007AE553FA}.Debug|Default.Build.0 = DebugLocal
+		{E1796200-662C-46AE-AA34-85007AE553FA}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{E1796200-662C-46AE-AA34-85007AE553FA}.DebugLocal|Default.Build.0 = DebugLocal
+		{E1796200-662C-46AE-AA34-85007AE553FA}.DEV|Default.ActiveCfg = DebugLocal
+		{E1796200-662C-46AE-AA34-85007AE553FA}.DEV|Default.Build.0 = DebugLocal
+		{E1796200-662C-46AE-AA34-85007AE553FA}.Development|Default.ActiveCfg = DebugLocal
+		{E1796200-662C-46AE-AA34-85007AE553FA}.Development|Default.Build.0 = DebugLocal
+		{E1796200-662C-46AE-AA34-85007AE553FA}.LCL-SQL2k5-DEV|Default.ActiveCfg = Production
+		{E1796200-662C-46AE-AA34-85007AE553FA}.LCL-SQL2k5-DEV|Default.Build.0 = Production
+		{E1796200-662C-46AE-AA34-85007AE553FA}.LCL-SQL2k5-DEV|Default.Deploy.0 = Production
+		{E1796200-662C-46AE-AA34-85007AE553FA}.Production|Default.ActiveCfg = Production
+		{E1796200-662C-46AE-AA34-85007AE553FA}.Production|Default.Build.0 = Production
+		{E1796200-662C-46AE-AA34-85007AE553FA}.Production|Default.Deploy.0 = Production
+		{E1796200-662C-46AE-AA34-85007AE553FA}.Test|Default.ActiveCfg = Production
+		{E1796200-662C-46AE-AA34-85007AE553FA}.Test|Default.Build.0 = Production
+		{E1796200-662C-46AE-AA34-85007AE553FA}.Test|Default.Deploy.0 = Production
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

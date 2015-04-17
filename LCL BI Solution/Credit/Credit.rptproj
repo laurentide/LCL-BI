@@ -9,6 +9,10 @@
   </DataSources>
   <Reports>
     <ProjectItem>
+      <Name>AR Fax.rdl</Name>
+      <FullPath>AR Fax.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>ARInvoices.rdl</Name>
       <FullPath>ARInvoices.rdl</FullPath>
     </ProjectItem>
@@ -29,8 +33,8 @@
       <FullPath>CreditHold.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>AR Fax.rdl</Name>
-      <FullPath>AR Fax.rdl</FullPath>
+      <Name>AR Fax 30 days.rdl</Name>
+      <FullPath>AR Fax 30 days.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
