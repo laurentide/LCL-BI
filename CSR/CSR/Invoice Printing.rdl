@@ -1650,8 +1650,8 @@ Order by 		HWATCG</CommandText>
                           <Value>=rtrim(Fields!IHH_Ship_To_Name.Value) &amp; vbNewLine &amp;
  rtrim(Fields!IHH_Ship_To_Address_1.Value) &amp; vbNewLine &amp; 
  iif(rtrim(fields!IHH_Ship_To_Address_2.value)&lt;&gt;"",(Fields!IHH_Ship_To_Address_2.Value) &amp; vbNewLine,"") &amp;
- rtrim(Fields!IHH_Bill_To_City.Value) &amp; ", " &amp;
- rtrim(Fields!IHH_Bill_To_State.Value) &amp; ", " &amp;
+ rtrim(Fields!IHH_Ship_To_City.Value) &amp; ", " &amp;
+ rtrim(Fields!IHH_Ship_To_State.Value) &amp; ", " &amp;
  rtrim(Fields!IHH_Ship_To_Zip_Code.Value)</Value>
                         </Textbox>
                       </ReportItems>
