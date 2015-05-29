@@ -12,6 +12,10 @@
       <Name>SafetyCasesReport.rdl</Name>
       <FullPath>SafetyCasesReport.rdl</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Safety Case Report.rdl</Name>
+      <FullPath>Safety Case Report.rdl</FullPath>
+    </ProjectItem>
   </Reports>
   <Configurations>
     <Configuration>
