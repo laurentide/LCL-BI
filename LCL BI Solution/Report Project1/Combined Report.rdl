@@ -296,7 +296,7 @@ from tblquotes a inner join
 +ISNULL([USNet],0)*[exchrate]+ISNULL([Valve_uslist],0)*[exchrate]*(1-ISNULL([Valve_Base],0)/100)*(1-ISNULL([Valve_Ext],0)/100)+ISNULL([Actuator_uslist],0)*[exchrate]*(1-ISNULL([Actuator_Base],0)/100)*(1-ISNULL([Actuator_Ext],0)/100)+ISNULL([Positioner_uslist],0)*[exchrate]*(1-ISNULL([Positioner_Base],0)/100)*(1-ISNULL([Positioner_Ext],0)/100)+(
  CASE WHEN [discount] IS NULL THEN 0
         ELSE ISNULL([uslistprice],0)*[exchrate]*(1-ISNULL([discount],0)/100)
- END)*[qty]) &gt;= 50000) b
+ END)*[qty]) &gt;= 10000) b
 on a.quoteidref = b.quoteidref
 where a.date between @datebegin and @dateend
 group by quotedby</CommandText>
