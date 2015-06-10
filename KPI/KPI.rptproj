@@ -201,6 +201,10 @@
       <FullPath>Reliablity Products Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Reliablity Report.rdl</Name>
+      <FullPath>Reliablity Report.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Reliablity Services Report.rdl</Name>
       <FullPath>Reliablity Services Report.rdl</FullPath>
     </ProjectItem>
@@ -405,8 +409,8 @@
       <FullPath>YTD Project Team.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Reliablity Report.rdl</Name>
-      <FullPath>Reliablity Report.rdl</FullPath>
+      <Name>Salesmen Report - Jamie Douville.rdl</Name>
+      <FullPath>Salesmen Report - Jamie Douville.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
