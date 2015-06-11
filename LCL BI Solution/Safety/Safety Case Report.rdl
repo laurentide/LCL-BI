@@ -1386,6 +1386,9 @@ order by urgent desc, issueddate</CommandText>
             <ToggleItem>textbox6</ToggleItem>
           </Visibility>
         </Details>
+        <Style>
+          <TextDecoration>Underline</TextDecoration>
+        </Style>
         <Header>
           <TableRows>
             <TableRow>

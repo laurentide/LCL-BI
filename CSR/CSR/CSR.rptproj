@@ -97,6 +97,10 @@
       <FullPath>Order Breakdown.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Originators Table.rdl</Name>
+      <FullPath>Originators Table.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>OTS.rdl</Name>
       <FullPath>OTS.rdl</FullPath>
     </ProjectItem>
@@ -145,8 +149,8 @@
       <FullPath>Wrong Salesman Number Report.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Originators Table.rdl</Name>
-      <FullPath>Originators Table.rdl</FullPath>
+      <Name>SIE Monthly Valve Shipments.rdl</Name>
+      <FullPath>SIE Monthly Valve Shipments.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
