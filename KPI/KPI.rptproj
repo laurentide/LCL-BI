@@ -233,6 +233,10 @@
       <FullPath>Salesmen Report - Admin.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Salesmen Report - Jamie Douville (059).rdl</Name>
+      <FullPath>Salesmen Report - Jamie Douville (059).rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>Salesmen Report - Michel Pomerleau.rdl</Name>
       <FullPath>Salesmen Report - Michel Pomerleau.rdl</FullPath>
     </ProjectItem>
@@ -409,8 +413,8 @@
       <FullPath>YTD Project Team.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Salesmen Report - Jamie Douville.rdl</Name>
-      <FullPath>Salesmen Report - Jamie Douville.rdl</FullPath>
+      <Name>Salesmen Report - Jamie Douville (060).rdl</Name>
+      <FullPath>Salesmen Report - Jamie Douville (060).rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
@@ -428,7 +432,8 @@
       <Name>DebugLocal</Name>
       <Platform>Win32</Platform>
       <Options>
-        <TargetFolder>Report Project1</TargetFolder>
+        <TargetServerURL>http://lcl-sql2k5-s/reportserver</TargetServerURL>
+        <TargetFolder>Sales And Bookings</TargetFolder>
         <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
       </Options>
     </Configuration>

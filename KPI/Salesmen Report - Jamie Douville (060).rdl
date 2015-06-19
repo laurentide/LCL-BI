@@ -282,7 +282,7 @@ eaboe0cLVfMib9TaTpM3h5J6m0nSZ/DyUJtb57+fvR5ptb57+fvR5puh7RwtV8yJv1NpOkz+HknqbSdJ
  ON COLUMNS, 
        [Product Codes].[Product Primary Category].Children Having (([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Goal - Fact Salesman Goals]) &gt; 0 or 	 ([Time].[Fiscal Hierarchy Time Calculations].[Year to Date],[Measures].[Sell - Bookings]) &lt;&gt; 0)
  ON ROWS FROM [Sales_2008] 
-WHERE ("  &amp; Parameters!TimeFiscalMonth.Value &amp; ",{[Salesmen].[Salesman Number].&amp;[059],[Salesmen].[Salesman Number].&amp;[060]}, Except([Product Codes].[Product Code].children,{[Product Codes].[Product Code].&amp;[TX],[Product Code].[Product Code].&amp;[FT]}))"</CommandText>
+WHERE ("  &amp; Parameters!TimeFiscalMonth.Value &amp; ",{[Salesmen].[Salesman Number].&amp;[060]}, Except([Product Codes].[Product Code].children,{[Product Codes].[Product Code].&amp;[TX],[Product Code].[Product Code].&amp;[FT]}))"</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
     </DataSet>

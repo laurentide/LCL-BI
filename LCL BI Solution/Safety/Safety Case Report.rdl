@@ -38,8 +38,8 @@
   <DataSets>
     <DataSet Name="Safety">
       <Fields>
-        <Field Name="ID">
-          <DataField />
+        <Field Name="ageOfCase">
+          <DataField>ageOfCase</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="safetycaseid">
@@ -309,23 +309,23 @@
       </Fields>
       <Query>
         <DataSourceName>Safety</DataSourceName>
-        <CommandText>SELECT datediff(d,issueddate,case when reviseddate is null then getdate() else reviseddate end), *
+        <CommandText>SELECT datediff(d,issueddate, getDate()) as ageOfCase, *
 FROM tblSafetyCases a 
-INNER JOIN tblSafetyStatus b
+FULL JOIN tblSafetyStatus b
 ON a.StatusID = b.StatusId
-INNER JOIN tblSafetyTypes c 
+FULL JOIN tblSafetyTypes c 
 ON a.SafetyTypeID = c.SafetyTypeID
-INNER JOIN tblManagers d
+FULL JOIN tblManagers d
 ON a.ManagerID = d.ManagerID
-INNER JOIN tblSafetyDepartments e
+FULL JOIN tblSafetyDepartments e
 ON a.DepartmentID = e.DepartmentID
-INNER JOIN tblSafetyProvinces f
+FULL JOIN tblSafetyProvinces f
 ON a.ProvinceID = f.ProvinceID
-INNER JOIN tblSafetyLesions g
+FULL JOIN tblSafetyLesions g
 ON a.LesionID = g.LesionID
-where a.statusid &lt;&gt;4 and a.statusid &lt;&gt; 3and a.statusid &lt;&gt; 7 and a.statusid &lt;&gt; 6
+where a.statusid &lt;&gt; 4 and a.statusid &lt;&gt; 3 and a.statusid &lt;&gt; 7 and a.statusid &lt;&gt; 6
 and visible = 1 and issueddate between @datemin and @datemax 
-order by urgent desc, issueddate</CommandText>
+order by urgent desc, ageOfCase desc</CommandText>
         <QueryParameters>
           <QueryParameter Name="@datemin">
             <Value>=Parameters!datemin.Value</Value>
@@ -401,7 +401,7 @@ order by urgent desc, issueddate</CommandText>
                           </Style>
                           <ZIndex>46</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=Count(Fields!ID.Value)</Value>
+                          <Value>=Count(Fields!safetycaseid.Value)</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -421,7 +421,7 @@ order by urgent desc, issueddate</CommandText>
                           </Style>
                           <ZIndex>45</ZIndex>
                           <CanGrow>true</CanGrow>
-                          <Value>=Avg(Fields!ID.Value)</Value>
+                          <Value>=Avg(Fields!ageOfCase.Value)</Value>
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -932,7 +932,7 @@ order by urgent desc, issueddate</CommandText>
                       </Style>
                       <ZIndex>21</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!ID.Value</Value>
+                      <Value>=Fields!ageOfCase.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>

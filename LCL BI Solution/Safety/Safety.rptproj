@@ -30,6 +30,7 @@
       <Name>DebugLocal</Name>
       <Platform>Win32</Platform>
       <Options>
+        <TargetServerURL>http://lcl-sql2k5-s/reportserver</TargetServerURL>
         <TargetFolder>Safety</TargetFolder>
         <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
       </Options>

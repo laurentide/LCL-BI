@@ -3,7 +3,7 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>localhost</TargetServer>
+        <TargetServer>lcl-sql2k5-s</TargetServer>
         <TargetDatabase>Nomis_Analysis</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>
