@@ -8,7 +8,7 @@
     <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>Default</ProcessingOption>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -292,14 +292,14 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>i7ju2u3ID6N1IhpmGYvoPA==12/06/2015 16:05:4927/04/2015 09:44:35DtCKwbir7XKM1OGJ0DTFuw==27/04/2015 09:44:3527/04/2015 09:44:35</TimeStamp>
+        <TimeStamp>i7ju2u3ID6N1IhpmGYvoPA==23/07/2015 16:24:4227/04/2015 09:44:35DtCKwbir7XKM1OGJ0DTFuw==27/04/2015 09:44:3527/04/2015 09:44:35</TimeStamp>
         <ID>
           <String>Nomis Warehouse</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>Bh2ce5DbFXzGqjLQNB75Rw==27/04/2015 09:44:3527/04/2015 09:44:35H7vTy1XOiF/yv+2UMlGeuA==27/04/2015 09:44:3527/04/2015 09:44:35</TimeStamp>
+        <TimeStamp>Bh2ce5DbFXzGqjLQNB75Rw==23/07/2015 16:36:0627/04/2015 09:44:35H7vTy1XOiF/yv+2UMlGeuA==27/04/2015 09:44:3527/04/2015 09:44:35</TimeStamp>
         <ID>
           <String>Quote Builder</String>
         </ID>
@@ -320,7 +320,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>Cq4ulPry+yUKYnRhtXQxeA==27/04/2015 09:44:3527/04/2015 09:44:35fwFyqQBcMHeHGW0/3z8M5Q==27/04/2015 09:44:3527/04/2015 09:44:35</TimeStamp>
+        <TimeStamp>Cq4ulPry+yUKYnRhtXQxeA==23/07/2015 16:39:2327/04/2015 09:44:35fwFyqQBcMHeHGW0/3z8M5Q==27/04/2015 09:44:3527/04/2015 09:44:35</TimeStamp>
         <ID>
           <String>Nomis Warehouse 1</String>
         </ID>
@@ -337,5 +337,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2015-06-12T20:22:14Z</LastDeployed>
+  <LastDeployed>2015-07-23T20:40:48Z</LastDeployed>
 </DeploymentSnapshot>

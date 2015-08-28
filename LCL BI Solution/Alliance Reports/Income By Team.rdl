@@ -455,7 +455,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
   </DataSets>
   <Author>Duc Duy Nguyen</Author>
   <Code />
-  <Width>9.5in</Width>
+  <Width>10.5in</Width>
   <Body>
     <ReportItems>
       <Table Name="table1">
@@ -488,7 +488,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>35</ZIndex>
+                          <ZIndex>39</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!Dim_Productcodes_Department_Name_Department_Name.Value</Value>
                         </Textbox>
@@ -510,7 +510,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>34</ZIndex>
+                          <ZIndex>38</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___Invoiced.Value)</Value>
                         </Textbox>
@@ -533,7 +533,7 @@ WHERE     (CONVERT(varchar(10), GETDATE(), 101) = CONVERT(varchar(10), PK_Date, 
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>33</ZIndex>
+                          <ZIndex>37</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=(sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___Invoiced.Value)-
 sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Cost___Fact_Sales.Value))
@@ -558,7 +558,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Cost
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>32</ZIndex>
+                          <ZIndex>36</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=max(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Goal.Value)</Value>
                         </Textbox>
@@ -580,7 +580,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Cost
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>31</ZIndex>
+                          <ZIndex>35</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)</Value>
                         </Textbox>
@@ -602,7 +602,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Cost
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>30</ZIndex>
+                          <ZIndex>34</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=(sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)-
 sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Cost___Fact_Sales.Value))
@@ -626,7 +626,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Cost_
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>29</ZIndex>
+                          <ZIndex>33</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=max(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Goal.Value)</Value>
                         </Textbox>
@@ -649,7 +649,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Cost_
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>28</ZIndex>
+                          <ZIndex>32</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration.Value)</Value>
                         </Textbox>
@@ -673,11 +673,35 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Cost_
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>27</ZIndex>
+                          <ZIndex>31</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=iif(sum(fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration.Value) &lt;&gt;0 , 
 sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)/
 sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration.Value),"")</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox49">
+                          <rd:DefaultName>textbox49</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <FontWeight>700</FontWeight>
+                            <Format>c0</Format>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>30</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -714,7 +738,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Durat
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>26</ZIndex>
+                          <ZIndex>29</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=Fields!Dim_Productcodes_Product_Service_Category_Product_Service_Category.Value</Value>
                         </Textbox>
@@ -736,7 +760,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Durat
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>25</ZIndex>
+                          <ZIndex>28</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___Invoiced.Value)</Value>
                         </Textbox>
@@ -759,7 +783,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Durat
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>24</ZIndex>
+                          <ZIndex>27</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=(sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___Invoiced.Value)-
 sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Cost___Fact_Sales.Value))
@@ -784,7 +808,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Cost
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>23</ZIndex>
+                          <ZIndex>26</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value />
                         </Textbox>
@@ -806,7 +830,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Cost
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>22</ZIndex>
+                          <ZIndex>25</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)</Value>
                         </Textbox>
@@ -828,7 +852,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Cost
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>21</ZIndex>
+                          <ZIndex>24</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=(sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)-
 sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Cost___Fact_Sales.Value))
@@ -852,7 +876,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Cost_
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>20</ZIndex>
+                          <ZIndex>23</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value />
                         </Textbox>
@@ -875,7 +899,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Cost_
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>19</ZIndex>
+                          <ZIndex>22</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration.Value)</Value>
                         </Textbox>
@@ -898,11 +922,35 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Cost_
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
-                          <ZIndex>18</ZIndex>
+                          <ZIndex>21</ZIndex>
                           <CanGrow>true</CanGrow>
                           <Value>=iif(sum(fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration.Value) &lt;&gt;0 , 
 sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)/
 sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration.Value),"")</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox52">
+                          <rd:DefaultName>textbox52</rd:DefaultName>
+                          <Style>
+                            <BackgroundColor>Gainsboro</BackgroundColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>8pt</FontSize>
+                            <Format>c0</Format>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>20</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value />
                         </Textbox>
                       </ReportItems>
                     </TableCell>
@@ -933,7 +981,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Durat
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>8</ZIndex>
+                      <ZIndex>9</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Dim_Productcodes_Product_Code_Product_Code.Value</Value>
                     </Textbox>
@@ -978,7 +1026,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Durat
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>7</ZIndex>
+                      <ZIndex>8</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___Invoiced.Value)</Value>
                     </Textbox>
@@ -1001,7 +1049,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Durat
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>6</ZIndex>
+                      <ZIndex>7</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___Invoiced.Value-
 Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Cost___Fact_Sales.Value)/
@@ -1023,7 +1071,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>5</ZIndex>
+                      <ZIndex>6</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1045,7 +1093,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>4</ZIndex>
+                      <ZIndex>5</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)</Value>
                     </Textbox>
@@ -1067,7 +1115,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>3</ZIndex>
+                      <ZIndex>4</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=((Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)-
 (Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Cost___Fact_Sales.Value))
@@ -1089,7 +1137,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>2</ZIndex>
+                      <ZIndex>3</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1111,7 +1159,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>1</ZIndex>
+                      <ZIndex>2</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration.Value</Value>
                     </Textbox>
@@ -1134,8 +1182,32 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
+                      <ZIndex>1</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)/Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Duration.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox57">
+                      <rd:DefaultName>textbox57</rd:DefaultName>
+                      <Style>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c0</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1174,7 +1246,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>47</ZIndex>
+                      <ZIndex>52</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1204,14 +1276,14 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>46</ZIndex>
+                      <ZIndex>51</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=Parameters!TimeFiscalMonth.Label</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
-                  <ColSpan>5</ColSpan>
+                  <ColSpan>6</ColSpan>
                   <ReportItems>
                     <Textbox Name="textbox45">
                       <Style>
@@ -1233,7 +1305,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>45</ZIndex>
+                      <ZIndex>50</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>YTD</Value>
                     </Textbox>
@@ -1271,7 +1343,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>44</ZIndex>
+                      <ZIndex>49</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Department/Revenue Stream</Value>
                     </Textbox>
@@ -1304,7 +1376,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>43</ZIndex>
+                      <ZIndex>48</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>MTD Invoiced</Value>
                     </Textbox>
@@ -1338,7 +1410,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>42</ZIndex>
+                      <ZIndex>47</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Margin</Value>
                     </Textbox>
@@ -1372,7 +1444,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>41</ZIndex>
+                      <ZIndex>46</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Monthly Goal</Value>
                     </Textbox>
@@ -1405,7 +1477,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>40</ZIndex>
+                      <ZIndex>45</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Invoiced</Value>
                     </Textbox>
@@ -1439,7 +1511,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>39</ZIndex>
+                      <ZIndex>44</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Margin</Value>
                     </Textbox>
@@ -1472,7 +1544,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>38</ZIndex>
+                      <ZIndex>43</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Goal</Value>
                     </Textbox>
@@ -1506,7 +1578,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>37</ZIndex>
+                      <ZIndex>42</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Billable Hours</Value>
                     </Textbox>
@@ -1541,9 +1613,44 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>36</ZIndex>
+                      <ZIndex>41</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Billable Rate</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox48">
+                      <rd:DefaultName>textbox48</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <Format>c0</Format>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>40</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -1556,6 +1663,9 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
         <TableColumns>
           <TableColumn>
             <Width>1.5in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
           </TableColumn>
           <TableColumn>
             <Width>1in</Width>
@@ -1612,7 +1722,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>17</ZIndex>
+                      <ZIndex>19</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>Total:</Value>
                     </Textbox>
@@ -1641,7 +1751,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>16</ZIndex>
+                      <ZIndex>18</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___Invoiced.Value)</Value>
                     </Textbox>
@@ -1671,7 +1781,7 @@ Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___I
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>15</ZIndex>
+                      <ZIndex>17</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=(sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Sell___Invoiced.Value)-
 sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Cost___Fact_Sales.Value))
@@ -1700,7 +1810,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Cost
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>14</ZIndex>
+                      <ZIndex>16</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1729,7 +1839,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Cost
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>13</ZIndex>
+                      <ZIndex>15</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)</Value>
                     </Textbox>
@@ -1758,7 +1868,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Month_to_Date_Measures_Cost
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>12</ZIndex>
+                      <ZIndex>14</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=(sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Sell___Invoiced.Value)-
 sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Cost___Fact_Sales.Value))
@@ -1787,7 +1897,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Cost_
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>11</ZIndex>
+                      <ZIndex>13</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>
@@ -1817,7 +1927,7 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Cost_
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>10</ZIndex>
+                      <ZIndex>12</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value>=sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Billable.Value)</Value>
                     </Textbox>
@@ -1848,7 +1958,38 @@ sum(Fields!Time_Fiscal_Hierarchy_Time_Calculations_4_Year_to_Date_Measures_Cost_
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                      <ZIndex>9</ZIndex>
+                      <ZIndex>11</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox58">
+                      <rd:DefaultName>textbox58</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                          <Top>Black</Top>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                          <Top>Solid</Top>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                        </BorderWidth>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>c0</Format>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
                       <CanGrow>true</CanGrow>
                       <Value />
                     </Textbox>

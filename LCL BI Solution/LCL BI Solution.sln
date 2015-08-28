@@ -37,6 +37,8 @@ Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "ExpenseReports", "ExpenseRe
 EndProject
 Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "AE Metrics", "Report Project1\AE Metrics.rptproj", "{E1796200-662C-46AE-AA34-85007AE553FA}"
 EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "QLT", "QLT\QLT.rptproj", "{595F42BF-2A6F-4154-8D52-208CABAD8A93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Default = Debug|Default
@@ -387,6 +389,23 @@ Global
 		{E1796200-662C-46AE-AA34-85007AE553FA}.Test|Default.ActiveCfg = Production
 		{E1796200-662C-46AE-AA34-85007AE553FA}.Test|Default.Build.0 = Production
 		{E1796200-662C-46AE-AA34-85007AE553FA}.Test|Default.Deploy.0 = Production
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.Debug|Default.ActiveCfg = DebugLocal
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.Debug|Default.Build.0 = DebugLocal
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.DebugLocal|Default.Build.0 = DebugLocal
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.DEV|Default.ActiveCfg = DebugLocal
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.DEV|Default.Build.0 = DebugLocal
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.Development|Default.ActiveCfg = DebugLocal
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.Development|Default.Build.0 = DebugLocal
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.LCL-SQL2k5-DEV|Default.ActiveCfg = Production
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.LCL-SQL2k5-DEV|Default.Build.0 = Production
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.LCL-SQL2k5-DEV|Default.Deploy.0 = Production
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.Production|Default.ActiveCfg = Production
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.Production|Default.Build.0 = Production
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.Production|Default.Deploy.0 = Production
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.Test|Default.ActiveCfg = Production
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.Test|Default.Build.0 = Production
+		{595F42BF-2A6F-4154-8D52-208CABAD8A93}.Test|Default.Deploy.0 = Production
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

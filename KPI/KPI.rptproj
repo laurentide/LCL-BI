@@ -233,8 +233,8 @@
       <FullPath>Salesmen Report - Admin.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Salesmen Report - Jamie Douville (059).rdl</Name>
-      <FullPath>Salesmen Report - Jamie Douville (059).rdl</FullPath>
+      <Name>Salesmen Report - Jamie Douville (059 and 060).rdl</Name>
+      <FullPath>Salesmen Report - Jamie Douville (059 and 060).rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Salesmen Report - Michel Pomerleau.rdl</Name>
@@ -411,10 +411,6 @@
     <ProjectItem>
       <Name>YTD Project Team.rdl</Name>
       <FullPath>YTD Project Team.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Salesmen Report - Jamie Douville (060).rdl</Name>
-      <FullPath>Salesmen Report - Jamie Douville (060).rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
